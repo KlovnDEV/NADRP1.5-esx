@@ -1,0 +1,36 @@
+
+:root {
+    --background-contrast: 95%;
+    --background-blur: 3px;
+    --loadbar-color: #ffffff5b;
+    --loadbar-progress-color: #0000009f;
+    --loadbar-height: 27px;
+    --footer-font-color: #dfdfdf98;
+    --footer-font-size: 24px;
+    --fadeTo-Color: #222222;
+}
+
+
+a:link {
+  color:  rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color:  rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}

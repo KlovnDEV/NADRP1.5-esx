@@ -1,0 +1,134 @@
+body {
+  position: relative;
+  font-family: sans-serif;
+  overflow: hidden;
+  display: none;
+  top: 0;
+}
+
+/*
+.radio {
+background-image: url("../img/radio.png");
+background-repeat: no-repeat;
+background-size: auto;
+background-attachment: fixed;
+
+}
+*/
+
+#cursor {
+  position: absolute;
+  z-index: 999999;
+  display: none;
+}
+
+#radio {
+  width: 367px;
+  height: 795px;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+#onoff {
+  background: none;
+  border-style: none;
+  position: absolute;
+  height: 3%;
+  width: 12%;
+  right: 65%;
+  top: 28%;
+  padding: 3px 3px;
+  outline: none;
+}
+
+#volumeup {
+  background: none;
+  border-style: none;
+  position: absolute;
+  padding: 9px 22px;
+  right: 55%;
+  top: 25%;
+  outline: none;
+}
+
+#volumedown {
+  background: none;
+  border-style: none;
+  position: absolute;
+  padding: 10px 17px;
+  right: 40%;
+  top: 25%;
+  outline: none;
+}
+
+#volumeup:hover::before {
+  background: none;
+  color:white;
+  content: attr(title); display: block;
+  font-size:12px;
+  font-weight: 100;
+}
+
+#volumedown:hover::before {
+  background: none;
+  content: attr(title); display: block;
+  color:white;
+  font-size:12px;
+  font-weight: 100;
+}
+
+#volumedown:hover {
+  background-color: rgba(29, 29, 28, 0.767); 
+  display: block;
+  padding: 5px 5px;
+  right: 35%;
+  top: 25%;
+}
+
+#volumeup:hover {
+  background-color: rgba(29, 29, 28, 0.767);
+  display: block;
+  padding: 5px 5px;
+  right: 55%;
+  top: 25%;
+}
+
+#onoff:hover {
+  background-color: rgba(29, 29, 28, 0.767);
+  padding: 5px 5px;
+  height: 3%;
+  width: 12%;
+}
+
+
+#onoff:hover::before {
+  background: none;
+  content: attr(title);
+  color:white;
+}
+
+.ekran {
+  position: absolute;
+  padding: 95px 70px;
+  top: 50%;
+  left: 26.5%;
+}
+
+.channel {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.channel span {
+  text-align: center;
+}
+
+.channel input {
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 38px 6px;
+  font-size: 24px;
+}
