@@ -1,0 +1,311 @@
+setr voice_useNativeAudio true
+setr voice_useSendingRangeOnly true
+setr voice_enableUi 1
+setr voice_defaultCycle Z
+setr voice_defaultRadio LMENU
+setr voice_enableSubmix 1
+
+# Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+set mysql_connection_string "server=127.0.0.1;uid=root;password=;database=s1873_ffrp"
+set mysql_slow_query_warning 100
+
+set es_enableCustomData 1 
+
+###############
+## EasyAdmin ##
+###############
+
+setr ea_LanguageName "en"                # set our language to english
+setr ea_MenuButton "121"			# set our menu button to F2. default: "289"
+setr ea_alwaysShowButtons "false"	# we don't want to see buttons we can't even access, do we? default: "false"
+set ea_moderationNotification "false"   # this can be either "false" or a discord webhook address, this will send a discord message if an admin takes actions against a player  ( such as banning and kicking )
+set ea_custombanlist "false"            # read docs for this, dont touch it
+set ea_enableCallAdminCommand "false" # enables "calladmin" command via webhook
+set ea_enableReportCommand "false" # enables "report" command, see Configuration Wiki Page for More infos
+add_ace group.admin easyadmin allow
+add_ace group.leo "flashBadge" allow
+
+set tigoanticheat.godmode false
+set tigoanticheat.updateidentifiers true
+set tigoanticheat.bypassenabled true
+set tigoanticheat.webhook "https://discord.com/api/webhooks/844687384821497898/r8NFTB-PxNPR2dN6-gCjvhIPo5AmKmY46Hr45UGDot6cPBEfWp8_kBaA5FF1O2Hq7RE4"
+set tigoanticheat.VPNCheck true
+set tigoanticheat.VPNKey "ns3111781.ip-94-23-33.eu"
+
+
+# Steam Web API key, if you want to use Steam authentication (https://steamcommunity.com/dev/apikey)
+# -> replace "" with the key
+set steam_webApiKey "10CCE385AE1C7FFDEF08B2CD1BDADBFB"
+
+# These resources will start by default.
+
+########################
+## DO NOT TOUCH BELOW ##
+########################
+
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure fivem
+ensure hardcap
+ensure rconlog
+ensure mb_discovery
+ensure mbmaps
+ensure wick
+
+ensure mysql-async
+ensure essentialmode
+ensure esplugin_mysql
+ensure es_admin
+ensure async
+ensure cron
+ensure es_extended
+start esx_acesync
+ensure esx_datastore
+ensure esx_menu_default
+ensure esx_menu_list
+ensure esx_menu_dialog
+ensure esx_addonaccount
+ensure esx_addoninventory
+ensure baseevents
+ensure srp-ipl
+ensure core_crafting
+ensure core_dispach
+ensure core_hud
+ensure core_multijob
+ensure core_vehicle
+
+#start ffrp-errorlog
+#start ffrp-radar
+
+start ffrp-login
+start spawnselector
+
+#start connectqueue
+#start discord_perms
+#start DiscordWhitelist
+
+start assets
+#start DiscordBot
+start esx-qalle-jail
+
+########################
+## DO NOT TOUCH ABOVE ##
+########################
+
+###################
+##      ESX      ##
+###################
+start esx_basicneeds
+start esx_status
+start esx_billing
+start esx_license
+start esx_society
+start ffrp-policejob
+start esx_tpm
+start esx_carwash
+start ffrp-weed
+start ffrp-blackjack
+start ffrp-casino
+###################
+##     Admin     ##
+###################
+start EasyAdmin
+start esx_nuo_givecar
+start delgun
+start ffrp-debug
+
+###################
+##      Disc     ##
+###################
+
+start disc-base
+
+###############
+##    Tate   ##
+###############
+start SSHospital
+start vMenu
+start mythic_hospital2
+start Cayo_Perico_UpdatedV3
+start cayoshop
+start dope_island_hopper
+start PolyZone
+start FiveEMS
+start MailmanPro
+start mx_bodydamages
+start sasp
+start tark_vangelico
+start Airamb
+start heli135
+start heloanimate
+start bt-target
+start cityhallv4
+start dynohauler
+start dynotrailer
+start esx_vehicleTeleportPads
+start gabz_hub
+start hunting-main
+start lafa2k_sportracer
+start core_evidence
+start esx_hachis_barikelo
+start esx_hunting-master
+start esx_prolactina
+start flashBadge
+start fizzfau-medicalrecords
+start gabz_hub
+start mpheist5
+
+###################
+##     Tate      ## 
+###################
+start ffrp-handling
+start ffrp_policecars_UpdateSASP
+start ffrp_policecars_UpdateLSPD
+start ffrp_policecars_UpdateBCSO
+
+
+###################
+##  Cayo_Perico  ## 
+###################
+start Cayo_Perico_UpdatedV3
+start cayoshop
+start dope_island_hopper
+start PolyZone
+
+###################
+##    casino     ## 
+###################
+start ffrp-blackjack
+strat ffrp-casino
+start srp-ipl
+
+###################
+##     Cars      ## 
+###################
+
+start ffrp-vanilla
+start ffrp-policecars
+start ffrp-emscars
+start mpheist3
+start mpvinewood
+start rmodveneno
+start streetsupra
+start tesla
+start wheels
+start jdmWheels
+start ffrp-vehiclepack
+start pdcars
+start gauntlet2
+start r1200rtp
+start redneck_gator_3
+start ShelbyGT500
+#start ffrp-undercover
+start ssc_tempesta
+start skyline
+start T440Wreckers
+start speedo
+start policepushbike
+start 18chargerleg
+start ambulance
+#start redblue_f250
+#start redneck_gator_trailer
+start custom_bikes_CBR
+start custom_bikes_HDIron
+start custom_bikes_KTM
+start custom_bikes_YMax
+start brickade3
+start speedoambo
+start mechanic_car
+start skyline
+###################
+##      EUP      ##
+###################
+start ffrp-clothing
+start ffrp-trains
+start larpchrgbb
+start emisarry_elevcontrol
+# This allows players to use scripthook-based plugins such as the legacy Lambda Menu.
+# Set this to 1 to allow scripthook. Do note that this does _not_ guarantee players won't be able to use external plugins.
+sv_scriptHookAllowed 0
+
+# Uncomment this and set a password to enable RCON. Make sure to change the password - it should look like rcon_password "YOURPASSWORD"
+#rcon_password ""
+
+# A comma-separated list of tags for your server.
+# For example:
+# - sets tags "drifting, cars, racing"
+# Or:
+# - sets tags "roleplay, military, tanks"
+sets tags "default, roleplay, seriousrp, esx, seriousrp, police, cad/mdt,  custom, economy, onesync, customcars, gang, eup, lspd, drugs"
+
+# A valid locale identifier for your server's primary language.
+# For example "en-US", "fr-CA", "nl-NL", "de-DE", "en-GB", "pt-BR"
+sets locale "en-GB","en-US"
+
+# please DO replace root-AQ on the line ABOVE with a real language! :)
+
+# Set an optional server info and connecting banner image url.
+# Size doesn't matter, any banner sized image will be fine.
+#sets banner_detail "https://url.to/image.png"
+#sets banner_connecting "https://url.to/image.png"
+
+# Set your server's hostname
+sv_hostname "|"
+
+# Nested configs!
+exec maps.cfg
+exec scripts.cfg
+
+# Loading a server icon (96x96 PNG file)
+load_server_icon logo.png
+
+# convars which can be used in scripts
+set temp_convar "hey world!"
+#sets "Discord" "https://discord.gg/FFRP"
+#sets banner_detail "https://i.imgur.com/mV3IuX9.png"
+#sets banner_connecting "https://i.imgur.com/mV3IuX9.png"
+# Uncomment this line if you do not want your server to be listed in the server browser.
+# Do not edit it if you *do* want your server listed.
+#sv_master1 ""
+
+
+add_ace resource.essentialmode command.sets 
+# Add system admins
+add_ace group.admin command allow # allow all commands
+add_ace group.admin command.quit deny # but don't allow quit
+add_ace group.admin command.restart allow # dont allow admins to use command restart
+
+add_principal group.admin easyadmin allow #I think you might want to check in the docs.
+add_principal identifier.steam:11000010719d775 group.admin #NonProGamer1000
+add_principal identifier.steam:110000113f4b389 group.admin #Tate
+
+
+add_ace resource.esx_acesync commands.setgroup allow start esx_acesync
+add_principal identifier.steam:11000010719d775 esx_acesync.admin #NonProGamer1000
+add_principal identifier.steam:110000113f4b389 esx_acesync.superadmin #Tate
+
+
+
+sv_tebexSecret dbb2f4f2966dbb1d1ae76c9e4b1772e663874862
+
+
+# Hide player endpoints in external log output.
+sv_endpointprivacy true
+
+# enable OneSync with default configuration (required for server-side state awareness)
+onesync_enabled false
+
+# Server player slot limit (must be between 1 and 32, unless using OneSync)
+sv_maxclients 10
+
+# License key for your server (https://keymaster.fivem.net)
+sv_licenseKey wv9o5hyml9x7l7kw65epp8mt5e1w6w2u
+
+
+#wv9o5hyml9x7l7kw65epp8mt5e1w6w2u -- Tate Local Host
+
