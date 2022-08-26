@@ -1,3 +1,3 @@
- cd /d H:\Dev-Server\Dev-Server\server-data
-H:\Dev-Server\Dev-Server\FXServer.exe +exec server.cfg
-H:\Dev-Server\start_3823_default.bat
+ cd /d E:\ffrp\Richards\server-data
+E:\ffrp\Richards\FXServer.exe +exec server.cfg
+E:\ffrp\Richards\start_3823_default.bat
