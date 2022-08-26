@@ -11,6 +11,8 @@
   "citizen:server:instance",
   "citizen:server:monitor",
   "citizen:server:impl",
+  "citizen:server:state:fivesv",
+  "citizen:server:state:rdr3sv",
   "citizen:server:fxdk",
   "citizen:devtools",
   "citizen:resources:core",
@@ -20,7 +22,7 @@
   "scripting:server",
   "svadhesive",
   "citizen:scripting:mono",
-  "citizen:scripting:v8",
+  "citizen:scripting:v8node",
   "voip-server:mumble",
   "http-client",
   "citizen:server:gui"
