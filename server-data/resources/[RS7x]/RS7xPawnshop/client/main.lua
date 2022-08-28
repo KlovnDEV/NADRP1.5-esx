@@ -178,12 +178,12 @@ local stolenGoodsTable = {
     [10] = "stolen5ctchain",
     [11] = "stolen2ctchain",
     [12] = "stolen10ctchain",
-    [13] = "stoleffrpsp",
+    [13] = "stolenadrpsp",
 }
 
 function HasStolenGoods()
     for i=1, #stolenGoodsTable do
-        local hasItem = exports["ffrp-inventory"]:hasEnoughOfItem(stolenGoodsTable[i],1,false)
+        local hasItem = exports["nadrp-inventory"]:hasEnoughOfItem(stolenGoodsTable[i],1,false)
         if hasItem then
             name = stolenGoodsTable[i]
             return true
@@ -204,7 +204,7 @@ AddEventHandler('RS7x:DoDropOff', function()
         giveAnim(GetPlayerPed(-1))
         Citizen.Wait(3000)
         --TriggerEvent("attachItem","cashcase01")
-        local itemcount = exports["ffrp-inventory"]:getQuantity(name)
+        local itemcount = exports["nadrp-inventory"]:getQuantity(name)
         print(name, itemcount)
         TriggerServerEvent('RS7x:payout', name, itemcount)
 
@@ -236,7 +236,7 @@ function CreatePawnPed()
 
 
 	deliveryPed = CreatePed(pedType, hashKey, dropoffpoints[rnd]["x"], dropoffpoints[rnd]["y"], dropoffpoints[rnd]["z"], dropoffpoints[rnd]["h"], 0, 0)
-    --local netObject = exports['ffrp-ped']:GlobalObject(deliveryPed)
+    --local netObject = exports['nadrp-ped']:GlobalObject(deliveryPed)
     ClearPedTasks(deliveryPed)
     ClearPedSecondaryTask(deliveryPed)
     TaskSetBlockingOfNonTemporaryEvents(deliveryPed, true)

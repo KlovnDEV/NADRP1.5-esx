@@ -54,7 +54,7 @@ AddEventHandler('RS7x:payout', function(name, itemCount)
         itemprice = math.random(50,75)
     elseif name == 'stolen10ctchain' then
         itemprice = math.random(150,175)
-    elseif name == 'stoleffrpsp' then
+    elseif name == 'stolenadrpsp' then
         itemprice = math.random(60,80)
     end
 
@@ -76,7 +76,7 @@ end)
 --[[RegisterServerEvent('RS7x:payout')
 AddEventHandler('RS7x:payout', function(name)
     local xPlayer = ESX.GetPlayerFromId(source)
-    local Iamount = exports['ffrp-inventory']:hasEnoughOfItem(name).count
+    local Iamount = exports['nadrp-inventory']:hasEnoughOfItem(name).count
     if name == 'rolex' then
         itemprice = math.random(320,370)
     elseif name == 'valuable_goods' then
@@ -109,25 +109,25 @@ AddEventHandler('RS7x:ItemCheck', function()
     local xPlayer = ESX.GetPlayerFromId(source)
 
     if xPlayer ~= nil then
-        local rolex = exports['ffrp-inventory']:hasEnoughOfItem("rolex").count
+        local rolex = exports['nadrp-inventory']:hasEnoughOfItem("rolex").count
         if rolex >= 1 then
             TriggerClientEvent('RS7x:check', source, 'rolex')
             return
         end
 
-        local valuable_goods = exports['ffrp-inventory']:hasEnoughOfItem("valuablegods").count
+        local valuable_goods = exports['nadrp-inventory']:hasEnoughOfItem("valuablegods").count
         if valuable_goods >= 1 then
             TriggerClientEvent('RS7x:check', source, 'valuablegoods')
             return
         end
 
-        local jewels = exports['ffrp-inventory']:hasEnoughOfItem("jewels").count
+        local jewels = exports['nadrp-inventory']:hasEnoughOfItem("jewels").count
         if jewels >= 1 then
             TriggerClientEvent('RS7x:check', source, 'jewels')
             return
         end
 
-        local goldNecklace = exports['ffrp-inventory']:hasEnoughOfItem("goldNecklace").count
+        local goldNecklace = exports['nadrp-inventory']:hasEnoughOfItem("goldNecklace").count
         if goldNecklace >= 1 then
             TriggerClientEvent('RS7x:check', source, 'goldNecklace')
             return

@@ -38,3 +38,4 @@ data_file 'AUDIO_SYNTHDATA' 'audio/dlcVinewood_amp.dat'
 data_file 'AUDIO_SPEECHDATA' 'audio/dlcvinewood_speech.dat'
 
 data_file 'AUDIO_WAVEPACK' 'audio/sfx/dlc_vinewood'
+client_script "@Badger-Anticheat/acloader.lua"

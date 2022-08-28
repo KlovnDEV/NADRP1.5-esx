@@ -41,16 +41,16 @@ Citizen.CreateThread(function()
 				end
 				if not arvonta then
 					if not liitytty then
-						exports['ffrp-notify']:ShowAlert('Paina ~INPUT_CONTEXT~ osallistuaksesi rulettiin')
+						exports['shrp-notify']:ShowAlert('Paina ~INPUT_CONTEXT~ osallistuaksesi rulettiin')
 					else
-						exports['ffrp-notify']:ShowAlert('Olet osallistunut kierrokselle - odotetaan Voit lisätä panoksia painamalla ~INPUT_CONTEXT~')
+						exports['shrp-notify']:ShowAlert('Olet osallistunut kierrokselle - odotetaan Voit lisätä panoksia painamalla ~INPUT_CONTEXT~')
 					end
 				end
 					if IsControlJustPressed(0, 38) then
 						maxLength = 5
 						AddTextEntry('FMMC_KEY_TIP8', "Panos")
 						DisplayOnscreenKeyboard(1, "FMMC_KEY_TIP8", "", "", "", "", "", maxLength)
-						exports['ffrp-notify']:ShowAlert("~b~Määritä panos")
+						exports['shrp-notify']:ShowAlert("~b~Määritä panos")
 						blockinput = true
 
 						while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do
@@ -88,11 +88,11 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('esx_ruletti:osallistuminen', osallistumismaksu, vari)
 									liitytty = true
 								else
-									exports['ffrp-notify']:ShowAlert('Virheellinen väri tai numero')
+									exports['shrp-notify']:ShowAlert('Virheellinen väri tai numero')
 								end
 							end
 						else
-							exports['ffrp-notify']:ShowAlert('Määritä kelvollinen panos')
+							exports['shrp-notify']:ShowAlert('Määritä kelvollinen panos')
 						end
 					end
 					if arvonta then

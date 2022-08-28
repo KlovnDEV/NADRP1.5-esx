@@ -271,10 +271,10 @@ Citizen.CreateThread(function()
              DrawMarker(27,-596.47, -283.96, 50.33, 0, 0, 0, 0, 0, 0, 0.60, 0.60, 0.3, 11, 111, 11, 60, 0, 0, 2, 0, 0, 0, 0) 
              DT(-596.47, -283.96, 50.33, "[E] Unlock Doors")
              if IsControlJustReleased(0,38) and distance < 1.0 then
-             	if exports["ffrp-inventory"]:hasEnoughOfItem("Gruppe6Card",1,false) then
+             	if exports["nadrp-inventory"]:hasEnoughOfItem("Gruppe6Card",1,false) then
              		TriggerEvent("inventory:removeItem", "Gruppe6Card", 1)
-             		TriggerServerEvent("ffrp-doors:alterlockstate",173)
-             		TriggerServerEvent("ffrp-doors:alterlockstate",174)
+             		TriggerServerEvent("nadrp-doors:alterlockstate",173)
+             		TriggerServerEvent("nadrp-doors:alterlockstate",174)
                  else
                     exports['mythic_notify']:SendAlert('error', 'You do not have the required resources!')
              	end
@@ -332,9 +332,9 @@ Citizen.CreateThread(function()
                 DT(-113.2352, 6470.437, 31.63, '~r~[H]~w~ Trade in gold bars')
                 if IsControlJustPressed(0, 74) and not recent then
                     exports['t0sic_loadingbar']:StartDelayedFunction('Trading Gold Bars', (math.random(40, 60) * 1000), function()
-                        local itemCount = exports["ffrp-inventory"]:getQuantity("goldbar")
-                        local hasItem = exports["ffrp-inventory"]:hasEnoughOfItem("goldbar",itemCount,true)
-                        local sid = exports['ffrp-ped']:isPed('steamid')
+                        local itemCount = exports["nadrp-inventory"]:getQuantity("goldbar")
+                        local hasItem = exports["nadrp-inventory"]:hasEnoughOfItem("goldbar",itemCount,true)
+                        local sid = exports['nadrp-ped']:isPed('steamid')
                         if hasItem then
                             TriggerServerEvent('RS7x:TradeBars', itemCount)
                             Wait(2000)

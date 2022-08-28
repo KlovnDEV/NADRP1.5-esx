@@ -46,7 +46,7 @@ Citizen.CreateThread(function()
             if IsEntityInWater(ped) then
 				exports['mythic_notify']:SendAlert('inform', 'You begin cleaning off the Gunshot Residue... stay in the water', 5000)
 				Wait(100)
-                local finished = exports['ffrp-taskbar']:taskBar(20000, 'Washing off GSR')
+                local finished = exports['nadrp-taskbar']:taskBar(20000, 'Washing off GSR')
                 if finished == 100 then 
                     if IsEntityInWater(ped) then
                         hasShot = false

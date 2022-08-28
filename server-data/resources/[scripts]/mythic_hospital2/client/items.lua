@@ -58,7 +58,7 @@ AddEventHandler("mythic_hospital2:items:ifak", function(item)
         usingHeal = true
         loadAnimDict( "amb@world_human_clipboard@male@idle_a" )
         TaskPlayAnim( PlayerPedId(), "amb@world_human_clipboard@male@idle_a", "idle_c", 8.0, 1.0, -1, 49, 0, 0, 0, 0 )
-        local finished = exports["ffrp-taskbar"]:taskBar(10000, "Applying IFAK 🤕")
+        local finished = exports["nadrp-taskbar"]:taskBar(10000, "Applying IFAK 🤕")
         if (finished == 100) then
             TriggerEvent('mythic_hospital2:client:ifak')
             TriggerEvent('client:newStress',false, 25)
@@ -77,7 +77,7 @@ AddEventHandler("mythic_hospital2:items:firstaid", function(item)
         usingHeal = true
         loadAnimDict( "amb@world_human_clipboard@male@idle_a" ) 
         TaskPlayAnim( PlayerPedId(), "amb@world_human_clipboard@male@idle_a", "idle_c", 8.0, 1.0, -1, 49, 0, 0, 0, 0 )
-        local finished = exports["ffrp-taskbar"]:taskBar(15000, "Healing 🤕")
+        local finished = exports["nadrp-taskbar"]:taskBar(15000, "Healing 🤕")
         if (finished == 100) then
             local maxHealth = GetEntityMaxHealth(PlayerPedId())
 			local health = GetEntityHealth(PlayerPedId())
@@ -97,7 +97,7 @@ AddEventHandler("mythic_hospital2:items:medkit", function(item)
         usingHeal = true
         loadAnimDict( "amb@world_human_clipboard@male@idle_a" ) 
         TaskPlayAnim( PlayerPedId(), "amb@world_human_clipboard@male@idle_a", "idle_c", 8.0, 1.0, -1, 49, 0, 0, 0, 0 )
-        local finished = exports["ffrp-taskbar"]:taskBar(10000, "Healing 🤕")
+        local finished = exports["nadrp-taskbar"]:taskBar(10000, "Healing 🤕")
         if (finished == 100) then
 			SetEntityHealth(PlayerPedId(), GetEntityMaxHealth(PlayerPedId()))
             TriggerEvent('mythic_hospital2:client:FieldTreatLimbs')
@@ -116,7 +116,7 @@ AddEventHandler("mythic_hospital2:items:oxy", function(item)
         usingHeal = true
         loadAnimDict( "mp_suicide" )
         TaskPlayAnim( PlayerPedId(), "mp_suicide", "pill", 8.0, 1.0, -1, 49, 0, 0, 0, 0 )
-        local finished = exports["ffrp-taskbar"]:taskBar(2700, "Taking oxy 💊")
+        local finished = exports["nadrp-taskbar"]:taskBar(2700, "Taking oxy 💊")
         if (finished == 100) then
             TriggerEvent('mythic_hospital2:client:UsePainKiller', 1)
             TriggerEvent('client:newStress',false, 25)

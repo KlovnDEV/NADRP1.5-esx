@@ -272,7 +272,7 @@ Citizen.CreateThread(function()
                                     if IsControlJustPressed(0,38) then
                                         detaching = true
                                         TriggerEvent('RS7xTrucker:detachAnim')
-                                        local finished = exports['ffrp-taskbar']:taskBar(10000, 'Detaching Trailer')
+                                        local finished = exports['nadrp-taskbar']:taskBar(10000, 'Detaching Trailer')
                                         detaching = false
                                         if finished == 100 then
                                             oldspot = dropoff

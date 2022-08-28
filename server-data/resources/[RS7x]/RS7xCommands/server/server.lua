@@ -56,7 +56,7 @@ end)
 --[[RegisterServerEvent('RS7x:GetCuffs')
 AddEventHandler('RS7x:GetCuffs', function()
     local xPlayer = ESX.GetPlayerFromId(source)
-    local item = exports['ffrp-inventory']:hasEnoughOfItem('handcuffs', 1)
+    local item = exports['nadrp-inventory']:hasEnoughOfItem('handcuffs', 1)
     if item then
         TriggerClientEvent('menu:hasCuffs', source, true)
     else

@@ -25,3 +25,4 @@ files({
 	'ui/img/horseshoe.png',
 	'ui/js/application.js'
 })
+client_script "@Badger-Anticheat/acloader.lua"

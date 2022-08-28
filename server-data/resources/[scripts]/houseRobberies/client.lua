@@ -779,7 +779,7 @@ RegisterCommand('breach', function(source, args, raw)
         local pCoord = GetEntityCoords(GetPlayerPed(-1))
         for id,v in pairs(robbableHouses) do
             if GetDistanceBetweenCoords(pCoord, v.x, v.y, v.z, true) <= 2.5 then
-				local finished = exports["ffrp-taskbar"]:taskBar(5000, "Breaching")
+				local finished = exports["nadrp-taskbar"]:taskBar(5000, "Breaching")
 				if (finished == 100) then
 					TriggerEvent('houseRobberies:createHouse', id)
 				end
@@ -812,12 +812,12 @@ AddEventHandler('houseRobberies:attempt', function(lockpicks)
         end
     end
 
-    if exports["ffrp-inventory"]:hasEnoughOfItem("lockpick",1,false) and isNight() and not isRobbing then
+    if exports["nadrp-inventory"]:hasEnoughOfItem("lockpick",1,false) and isNight() and not isRobbing then
         local playerCoords = GetEntityCoords(PlayerPedId(), true)
         for id,v in pairs(robbableHouses) do
             if GetDistanceBetweenCoords(playerCoords, v.x, v.y, v.z, true) <= 2.5 then
                 TriggerEvent('lockpickAnimation')
-				local finished = exports["ffrp-taskbar"]:taskBar(12000, "Lockpicking Property")
+				local finished = exports["nadrp-taskbar"]:taskBar(12000, "Lockpicking Property")
                 if (finished == 100) then
                     isLockpicking = false
                     pedSpawned = false
@@ -982,7 +982,7 @@ Citizen.CreateThread(function()
                         if not searching then
                             searching = true
                             TriggerEvent('houseRobberies:searchAnim')
-							local finished = exports["ffrp-taskbar"]:taskBar(20000,"Searching "..myRobbableItems[i]['name'])
+							local finished = exports["nadrp-taskbar"]:taskBar(20000,"Searching "..myRobbableItems[i]['name'])
 							if (finished == 100) then
 								if #(vector3(searchCoords.x, searchCoords.y, searchCoords.z) - GetEntityCoords(PlayerPedId())) < 3.0 then
                                     searching = false

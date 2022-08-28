@@ -195,15 +195,15 @@ Citizen.CreateThread(function()
                     --PrintHelpText('Press ~INPUT_CONTEXT~ ~s~to check in')
                     DrawText3D(hospitalCheckin.x, hospitalCheckin.y, hospitalCheckin.z, '~r~[E]~w~ Check in')
                     if IsControlJustReleased(0, 54) or IsDisabledControlJustPressed(0, 54) then
-                        local isDead = exports['ffrp-death']:GetDeath()
+                        local isDead = exports['nadrp-death']:GetDeath()
                         if (GetEntityHealth(PlayerPedId()) < 200) or (IsInjuredOrBleeding()) or (isDead) then
                             if not trying then
                                 trying = true
-                    local finished = exports["ffrp-taskbar"]:taskBar(7500, "Checking in 🚑")
+                    local finished = exports["nadrp-taskbar"]:taskBar(7500, "Checking in 🚑")
                         if (finished == 100) then
                             trying = false
                             TriggerServerEvent('mythic_hospital2:server:RequestBed')
-                            TriggerEvent('ffrp-death:revive', true)
+                            TriggerEvent('nadrp-death:revive', true)
                         end
 
                             else

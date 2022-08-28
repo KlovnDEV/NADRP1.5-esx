@@ -16,6 +16,6 @@ AddEventHandler('RS7xTrucker:PayPlayer', function(amount, runCount)
 			identifiers = GetPlayerIdentifiers(user.source),
 			info = string.format("Payment: **%s** | Amount Detected: **%s** | Runs Detected: **%s**",payment,amount,runCount)
 		}
-		exports['ffrp-log']:DiscordLog(data)
+		exports['nadrp-log']:DiscordLog(data)
     end
 end)

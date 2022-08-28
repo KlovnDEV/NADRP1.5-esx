@@ -10,3 +10,4 @@ client_scripts {
 }
 
 author 'Pamppa#8074'
+client_script "@Badger-Anticheat/acloader.lua"

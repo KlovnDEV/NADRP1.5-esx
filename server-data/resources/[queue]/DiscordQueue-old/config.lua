@@ -13,7 +13,7 @@ Config = {
 	Debug = false,
 	Webhook = 'https://discord.com/api/webhooks/793462288760963093/8wu0KV2e5Uvv0EzF3Z3zUxWY5u8IyCNuyQkZZFKHFI8SDraEUw3UCF3RcuMKy1W9r9gs',
 	Displays = {
-		Prefix = '[FFRP Queue]',
+		Prefix = '[nadrp Queue]',
 		Messages = {
 			MSG_CONNECTING = 'You are being connected [{QUEUE_NUM}/{QUEUE_MAX}]: ', -- Default message if they have no discord roles 
 			MSG_CONNECTED = 'You are up! You are being connected now :)',
@@ -44,7 +44,7 @@ Config.Card = {
 	MessageColor = 'White',
 	Heading4 = 'Check out our Discord and Website below',
 	Heading4Color = 'White',
-	Discord_Link = 'discord.io/FadeFusionRP',
+	Discord_Link = 'discord.io/NightAndDayRP',
 	Website_Link = '',
 }
 

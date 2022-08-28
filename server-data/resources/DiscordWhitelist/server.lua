@@ -4,7 +4,7 @@
 
 -- Documentation: https://docs.faxes.zone/docs/discord-whitelist-setup
 --- Config ---
-notWhitelistedMessage = "You are not whitelisted for this server. Make sure you are connected to discord.io/FadeFusionRP" -- Message displayed when they are not whitelist with the role
+notWhitelistedMessage = "You are not whitelisted for this server. Make sure you are connected to discord.io/NightAndDayRP" -- Message displayed when they are not whitelist with the role
 
 whitelistRoles = { -- Role IDs needed to pass the whitelist
     "692405154410135592", -- Owner

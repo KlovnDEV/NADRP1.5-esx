@@ -47,7 +47,7 @@ local robbableItems = {
     [38] = {chance = 9, id = "stolen5ctchain", name = '5ct Chain',quantity = 1},
     [39] = {chance = 8, id = "stolen2ctchain", name = '2ct Chain',quantity = 1},
     [40] = {chance = 10, id = "stolen10ctchain", name = '10ctChain', quantity = 1},
-    [41] = {chance = 5, id = "stoleffrpsp", name = 'PSP', quantity = 1},
+    [41] = {chance = 5, id = "stolenadrpsp", name = 'PSP', quantity = 1},
     [42] = {chance = 10, id = "heavycutters", name = 'Heavy Cutters', quantity = 1},
     [43] = {chance = 9, id = "usbdevice", name = 'Usb', math.random(1,4)},
 }

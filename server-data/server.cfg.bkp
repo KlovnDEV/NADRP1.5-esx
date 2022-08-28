@@ -79,10 +79,10 @@ ensure core_hud
 ensure core_multijob
 ensure core_vehicle
 
-#start ffrp-errorlog
-#start ffrp-radar
+#start nadrp-errorlog
+#start nadrp-radar
 
-start ffrp-login
+start nadrp-login
 start spawnselector
 
 #start connectqueue
@@ -105,19 +105,19 @@ start esx_status
 start esx_billing
 start esx_license
 start esx_society
-start ffrp-policejob
+start nadrp-policejob
 start esx_tpm
 start esx_carwash
-start ffrp-weed
-start ffrp-blackjack
-start ffrp-casino
+start nadrp-weed
+start nadrp-blackjack
+start nadrp-casino
 ###################
 ##     Admin     ##
 ###################
 start EasyAdmin
 start esx_nuo_givecar
 start delgun
-start ffrp-debug
+start nadrp-debug
 
 ###################
 ##      Disc     ##
@@ -163,10 +163,10 @@ start mpheist5
 ###################
 ##     Tate      ## 
 ###################
-start ffrp-handling
-start ffrp_policecars_UpdateSASP
-start ffrp_policecars_UpdateLSPD
-start ffrp_policecars_UpdateBCSO
+start nadrp-handling
+start nadrp_policecars_UpdateSASP
+start nadrp_policecars_UpdateLSPD
+start nadrp_policecars_UpdateBCSO
 
 
 ###################
@@ -180,17 +180,17 @@ start PolyZone
 ###################
 ##    casino     ## 
 ###################
-start ffrp-blackjack
-strat ffrp-casino
+start nadrp-blackjack
+strat nadrp-casino
 start srp-ipl
 
 ###################
 ##     Cars      ## 
 ###################
 
-start ffrp-vanilla
-start ffrp-policecars
-start ffrp-emscars
+start nadrp-vanilla
+start nadrp-policecars
+start nadrp-emscars
 start mpheist3
 start mpvinewood
 start rmodveneno
@@ -198,13 +198,13 @@ start streetsupra
 start tesla
 start wheels
 start jdmWheels
-start ffrp-vehiclepack
+start nadrp-vehiclepack
 start pdcars
 start gauntlet2
 start r1200rtp
 start redneck_gator_3
 start ShelbyGT500
-#start ffrp-undercover
+#start nadrp-undercover
 start ssc_tempesta
 start skyline
 start T440Wreckers
@@ -225,8 +225,8 @@ start skyline
 ###################
 ##      EUP      ##
 ###################
-start ffrp-clothing
-start ffrp-trains
+start nadrp-clothing
+start nadrp-trains
 start larpchrgbb
 start emisarry_elevcontrol
 # This allows players to use scripthook-based plugins such as the legacy Lambda Menu.
@@ -266,7 +266,7 @@ load_server_icon logo.png
 
 # convars which can be used in scripts
 set temp_convar "hey world!"
-#sets "Discord" "https://discord.gg/FFRP"
+#sets "Discord" "https://discord.gg/nadrp"
 #sets banner_detail "https://i.imgur.com/mV3IuX9.png"
 #sets banner_connecting "https://i.imgur.com/mV3IuX9.png"
 # Uncomment this line if you do not want your server to be listed in the server browser.

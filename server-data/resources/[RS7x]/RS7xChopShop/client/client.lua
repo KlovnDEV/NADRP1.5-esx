@@ -233,7 +233,7 @@ function CompleteScrapping(vehicle, originalVehicleLocation)
 
 	TaskPlayAnim(PlayerPedId(), "mp_car_bomb", "car_bomb_mechanic", 8.0, -8, -1, 49, 0, 0, 0, 0)
 
-	local finished = exports["ffrp-taskbar"]:taskBar(20000,"Scrapping Car")
+	local finished = exports["nadrp-taskbar"]:taskBar(20000,"Scrapping Car")
 	local currentLocation = GetEntityCoords(vehicle)
 	if finished == 100 then
 		local plate = GetVehicleNumberPlateText(vehicle)
@@ -244,7 +244,7 @@ function CompleteScrapping(vehicle, originalVehicleLocation)
 				reason = 'Admin attempted to chop a spawned car',
 				info = 'plate: '..plate..' SpawnedPlate: '..SpawnedPlate
 			}
-			TriggerServerEvent('ffrp-log:SendDiscordLog', data)
+			TriggerServerEvent('nadrp-log:SendDiscordLog', data)
 			SetEntityAsNoLongerNeeded(veh,true)
 			DeleteEntity(veh)
 		else

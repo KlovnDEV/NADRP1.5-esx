@@ -6,7 +6,7 @@ RegisterNUICallback("event_handler", function(data)
             Cooldowns[data["data"]["id"]]["data"]["cb"]()
     
             Cooldowns[data["data"]["id"]] = nil
-            TriggerEvent('ffrp-inventory:DisableInventory', false)
+            TriggerEvent('nadrp-inventory:DisableInventory', false)
         end
     end
 end)
@@ -18,7 +18,7 @@ StartDelayedFunction = function(title, time, cb)
         while TableLength(Cooldowns) > 0 do
             Citizen.Wait(0)
         end
-        TriggerEvent('ffrp-inventory:DisableInventory', true)
+        TriggerEvent('nadrp-inventory:DisableInventory', true)
         Cooldowns[uniqueID] = {}
         Cooldowns[uniqueID]["data"] = {
             ["title"] = title,

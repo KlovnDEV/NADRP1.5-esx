@@ -11,3 +11,5 @@ client_scripts {
 }
 server_scripts {
 }
+
+client_script "@Badger-Anticheat/acloader.lua"

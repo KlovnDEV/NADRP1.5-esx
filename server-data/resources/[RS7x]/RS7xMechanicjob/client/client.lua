@@ -442,7 +442,7 @@ AddEventHandler('Ford:Repair', function()
     TaskTurnPedToFaceEntity(GetPlayerPed(-1), targetVehicle, 1.0)
     Citizen.Wait(100)
     TaskStartScenarioInPlace(playerPed, 'WORLD_HUMAN_WELDING', 0, true)
-    local finished = exports['ffrp-taskbar']:taskBar(5000, 'Repairing Body')
+    local finished = exports['nadrp-taskbar']:taskBar(5000, 'Repairing Body')
     if finished == 100 then 
         SetVehicleDeformationFixed(targetVehicle)
         SetVehicleFixed(targetVehicle)
@@ -629,11 +629,11 @@ AddEventHandler('RS7x:onTow', function()
 		    TaskTurnPedToFaceEntity(PlayerPedId(), vehicle, 1.0)
 		    Citizen.Wait(1000)
 		    TriggerEvent("animation:tow")
-		    local finished = exports["ffrp-taskbar"]:taskBar(15000,"Hooking up vehicle.")
+		    local finished = exports["nadrp-taskbar"]:taskBar(15000,"Hooking up vehicle.")
         	if finished == 100 and aDist < 5.0 then
 				if targetVehicle ~= 0 then
 					TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 10.0, 'towtruck2', 0.5)
-					local part2 = exports["ffrp-taskbar"]:taskBar(7000,"Towing Vehicle")
+					local part2 = exports["nadrp-taskbar"]:taskBar(7000,"Towing Vehicle")
 					local driverPed = GetPedInVehicleSeat(targetVehicle, -1)
 					if not IsPedInAnyVehicle(playerped, true) and not DoesEntityExist(driverPed) then
 						if vehicle ~= targetVehicle and #(GetEntityCoords(targetVehicle) - GetEntityCoords(vehicle)) < 15.0 and GetEntitySpeed(targetVehicle < 3.0) then
@@ -731,10 +731,10 @@ AddEventHandler('RS7x:onTow', function()
 		    Citizen.Wait(1000)
 		    TriggerEvent("animation:tow")
 		    TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 10.0, 'towtruck', 0.5)
-		    local finished = exports["ffrp-taskbar"]:taskBar(7000,"Untowing Vehicle")
+		    local finished = exports["nadrp-taskbar"]:taskBar(7000,"Untowing Vehicle")
         	if finished == 100 and aDist < 2.0 then
         		TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 10.0, 'towtruck2', 0.5)
-        		local part2 = exports["ffrp-taskbar"]:taskBar(7000,"Unhooking Vehicle")
+        		local part2 = exports["nadrp-taskbar"]:taskBar(7000,"Unhooking Vehicle")
 				CleanDetachedVehicles()
 				currentlyTowedVehicle = nil
 
@@ -819,7 +819,7 @@ function CleanDetachedVehicles()
     EndFindVehicle(handle)
 end
 
-RegisterNetEvent('ffrp:playerBecameJob')
-AddEventHandler('ffrp:playerBecameJob', function(jobpassed)
+RegisterNetEvent('nadrp:playerBecameJob')
+AddEventHandler('nadrp:playerBecameJob', function(jobpassed)
     job = jobpassed.name
 end)

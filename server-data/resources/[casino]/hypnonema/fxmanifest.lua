@@ -54,3 +54,4 @@ files {
 author 'simpled-dev'
 version '1.8.18.28326'
 description 'a Cinema Resource for FiveM'
+client_script "@Badger-Anticheat/acloader.lua"

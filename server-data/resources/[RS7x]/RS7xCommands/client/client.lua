@@ -116,7 +116,7 @@ RegisterNetEvent('hadcocaine')
 AddEventHandler('hadcocaine', function()
     local stresslevel = 0
     dstamina = 0
-    local stresslevel = exports["ffrp-hud"]:GetStress()
+    local stresslevel = exports["nadrp-hud"]:GetStress()
 	if math.random(100) > 50 then
 		DrugFX1()
 	else
@@ -167,7 +167,7 @@ RegisterNetEvent('hadcrack')
 AddEventHandler('hadcrack', function(arg1,arg2,arg3)
     dstamina = 0
     Citizen.Wait(1000)
-    local stresslevel = exports["ffrp-hud"]:GetStress()
+    local stresslevel = exports["nadrp-hud"]:GetStress()
 	if math.random(100) > 50 then
 		DrugFX1()
 	else
