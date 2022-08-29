@@ -1,0 +1,16 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>..\..\fightclub_milo.ymap</Item>
+    <Item>..\fightclub_milo.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>..\fightclub_custom.ytyp</Item>
+    <Item>..\..\fightclub_custom.ytyp</Item>
+  </YtypFilenames>
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+</CodeWalkerProject>
