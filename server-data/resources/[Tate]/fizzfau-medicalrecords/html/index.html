@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="./script.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+            <p id="label"> <i class="fas fa-stethoscope" style="color:rgb(0, 89, 255)"></i> Medical System </p>
+			<button class="header-button" name="#show-page">Search Patient</button>
+			<button class="header-button" name="#create-page">Create New Data</button>
+			<p id="close"> <i class="fas fa-times"></i> </p>
+			<p class="doctor-name" id="doctor-name"> Welcome, <b>fizzfau fizzfau</b>  </p>
+			<p id="fizzfau"> by <b> fizzfau </b>  </p>
+            <div class="vehicles">
+				<div class="create-report" id="create-page">
+					<p class="label">Create A New Report</p>
+
+					<input type="text" name="patient-name" id="patient-name" placeholder="Enter Patient Name">
+					<textarea type="text" name="patient-data" id="patient-data" placeholder="Enter Patient Data" draggable="false"></textarea>
+					<button type="submit" id="patient-submit">Submit</button>
+				</div>
+				<div class="show-records" id="show-page">
+					<p class="label">Search Records</p>
+					<input type="text" name="patient-name" id="search-bar" placeholder="Search Patient">
+					<button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+					<div class="patient-info">
+						<span class="close-info">X</span>
+					</div>
+				</div>
+				<p id="warning">This area must be filled!</p>
+            </div>
+        </div>
+	</body>
+</html>

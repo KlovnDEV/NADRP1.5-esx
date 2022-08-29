@@ -1,0 +1,47 @@
+{
+	/* -- Menu -- */
+	"MainMenuHeader": "MailmanPro",
+	"MainMenuDescription": "Select action",
+	"DriveMenuHeader": "Drive Route",
+	"DriveMenuDescription": "Select delivery route",
+	"RouteEditorName": "Route Editor",
+	"RouteEditorDescription": "Open the route editor",
+	"RouteItemDescription": "Deliver on %name% - Estimated time is %time%min",
+	"RouteMenuHeader": "Deliver on %name%",
+	"RouteMenuDescription": "Configure your tour on %name%",
+	"RouteMenuCarItemName": "Delivery vehicle",
+	"RouteMenuCarItemDescription": "Select delivery vehicle",
+	"RouteMenuDriveItemName": "Start delivery tour",
+	"RouteMenuDriveItemDescription": "Start your delivery tour",
+	"ItemMenuHeader": "Item Menu",
+	"ItemMenuDescription": "Give Parcels or Letters",
+	"ItemMenuItemName": "Give Items",
+	"ItemMenuItemDescription": "Give Parcels or Letters",
+	"GiveLetterItemName": "Give Letters",
+	"GiveParcelItemName": "Give Parcels",
+	"GiveLetterItemDescription": "Give yourself some letters",
+	"GiveParcelItemDescription": "Give yourself some parcels",
+	/* -- Menu -- */
+
+	/* -- Notifications -- */
+	"NoSpawnAvailable": "There is no suitable spawn point available.",
+	"RouteCancelled": "It looks like you cancelled your route.",
+	"TakeParcelsOut": "Press ~INPUT_CONTEXT~ to take the parcels out.",
+	"TakenParcelsOut": "You have taken the parcels out.",
+	"PutSacktruckBack": "Press ~INPUT_CONTEXT~ to put the sacktruck in.",
+	"StopInfoLine1": "Parcels: %parcels%",
+	"StopInfoLine2": "Letters: %letters%",
+	"StopInfoLine3": "Press ~INPUT_CONTEXT~ to deliver the letters and parcels.",
+	"Delivered": "You delivered %parcels% parcels and %letters% letters. Put the sacktruck in and proceed to the next stop",
+	"RouteFinished": "You have finished your route. Drive back to the depot.",
+	"DeliveredParcels": "You delivered %parcels% parcels.",
+	"DeliveredLetters": "You delivered %letters% letters.",
+	"Earnings": "You earned %money%$.",
+	"NotEnough": "You do not have enough parcels or letters.",
+	/* -- Notifications -- */
+
+	/* -- Misc -- */
+	"DeliveryStopBlipName": "Delivery stop",
+	"OpenMenu": "Press ~INPUT_CONTEXT~ to open the menu.",
+	/* -- Misc -- */
+}

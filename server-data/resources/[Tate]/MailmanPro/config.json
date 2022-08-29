@@ -1,0 +1,186 @@
+{
+	/* -- Verification -- */
+	"TransactionID": "tbx-9023521a38864-535d90",
+	/* -- Verification -- */
+
+	/* -- Features -- */
+	"DisableSprinting": false,
+	"DisableJumping": false,
+	"DisableEnteringCarWithSackTruck": false,
+	/* -- Features -- */
+
+	/* -- Depot Blip -- */
+	"EnableDepotBlip": true,
+	"DepotBlipSprite": 568,
+	"DepotBlipColor": 5,
+	"DepotBlipSize": 1.0,
+	"DepotBlipName": "Mail Depot",
+	/* -- Depot Blip -- */
+
+	/* -- Depot Marker -- */
+	"EnableDepotMarker": true,
+	"DepotMarkerColorRed": 10,
+	"DepotMarkerColorGreen": 0,
+	"DepotMarkerColorBlue": 255,
+	"DepotMarkerSize": 5,
+	"DepotMarkerHeight": 1,
+	"DepotMarkerType": 1,
+	/* -- Depot Marker -- */
+
+	/* -- Commands -- */
+	"EnableCancelCommand": true,
+	"CancelCommand": "cancelDelivery",
+	"EnableDriveCommand": true,
+	"DriveCommand": "deliver",
+	"EnableShowStopsCommand": true,
+	"ShowStopsCommand": "showDeliveryStops",
+	/* -- Commands -- */
+
+	/* -- Positions -- */
+	"Depot":{
+		"X":67.08,
+		"Y":118.22,
+		"Z":79.16
+	},
+	/* -- Positions -- */
+
+	/* -- ESX -- */
+	"EnableESX": false,
+	"EnableQBCore": false,
+	"ChargeSecurityDeposit": true,
+	"SecurityDepositAmount": 1000,
+	"RestrictToJob": true,
+	"Job": "gopostal",
+	"RestrictBlipToJob": true,
+	"AddToBank": false,
+	"MoneyPerParcel": 25,
+	"MoneyPerLetter": 10,
+	"EnableItem": true,
+	"ParcelItem": "parcel",
+	"LetterItem": "letter",
+	"ESXSharedObjectEvent": "esx:getSharedObject",
+	"QBCoreSharedObjectEvent": "QBCore:GetObject",
+	/* -- ESX -- */
+
+	/* -- Route Editor -- */
+	"RestrictRouteEditorToJobRank": true,
+	"RouteEditorJobRank": 1,
+	"RestrictRouteEditorToPermission": false,
+	"RouteEditorPermission": "mailmanpro.editor",
+	/* -- Route Editor -- */
+	
+	/* -- Spawn Points -- */
+	"SpawnPoints": [
+			{
+				"X":67.08,
+				"Y":118.22,
+				"Z":79.16
+			},
+			{
+				"X":62.15,
+				"Y":125.41,
+				"Z":79.2
+			},
+			{
+				"X":72.69,
+				"Y":119.46,
+				"Z":79.18
+			}
+	],
+	/* -- Spawn Points -- */	
+
+	/* -- Names -- */
+	"FirstNames": [ 
+		"Luigi",
+		"Donald",
+		"Marco",
+		"Marcus",
+		"Lucas",
+		"Lukas",
+		"Ronald",
+		"Jeffrey",
+		"John",
+		"Steve",
+		"Barack",
+		"Bill",
+		"Michael",
+		"Norman",
+		"Elon",
+		"Earl",
+		"Joe",
+		"Elizabeth",
+		"Marie",
+		"Petra",
+		"Michelle",
+		"Melania",
+		"Lena",
+		"Lina",
+		"Melinda",
+		"Susan",
+		"Angela",
+		"Kamela",
+		"Tim",
+		"Mark",
+		"Timothy",
+		"Richard",
+		"Larry",
+		"Frank",
+		"Timon",
+		"Jack",
+		"Sarazar",
+		"Craig",
+		"Arnold",
+		"Harry",
+		"Sergei",
+		"Eduardo",
+		"Franklin",
+		"Pablo",
+		"Conner",
+		"Laurene",
+		"Podz",
+		"Dwight",
+		"Dwain",
+		"Trevor",
+	],
+	"LastNames": [ 
+		"Trump", 
+		"Biden", 
+		"Clinton", 
+		"Merkel", 
+		"Harris", 
+		"Bezos", 
+		"Freeman", 
+		"Miller", 
+		"Smith", 
+		"Musk", 
+		"Page", 
+		"Jobs", 
+		"Gates", 
+		"Obama", 
+		"Washington", 
+		"Escobar", 
+		"Rohrschinken", 
+		"Jordan", 
+		"Ma", 
+		"Zuckerberg", 
+		"Cuban", 
+		"Buffett", 
+		"Federighi", 
+		"Cook", 
+		"Branson", 
+		"Schwarzenegger", 
+		"Obrian", 
+		"Powell", 
+		"Potter", 
+		"Schiller", 
+		"Cue", 
+		"DeSantos", 
+		"Eisenhower", 
+		"Johnson", 
+		"Nixon", 
+		"Roosevelt", 
+		"De Santa", 
+		"Phillips", 
+	],
+	/* -- Names -- */
+}
