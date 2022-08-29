@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    top: 20%;
+    right: 20%;
+    border-radius: 5px;
+    background: transparent !important;
+}
+
+#buttons {
+    max-height: 75vh;
+    width: 35vw;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html,body {
+    background: transparent !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.button {
+    width: auto;
+    max-width: 45%;
+    height: 10%;
+    background: #222831;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.0rem 0.0rem 0.1rem 0.05rem #000000;
+}
+
+.button:not(.disabled):hover { 
+    background-color: #30475e;
+}
+
+.button > .txt {
+    color: rgb(232, 229, 229);
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+.button > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color:  rgb(232, 229, 229);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.disabled {
+    background: #0d0f13c5;
+}
+
+/* Thermite */
+
+.minigame{
+    margin: 250px auto 20px;
+    width: 450px;
+    min-width: 450px;
+    max-width: 450px;
+    height: 470px;
+    min-height: 470px;
+    max-height: 470px;
+    background-color: #272c34;
+    border: 3px solid rgb(21, 24, 29);
+}
+
+.splash{
+    display: inline-block;
+    width: 100%;
+    margin: 220px auto;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+.splash .hacker{
+    font-size: 65px;
+    margin-bottom: 30px;
+}
+
+.groups {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.group{
+    width: 74px;
+    height: 74px;
+    border: 8px #272c34 solid;
+    background-color: rgb(16, 18, 22);
+}
+
+.proper {
+    background-color: #006600;
+}
+
+.good{
+    background-color: #CCCCCC;
+}
+
+.bad{
+    background-color: #F00F18;
+}
+
+.hidden {
+    display: none;
+}
