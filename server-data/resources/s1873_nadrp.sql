@@ -13,11 +13,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for s1873_nadrp
-CREATE DATABASE IF NOT EXISTS `s1873_nadrp` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `s1873_nadrp`;
+-- Dumping database structure for s1873_ffrp
+CREATE DATABASE IF NOT EXISTS `s1873_ffrp` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `s1873_ffrp`;
 
--- Dumping structure for table s1873_nadrp.addon_account
+-- Dumping structure for table s1873_ffrp.addon_account
 CREATE TABLE IF NOT EXISTS `addon_account` (
   `name` varchar(60) NOT NULL,
   `label` varchar(100) NOT NULL,
@@ -25,11 +25,11 @@ CREATE TABLE IF NOT EXISTS `addon_account` (
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.addon_account: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.addon_account: ~0 rows (approximately)
 /*!40000 ALTER TABLE `addon_account` DISABLE KEYS */;
 /*!40000 ALTER TABLE `addon_account` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.addon_account_data
+-- Dumping structure for table s1873_ffrp.addon_account_data
 CREATE TABLE IF NOT EXISTS `addon_account_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account_name` varchar(100) DEFAULT NULL,
@@ -40,11 +40,11 @@ CREATE TABLE IF NOT EXISTS `addon_account_data` (
   KEY `IDX_addon_account_data_owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.addon_account_data: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.addon_account_data: ~0 rows (approximately)
 /*!40000 ALTER TABLE `addon_account_data` DISABLE KEYS */;
 /*!40000 ALTER TABLE `addon_account_data` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.addon_inventory
+-- Dumping structure for table s1873_ffrp.addon_inventory
 CREATE TABLE IF NOT EXISTS `addon_inventory` (
   `name` varchar(60) NOT NULL,
   `label` varchar(255) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `addon_inventory` (
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.addon_inventory: ~393 rows (approximately)
+-- Dumping data for table s1873_ffrp.addon_inventory: ~393 rows (approximately)
 /*!40000 ALTER TABLE `addon_inventory` DISABLE KEYS */;
 INSERT INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
 	('BayviewLodgeMotel_1', 'BAYVIEW LODGE MOTEL Room 1 Motel Storage', 1),
@@ -450,7 +450,7 @@ INSERT INTO `addon_inventory` (`name`, `label`, `shared`) VALUES
 	('VonCrastenburgMotel_9_bed', 'VON CRASTENBURG MOTEL Room 9 Motel Bed Storage', 1);
 /*!40000 ALTER TABLE `addon_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.addon_inventory_items
+-- Dumping structure for table s1873_ffrp.addon_inventory_items
 CREATE TABLE IF NOT EXISTS `addon_inventory_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `inventory_name` varchar(100) NOT NULL,
@@ -463,11 +463,11 @@ CREATE TABLE IF NOT EXISTS `addon_inventory_items` (
   KEY `index_addon_inventory_inventory_name` (`inventory_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=252 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.addon_inventory_items: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.addon_inventory_items: ~0 rows (approximately)
 /*!40000 ALTER TABLE `addon_inventory_items` DISABLE KEYS */;
 /*!40000 ALTER TABLE `addon_inventory_items` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.admin_logs
+-- Dumping structure for table s1873_ffrp.admin_logs
 CREATE TABLE IF NOT EXISTS `admin_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -477,11 +477,11 @@ CREATE TABLE IF NOT EXISTS `admin_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.admin_logs: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.admin_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `admin_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `admin_logs` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.announces
+-- Dumping structure for table s1873_ffrp.announces
 CREATE TABLE IF NOT EXISTS `announces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `job` varchar(1000) NOT NULL,
@@ -493,22 +493,22 @@ CREATE TABLE IF NOT EXISTS `announces` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.announces: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.announces: ~0 rows (approximately)
 /*!40000 ALTER TABLE `announces` DISABLE KEYS */;
 /*!40000 ALTER TABLE `announces` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.arrests_list
+-- Dumping structure for table s1873_ffrp.arrests_list
 CREATE TABLE IF NOT EXISTS `arrests_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `json_data` longtext NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.arrests_list: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.arrests_list: ~0 rows (approximately)
 /*!40000 ALTER TABLE `arrests_list` DISABLE KEYS */;
 /*!40000 ALTER TABLE `arrests_list` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.billing
+-- Dumping structure for table s1873_ffrp.billing
 CREATE TABLE IF NOT EXISTS `billing` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL,
@@ -520,32 +520,32 @@ CREATE TABLE IF NOT EXISTS `billing` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.billing: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.billing: ~0 rows (approximately)
 /*!40000 ALTER TABLE `billing` DISABLE KEYS */;
 /*!40000 ALTER TABLE `billing` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.bolos_list
+-- Dumping structure for table s1873_ffrp.bolos_list
 CREATE TABLE IF NOT EXISTS `bolos_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `json_data` longtext NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.bolos_list: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.bolos_list: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bolos_list` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bolos_list` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.bought_houses
+-- Dumping structure for table s1873_ffrp.bought_houses
 CREATE TABLE IF NOT EXISTS `bought_houses` (
   `houseid` int(50) NOT NULL,
   PRIMARY KEY (`houseid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.bought_houses: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.bought_houses: ~0 rows (approximately)
 /*!40000 ALTER TABLE `bought_houses` DISABLE KEYS */;
 /*!40000 ALTER TABLE `bought_houses` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.cardealer_vehicles
+-- Dumping structure for table s1873_ffrp.cardealer_vehicles
 CREATE TABLE IF NOT EXISTS `cardealer_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vehicle` varchar(255) NOT NULL,
@@ -553,11 +553,11 @@ CREATE TABLE IF NOT EXISTS `cardealer_vehicles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.cardealer_vehicles: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.cardealer_vehicles: ~0 rows (approximately)
 /*!40000 ALTER TABLE `cardealer_vehicles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `cardealer_vehicles` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.characters
+-- Dumping structure for table s1873_ffrp.characters
 CREATE TABLE IF NOT EXISTS `characters` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL,
@@ -572,11 +572,11 @@ CREATE TABLE IF NOT EXISTS `characters` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.characters: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.characters: ~0 rows (approximately)
 /*!40000 ALTER TABLE `characters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.character_current
+-- Dumping structure for table s1873_ffrp.character_current
 CREATE TABLE IF NOT EXISTS `character_current` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` varchar(255) NOT NULL DEFAULT '',
@@ -594,11 +594,11 @@ CREATE TABLE IF NOT EXISTS `character_current` (
   KEY `IDX_character_current_proptextures` (`proptextures`(3072))
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.character_current: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.character_current: ~0 rows (approximately)
 /*!40000 ALTER TABLE `character_current` DISABLE KEYS */;
 /*!40000 ALTER TABLE `character_current` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.character_face
+-- Dumping structure for table s1873_ffrp.character_face
 CREATE TABLE IF NOT EXISTS `character_face` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL DEFAULT '',
@@ -615,11 +615,11 @@ CREATE TABLE IF NOT EXISTS `character_face` (
   KEY `IDX_character_face_headOverlay` (`headOverlay`(1024))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.character_face: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.character_face: ~0 rows (approximately)
 /*!40000 ALTER TABLE `character_face` DISABLE KEYS */;
 /*!40000 ALTER TABLE `character_face` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.character_outfits
+-- Dumping structure for table s1873_ffrp.character_outfits
 CREATE TABLE IF NOT EXISTS `character_outfits` (
   `cid` varchar(255) DEFAULT NULL,
   `slot` int(11) NOT NULL,
@@ -633,11 +633,11 @@ CREATE TABLE IF NOT EXISTS `character_outfits` (
   KEY `IDX_character_outfits_cid` (`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.character_outfits: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.character_outfits: ~0 rows (approximately)
 /*!40000 ALTER TABLE `character_outfits` DISABLE KEYS */;
 /*!40000 ALTER TABLE `character_outfits` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.cocaine
+-- Dumping structure for table s1873_ffrp.cocaine
 CREATE TABLE IF NOT EXISTS `cocaine` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) DEFAULT NULL,
@@ -647,13 +647,13 @@ CREATE TABLE IF NOT EXISTS `cocaine` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=32768;
 
--- Dumping data for table s1873_nadrp.cocaine: ~1 rows (approximately)
+-- Dumping data for table s1873_ffrp.cocaine: ~1 rows (approximately)
 /*!40000 ALTER TABLE `cocaine` DISABLE KEYS */;
 INSERT INTO `cocaine` (`id`, `type`, `status`, `percent`, `amount`) VALUES
 	(1, 'cocaine', 0, 84, 83);
 /*!40000 ALTER TABLE `cocaine` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.datastore
+-- Dumping structure for table s1873_ffrp.datastore
 CREATE TABLE IF NOT EXISTS `datastore` (
   `name` varchar(60) NOT NULL,
   `label` varchar(255) NOT NULL,
@@ -661,11 +661,11 @@ CREATE TABLE IF NOT EXISTS `datastore` (
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.datastore: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.datastore: ~0 rows (approximately)
 /*!40000 ALTER TABLE `datastore` DISABLE KEYS */;
 /*!40000 ALTER TABLE `datastore` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.datastore_data
+-- Dumping structure for table s1873_ffrp.datastore_data
 CREATE TABLE IF NOT EXISTS `datastore_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
@@ -676,11 +676,11 @@ CREATE TABLE IF NOT EXISTS `datastore_data` (
   KEY `index_datastore_data_name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.datastore_data: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.datastore_data: ~0 rows (approximately)
 /*!40000 ALTER TABLE `datastore_data` DISABLE KEYS */;
 /*!40000 ALTER TABLE `datastore_data` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.disc_ammo
+-- Dumping structure for table s1873_ffrp.disc_ammo
 CREATE TABLE IF NOT EXISTS `disc_ammo` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `owner` text NOT NULL,
@@ -690,11 +690,11 @@ CREATE TABLE IF NOT EXISTS `disc_ammo` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.disc_ammo: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.disc_ammo: ~0 rows (approximately)
 /*!40000 ALTER TABLE `disc_ammo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `disc_ammo` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.disc_inventory
+-- Dumping structure for table s1873_ffrp.disc_inventory
 CREATE TABLE IF NOT EXISTS `disc_inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `owner` text NOT NULL,
@@ -703,11 +703,11 @@ CREATE TABLE IF NOT EXISTS `disc_inventory` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.disc_inventory: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.disc_inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `disc_inventory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `disc_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.disc_inventory_itemdata
+-- Dumping structure for table s1873_ffrp.disc_inventory_itemdata
 CREATE TABLE IF NOT EXISTS `disc_inventory_itemdata` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
@@ -718,11 +718,11 @@ CREATE TABLE IF NOT EXISTS `disc_inventory_itemdata` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.disc_inventory_itemdata: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.disc_inventory_itemdata: ~0 rows (approximately)
 /*!40000 ALTER TABLE `disc_inventory_itemdata` DISABLE KEYS */;
 /*!40000 ALTER TABLE `disc_inventory_itemdata` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.dopeplants
+-- Dumping structure for table s1873_ffrp.dopeplants
 CREATE TABLE IF NOT EXISTS `dopeplants` (
   `owner` varchar(50) NOT NULL,
   `plant` longtext NOT NULL,
@@ -730,11 +730,11 @@ CREATE TABLE IF NOT EXISTS `dopeplants` (
   KEY `owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.dopeplants: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.dopeplants: ~0 rows (approximately)
 /*!40000 ALTER TABLE `dopeplants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dopeplants` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.dpkeybinds
+-- Dumping structure for table s1873_ffrp.dpkeybinds
 CREATE TABLE IF NOT EXISTS `dpkeybinds` (
   `id` varchar(50) DEFAULT NULL,
   `keybind1` varchar(50) DEFAULT 'num4',
@@ -751,11 +751,11 @@ CREATE TABLE IF NOT EXISTS `dpkeybinds` (
   `emote6` varchar(255) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.dpkeybinds: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.dpkeybinds: ~0 rows (approximately)
 /*!40000 ALTER TABLE `dpkeybinds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `dpkeybinds` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.exploiter_logs
+-- Dumping structure for table s1873_ffrp.exploiter_logs
 CREATE TABLE IF NOT EXISTS `exploiter_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -764,11 +764,11 @@ CREATE TABLE IF NOT EXISTS `exploiter_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.exploiter_logs: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.exploiter_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `exploiter_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `exploiter_logs` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.fine_types
+-- Dumping structure for table s1873_ffrp.fine_types
 CREATE TABLE IF NOT EXISTS `fine_types` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `label` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -778,7 +778,7 @@ CREATE TABLE IF NOT EXISTS `fine_types` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table s1873_nadrp.fine_types: ~96 rows (approximately)
+-- Dumping data for table s1873_ffrp.fine_types: ~96 rows (approximately)
 /*!40000 ALTER TABLE `fine_types` DISABLE KEYS */;
 INSERT INTO `fine_types` (`id`, `label`, `amount`, `jailtime`, `category`) VALUES
 	(1, 'Speeding over 10-25 MPH', 150, 0, 0),
@@ -879,7 +879,7 @@ INSERT INTO `fine_types` (`id`, `label`, `amount`, `jailtime`, `category`) VALUE
 	(96, 'Murder of a Goverment Employee', 0, 0, 3);
 /*!40000 ALTER TABLE `fine_types` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.glovebox_inventory
+-- Dumping structure for table s1873_ffrp.glovebox_inventory
 CREATE TABLE IF NOT EXISTS `glovebox_inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(8) NOT NULL,
@@ -889,11 +889,11 @@ CREATE TABLE IF NOT EXISTS `glovebox_inventory` (
   UNIQUE KEY `plate` (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.glovebox_inventory: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.glovebox_inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `glovebox_inventory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `glovebox_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.houses
+-- Dumping structure for table s1873_ffrp.houses
 CREATE TABLE IF NOT EXISTS `houses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `owner` varchar(55) NOT NULL DEFAULT '',
@@ -914,11 +914,11 @@ CREATE TABLE IF NOT EXISTS `houses` (
   KEY `IDX_houses_owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.houses: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.houses: ~0 rows (approximately)
 /*!40000 ALTER TABLE `houses` DISABLE KEYS */;
 /*!40000 ALTER TABLE `houses` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.house_inventory
+-- Dumping structure for table s1873_ffrp.house_inventory
 CREATE TABLE IF NOT EXISTS `house_inventory` (
   `house` varchar(50) DEFAULT NULL,
   `item` varchar(50) DEFAULT NULL,
@@ -927,11 +927,11 @@ CREATE TABLE IF NOT EXISTS `house_inventory` (
   `type` varchar(50) DEFAULT 'item'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.house_inventory: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.house_inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `house_inventory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `house_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.items
+-- Dumping structure for table s1873_ffrp.items
 CREATE TABLE IF NOT EXISTS `items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -944,7 +944,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   KEY `label` (`label`)
 ) ENGINE=InnoDB AUTO_INCREMENT=968 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.items: ~967 rows (approximately)
+-- Dumping data for table s1873_ffrp.items: ~967 rows (approximately)
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
 INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`, `price`) VALUES
 	(1, '9mm_rounds', '9mm Rounds', -1, 0, 1, 100),
@@ -1916,7 +1916,7 @@ INSERT INTO `items` (`id`, `name`, `label`, `limit`, `rare`, `can_remove`, `pric
 	(967, 'fertilizzante', 'Fertilizzante', 5, 0, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.jobs
+-- Dumping structure for table s1873_ffrp.jobs
 CREATE TABLE IF NOT EXISTS `jobs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -1925,7 +1925,7 @@ CREATE TABLE IF NOT EXISTS `jobs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.jobs: ~59 rows (approximately)
+-- Dumping data for table s1873_ffrp.jobs: ~59 rows (approximately)
 /*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
 INSERT INTO `jobs` (`id`, `name`, `label`, `whitelisted`) VALUES
 	(1, 'ambulance', 'Ambulance', 1),
@@ -1989,7 +1989,7 @@ INSERT INTO `jobs` (`id`, `name`, `label`, `whitelisted`) VALUES
 	(62, 'pcbuilder', 'PC Builder', 1);
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.job_grades
+-- Dumping structure for table s1873_ffrp.job_grades
 CREATE TABLE IF NOT EXISTS `job_grades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `job_name` varchar(50) DEFAULT NULL,
@@ -2002,7 +2002,7 @@ CREATE TABLE IF NOT EXISTS `job_grades` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.job_grades: ~124 rows (approximately)
+-- Dumping data for table s1873_ffrp.job_grades: ~124 rows (approximately)
 /*!40000 ALTER TABLE `job_grades` DISABLE KEYS */;
 INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES
 	(1, 'unemployed', 0, 'unemployed', 'Unemployed', 50, '{}', '{}'),
@@ -2131,7 +2131,7 @@ INSERT INTO `job_grades` (`id`, `job_name`, `grade`, `name`, `label`, `salary`, 
 	(274, 'pcbuilder', 0, 'pcbuilder', 'PC Builder', 500, '{}', '{}');
 /*!40000 ALTER TABLE `job_grades` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.kicks
+-- Dumping structure for table s1873_ffrp.kicks
 CREATE TABLE IF NOT EXISTS `kicks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `steamid` varchar(255) NOT NULL,
@@ -2140,18 +2140,18 @@ CREATE TABLE IF NOT EXISTS `kicks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.kicks: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.kicks: ~0 rows (approximately)
 /*!40000 ALTER TABLE `kicks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `kicks` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.licenses
+-- Dumping structure for table s1873_ffrp.licenses
 CREATE TABLE IF NOT EXISTS `licenses` (
   `type` varchar(60) NOT NULL,
   `label` varchar(60) NOT NULL,
   PRIMARY KEY (`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.licenses: ~10 rows (approximately)
+-- Dumping data for table s1873_ffrp.licenses: ~10 rows (approximately)
 /*!40000 ALTER TABLE `licenses` DISABLE KEYS */;
 INSERT INTO `licenses` (`type`, `label`) VALUES
 	('bee_processing', 'Bee Processing License'),
@@ -2166,7 +2166,7 @@ INSERT INTO `licenses` (`type`, `label`) VALUES
 	('weed_processing', 'Weed Processing License');
 /*!40000 ALTER TABLE `licenses` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.mdt_reports
+-- Dumping structure for table s1873_ffrp.mdt_reports
 CREATE TABLE IF NOT EXISTS `mdt_reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `char_id` int(11) DEFAULT NULL,
@@ -2180,11 +2180,11 @@ CREATE TABLE IF NOT EXISTS `mdt_reports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.mdt_reports: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.mdt_reports: ~0 rows (approximately)
 /*!40000 ALTER TABLE `mdt_reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `mdt_reports` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.mdt_warrants
+-- Dumping structure for table s1873_ffrp.mdt_warrants
 CREATE TABLE IF NOT EXISTS `mdt_warrants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -2199,22 +2199,22 @@ CREATE TABLE IF NOT EXISTS `mdt_warrants` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.mdt_warrants: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.mdt_warrants: ~0 rows (approximately)
 /*!40000 ALTER TABLE `mdt_warrants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `mdt_warrants` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.medical_records
+-- Dumping structure for table s1873_ffrp.medical_records
 CREATE TABLE IF NOT EXISTS `medical_records` (
   `name` varchar(255) DEFAULT NULL,
   `text` longtext DEFAULT NULL,
   `date` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.medical_records: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.medical_records: ~0 rows (approximately)
 /*!40000 ALTER TABLE `medical_records` DISABLE KEYS */;
 /*!40000 ALTER TABLE `medical_records` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.owned_vehicles
+-- Dumping structure for table s1873_ffrp.owned_vehicles
 CREATE TABLE IF NOT EXISTS `owned_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `owner` varchar(22) COLLATE utf8mb4_bin NOT NULL,
@@ -2237,11 +2237,11 @@ CREATE TABLE IF NOT EXISTS `owned_vehicles` (
   KEY `IDX_owned_vehicles_harnessDurability` (`harnessDurability`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Dumping data for table s1873_nadrp.owned_vehicles: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.owned_vehicles: ~0 rows (approximately)
 /*!40000 ALTER TABLE `owned_vehicles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `owned_vehicles` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.phone_calls
+-- Dumping structure for table s1873_ffrp.phone_calls
 CREATE TABLE IF NOT EXISTS `phone_calls` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `owner` varchar(10) NOT NULL COMMENT 'Name',
@@ -2252,22 +2252,22 @@ CREATE TABLE IF NOT EXISTS `phone_calls` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.phone_calls: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.phone_calls: ~0 rows (approximately)
 /*!40000 ALTER TABLE `phone_calls` DISABLE KEYS */;
 /*!40000 ALTER TABLE `phone_calls` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.phone_contacts
+-- Dumping structure for table s1873_ffrp.phone_contacts
 CREATE TABLE IF NOT EXISTS `phone_contacts` (
   `identifier` varchar(40) NOT NULL,
   `name` longtext NOT NULL,
   `number` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.phone_contacts: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.phone_contacts: ~0 rows (approximately)
 /*!40000 ALTER TABLE `phone_contacts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `phone_contacts` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.phone_messages
+-- Dumping structure for table s1873_ffrp.phone_messages
 CREATE TABLE IF NOT EXISTS `phone_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `transmitter` varchar(10) NOT NULL DEFAULT '',
@@ -2280,11 +2280,11 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.phone_messages: 0 rows
+-- Dumping data for table s1873_ffrp.phone_messages: 0 rows
 /*!40000 ALTER TABLE `phone_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `phone_messages` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.phone_yp
+-- Dumping structure for table s1873_ffrp.phone_yp
 CREATE TABLE IF NOT EXISTS `phone_yp` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -2293,11 +2293,11 @@ CREATE TABLE IF NOT EXISTS `phone_yp` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3448 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.phone_yp: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.phone_yp: ~0 rows (approximately)
 /*!40000 ALTER TABLE `phone_yp` DISABLE KEYS */;
 /*!40000 ALTER TABLE `phone_yp` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.playerhousing
+-- Dumping structure for table s1873_ffrp.playerhousing
 CREATE TABLE IF NOT EXISTS `playerhousing` (
   `id` int(32) NOT NULL,
   `owner` varchar(50) DEFAULT NULL,
@@ -2307,11 +2307,11 @@ CREATE TABLE IF NOT EXISTS `playerhousing` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.playerhousing: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.playerhousing: ~0 rows (approximately)
 /*!40000 ALTER TABLE `playerhousing` DISABLE KEYS */;
 /*!40000 ALTER TABLE `playerhousing` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.playerhousing_keys
+-- Dumping structure for table s1873_ffrp.playerhousing_keys
 CREATE TABLE IF NOT EXISTS `playerhousing_keys` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL,
@@ -2322,11 +2322,11 @@ CREATE TABLE IF NOT EXISTS `playerhousing_keys` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.playerhousing_keys: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.playerhousing_keys: ~0 rows (approximately)
 /*!40000 ALTER TABLE `playerhousing_keys` DISABLE KEYS */;
 /*!40000 ALTER TABLE `playerhousing_keys` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.players
+-- Dumping structure for table s1873_ffrp.players
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) DEFAULT NULL,
@@ -2352,11 +2352,11 @@ CREATE TABLE IF NOT EXISTS `players` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.players: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.players: ~0 rows (approximately)
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.playerstattoos
+-- Dumping structure for table s1873_ffrp.playerstattoos
 CREATE TABLE IF NOT EXISTS `playerstattoos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL,
@@ -2364,11 +2364,11 @@ CREATE TABLE IF NOT EXISTS `playerstattoos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.playerstattoos: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.playerstattoos: ~0 rows (approximately)
 /*!40000 ALTER TABLE `playerstattoos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `playerstattoos` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.player_clothing
+-- Dumping structure for table s1873_ffrp.player_clothing
 CREATE TABLE IF NOT EXISTS `player_clothing` (
   `identifier` varchar(255) NOT NULL,
   `cid` int(11) NOT NULL,
@@ -2411,11 +2411,11 @@ CREATE TABLE IF NOT EXISTS `player_clothing` (
   `prop_watches_text` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.player_clothing: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.player_clothing: ~0 rows (approximately)
 /*!40000 ALTER TABLE `player_clothing` DISABLE KEYS */;
 /*!40000 ALTER TABLE `player_clothing` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.player_contacts
+-- Dumping structure for table s1873_ffrp.player_contacts
 CREATE TABLE IF NOT EXISTS `player_contacts` (
   `identifier` varchar(50) DEFAULT NULL,
   `cid` int(11) DEFAULT NULL,
@@ -2424,22 +2424,22 @@ CREATE TABLE IF NOT EXISTS `player_contacts` (
   `color` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.player_contacts: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.player_contacts: ~0 rows (approximately)
 /*!40000 ALTER TABLE `player_contacts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `player_contacts` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.player_houses
+-- Dumping structure for table s1873_ffrp.player_houses
 CREATE TABLE IF NOT EXISTS `player_houses` (
   `identifier` varchar(50) DEFAULT NULL,
   `cid` int(11) DEFAULT NULL,
   `house` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.player_houses: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.player_houses: ~0 rows (approximately)
 /*!40000 ALTER TABLE `player_houses` DISABLE KEYS */;
 /*!40000 ALTER TABLE `player_houses` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.pw_motels
+-- Dumping structure for table s1873_ffrp.pw_motels
 CREATE TABLE IF NOT EXISTS `pw_motels` (
   `rentalid` bigint(255) NOT NULL AUTO_INCREMENT,
   `ident` varchar(70) NOT NULL DEFAULT '0',
@@ -2450,11 +2450,11 @@ CREATE TABLE IF NOT EXISTS `pw_motels` (
   KEY `ident` (`ident`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.pw_motels: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.pw_motels: ~0 rows (approximately)
 /*!40000 ALTER TABLE `pw_motels` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pw_motels` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.racing-maps
+-- Dumping structure for table s1873_ffrp.racing-maps
 CREATE TABLE IF NOT EXISTS `racing-maps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `track_name` varchar(50) DEFAULT NULL,
@@ -2464,7 +2464,7 @@ CREATE TABLE IF NOT EXISTS `racing-maps` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=4096;
 
--- Dumping data for table s1873_nadrp.racing-maps: ~11 rows (approximately)
+-- Dumping data for table s1873_ffrp.racing-maps: ~11 rows (approximately)
 /*!40000 ALTER TABLE `racing-maps` DISABLE KEYS */;
 INSERT INTO `racing-maps` (`id`, `track_name`, `description`, `distance`, `checkpoints`) VALUES
 	(17, 'GrandPrix', 'GrandPrix', '16182', '[{"start":true,"flare2x":-98.21,"flare2z":30.45,"flare1x":-116.06,"dist":12.0,"y":6268.01,"x":-107.5,"flare1z":30.57,"z":29.44,"flare1y":6275.88,"flare2y":6259.84},{"start":false,"flare2x":-381.06,"flare2z":30.75,"flare1x":-399.01,"dist":12.0,"y":5982.14,"x":-390.57,"flare1z":30.94,"z":29.79,"flare1y":5990.15,"flare2y":5974.22},{"start":false,"flare2x":-1606.28,"flare2z":60.3,"flare1x":-1619.65,"dist":9.5,"y":4883.53,"x":-1613.48,"flare1z":60.44,"z":59.3,"flare1y":4890.26,"flare2y":4876.77},{"start":false,"flare2x":-2155.64,"flare2z":61.65,"flare1x":-2177.81,"dist":16.0,"y":4441.02,"x":-2167.08,"flare1z":61.59,"z":60.55,"flare1y":4452.39,"flare2y":4429.31},{"start":false,"flare2x":-2552.06,"flare2z":12.56,"flare1x":-2577.73,"dist":13.0,"y":3372.18,"x":-2565.29,"flare1z":12.7,"z":11.57,"flare1y":3374.35,"flare2y":3370.24},{"start":false,"flare2x":-2695.03,"flare2z":17.12,"flare1x":-2725.64,"dist":16.0,"y":2318.85,"x":-2710.73,"flare1z":16.6,"z":15.79,"flare1y":2323.53,"flare2y":2314.21},{"start":false,"flare2x":-2656.16,"flare2z":22.19,"flare1x":-2655.98,"dist":14.5,"y":2285.01,"x":-2655.93,"flare1z":21.81,"z":20.94,"flare1y":2270.88,"flare2y":2299.88},{"start":false,"flare2x":-2159.17,"flare2z":34.69,"flare1x":-2161.52,"dist":12.0,"y":2308.22,"x":-2160.25,"flare1z":34.61,"z":33.6,"flare1y":2296.65,"flare2y":2320.54},{"start":false,"flare2x":-1338.87,"flare2z":25.16,"flare1x":-1323.9,"dist":12.0,"y":2457.95,"x":-1331.05,"flare1z":25.28,"z":24.15,"flare1y":2448.77,"flare2y":2467.53},{"start":false,"flare2x":-1249.0,"flare2z":16.45,"flare1x":-1232.24,"dist":12.0,"y":2551.11,"x":-1240.25,"flare1z":16.45,"z":15.38,"flare1y":2542.68,"flare2y":2559.86},{"start":false,"flare2x":-347.66,"flare2z":43.6,"flare1x":-340.99,"dist":12.0,"y":2884.49,"x":-344.08,"flare1z":43.6,"z":42.55,"flare1y":2873.28,"flare2y":2896.33},{"start":false,"flare2x":294.36,"flare2z":43.95,"flare1x":300.99,"dist":12.0,"y":2639.64,"x":297.93,"flare1z":43.9,"z":42.86,"flare1y":2628.42,"flare2y":2651.48},{"start":false,"flare2x":1230.96,"flare2z":36.92,"flare1x":1231.03,"dist":12.0,"y":2682.23,"x":1231.15,"flare1z":36.94,"z":35.87,"flare1y":2670.61,"flare2y":2694.61},{"start":false,"flare2x":2062.63,"flare2z":44.36,"flare1x":2067.14,"dist":12.0,"y":2996.79,"x":2065.09,"flare1z":44.37,"z":43.3,"flare1y":2985.34,"flare2y":3008.92},{"start":false,"flare2x":2444.77,"flare2z":48.41,"flare1x":2430.51,"dist":9.0,"y":2873.41,"x":2437.43,"flare1z":48.4,"z":47.34,"flare1y":2868.25,"flare2y":2879.23},{"start":false,"flare2x":2456.45,"flare2z":47.84,"flare1x":2469.03,"dist":8.0,"y":2885.46,"x":2463.12,"flare1z":47.29,"z":46.48,"flare1y":2880.64,"flare2y":2890.51},{"start":false,"flare2x":2824.8,"flare2z":54.3,"flare1x":2848.36,"dist":12.5,"y":3473.78,"x":2836.98,"flare1z":54.26,"z":53.21,"flare1y":3469.6,"flare2y":3477.95},{"start":false,"flare2x":2769.8,"flare2z":46.2,"flare1x":2792.96,"dist":12.0,"y":4509.01,"x":2781.7,"flare1z":46.18,"z":45.12,"flare1y":4511.93,"flare2y":4505.63},{"start":false,"flare2x":1700.56,"flare2z":31.91,"flare1x":1706.57,"dist":13.5,"y":6381.14,"x":1703.51,"flare1z":31.88,"z":30.82,"flare1y":6393.91,"flare2y":6367.58},{"start":false,"flare2x":118.07,"flare2z":30.45,"flare1x":94.27,"dist":17.0,"y":6482.64,"x":105.81,"flare1z":30.79,"z":29.56,"flare1y":6494.61,"flare2y":6470.33}]'),
@@ -2480,7 +2480,7 @@ INSERT INTO `racing-maps` (`id`, `track_name`, `description`, `distance`, `check
 	(28, 'High Stakes', 'Where big ballers come to play. -Ogled Jones', '9871', '[{"flare1z":75.06,"dist":15.0,"z":73.68,"flare1y":-113.92,"flare2x":673.69,"flare2y":-88.73,"flare2z":74.67,"start":true,"flare1x":657.4,"y":-100.5,"x":665.23},{"flare1z":67.68,"dist":15.0,"z":66.34,"flare1y":-393.32,"flare2x":1074.11,"flare2y":-415.76,"flare2z":67.36,"start":false,"flare1x":1054.2,"y":-404.5,"x":1064.98},{"flare1z":57.32,"dist":15.0,"z":56.63,"flare1y":-677.73,"flare2x":994.14,"flare2y":-668.32,"flare2z":58.26,"start":false,"flare1x":965.67,"y":-672.2,"x":980.18},{"flare1z":56.44,"dist":15.0,"z":55.54,"flare1y":-795.71,"flare2x":1203.51,"flare2y":-802.54,"flare2z":56.92,"start":false,"flare1x":1174.3,"y":-798.56,"x":1189.58},{"flare1z":52.95,"dist":15.0,"z":50.38,"flare1y":-1558.31,"flare2x":1323.83,"flare2y":-1529.0,"flare2z":50.43,"start":false,"flare1x":1329.69,"y":-1543.28,"x":1326.01},{"flare1z":79.4,"dist":15.0,"z":78.37,"flare1y":-951.17,"flare2x":1998.22,"flare2y":-932.85,"flare2z":79.65,"start":false,"flare1x":1974.47,"y":-941.13,"x":1986.33},{"flare1z":108.31,"dist":15.0,"z":107.01,"flare1y":-2142.9,"flare2x":1675.59,"flare2y":-2159.26,"flare2z":108.1,"start":false,"flare1x":1650.44,"y":-2150.94,"x":1663.73},{"flare1z":37.77,"dist":15.0,"z":36.35,"flare1y":-2563.57,"flare2x":1195.83,"flare2y":-2537.2,"flare2z":37.38,"start":false,"flare1x":1210.14,"y":-2550.14,"x":1202.37},{"flare1z":38.53,"dist":8.0,"z":37.69,"flare1y":-1928.11,"flare2x":1212.13,"flare2y":-1934.08,"flare2z":39.04,"start":false,"flare1x":1226.97,"y":-1931.95,"x":1219.32},{"flare1z":37.82,"dist":10.5,"z":36.51,"flare1y":-1834.54,"flare2x":1165.21,"flare2y":-1853.76,"flare2z":37.57,"start":false,"flare1x":1156.75,"y":-1844.34,"x":1161.85},{"flare1z":31.86,"dist":10.5,"z":30.43,"flare1y":-1859.97,"flare2x":940.51,"flare2y":-1857.85,"flare2z":31.37,"start":false,"flare1x":961.4,"y":-1859.58,"x":950.36},{"flare1z":31.58,"dist":10.5,"z":30.43,"flare1y":-1752.3,"flare2x":936.75,"flare2y":-1773.16,"flare2z":31.64,"start":false,"flare1x":939.17,"y":-1763.33,"x":938.6},{"flare1z":30.19,"dist":10.5,"z":28.8,"flare1y":-1717.57,"flare2x":822.53,"flare2y":-1714.33,"flare2z":29.8,"start":false,"flare1x":843.28,"y":-1716.57,"x":832.28},{"flare1z":26.64,"dist":12.5,"z":25.45,"flare1y":-1335.08,"flare2x":789.51,"flare2y":-1334.62,"flare2z":26.62,"start":false,"flare1x":814.51,"y":-1335.27,"x":801.48},{"flare1z":28.75,"dist":10.0,"z":27.42,"flare1y":-998.26,"flare2x":734.35,"flare2y":-1018.0,"flare2z":28.61,"start":false,"flare1x":731.18,"y":-1008.55,"x":733.47},{"flare1z":29.73,"dist":10.0,"z":28.62,"flare1y":-1081.2,"flare2x":407.67,"flare2y":-1080.43,"flare2z":29.86,"start":false,"flare1x":387.69,"y":-1080.09,"x":398.18},{"flare1z":29.53,"dist":10.0,"z":28.61,"flare1y":-1120.31,"flare2x":371.38,"flare2y":-1140.28,"flare2z":30.03,"start":false,"flare1x":370.37,"y":-1130.79,"x":371.62},{"flare1z":31.07,"dist":14.5,"z":28.59,"flare1y":-1166.14,"flare2x":227.19,"flare2y":-1162.83,"flare2z":28.57,"start":false,"flare1x":198.49,"y":-1163.72,"x":213.27},{"flare1z":29.7,"dist":11.5,"z":28.6,"flare1y":-1424.43,"flare2x":190.21,"flare2y":-1405.53,"flare2z":29.84,"start":false,"flare1x":177.1,"y":-1414.14,"x":183.37},{"flare1z":29.43,"dist":8.5,"z":28.46,"flare1y":-1606.67,"flare2x":504.66,"flare2y":-1595.68,"flare2z":29.83,"start":false,"flare1x":517.62,"y":-1601.37,"x":510.29},{"flare1z":29.64,"dist":8.5,"z":28.44,"flare1y":-1522.15,"flare2x":533.6,"flare2y":-1534.9,"flare2z":29.61,"start":false,"flare1x":544.85,"y":-1529.39,"x":539.41},{"flare1z":27.86,"dist":8.5,"z":26.83,"flare1y":-945.27,"flare2x":474.14,"flare2y":-962.27,"flare2z":28.2,"start":false,"flare1x":474.41,"y":-954.32,"x":474.95},{"flare1z":29.57,"dist":15.0,"z":28.27,"flare1y":-926.38,"flare2x":254.6,"flare2y":-915.79,"flare2z":29.32,"start":false,"flare1x":282.67,"y":-921.56,"x":267.89},{"flare1z":29.91,"dist":15.0,"z":28.78,"flare1y":-833.81,"flare2x":247.65,"flare2y":-862.32,"flare2z":30.05,"start":false,"flare1x":257.01,"y":-848.78,"x":252.83},{"flare1z":32.42,"dist":15.0,"z":31.26,"flare1y":-783.48,"flare2x":176.72,"flare2y":-773.04,"flare2z":32.51,"start":false,"flare1x":204.85,"y":-778.72,"x":190.05},{"flare1z":44.35,"dist":7.0,"z":43.19,"flare1y":-443.18,"flare2x":327.72,"flare2y":-435.81,"flare2z":44.42,"start":false,"flare1x":339.62,"y":-439.84,"x":332.84},{"flare1z":48.99,"dist":10.5,"z":47.83,"flare1y":-253.73,"flare2x":508.99,"flare2y":-244.61,"flare2z":49.11,"start":false,"flare1x":527.91,"y":-249.58,"x":517.67},{"flare1z":60.17,"dist":10.5,"z":58.22,"flare1y":-140.51,"flare2x":469.53,"flare2y":-160.6,"flare2z":58.94,"start":false,"flare1x":475.51,"y":-151.24,"x":473.03},{"flare1z":69.07,"dist":13.5,"z":68.47,"flare1y":-95.85,"flare2x":414.01,"flare2y":-80.06,"flare2z":70.38,"start":false,"flare1x":435.88,"y":-88.19,"x":424.12},{"flare1z":95.0,"dist":7.5,"z":94.23,"flare1y":38.4,"flare2x":527.46,"flare2y":52.71,"flare2z":95.83,"start":false,"flare1x":531.88,"y":45.85,"x":528.84},{"flare1z":83.97,"dist":10.5,"z":82.86,"flare1y":-12.63,"flare2x":680.62,"flare2y":-25.0,"flare2z":83.98,"start":false,"flare1x":663.66,"y":-18.55,"x":672.97}]');
 /*!40000 ALTER TABLE `racing-maps` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.rented_vehicles
+-- Dumping structure for table s1873_ffrp.rented_vehicles
 CREATE TABLE IF NOT EXISTS `rented_vehicles` (
   `vehicle` varchar(60) NOT NULL,
   `plate` varchar(12) NOT NULL,
@@ -2491,11 +2491,11 @@ CREATE TABLE IF NOT EXISTS `rented_vehicles` (
   PRIMARY KEY (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.rented_vehicles: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.rented_vehicles: ~0 rows (approximately)
 /*!40000 ALTER TABLE `rented_vehicles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rented_vehicles` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.society_moneywash
+-- Dumping structure for table s1873_ffrp.society_moneywash
 CREATE TABLE IF NOT EXISTS `society_moneywash` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(60) NOT NULL,
@@ -2504,11 +2504,11 @@ CREATE TABLE IF NOT EXISTS `society_moneywash` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.society_moneywash: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.society_moneywash: ~0 rows (approximately)
 /*!40000 ALTER TABLE `society_moneywash` DISABLE KEYS */;
 /*!40000 ALTER TABLE `society_moneywash` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.trunk_inventory
+-- Dumping structure for table s1873_ffrp.trunk_inventory
 CREATE TABLE IF NOT EXISTS `trunk_inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(8) NOT NULL,
@@ -2518,11 +2518,11 @@ CREATE TABLE IF NOT EXISTS `trunk_inventory` (
   UNIQUE KEY `plate` (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.trunk_inventory: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.trunk_inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `trunk_inventory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `trunk_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.tweets
+-- Dumping structure for table s1873_ffrp.tweets
 CREATE TABLE IF NOT EXISTS `tweets` (
   `handle` longtext NOT NULL,
   `message` varchar(500) NOT NULL,
@@ -2532,11 +2532,11 @@ CREATE TABLE IF NOT EXISTS `tweets` (
   KEY `IDX_tweets_time` (`time`(768))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.tweets: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.tweets: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tweets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tweets` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.users
+-- Dumping structure for table s1873_ffrp.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) COLLATE utf8mb4_bin NOT NULL,
@@ -2569,11 +2569,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `IDX_users_identifier` (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Dumping data for table s1873_nadrp.users: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.users: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_accounts
+-- Dumping structure for table s1873_ffrp.user_accounts
 CREATE TABLE IF NOT EXISTS `user_accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(22) NOT NULL,
@@ -2583,11 +2583,11 @@ CREATE TABLE IF NOT EXISTS `user_accounts` (
   KEY `identifier` (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_accounts: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_accounts: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_accounts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_accounts` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_bans
+-- Dumping structure for table s1873_ffrp.user_bans
 CREATE TABLE IF NOT EXISTS `user_bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
@@ -2598,11 +2598,11 @@ CREATE TABLE IF NOT EXISTS `user_bans` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.user_bans: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_bans: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_bans` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_bans` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_convictions
+-- Dumping structure for table s1873_ffrp.user_convictions
 CREATE TABLE IF NOT EXISTS `user_convictions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `char_id` int(11) DEFAULT NULL,
@@ -2612,11 +2612,11 @@ CREATE TABLE IF NOT EXISTS `user_convictions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_convictions: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_convictions: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_convictions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_convictions` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_identifiers
+-- Dumping structure for table s1873_ffrp.user_identifiers
 CREATE TABLE IF NOT EXISTS `user_identifiers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) NOT NULL,
@@ -2631,11 +2631,11 @@ CREATE TABLE IF NOT EXISTS `user_identifiers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.user_identifiers: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_identifiers: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_identifiers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_identifiers` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_inventory
+-- Dumping structure for table s1873_ffrp.user_inventory
 CREATE TABLE IF NOT EXISTS `user_inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(22) NOT NULL,
@@ -2645,11 +2645,11 @@ CREATE TABLE IF NOT EXISTS `user_inventory` (
   KEY `identifier` (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_inventory: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_inventory: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_inventory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_inventory` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_inventory2
+-- Dumping structure for table s1873_ffrp.user_inventory2
 CREATE TABLE IF NOT EXISTS `user_inventory2` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `item_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
@@ -2663,32 +2663,32 @@ CREATE TABLE IF NOT EXISTS `user_inventory2` (
   KEY `IDX_user_inventory2_name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_inventory2: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_inventory2: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_inventory2` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_inventory2` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_keybinds
+-- Dumping structure for table s1873_ffrp.user_keybinds
 CREATE TABLE IF NOT EXISTS `user_keybinds` (
   `identifier` varchar(100) NOT NULL,
   `keybinds` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.user_keybinds: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_keybinds: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_keybinds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_keybinds` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_lastcharacter
+-- Dumping structure for table s1873_ffrp.user_lastcharacter
 CREATE TABLE IF NOT EXISTS `user_lastcharacter` (
   `steamid` varchar(255) NOT NULL,
   `charid` int(11) NOT NULL,
   PRIMARY KEY (`steamid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_lastcharacter: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_lastcharacter: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_lastcharacter` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_lastcharacter` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_licenses
+-- Dumping structure for table s1873_ffrp.user_licenses
 CREATE TABLE IF NOT EXISTS `user_licenses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(60) NOT NULL,
@@ -2697,11 +2697,11 @@ CREATE TABLE IF NOT EXISTS `user_licenses` (
   KEY `owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_licenses: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_licenses: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_licenses` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_licenses` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.user_mdt
+-- Dumping structure for table s1873_ffrp.user_mdt
 CREATE TABLE IF NOT EXISTS `user_mdt` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `char_id` int(11) DEFAULT NULL,
@@ -2711,17 +2711,17 @@ CREATE TABLE IF NOT EXISTS `user_mdt` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.user_mdt: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.user_mdt: ~0 rows (approximately)
 /*!40000 ALTER TABLE `user_mdt` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_mdt` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicleaddon_categories
+-- Dumping structure for table s1873_ffrp.vehicleaddon_categories
 CREATE TABLE IF NOT EXISTS `vehicleaddon_categories` (
   `name` varchar(60) NOT NULL,
   `label` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicleaddon_categories: ~3 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicleaddon_categories: ~3 rows (approximately)
 /*!40000 ALTER TABLE `vehicleaddon_categories` DISABLE KEYS */;
 INSERT INTO `vehicleaddon_categories` (`name`, `label`) VALUES
 	('addon', 'Addon'),
@@ -2729,7 +2729,7 @@ INSERT INTO `vehicleaddon_categories` (`name`, `label`) VALUES
 	('addon', 'Addon');
 /*!40000 ALTER TABLE `vehicleaddon_categories` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles
+-- Dumping structure for table s1873_ffrp.vehicles
 CREATE TABLE IF NOT EXISTS `vehicles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
@@ -2742,7 +2742,7 @@ CREATE TABLE IF NOT EXISTS `vehicles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=246 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicles: ~245 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles: ~245 rows (approximately)
 /*!40000 ALTER TABLE `vehicles` DISABLE KEYS */;
 INSERT INTO `vehicles` (`id`, `name`, `model`, `price`, `category`, `inshop`, `commission`, `baseprice`) VALUES
 	(1, 'Adder', 'adder', 900000, 'super', 0, 0, 0),
@@ -2992,7 +2992,7 @@ INSERT INTO `vehicles` (`id`, `name`, `model`, `price`, `category`, `inshop`, `c
 	(245, 'Elegy2', 'elegy', 300000, 'sports', 1, 0, 0);
 /*!40000 ALTER TABLE `vehicles` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehiclesaddon
+-- Dumping structure for table s1873_ffrp.vehiclesaddon
 CREATE TABLE IF NOT EXISTS `vehiclesaddon` (
   `name` varchar(60) NOT NULL,
   `model` varchar(60) NOT NULL,
@@ -3001,11 +3001,11 @@ CREATE TABLE IF NOT EXISTS `vehiclesaddon` (
   PRIMARY KEY (`model`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehiclesaddon: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehiclesaddon: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehiclesaddon` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehiclesaddon` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_display
+-- Dumping structure for table s1873_ffrp.vehicles_display
 CREATE TABLE IF NOT EXISTS `vehicles_display` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3014,7 +3014,7 @@ CREATE TABLE IF NOT EXISTS `vehicles_display` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicles_display: ~7 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_display: ~7 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_display` DISABLE KEYS */;
 INSERT INTO `vehicles_display` (`ID`, `model`, `commission`, `baseprice`) VALUES
 	(1, 'bati', 15, 75000),
@@ -3026,7 +3026,7 @@ INSERT INTO `vehicles_display` (`ID`, `model`, `commission`, `baseprice`) VALUES
 	(7, 'vindicator', 15, 75000);
 /*!40000 ALTER TABLE `vehicles_display` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_display_bikeshop
+-- Dumping structure for table s1873_ffrp.vehicles_display_bikeshop
 CREATE TABLE IF NOT EXISTS `vehicles_display_bikeshop` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3035,7 +3035,7 @@ CREATE TABLE IF NOT EXISTS `vehicles_display_bikeshop` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 AVG_ROW_LENGTH=2340;
 
--- Dumping data for table s1873_nadrp.vehicles_display_bikeshop: ~7 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_display_bikeshop: ~7 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_display_bikeshop` DISABLE KEYS */;
 INSERT INTO `vehicles_display_bikeshop` (`ID`, `model`, `commission`, `baseprice`) VALUES
 	(1, 'pcj', 15, 75000),
@@ -3047,7 +3047,7 @@ INSERT INTO `vehicles_display_bikeshop` (`ID`, `model`, `commission`, `baseprice
 	(7, 'sanctus', 15, 80000);
 /*!40000 ALTER TABLE `vehicles_display_bikeshop` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_display_imports
+-- Dumping structure for table s1873_ffrp.vehicles_display_imports
 CREATE TABLE IF NOT EXISTS `vehicles_display_imports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3056,7 +3056,7 @@ CREATE TABLE IF NOT EXISTS `vehicles_display_imports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicles_display_imports: ~5 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_display_imports: ~5 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_display_imports` DISABLE KEYS */;
 INSERT INTO `vehicles_display_imports` (`id`, `model`, `commission`, `baseprice`) VALUES
 	(1, 'esv', 15, 850000),
@@ -3066,7 +3066,7 @@ INSERT INTO `vehicles_display_imports` (`id`, `model`, `commission`, `baseprice`
 	(5, 'mig', 15, 2000000);
 /*!40000 ALTER TABLE `vehicles_display_imports` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_display_tuner
+-- Dumping structure for table s1873_ffrp.vehicles_display_tuner
 CREATE TABLE IF NOT EXISTS `vehicles_display_tuner` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3075,7 +3075,7 @@ CREATE TABLE IF NOT EXISTS `vehicles_display_tuner` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicles_display_tuner: ~7 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_display_tuner: ~7 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_display_tuner` DISABLE KEYS */;
 INSERT INTO `vehicles_display_tuner` (`ID`, `model`, `commission`, `baseprice`) VALUES
 	(1, 'schwarzer2', 15, 435000),
@@ -3087,7 +3087,7 @@ INSERT INTO `vehicles_display_tuner` (`ID`, `model`, `commission`, `baseprice`) 
 	(7, 'dc5', 15, 455000);
 /*!40000 ALTER TABLE `vehicles_display_tuner` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_sold_bikeshop
+-- Dumping structure for table s1873_ffrp.vehicles_sold_bikeshop
 CREATE TABLE IF NOT EXISTS `vehicles_sold_bikeshop` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3101,11 +3101,11 @@ CREATE TABLE IF NOT EXISTS `vehicles_sold_bikeshop` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=1365;
 
--- Dumping data for table s1873_nadrp.vehicles_sold_bikeshop: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_sold_bikeshop: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_sold_bikeshop` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicles_sold_bikeshop` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_sold_imports
+-- Dumping structure for table s1873_ffrp.vehicles_sold_imports
 CREATE TABLE IF NOT EXISTS `vehicles_sold_imports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3119,11 +3119,11 @@ CREATE TABLE IF NOT EXISTS `vehicles_sold_imports` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.vehicles_sold_imports: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_sold_imports: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_sold_imports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicles_sold_imports` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_sold_pdm
+-- Dumping structure for table s1873_ffrp.vehicles_sold_pdm
 CREATE TABLE IF NOT EXISTS `vehicles_sold_pdm` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3137,11 +3137,11 @@ CREATE TABLE IF NOT EXISTS `vehicles_sold_pdm` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=1365;
 
--- Dumping data for table s1873_nadrp.vehicles_sold_pdm: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_sold_pdm: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_sold_pdm` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicles_sold_pdm` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicles_sold_tuner
+-- Dumping structure for table s1873_ffrp.vehicles_sold_tuner
 CREATE TABLE IF NOT EXISTS `vehicles_sold_tuner` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(50) NOT NULL,
@@ -3155,18 +3155,18 @@ CREATE TABLE IF NOT EXISTS `vehicles_sold_tuner` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.vehicles_sold_tuner: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicles_sold_tuner: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicles_sold_tuner` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicles_sold_tuner` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicle_categories
+-- Dumping structure for table s1873_ffrp.vehicle_categories
 CREATE TABLE IF NOT EXISTS `vehicle_categories` (
   `name` varchar(60) NOT NULL,
   `label` varchar(60) NOT NULL,
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicle_categories: ~11 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicle_categories: ~11 rows (approximately)
 /*!40000 ALTER TABLE `vehicle_categories` DISABLE KEYS */;
 INSERT INTO `vehicle_categories` (`name`, `label`) VALUES
 	('compacts', 'Compacts'),
@@ -3182,7 +3182,7 @@ INSERT INTO `vehicle_categories` (`name`, `label`) VALUES
 	('vans', 'Vans');
 /*!40000 ALTER TABLE `vehicle_categories` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicle_mdt
+-- Dumping structure for table s1873_ffrp.vehicle_mdt
 CREATE TABLE IF NOT EXISTS `vehicle_mdt` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(255) DEFAULT NULL,
@@ -3191,11 +3191,11 @@ CREATE TABLE IF NOT EXISTS `vehicle_mdt` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.vehicle_mdt: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicle_mdt: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicle_mdt` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicle_mdt` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicle_parts
+-- Dumping structure for table s1873_ffrp.vehicle_parts
 CREATE TABLE IF NOT EXISTS `vehicle_parts` (
   `id` int(11) NOT NULL,
   `plate` varchar(100) NOT NULL,
@@ -3203,11 +3203,11 @@ CREATE TABLE IF NOT EXISTS `vehicle_parts` (
   `mileage` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.vehicle_parts: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicle_parts: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicle_parts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicle_parts` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.vehicle_sold
+-- Dumping structure for table s1873_ffrp.vehicle_sold
 CREATE TABLE IF NOT EXISTS `vehicle_sold` (
   `client` varchar(50) NOT NULL,
   `model` varchar(50) NOT NULL,
@@ -3217,22 +3217,22 @@ CREATE TABLE IF NOT EXISTS `vehicle_sold` (
   PRIMARY KEY (`plate`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table s1873_nadrp.vehicle_sold: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.vehicle_sold: ~0 rows (approximately)
 /*!40000 ALTER TABLE `vehicle_sold` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vehicle_sold` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.warrants_list
+-- Dumping structure for table s1873_ffrp.warrants_list
 CREATE TABLE IF NOT EXISTS `warrants_list` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `json_data` longtext NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table s1873_nadrp.warrants_list: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.warrants_list: ~0 rows (approximately)
 /*!40000 ALTER TABLE `warrants_list` DISABLE KEYS */;
 /*!40000 ALTER TABLE `warrants_list` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.weed
+-- Dumping structure for table s1873_ffrp.weed
 CREATE TABLE IF NOT EXISTS `weed` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `Spot` int(10) NOT NULL,
@@ -3246,11 +3246,11 @@ CREATE TABLE IF NOT EXISTS `weed` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table s1873_nadrp.weed: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.weed: ~0 rows (approximately)
 /*!40000 ALTER TABLE `weed` DISABLE KEYS */;
 /*!40000 ALTER TABLE `weed` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp.weed_plants
+-- Dumping structure for table s1873_ffrp.weed_plants
 CREATE TABLE IF NOT EXISTS `weed_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) NOT NULL,
@@ -3263,11 +3263,11 @@ CREATE TABLE IF NOT EXISTS `weed_plants` (
   KEY `IDX_weed_plants` (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=606;
 
--- Dumping data for table s1873_nadrp.weed_plants: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp.weed_plants: ~0 rows (approximately)
 /*!40000 ALTER TABLE `weed_plants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `weed_plants` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp._business_logs
+-- Dumping structure for table s1873_ffrp._business_logs
 CREATE TABLE IF NOT EXISTS `_business_logs` (
   `identifier` varchar(50) NOT NULL DEFAULT '',
   `name` varchar(100) DEFAULT NULL,
@@ -3277,11 +3277,11 @@ CREATE TABLE IF NOT EXISTS `_business_logs` (
   KEY `identifier` (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=3276;
 
--- Dumping data for table s1873_nadrp._business_logs: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp._business_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `_business_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `_business_logs` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp._exploiter_logs
+-- Dumping structure for table s1873_ffrp._exploiter_logs
 CREATE TABLE IF NOT EXISTS `_exploiter_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -3290,11 +3290,11 @@ CREATE TABLE IF NOT EXISTS `_exploiter_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=32768;
 
--- Dumping data for table s1873_nadrp._exploiter_logs: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp._exploiter_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `_exploiter_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `_exploiter_logs` ENABLE KEYS */;
 
--- Dumping structure for table s1873_nadrp._housing_logs
+-- Dumping structure for table s1873_ffrp._housing_logs
 CREATE TABLE IF NOT EXISTS `_housing_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(255) DEFAULT NULL,
@@ -3305,7 +3305,7 @@ CREATE TABLE IF NOT EXISTS `_housing_logs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AVG_ROW_LENGTH=32768;
 
--- Dumping data for table s1873_nadrp._housing_logs: ~0 rows (approximately)
+-- Dumping data for table s1873_ffrp._housing_logs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `_housing_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `_housing_logs` ENABLE KEYS */;
 
