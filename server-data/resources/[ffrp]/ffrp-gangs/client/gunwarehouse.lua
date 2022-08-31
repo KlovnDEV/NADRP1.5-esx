@@ -15,7 +15,7 @@ local whitelisted = {
     17, -- Loke
     317,--Panduko
     751, --Vitaly
-    391, --Barry
+    --1, --Barry
     --1114,
 }
 

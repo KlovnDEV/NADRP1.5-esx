@@ -2018,6 +2018,70 @@ itemList["stungunammo"] = {
 
 // custom items with decay
 
+
+//craft
+
+itemList["craftingtable"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "Crafting Table",
+    price: 100,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "craftingtable.png",
+    deg: false
+}
+
+itemList["recipe_bagofdope"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "Recipe: Bag of Dope",
+    price: 10,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "recipe_bagofdope.png",
+    deg: false
+}
+
+itemList["bagofdope"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "Recipe: Bag of Dope",
+    price: 10,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "bagofdope.png",
+    deg: false
+}
+
+itemList["dopebag"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "Recipe: Bag of Dope",
+    price: 10,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "dopebag.png",
+    deg: false
+}
+
+itemList["bagofdope"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "Recipe: Bag of Dope",
+    price: 10,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "bagofdope.png",
+    deg: false
+}
+
+
 itemList["tuner"] = {
     fullyDegrades: true,
     decayrate: 2.0,

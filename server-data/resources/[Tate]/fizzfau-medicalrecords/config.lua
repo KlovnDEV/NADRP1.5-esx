@@ -1,4 +1,0 @@
-Config = {
-    ghmatti = true,
-    Webhook = "",
-}
