@@ -6,7 +6,7 @@ local found = false
 local spawnedPeds = {}
 local whitelisted = {
    --27, -- Reece
-   505,
+   1,
    540,
    1186,
 }

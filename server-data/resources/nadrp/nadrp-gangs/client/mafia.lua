@@ -16,7 +16,7 @@ local whitelisted = {
     755, --Labunga
     1867, --Nanoid
     2659, --Ninj
-    2783
+    1
 }
 
 Citizen.CreateThread(function()

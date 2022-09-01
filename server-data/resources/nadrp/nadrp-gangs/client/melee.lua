@@ -11,7 +11,7 @@ local locations = {
 }
 
 local whitelisted = {
-    505,
+    1,
 }
 
 Citizen.CreateThread(function()
