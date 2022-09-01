@@ -249,17 +249,17 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
         isActive = true
         chance = math.random(1,7)
         time = 10000
-        local finished = exports['ffrp-skillbar']:taskBar(5000, math.random(5,15))
+        local finished = exports['nadrp-skillbar']:taskBar(5000, math.random(5,15))
         if finished ~= 100 then
             exports['mythic_notify']:SendAlert('error', 'failed')
             lockpicking = false
         else
-            local finished2 = exports['ffrp-skillbar']:taskBar(4000, math.random(5,15))
+            local finished2 = exports['nadrp-skillbar']:taskBar(4000, math.random(5,15))
             if finished2 ~= 100 then
                 exports['mythic_notify']:SendAlert('error', 'failed')
                 lockpicking = false
             else
-                local finished3 = exports['ffrp-skillbar']:taskBar(2000, math.random(5,15))
+                local finished3 = exports['nadrp-skillbar']:taskBar(2000, math.random(5,15))
                 if finished3 ~= 100 then
                     exports['mythic_notify']:SendAlert('error', 'failed')
                     lockpicking = false
@@ -314,22 +314,22 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
         end
         isActive = true
         TriggerEvent("animation:repaircar", 28)
-        local finished = exports['ffrp-skillbar']:taskBar(5000,math.random(5,15))
+        local finished = exports['nadrp-skillbar']:taskBar(5000,math.random(5,15))
         if finished ~= 100 then
             exports["mythic_notify"]:SendAlert('error', 'Failed...')
             giveKeysHotwire(false, veh, true)
         else
-            local finished2 = exports['ffrp-skillbar']:taskBar(4000,math.random(5,15))
+            local finished2 = exports['nadrp-skillbar']:taskBar(4000,math.random(5,15))
             if finished2 ~= 100 then
                 exports["mythic_notify"]:SendAlert('error', 'Failed...')
                 giveKeysHotwire(false, veh, true)
             else
-                local finished3 = exports['ffrp-skillbar']:taskBar(3000,math.random(5,15))
+                local finished3 = exports['nadrp-skillbar']:taskBar(3000,math.random(5,15))
                 if finished3 ~= 100 then
                     exports["mythic_notify"]:SendAlert('error', 'Failed...')
                     giveKeysHotwire(false, veh, true)
                 else
-                    local finished4 = exports['ffrp-skillbar']:taskBar(1500,math.random(5,15))
+                    local finished4 = exports['nadrp-skillbar']:taskBar(1500,math.random(5,15))
                     if finished4 ~= 100 then
                         exports["mythic_notify"]:SendAlert('error', 'Failed...')
                         giveKeysHotwire(false, veh, true)
@@ -365,7 +365,7 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
 
         isActive = true
         TriggerEvent("animation:repaircar", 40)
-        local finished = exports['ffrp-taskbar']:taskBar(30000, 'Attempting hotwire')
+        local finished = exports['nadrp-taskbar']:taskBar(30000, 'Attempting hotwire')
         if finished == 100 then
             local chance = math.random(1,100)
             if chance <= 75 then 
@@ -538,7 +538,7 @@ Citizen.CreateThread( function()
                 if pedDriver ~= 0 and (not IsPedAPlayer(pedDriver) or IsEntityDead(pedDriver)) then
                     if IsEntityDead(pedDriver) then
                         -- add your alert
-                        local finished = exports['ffrp-taskbar']:taskBar(3000, 'Taking Keys')
+                        local finished = exports['nadrp-taskbar']:taskBar(3000, 'Taking Keys')
                         if finished == 100 then 
                             --Citizen.Wait(4500)
                             exports['mythic_notify']:SendAlert('inform', 'You got the keys to the car')
@@ -549,7 +549,7 @@ Citizen.CreateThread( function()
 
                         if math.random(100) > 95 then
                             -- add your alert
-                            local finished = exports['ffrp-taskbar']:taskBar(3000, 'Taking Keys')
+                            local finished = exports['nadrp-taskbar']:taskBar(3000, 'Taking Keys')
                             if finished == 100 then
                                 --Citizen.Wait(4500)
                                 exports['mythic_notify']:SendAlert('inform', 'You got the keys to the car')

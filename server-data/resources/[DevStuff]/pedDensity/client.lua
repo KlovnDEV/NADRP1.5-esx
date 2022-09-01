@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
   end
 end)
 
-RegisterNetEvent('ffrp-density:SetPedDensity')
-AddEventHandler('ffrp-density:SetPedDensity', function(newDensity)
+RegisterNetEvent('nadrp-density:SetPedDensity')
+AddEventHandler('nadrp-density:SetPedDensity', function(newDensity)
   density = newDensity
 end)

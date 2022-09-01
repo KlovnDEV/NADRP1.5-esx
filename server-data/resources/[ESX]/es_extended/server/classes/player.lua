@@ -383,7 +383,7 @@ function CreateExtendedPlayer(player, accounts, inventory, job, loadout, name, l
 
 			TriggerEvent('tac:setJob', self.source, self.job, lastJob)
 			TriggerClientEvent('tac:setJob', self.source, self.job)
-			TriggerClientEvent('ffrp:playerBecameJob', self.source, self.job)
+			TriggerClientEvent('nadrp:playerBecameJob', self.source, self.job)
 		else
 			print(('es_extended: ignoring setJob for %s due to job not found!'):format(self.source))
 		end

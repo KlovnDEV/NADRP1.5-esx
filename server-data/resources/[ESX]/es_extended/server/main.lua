@@ -156,7 +156,7 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 						if gradeObject.skin_female ~= nil then
 							userData.job.skin_female = json.decode(gradeObject.skin_female)
 						end
-						TriggerClientEvent('ffrp:playerBecameJob', source, userData.job)
+						TriggerClientEvent('nadrp:playerBecameJob', source, userData.job)
 					else
 						print(('es_extended: %s had an unknown job [job: %s, grade: %s], setting as unemployed!'):format(player.getIdentifier(), job, grade))
 
@@ -176,7 +176,7 @@ AddEventHandler('es:playerLoaded', function(source, _player)
 			
 						userData.job.skin_male    = {}
 						userData.job.skin_female  = {}
-						TriggerClientEvent('ffrp:playerBecameJob', source, userData.job)
+						TriggerClientEvent('nadrp:playerBecameJob', source, userData.job)
 					end
 
 					--[[if result[1].loadout ~= nil then

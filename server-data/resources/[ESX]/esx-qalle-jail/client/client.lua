@@ -30,8 +30,8 @@ Citizen.CreateThread(function()
 	PlayerData = ESX.GetPlayerData()
 end)
 
-RegisterNetEvent("ffrp-jail:PlayerLoaded")
-AddEventHandler("ffrp-jail:PlayerLoaded", function()
+RegisterNetEvent("nadrp-jail:PlayerLoaded")
+AddEventHandler("nadrp-jail:PlayerLoaded", function()
     ESX.TriggerServerCallback("tac-qalle-jail:retrieveJailTime", function(inJail, newJailTime)
 		if inJail then
 			jailTime = newJailTime
@@ -347,7 +347,7 @@ Citizen.CreateThread(function()
         end
         if waitCheck < 1.5 then
             if IsControlJustPressed(0,46) then
-                TriggerServerEvent("ffrp-jail:reclaimPossessions")
+                TriggerServerEvent("nadrp-jail:reclaimPossessions")
                 exports['mythic_notify']:SendAlert('inform', 'You have re-claimed your possessions.')
                 Wait(60000)
             end

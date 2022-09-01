@@ -171,7 +171,7 @@ end, false)
 RegisterNetEvent('chat:AttemptChat')
 AddEventHandler('chat:AttemptChat', function(msg, name)
     local onCooldown = false
-    local pCooldown = exports['ffrp-admin']:GetCooldown()
+    local pCooldown = exports['nadrp-admin']:GetCooldown()
 
     if pCooldown > 0 then
 		onCooldown = true

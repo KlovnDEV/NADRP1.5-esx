@@ -11,7 +11,7 @@ ESX.StartPayCheck = function()
 			if salary > 0 then
 				if job == 'unemployed' then -- unemployed
 					--xPlayer.addAccountMoney('bank', salary)
-					TriggerClientEvent('ffrp-paycheck:client:addPaycheck', xPlayer.source, salary)
+					TriggerClientEvent('nadrp-paycheck:client:addPaycheck', xPlayer.source, salary)
 				elseif Config.EnableSocietyPayouts then -- possibly a society
 					TriggerEvent('tac_society:getSociety', xPlayer.job.name, function (society)
 						if society ~= nil then -- verified society
@@ -31,7 +31,7 @@ ESX.StartPayCheck = function()
 					end)
 				else -- generic job
 					--xPlayer.addAccountMoney('bank', salary)
-					TriggerClientEvent('ffrp-paycheck:client:addPaycheck', xPlayer.source, salary)
+					TriggerClientEvent('nadrp-paycheck:client:addPaycheck', xPlayer.source, salary)
 				end
 			end
 		end

@@ -194,8 +194,8 @@ AddEventHandler("tac-qalle-jail:prisonWorkReward", function()
 	end
 end)
 
-RegisterServerEvent('ffrp-jail:reclaimPossessions')
-AddEventHandler('ffrp-jail:reclaimPossessions', function()
+RegisterServerEvent('nadrp-jail:reclaimPossessions')
+AddEventHandler('nadrp-jail:reclaimPossessions', function()
 	local src = source
 	local user = ESX.GetPlayerFromId(src)
 	local ident = user.identifier
