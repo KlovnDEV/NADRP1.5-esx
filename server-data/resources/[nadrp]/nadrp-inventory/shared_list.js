@@ -8089,6 +8089,30 @@ itemList["Suitcase"] = {
     information: "Its a prop, wow?",
     deg: false
 }
+itemList["switch"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "switch",
+    price: 10,
+    weight: 0,
+    nonStack: false,
+    model: "",
+    image: "switch.png",
+    information: "switch",
+    deg: false
+}
+itemList["landmine"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "landmine",
+    price: 10,
+    weight: 0,
+    nonStack: false,
+    model: "",
+    image: "landmine.png",
+    information: "landmine",
+    deg: false
+}
 itemList["sunflower"] = {
     fullyDegrades: false,
     decayrate: 0.0,

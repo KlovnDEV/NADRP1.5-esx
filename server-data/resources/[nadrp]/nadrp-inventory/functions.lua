@@ -146,6 +146,12 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
         if (itemid == "Galaxy") then
             TriggerEvent('attach:galaxy')
         end
+        if (itemid == "switch") then
+            TriggerEvent('stg_switch:use')
+        end
+        if (itemid == "landmine") then
+            TriggerEvent('ruined_kits:landmine')
+        end
 
 
 
