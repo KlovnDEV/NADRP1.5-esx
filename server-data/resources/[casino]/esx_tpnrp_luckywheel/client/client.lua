@@ -172,7 +172,7 @@ Citizen.CreateThread(function()
         local coords = GetEntityCoords(PlayerPedId())
 
         if(GetDistanceBetweenCoords(coords, _wheelPos.x, _wheelPos.y, _wheelPos.z, true) < 1.5) and not _isRolling then
-            exports['shrp-notify']:ShowAlert('Bấm E để thử vận may với Vòng Quay 1 lần 100,000$', 2500)
+            exports['nadrp-notify']:ShowAlert('Bấm E để thử vận may với Vòng Quay 1 lần 100,000$', 2500)
             if IsControlJustReleased(0, Keys['E']) then
                 doRoll()
             end

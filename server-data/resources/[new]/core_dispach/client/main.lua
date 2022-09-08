@@ -201,8 +201,8 @@ AddEventHandler("core_dispatch:callAdded", function(id, call, j, cooldown, sprit
     end
 end)
 
-RegisterNetEvent('shrp-dispatch:myCallsign')
-AddEventHandler('shrp-dispatch:myCallsign', function(pCallsign)
+RegisterNetEvent('nadrp-dispatch:myCallsign')
+AddEventHandler('nadrp-dispatch:myCallsign', function(pCallsign)
     callsign = pCallsign
 end)
 
@@ -426,7 +426,7 @@ RegisterCommand('setcallsign', function(source, args, raw)
 				if tonumber(callSign) < 99 or tonumber(callSign) > 999 then
 					exports['mythic_notify']:DoLongHudText('error', 'Invalid callsign')
 				else	
-					TriggerServerEvent('shrp-dispatch:setCallSign', callSign)
+					TriggerServerEvent('nadrp-dispatch:setCallSign', callSign)
 				end
 			else
 				exports['mythic_notify']:DoLongHudText('error', 'Your callsign must be a number')
@@ -445,7 +445,7 @@ AddEventHandler('onResourceStart', function(resource) -- Remove After test
     end
 end)
 
-RegisterNetEvent('shrp:playerBecameJob')
-AddEventHandler('shrp:playerBecameJob', function(jobPassed)
+RegisterNetEvent('nadrp:playerBecameJob')
+AddEventHandler('nadrp:playerBecameJob', function(jobPassed)
     job = jobPassed.name
 end)

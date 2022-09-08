@@ -120,18 +120,18 @@ function ShowDoorAlert(doorState, update)
 	lastDoorstate = doorState
 	if doorState == "locked" then
 		if isAuthorized then
-			exports["shrp-notify"]:ShowPersistAlert('[E] - Locked', 'error', 'show')
+			exports["nadrp-notify"]:ShowPersistAlert('[E] - Locked', 'error', 'show')
 		else
-			exports["shrp-notify"]:ShowPersistAlert('Locked', 'error', 'show')
+			exports["nadrp-notify"]:ShowPersistAlert('Locked', 'error', 'show')
 		end
 	elseif doorState == "unlocked" then
 		if isAuthorized then
-			exports["shrp-notify"]:ShowPersistAlert('[E] - Unlocked', 'success', 'show')
+			exports["nadrp-notify"]:ShowPersistAlert('[E] - Unlocked', 'success', 'show')
 		else
-			exports["shrp-notify"]:ShowPersistAlert('Unlocked', 'success', 'show')
+			exports["nadrp-notify"]:ShowPersistAlert('Unlocked', 'success', 'show')
 		end
 	elseif doorState == "hide" then 
-		exports["shrp-notify"]:ShowPersistAlert('', '', 'hide')
+		exports["nadrp-notify"]:ShowPersistAlert('', '', 'hide')
 	end
 	isDrawing = true
 end
@@ -448,7 +448,7 @@ AddEventHandler('nui_doorlock:newDoorSetup', function(args)
 	end
 end)
 
-RegisterNetEvent('shrp:playerBecameJob')
-AddEventHandler('shrp:playerBecameJob', function(jobData)
+RegisterNetEvent('nadrp:playerBecameJob')
+AddEventHandler('nadrp:playerBecameJob', function(jobData)
 	job = jobData.name
 end)

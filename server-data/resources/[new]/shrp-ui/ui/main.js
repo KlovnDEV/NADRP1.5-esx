@@ -56,12 +56,12 @@ $(document).click(function(event){
 })
 
 const PostData = (id) => {
-    $.post(`https://shrp-ui/dataPost`, JSON.stringify(Button[id]))
+    $.post(`https://nadrp-ui/dataPost`, JSON.stringify(Button[id]))
     return CloseMenu();
 }
 
 const CancelMenu = () => {
-    $.post(`https://shrp-ui/cancel`)
+    $.post(`https://nadrp-ui/cancel`)
     return CloseMenu();
 }
 

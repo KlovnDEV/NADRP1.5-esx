@@ -6,16 +6,16 @@ local function addToComboZone(zone)
     if comboZone ~= nil then
         comboZone:AddZone(zone)
     else
-        comboZone = ComboZone:Create({ zone }, { name = "shrp-polyzone" })
+        comboZone = ComboZone:Create({ zone }, { name = "nadrp-polyzone" })
         comboZone:onPlayerInOutExhaustive(function(isPointInside, point, insideZones, enteredZones, leftZones)
             if leftZones ~= nil then
                 for i = 1, #leftZones do
-                    TriggerEvent("shrp-polyzone:exit", leftZones[i].name)
+                    TriggerEvent("nadrp-polyzone:exit", leftZones[i].name)
                 end
             end
             if enteredZones ~= nil then
                 for i = 1, #enteredZones do
-                    TriggerEvent("shrp-polyzone:enter", enteredZones[i].name, enteredZones[i].data, enteredZones[i].center)
+                    TriggerEvent("nadrp-polyzone:enter", enteredZones[i].name, enteredZones[i].data, enteredZones[i].center)
                 end
             end
         end, 500)

@@ -115,6 +115,6 @@ Citizen.CreateThread(function()
 	end
 end)
 
-AddEventHandler("shrp-casino:InCasino", function(toggle)
+AddEventHandler("nadrp-casino:InCasino", function(toggle)
 	inCasino = toggle
 end)

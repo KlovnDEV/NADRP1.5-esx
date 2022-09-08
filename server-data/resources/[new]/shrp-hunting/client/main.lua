@@ -141,25 +141,25 @@ function LoadMarkers()
 
 end
 
-RegisterNetEvent("shrp-hunting:start")
-AddEventHandler("shrp-hunting:start", function()
-	TriggerServerEvent('shrp-hunting:starthoe')
+RegisterNetEvent("nadrp-hunting:start")
+AddEventHandler("nadrp-hunting:start", function()
+	TriggerServerEvent('nadrp-hunting:starthoe')
 	LoadMarkers()
 end)
 
-RegisterNetEvent("shrp-hunting:start2")
-AddEventHandler("shrp-hunting:start2", function()
+RegisterNetEvent("nadrp-hunting:start2")
+AddEventHandler("nadrp-hunting:start2", function()
 	StartHuntingSession()
 end)
 
-RegisterNetEvent("shrp-hunting:stop")
-AddEventHandler("shrp-hunting:stop", function()
+RegisterNetEvent("nadrp-hunting:stop")
+AddEventHandler("nadrp-hunting:stop", function()
 	if OnGoingHuntSession then
 		TriggerEvent('hunting:onxhair', true)
-		if exports["shrp-inventory"]:getQuantity(100416529) then
+		if exports["nadrp-inventory"]:getQuantity(100416529) then
 			OnGoingHuntSession = false
-			TriggerServerEvent('shrp-hunting:removeloadout')
-			TriggerServerEvent('shrp-hunting:huntingreturnree')
+			TriggerServerEvent('nadrp-hunting:removeloadout')
+			TriggerServerEvent('nadrp-hunting:huntingreturnree')
 			if DoesEntityExist(HuntCar) then
 				DeleteEntity(HuntCar)
 			end
@@ -174,14 +174,14 @@ AddEventHandler("shrp-hunting:stop", function()
 	end
 end)
 
-RegisterNetEvent("shrp-hunting:sellcarcass1")
-AddEventHandler("shrp-hunting:sellcarcass1", function()
-	if exports["shrp-inventory"]:getQuantity("huntingcarcass1") >= 1 then
+RegisterNetEvent("nadrp-hunting:sellcarcass1")
+AddEventHandler("nadrp-hunting:sellcarcass1", function()
+	if exports["nadrp-inventory"]:getQuantity("huntingcarcass1") >= 1 then
 		playerAnim()
-		local finished = exports["shrp-taskbar"]:taskBar(4000,"Selling 1 Star",true,false,playerVeh)
+		local finished = exports["nadrp-taskbar"]:taskBar(4000,"Selling 1 Star",true,false,playerVeh)
 		if (finished == 100) then
 			local carcass = math.random(90, 160)
-			TriggerServerEvent("shrp-hunting:sell", carcass)
+			TriggerServerEvent("nadrp-hunting:sell", carcass)
 			ClearPedTasksImmediately(PlayerPedId())
 			TriggerEvent('inventory:removeItem', 'huntingcarcass1', 1)
 		end
@@ -190,14 +190,14 @@ AddEventHandler("shrp-hunting:sellcarcass1", function()
 	end
 end)
 
-RegisterNetEvent("shrp-hunting:sellcarcass2")
-AddEventHandler("shrp-hunting:sellcarcass2", function()
-	if exports["shrp-inventory"]:getQuantity("huntingcarcass2") >= 1 then
+RegisterNetEvent("nadrp-hunting:sellcarcass2")
+AddEventHandler("nadrp-hunting:sellcarcass2", function()
+	if exports["nadrp-inventory"]:getQuantity("huntingcarcass2") >= 1 then
 		playerAnim()
-		local finished = exports["shrp-taskbar"]:taskBar(4000,"Selling 2 Star",true,false,playerVeh)
+		local finished = exports["nadrp-taskbar"]:taskBar(4000,"Selling 2 Star",true,false,playerVeh)
 		if (finished == 100) then
 			local carcass2 = math.random(130, 190)
-			TriggerServerEvent("shrp-hunting:sell", carcass2)
+			TriggerServerEvent("nadrp-hunting:sell", carcass2)
 			ClearPedTasksImmediately(PlayerPedId())
 			TriggerEvent('inventory:removeItem', 'huntingcarcass2', 1)
 		end
@@ -206,14 +206,14 @@ AddEventHandler("shrp-hunting:sellcarcass2", function()
 	end
 end)
 
-RegisterNetEvent("shrp-hunting:sellcarcass3")
-AddEventHandler("shrp-hunting:sellcarcass3", function()
-	if exports["shrp-inventory"]:getQuantity("huntingcarcass3") >= 1 then
+RegisterNetEvent("nadrp-hunting:sellcarcass3")
+AddEventHandler("nadrp-hunting:sellcarcass3", function()
+	if exports["nadrp-inventory"]:getQuantity("huntingcarcass3") >= 1 then
 		playerAnim()
-		local finished = exports["shrp-taskbar"]:taskBar(4000,"Selling 3 Star",true,false,playerVeh)
+		local finished = exports["nadrp-taskbar"]:taskBar(4000,"Selling 3 Star",true,false,playerVeh)
 		if (finished == 100) then
 			local carcass3 = math.random(180, 260)
-			TriggerServerEvent("shrp-hunting:sell", carcass3)
+			TriggerServerEvent("nadrp-hunting:sell", carcass3)
 			ClearPedTasksImmediately(PlayerPedId())
 			TriggerEvent('inventory:removeItem', 'huntingcarcass3', 1)
 		end
@@ -222,14 +222,14 @@ AddEventHandler("shrp-hunting:sellcarcass3", function()
 	end
 end)
 
-RegisterNetEvent("shrp-hunting:sellcarcass4")
-AddEventHandler("shrp-hunting:sellcarcass4", function()
-	if exports["shrp-inventory"]:getQuantity("huntingcarcass4") >= 1 then
+RegisterNetEvent("nadrp-hunting:sellcarcass4")
+AddEventHandler("nadrp-hunting:sellcarcass4", function()
+	if exports["nadrp-inventory"]:getQuantity("huntingcarcass4") >= 1 then
 		playerAnim()
-		local finished = exports["shrp-taskbar"]:taskBar(4000,"Selling Red 3 Star",true,false,playerVeh)
+		local finished = exports["nadrp-taskbar"]:taskBar(4000,"Selling Red 3 Star",true,false,playerVeh)
 		if finished == 100 then
 			local carcass4 = math.random(500, 700)
-			TriggerServerEvent("shrp-hunting:sell", carcass4)
+			TriggerServerEvent("nadrp-hunting:sell", carcass4)
 			ClearPedTasksImmediately(PlayerPedId())
 			TriggerEvent('inventory:removeItem', 'huntingcarcass4', 1)
 			TriggerEvent('player:receiveItem', 'rollcash', math.random(1, 15))
@@ -259,7 +259,7 @@ function StartHuntingSession()
 				HuntCar = spawned_car
 				local plate = GetVehicleNumberPlateText(HuntCar)
 				TriggerEvent("keys:addNew", spawned_car, plate)
-				TriggerServerEvent('shrp-hunting:giveloadout')
+				TriggerServerEvent('nadrp-hunting:giveloadout')
 				TaskWarpPedIntoVehicle(PlayerPedId() , HuntCar, -1)
 				Citizen.Wait(3000)
 
@@ -417,7 +417,7 @@ function StartHuntingSession()
 												table.remove(AnimalsInSession, index)
 												TaskPlayAnim(PlayerPedId(), "amb@medic@standing@kneel@base" ,"base" ,8.0, -8.0, -1, 1, 0, false, false, false )
 												TaskPlayAnim(PlayerPedId(), "anim@gangops@facility@servers@bodysearch@" ,"player_search" ,8.0, -8.0, -1, 48, 0, false, false, false )
-												local finished = exports["shrp-taskbar"]:taskBar(10000,"Skinning")
+												local finished = exports["nadrp-taskbar"]:taskBar(10000,"Skinning")
 												TaskPlayAnim(PlayerPedId(), "amb@medic@standing@kneel@base" ,"base" ,8.0, -8.0, -1, 1, 0, false, false, false )
 												TaskPlayAnim(PlayerPedId(), "anim@gangops@facility@servers@bodysearch@" ,"player_search" ,8.0, -8.0, -1, 48, 0, false, false, false )
 													if finished == 100 then
@@ -505,7 +505,7 @@ Citizen.CreateThread(function()
 				SetAmmoInClip(PlayerPedId(), 'WEAPON_SNIPERRIFLE', 10)
 				SetPedInfiniteAmmo(PlayerPedId(), true, GetHashKey('WEAPON_SNIPERRIFLE'))
 			if timer > 380000 then 
-				TriggerServerEvent('shrp-hunting:removeloadout')
+				TriggerServerEvent('nadrp-hunting:removeloadout')
 				TriggerEvent('DoLongHudText', 'Uh oh! you ran out of time, yoink!', 2)
 				timer = 0
 				OnGoingHuntSession = false
@@ -521,7 +521,7 @@ Citizen.CreateThread(function()
 					RemoveWeaponFromPed(PlayerPedId(), GetHashKey('WEAPON_SNIPERRIFLE'))
 					SetPedInfiniteAmmo(PlayerPedId(), false, GetHashKey('WEAPON_SNIPERRIFLE'))
 					TriggerEvent('DoLongHudText', 'This weapon may only be used for hunting!', 2)
-					TriggerServerEvent('shrp-hunting:removeloadout')
+					TriggerServerEvent('nadrp-hunting:removeloadout')
 					TriggerEvent('hunting:onxhair', false)
 				end
 				TriggerEvent('hunting:onxhair', true)
@@ -585,7 +585,7 @@ Citizen.CreateThread(function()
 			SetAmmoInClip(PlayerPedId(), 'WEAPON_SNIPERRIFLE', 10)
 			SetPedInfiniteAmmo(PlayerPedId(), true, GetHashKey('WEAPON_SNIPERRIFLE'))
 		if timer > 380000 then 
-			TriggerServerEvent('shrp-hunting:removeloadout')
+			TriggerServerEvent('nadrp-hunting:removeloadout')
 			TriggerEvent('DoLongHudText', 'Uh oh! you ran out of time, yoink!', 2)
 			timer = 0
 			OnGoingHuntSession = false
@@ -611,7 +611,7 @@ AddEventHandler("hunting:sell", function()
 			header = "Sell Carcass 1",
 			txt = "1 Carcass",
 			params = {
-				event = "shrp-hunting:sellcarcass1",
+				event = "nadrp-hunting:sellcarcass1",
 			}
 		},
         {
@@ -619,7 +619,7 @@ AddEventHandler("hunting:sell", function()
 			header = "Sell Carcass 2",
 			txt = "2 Carcass",
 			params = {
-				event = "shrp-hunting:sellcarcass2",
+				event = "nadrp-hunting:sellcarcass2",
 			}
 		},
         {
@@ -627,7 +627,7 @@ AddEventHandler("hunting:sell", function()
 			header = "Sell Carcass 3",
 			txt = "3 Carcass",
 			params = {
-				event = "shrp-hunting:sellcarcass3",
+				event = "nadrp-hunting:sellcarcass3",
 			}
 		},
 		{
@@ -635,7 +635,7 @@ AddEventHandler("hunting:sell", function()
 			header = "Sell Carcass 3(RED)",
 			txt = "3 Carcass(RED)",
 			params = {
-				event = "shrp-hunting:sellcarcass4",
+				event = "nadrp-hunting:sellcarcass4",
 			}
 		},
 		{

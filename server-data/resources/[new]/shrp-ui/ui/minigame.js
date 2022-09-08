@@ -43,13 +43,13 @@ function check(){
             blocks[pos].classList.add('proper');
         });
         setTimeout(() => {
-            $.post(`https://shrp-ui/completeMinigame`, JSON.stringify({state: "lost"}))
+            $.post(`https://nadrp-ui/completeMinigame`, JSON.stringify({state: "lost"}))
             reset();
         }, 1500);
         return;
     }
     if(right === 14){
-        $.post(`https://shrp-ui/completeMinigame`, JSON.stringify({state: "won"}))
+        $.post(`https://nadrp-ui/completeMinigame`, JSON.stringify({state: "won"}))
         reset();
     }
 }

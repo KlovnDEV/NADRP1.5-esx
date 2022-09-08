@@ -7,7 +7,7 @@ local isResourceStarted = false
 
 local function CallExport(name, ...)
     if isResourceStarted or not RPC.isWaitingForResourceStart then
-        return exports["shrp-rpc"][name](exports["shrp-rpc"], ...)
+        return exports["nadrp-rpc"][name](exports["nadrp-rpc"], ...)
     else
         table.insert(pendingExportCalls, {
             name = name,
@@ -20,7 +20,7 @@ AddEventHandler(("on%sResourceStart"):format(IsDuplicityVersion() and "Server" o
     if GetCurrentResourceName() ~= resource then return end
 
     for i, c in ipairs(pendingExportCalls) do
-        exports["shrp-rpc"][c.name](exports["shrp-rpc"], table.unpack(c.args))
+        exports["nadrp-rpc"][c.name](exports["nadrp-rpc"], table.unpack(c.args))
     end
 
     isResourceStarted = true

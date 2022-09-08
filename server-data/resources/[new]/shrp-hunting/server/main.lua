@@ -8,15 +8,15 @@ PerformHttpRequest(DISCORD_WEBHOOK5, function(err, text, headers) end, 'POST', j
 
 local cachedData = {}
 
-RegisterServerEvent('shrp-hunting:huntingreturnree')
-AddEventHandler('shrp-hunting:huntingreturnree', function()
+RegisterServerEvent('nadrp-hunting:huntingreturnree')
+AddEventHandler('nadrp-hunting:huntingreturnree', function()
     --local user = exports["esx_extended"]:getModule("Player"):GetUser(source)
     local money = tonumber(user:getCash())
     user:addMoney(500)
 end)
 
-RegisterServerEvent('shrp-hunting:sell')
-AddEventHandler('shrp-hunting:sell', function(money)
+RegisterServerEvent('nadrp-hunting:sell')
+AddEventHandler('nadrp-hunting:sell', function(money)
     local source = source
     local player = GetPlayerName(source)
    -- local user = exports["esx_extended"]:getModule("Player"):GetUser(source)
@@ -28,40 +28,40 @@ AddEventHandler('shrp-hunting:sell', function(money)
 	end
 end)
 
-RegisterServerEvent('shrp-hunting:starthoe')
-AddEventHandler('shrp-hunting:starthoe', function()
+RegisterServerEvent('nadrp-hunting:starthoe')
+AddEventHandler('nadrp-hunting:starthoe', function()
     local src = source
-    --local user = exports["shrp-core"]:getModule("Player"):GetUser(src)
+    --local user = exports["nadrp-core"]:getModule("Player"):GetUser(src)
     local character = user:getCurrentCharacter()
     local money = tonumber(user:getCash())
     if money >= 100 then
         user:removeMoney(500)
-        TriggerClientEvent('shrp-hunting:start2', src)
+        TriggerClientEvent('nadrp-hunting:start2', src)
     else
         TriggerClientEvent('DoLongHudText', src, 'You dont have enough money on you!', 2)
     end
 end)
 
-RegisterServerEvent('shrp-hunting:giveloadout')
-AddEventHandler('shrp-hunting:giveloadout', function()
+RegisterServerEvent('nadrp-hunting:giveloadout')
+AddEventHandler('nadrp-hunting:giveloadout', function()
     TriggerClientEvent('player:receiveItem', source, '100416529', 1)
     TriggerClientEvent('player:receiveItem', source, '2578778090', 1)
 end)
 
-RegisterServerEvent('shrp-hunting:removeloadout')
-AddEventHandler('shrp-hunting:removeloadout', function()
+RegisterServerEvent('nadrp-hunting:removeloadout')
+AddEventHandler('nadrp-hunting:removeloadout', function()
     TriggerClientEvent('inventory:removeItem', source, '100416529', 1)
     TriggerClientEvent('inventory:removeItem', source, '2578778090', 1)
 end)
 
-RegisterServerEvent("shrp-hunting:retreive:license")
-AddEventHandler("shrp-hunting:retreive:license", function()
+RegisterServerEvent("nadrp-hunting:retreive:license")
+AddEventHandler("nadrp-hunting:retreive:license", function()
     local src = source
-	--local user = exports["shrp-core"]:getModule("Player"):GetUser(src)
+	--local user = exports["nadrp-core"]:getModule("Player"):GetUser(src)
 	local character = user:getCurrentCharacter()
     exports.ghmattimysql:execute('SELECT * FROM user_licenses WHERE `owner`= ? AND `type` = ? AND `status` = ?', {character.id, "Hunting", "1"}, function(data)
 		if data[1] then
-            TriggerClientEvent("shrp-hunting:allowed", src, true)
+            TriggerClientEvent("nadrp-hunting:allowed", src, true)
         end
     end)
 end)

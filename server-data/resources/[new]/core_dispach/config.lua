@@ -103,5 +103,5 @@ end
 
 -- Only change if you know what are you doing!
 function SendTextMessage(msg)
-	exports["shrp-notify"]:ShowAlert(msg, 'info', 2500)
+	exports["nadrp-notify"]:ShowAlert(msg, 'info', 2500)
 end

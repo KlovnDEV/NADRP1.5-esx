@@ -12,8 +12,8 @@ RegisterNUICallback("cancel", function(data, cb)
     cb('ok')
 end)
 
-RegisterNetEvent('shrp-ui:sendMenu')
-AddEventHandler('shrp-ui:sendMenu', function(data)
+RegisterNetEvent('nadrp-ui:sendMenu')
+AddEventHandler('nadrp-ui:sendMenu', function(data)
     if not data then return end
     SetNuiFocus(true, true)
     SendNUIMessage({
@@ -24,8 +24,8 @@ end)
 
 --// MINI GAME //--
 local game_state = nil
-RegisterNetEvent('shrp-ui:StartMiniGame')
-AddEventHandler('shrp-ui:StartMiniGame', function()
+RegisterNetEvent('nadrp-ui:StartMiniGame')
+AddEventHandler('nadrp-ui:StartMiniGame', function()
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = "startMinigame",

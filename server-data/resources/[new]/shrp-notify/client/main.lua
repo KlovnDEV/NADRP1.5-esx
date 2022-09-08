@@ -6,12 +6,12 @@
     -- // TEMPLATE //--
 
     -- EVENTS
-    TriggerEvent('shrp-notify:ShowPersistAlert', {text = '', type = '', state = ''})
-    TriggerEvent('shrp-notify:ShowAlert', {text = '', type = '', duration = 3000})
+    TriggerEvent('nadrp-notify:ShowPersistAlert', {text = '', type = '', state = ''})
+    TriggerEvent('nadrp-notify:ShowAlert', {text = '', type = '', duration = 3000})
 
     -- EXPORTS
-    exports['shrp-notify']:ShowAlert('text', 'type', 3000)
-    exports['shrp-notify']:ShowPersistAlert('text', 'type', 'state')
+    exports['nadrp-notify']:ShowAlert('text', 'type', 3000)
+    exports['nadrp-notify']:ShowPersistAlert('text', 'type', 'state')
 ]]
 
 function ShowAlert(text,type,duration)
@@ -28,8 +28,8 @@ function ShowAlert(text,type,duration)
 end
 
 -- Used for calling on server side
-RegisterNetEvent('shrp-notify:ShowAlert')
-AddEventHandler('shrp-notify:ShowAlert', function(data)
+RegisterNetEvent('nadrp-notify:ShowAlert')
+AddEventHandler('nadrp-notify:ShowAlert', function(data)
     ShowAlert(data.text,data.type,data.duration)
 end)
 exports('ShowAlert', ShowAlert)
@@ -41,7 +41,7 @@ function ShowPersistAlert(text,type,state)
     if text == nil then return end
     if type == nil then type = 'info' end
     if state == nil then
-        print('[shrp-notify]: State not defined')
+        print('[nadrp-notify]: State not defined')
         return
     elseif state == "show" then
         cachedAlert = {
@@ -65,8 +65,8 @@ function ShowPersistAlert(text,type,state)
 end
 
 -- Used for calling on server side
-RegisterNetEvent('shrp-notify:ShowPersistAlert')
-AddEventHandler('shrp-notify:ShowPersistAlert', function(data)
+RegisterNetEvent('nadrp-notify:ShowPersistAlert')
+AddEventHandler('nadrp-notify:ShowPersistAlert', function(data)
     ShowPersistAlert(data.text,data.type,data.state)
 end)
 

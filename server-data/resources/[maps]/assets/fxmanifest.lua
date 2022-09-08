@@ -11,7 +11,7 @@ files {
 	'stream/housing/shellprops.ytyp',
 	'stream/housing/shellpropsv5.ytyp',
 	'stream/housing/frankelientje.ytyp',
-	'stream/housing/shrp_hotel.ytyp',
+	'stream/housing/nadrp_hotel.ytyp',
 	-- motels
 	'stream/motel/v_int_shop.ytyp',
 	'stream/motels/playerhouse_appartment_motel.ytyp'
@@ -27,7 +27,7 @@ data_file 'DLC_ITYP_REQUEST' 'stream/housing/shellprops.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/housing/shellpropsv5.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/housing/shellpropsv5.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/housing/frankelientje.ytyp'
-data_file 'DLC_ITYP_REQUEST' 'stream/housing/shrp_hotel.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/housing/nadrp_hotel.ytyp'
 
 -- Motels
 data_file 'DLC_ITYP_REQUEST' 'stream/motels/playerhouse_appartment_motel.ytyp'

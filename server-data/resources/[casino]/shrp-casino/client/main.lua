@@ -15,10 +15,10 @@ mainDesk:onPointInOut(PolyZone.getPlayerPosition, function(isPointInside, point)
     if isPointInside then
         NearDesk = true
         KeyPressThread()
-        exports["shrp-notify"]:ShowPersistAlert('[E] - Buy/Sell Chips', 'info', 'show')
+        exports["nadrp-notify"]:ShowPersistAlert('[E] - Buy/Sell Chips', 'info', 'show')
     else
         NearDesk = false
-        exports["shrp-notify"]:ShowPersistAlert('[E] - Buy/Sell Chips', 'info', 'hide')
+        exports["nadrp-notify"]:ShowPersistAlert('[E] - Buy/Sell Chips', 'info', 'hide')
     end
 end)
 
@@ -192,12 +192,12 @@ end
 -- NUI Callbacks
 
 RegisterNUICallback('buyChips', function(data, cb)
-    TriggerServerEvent('shrp-casino:buyChips', tonumber(data.amount))
+    TriggerServerEvent('nadrp-casino:buyChips', tonumber(data.amount))
     cb('ok')
 end)
 
 RegisterNUICallback('sellChips', function(data, cb)
-    TriggerServerEvent('shrp-casino:sellChips', tonumber(data.amount))
+    TriggerServerEvent('nadrp-casino:sellChips', tonumber(data.amount))
     cb('ok')
 end)
 

@@ -147,8 +147,8 @@ ESX.RegisterServerCallback("core_dispatch:getUnits",function(source, cb)
     cb(generated)
 end)
 
-RegisterNetEvent('shrp-dispatch:setCallSign')
-AddEventHandler('shrp-dispatch:setCallSign', function(pCallsign)
+RegisterNetEvent('nadrp-dispatch:setCallSign')
+AddEventHandler('nadrp-dispatch:setCallSign', function(pCallsign)
 	local user = ESX.GetPlayerFromId(source)
 	local ident = user.identifier
 	if pCallsign ~= nil then

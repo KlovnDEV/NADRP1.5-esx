@@ -675,7 +675,7 @@ AddEventHandler("BLACKJACK:RequestBets", function(index, _timeLeft)
 					end
 					return
 				else
-					exports['shrp-notify']:ShowAlert('You dont have enough chips', 'error', 2500)
+					exports['nadrp-notify']:ShowAlert('You dont have enough chips', 'error', 2500)
 				end
 			end
 		end
@@ -1297,13 +1297,13 @@ function ToggleAlert(toggle)
 			local max = bettingNums[tableMax]
 			showingAlert = true
 			if min >= 5000 then
-				exports["shrp-notify"]:ShowPersistAlert('[E] - $'..min..' - $'..max..'', 'error', 'show')
+				exports["nadrp-notify"]:ShowPersistAlert('[E] - $'..min..' - $'..max..'', 'error', 'show')
 			else
-				exports["shrp-notify"]:ShowPersistAlert('[E] - $'..min..' - $'..max..'', 'success', 'show')
+				exports["nadrp-notify"]:ShowPersistAlert('[E] - $'..min..' - $'..max..'', 'success', 'show')
 			end
 		elseif toggle == false then
 			showingAlert = false
-			exports["shrp-notify"]:ShowPersistAlert('', '', 'hide')
+			exports["nadrp-notify"]:ShowPersistAlert('', '', 'hide')
 		end
 	end
 end
@@ -1380,13 +1380,13 @@ exports("SetStandUpCallback", SetStandUpCallback)
 exports("SetLeaveCheckCallback", SetLeaveCheckCallback)
 exports("SetCanSitDownCallback", SetCanSitDownCallback)
 
-AddEventHandler('shrp-polyzone:enter', function(zone, data, center)
+AddEventHandler('nadrp-polyzone:enter', function(zone, data, center)
 	if zone == "blackJack" then
 		ToggleAlert(true)
 	end
 end)
 
-AddEventHandler('shrp-polyzone:exit', function(zone)
+AddEventHandler('nadrp-polyzone:exit', function(zone)
 	if zone == "blackJack" then 
 		ToggleAlert(false)
 	elseif zone == "casino_exit" then 
@@ -1394,6 +1394,6 @@ AddEventHandler('shrp-polyzone:exit', function(zone)
 	end
 end)
 
-AddEventHandler('shrp-casino:InCasino', function(toggle)
+AddEventHandler('nadrp-casino:InCasino', function(toggle)
 	inCasino = toggle
 end)

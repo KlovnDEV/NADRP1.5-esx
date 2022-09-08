@@ -3,7 +3,7 @@ local PodiumThread = false
 local inCasino = false
 
 Citizen.CreateThread(function()
-    exports["shrp-polyzone"]:AddBoxZone("podium_room", vector3(1110.23, 221.74, -49.44), 53.8, 36.0, {
+    exports["nadrp-polyzone"]:AddBoxZone("podium_room", vector3(1110.23, 221.74, -49.44), 53.8, 36.0, {
         heading=320,
         --debugPoly=true,
         minZ=-51.64,
@@ -52,7 +52,7 @@ AddEventHandler('onResourceStop',function(resource)
     end
 end)
 
-AddEventHandler("shrp-polyzone:enter", function(zone, data, center) 
+AddEventHandler("nadrp-polyzone:enter", function(zone, data, center) 
 	if zone == "podium_room" then
         inCasino = true
         PodiumThread()
@@ -60,7 +60,7 @@ AddEventHandler("shrp-polyzone:enter", function(zone, data, center)
     end
 end)
 
-AddEventHandler('shrp-polyzone:exit', function(zone)
+AddEventHandler('nadrp-polyzone:exit', function(zone)
     if zone == "podium_room" then
         inCasino = false
         DeleteEntity(podiumVehicle)

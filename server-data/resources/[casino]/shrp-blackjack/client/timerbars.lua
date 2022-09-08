@@ -115,7 +115,7 @@ function DrawTimerBar(idx, title, text, titleColor, textColor, usePlayerStyle)
 end
 
 Citizen.CreateThread(function()
-	exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1148.46, 269.95, -51.84), 2.8, 4.2, {
+	exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1148.46, 269.95, -51.84), 2.8, 4.2, {
         heading=51,
         --debugPoly=true,
         minZ= -52.84,
@@ -124,7 +124,7 @@ Citizen.CreateThread(function()
 		  id = "1",
 		},
 	})
-	exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1151.99, 266.4, -51.84), 2.6, 3.6, {
+	exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1151.99, 266.4, -51.84), 2.6, 3.6, {
         heading=44,
         --debugPoly=true,
         minZ= -52.84,
@@ -133,7 +133,7 @@ Citizen.CreateThread(function()
 		  id = "2",
 		},
 	})
-	exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1146.58, 260.92, -51.84), 4.0, 2.6, { 
+	exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1146.58, 260.92, -51.84), 4.0, 2.6, { 
         heading=312,
         --debugPoly=true,
         minZ= -52.84,
@@ -142,7 +142,7 @@ Citizen.CreateThread(function()
 		  id = "3",
 		},
 	})
-	exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1143.11, 264.44, -51.84), 3.6, 2.8, {
+	exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1143.11, 264.44, -51.84), 3.6, 2.8, {
 		heading=315,
 		--debugPoly=true,
 		minZ= -53.04,
@@ -151,7 +151,7 @@ Citizen.CreateThread(function()
 		  id = "4",
 		},
 	})
-    exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1129.62, 262.56, -51.04), 2.6, 4.2,  {
+    exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1129.62, 262.56, -51.04), 2.6, 4.2,  {
         heading=310,
         --debugPoly=true,
         minZ= -52.84,
@@ -160,7 +160,7 @@ Citizen.CreateThread(function()
 		  id = "5",
 		},
 	})
-    exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1133.44, 266.61, -51.04), 4.2, 2.6, {
+    exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1133.44, 266.61, -51.04), 4.2, 2.6, {
         heading=45,
         --debugPoly=true,
         minZ= -52.84,
@@ -169,7 +169,7 @@ Citizen.CreateThread(function()
 		  id = "6",
 		},
 	})
-    exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1148.66, 251.76, -51.04), 4.0, 2.6, {
+    exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1148.66, 251.76, -51.04), 4.0, 2.6, {
         heading=35,
         --debugPoly=true,
         minZ= -52.84,
@@ -178,7 +178,7 @@ Citizen.CreateThread(function()
 		  id = "7",
 		},
 	})
-    exports["shrp-polyzone"]:AddBoxZone("blackJack", vector3(1144.67, 247.74, -51.04), 4.2, 2.8, {
+    exports["nadrp-polyzone"]:AddBoxZone("blackJack", vector3(1144.67, 247.74, -51.04), 4.2, 2.8, {
         heading=45,
         --debugPoly=true,
         minZ= -52.84,
