@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShopVehicleDataArray>
+	<Vehicles>
+	<Item>
+		<lockHash>CU_VEH_mehran2017</lockHash>
+		<modelNameHash>mehran2017</modelNameHash>
+		<cost value="100"/>
+		<textLabel>mehran2017</textLabel>
+		<textLabel></textLabel>
+	</Item>
+	</Vehicles>
+</ShopVehicleDataArray>
