@@ -25,7 +25,7 @@ AddEventHandler('nadrp-bennys:attemptPurchase', function(type, upgradelevel)
 	 		societyAccount.removeMoney(price)
 	 	else
 	 		TriggerClientEvent('nadrp-bennys:purchaseFailed', _source)
-	 		TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = "error", text = "You don't have enough money for this"})
+	 		TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = "error", text = "You don't have enough money for this"})
 	 	end
 	else
 	 	if price < xPlayer.getMoney() then
@@ -33,7 +33,7 @@ AddEventHandler('nadrp-bennys:attemptPurchase', function(type, upgradelevel)
 	 		xPlayer.removeMoney(price)
 	 	else
 	 		TriggerClientEvent('nadrp-bennys:purchaseFailed', _source)
-	 		TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = "error", text = "You don't have enough money for this"})
+	 		TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = "error", text = "You don't have enough money for this"})
 	 	end
 	 end
 end)

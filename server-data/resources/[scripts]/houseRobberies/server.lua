@@ -59,7 +59,7 @@ TriggerEvent('tac:getSharedObject', function(obj)
     ESX = obj
 end)
 
-local CopsNeeded = 3
+local CopsNeeded = 0
 function CountCops()
 	local xPlayers = ESX.GetPlayers()
 	CopsConnected = 0
@@ -80,7 +80,7 @@ AddEventHandler('houseRobberies:attempt', function()
     if Cops >= CopsNeeded then
         TriggerClientEvent('houseRobberies:attempt', source)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = "Not enough police" })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = "Not enough police" })
     end
 end)
 
@@ -89,7 +89,7 @@ AddEventHandler('houseRobberies:removeLockpick', function()
     local source = tonumber(source)
     local xPlayer = ESX.GetPlayerFromId(source)
     TriggerClientEvent('inventory:removeItem',source, "lockpick", 1) 
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'The lockpick bent out of shape.'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'The lockpick bent out of shape.'})
 end)
 
 RegisterServerEvent('houseRobberies:giveMoney')
@@ -98,7 +98,7 @@ AddEventHandler('houseRobberies:giveMoney', function()
     local xPlayer = ESX.GetPlayerFromId(source)
     local cash = math.random(500, 3000)
     xPlayer.addMoney(cash)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'inform', text = 'You found $'..cash})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'inform', text = 'You found $'..cash})
 end)
 
 function RandomItem()
@@ -119,17 +119,17 @@ AddEventHandler('houseRobberies:searchItem', function()
             if item.id == 0 and not gotID[item.id] then
                 gotID[item.id] = true
                 xPlayer.addMoney(math.random(1, 2000))
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'inform', text = 'You found $'..item.quantity})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'inform', text = 'You found $'..item.quantity})
             elseif item.isWeapon and not gotID[item.id] then
                 gotID[item.id] = true
                 TriggerClientEvent('player:receiveItem',source, item.id, item.quantity) 
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'inform', text = 'Item Added!'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'inform', text = 'Item Added!'})
             elseif not gotID[item.id] then
                 gotID[item.id] = true
                 TriggerClientEvent('player:receiveItem',source, item.id, item.quantity) 
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'inform', text = 'Item Added!'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'inform', text = 'Item Added!'})
             elseif gotID[item.id] then
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = "You didn't find anything here"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = "You didn't find anything here"})
             end
         end
     end

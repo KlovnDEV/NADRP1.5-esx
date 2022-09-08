@@ -365,7 +365,7 @@ Citizen.CreateThread(function()
 							if row["home_owner"] == steamid or hasKey(row["table_id"]) then
 								TriggerEvent("server-inventory-open", "1", "house-"..row["house_name"])
 							else
-								exports['mythic_notify']:SendAlert("error", "You are not allowed to open other's stashes.")
+								exports['mythic_notify']:DoLongHudText("error", "You are not allowed to open other's stashes.")
 							end
 						end
 					end
@@ -528,13 +528,13 @@ function ReturnRental()
 				TriggerServerEvent('nadrp-garages:returnRental')
 				DeleteVehicle(vehicle)
 			else
-				exports['mythic_notify']:SendAlert('error', 'This isnt the bike we rented out.')
+				exports['mythic_notify']:DoLongHudText('error', 'This isnt the bike we rented out.')
 			end
 		else
-			exports['mythic_notify']:SendAlert('error', 'No vehicle found.')
+			exports['mythic_notify']:DoLongHudText('error', 'No vehicle found.')
 		end
 	else
-		exports['mythic_notify']:SendAlert('error', 'Bike no longer exists? (Resetting)')
+		exports['mythic_notify']:DoLongHudText('error', 'Bike no longer exists? (Resetting)')
 		HasRental = false
 		CloseMenu()
 	end
@@ -545,7 +545,7 @@ function AttemptRent(bike)
 		TriggerServerEvent('nadrp-garages:attemptRent', bike)
 		CloseMenu()
 	else
-		exports['mythic_notify']:SendAlert('error', 'You already have a rental out!')
+		exports['mythic_notify']:DoLongHudText('error', 'You already have a rental out!')
 	end
 end
 
@@ -565,7 +565,7 @@ AddEventHandler('nadrp-garages:SpawnRental', function(bike)
 		TriggerEvent("ARPF:spawn:recivekeys", bike, plate)
 		SetModelAsNoLongerNeeded(hash)
 		rentalPlate = plate
-		exports['mythic_notify']:SendAlert('inform', 'Remember to return the bike to get your deposit back')
+		exports['mythic_notify']:DoLongHudText('inform', 'Remember to return the bike to get your deposit back')
 		HasRental = true
 		NetBikeId = NetworkGetNetworkIdFromEntity(bike)
 	end
@@ -840,7 +840,7 @@ function ListeVehicule()
 	    end
 	end
 
-	--exports["mythic_notify"]:SendAlert('inform', "It will cost $" .. estimate .. " to $" .. estimate + (estimate * 0.15) .. " @ $15 x (carCount x carCount x 2)")
+	--exports["mythic_notify"]:DoLongHudText('inform', "It will cost $" .. estimate .. " to $" .. estimate + (estimate * 0.15) .. " @ $15 x (carCount x carCount x 2)")
     Menu.addButton("Return","MenuGarage",nil)
 end
 
@@ -1158,17 +1158,17 @@ AddEventHandler('garages:SpawnVehicle', function(vehicle, state)
 		--end
 
 		if DoesEntityExist(caisseo) then
-			exports['mythic_notify']:SendAlert('inform', 'The area is crowded')
+			exports['mythic_notify']:DoLongHudText('inform', 'The area is crowded')
 		else
 			if state == "Out" and coordlocation == nil then
-				exports['mythic_notify']:SendAlert('inform', 'Not in garage')
+				exports['mythic_notify']:DoLongHudText('inform', 'Not in garage')
 			else
 				if state == "Standard Impound" then
-					exports['mythic_notify']:SendAlert('inform', "This vehicle cost you $500.")
+					exports['mythic_notify']:DoLongHudText('inform', "This vehicle cost you $500.")
 				end
 
 				if state == "Police Impound" then
-					exports['mythic_notify']:SendAlert('inform', "This vehicle cost you $1500.")
+					exports['mythic_notify']:DoLongHudText('inform', "This vehicle cost you $1500.")
 				end
 
 				--RequestModel(model)
@@ -1252,7 +1252,7 @@ AddEventHandler('garages:StoreVehicle', function(plates)
 		if not DoesEntityExist(caissei) then caissei = GetVehiclePedIsIn(PlayerPedId(), true) end
 
 		if #(vector3(pos[1],pos[2],pos[3]) - GetEntityCoords(caissei)) > 5.0 then
-			exports['mythic_notify']:SendAlert('inform', 'No Vehicle')
+			exports['mythic_notify']:DoLongHudText('inform', 'No Vehicle')
 			return
 		end
 
@@ -1261,7 +1261,7 @@ AddEventHandler('garages:StoreVehicle', function(plates)
     	if current_used_garage == "House" then
     		local d1,d2 = GetModelDimensions(GetEntityModel(caissei))
     		if d2["y"] > 3.4 then
-				exports['mythic_notify']:SendAlert('infrom', "This vehicle is too big.")
+				exports['mythic_notify']:DoLongHudText('infrom', "This vehicle is too big.")
     			return
     		end
 		end
@@ -1281,7 +1281,7 @@ AddEventHandler('garages:StoreVehicle', function(plates)
 			DeleteEntity(caissei)
 			TriggerServerEvent('nadrp_garages:modifystate', vehProps, 1, current_used_garage)
 		else
-			exports['mythic_notify']:SendAlert('infrom', 'No Vehicle')
+			exports['mythic_notify']:DoLongHudText('infrom', 'No Vehicle')
 		end
 		Citizen.Wait(5000)
 		TriggerServerEvent("garages:CheckGarageForVeh")
@@ -1301,14 +1301,14 @@ AddEventHandler('garages:SelVehicle', function(vehicle, plate)
 		local platecaissei = GetVehicleNumberPlateText(caissei)
 		if DoesEntityExist(caissei) then
 			if plate ~= platecaissei then
-				exports['mythic_notify']:SendAlert('error', "It's not your vehicle")
+				exports['mythic_notify']:DoLongHudText('error', "It's not your vehicle")
 			else
 				--Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(caissei))
 				TriggerServerEvent('garages:SelVeh', plate)
 				TriggerServerEvent("garages:CheckGarageForVeh")
 			end
 		else
-			exports['mythic_notify']:SendAlert('error', "No Vehicle")
+			exports['mythic_notify']:DoLongHudText('error', "No Vehicle")
 		end
 	end)
 end)
@@ -1339,7 +1339,7 @@ AddEventHandler('garages:SellToPlayer', function(player,plate,price)
 		Citizen.Wait(0)
 		local targetPed = GetPlayerFromServerId(player)
 		if not DoesEntityExist(GetPlayerPed(targetPed)) then
-			exports['mythic_notify']:SendAlert('error', "No person found")
+			exports['mythic_notify']:DoLongHudText('error', "No person found")
 			return
 		end
 
@@ -1361,16 +1361,16 @@ AddEventHandler('garages:SellToPlayer', function(player,plate,price)
 					if isWanting then
 						TriggerServerEvent('garages:SellToPlayerEnd', plate,player,price)
 					else
-						exports['mythic_notify']:SendAlert('error', "Person has declined.")
+						exports['mythic_notify']:DoLongHudText('error', "Person has declined.")
 					end
 				else
-					exports['mythic_notify']:SendAlert('error', "It's not your vehicle")
+					exports['mythic_notify']:DoLongHudText('error', "It's not your vehicle")
 				end
 			else
-				exports['mythic_notify']:SendAlert('error', "No Vehicle")
+				exports['mythic_notify']:DoLongHudText('error', "No Vehicle")
 			end
 		else
-			exports['mythic_notify']:SendAlert('error', 'Not close enough.')
+			exports['mythic_notify']:DoLongHudText('error', 'Not close enough.')
 		end
 	end)
 end)
@@ -1417,7 +1417,7 @@ AddEventHandler('garages:ClientEnd', function(plate)
 		if DoesEntityExist(caissei) then
 			TriggerServerEvent("garages:CheckGarageForVeh")
 		else
-			exports['mythic_notify']:SendAlert('inform', 'No Vehicle')
+			exports['mythic_notify']:DoLongHudText('inform', 'No Vehicle')
 		end
 	end)
 end)
@@ -1433,7 +1433,7 @@ AddEventHandler('garages:PlayerEnd', function(plate)
 		if DoesEntityExist(caissei) then
 			TriggerServerEvent("garages:CheckGarageForVeh")
 		else
-			exports['mythic_notify']:SendAlert('inform', 'No Vehicle')
+			exports['mythic_notify']:DoLongHudText('inform', 'No Vehicle')
 		end
 	end)
 end)
@@ -1493,10 +1493,10 @@ AddEventHandler('impoundVehicle', function()
 			end
 		end, licensePlate)
 
-		exports['mythic_notify']:SendAlert('inform', "Impounded with retrieval price of $500")
+		exports['mythic_notify']:DoLongHudText('inform', "Impounded with retrieval price of $500")
 		deleteVeh(targetVehicle)
 	else
-		exports['mythic_notify']:SendAlert('error', 'The fuck do you think this is ?', 7000)
+		exports['mythic_notify']:DoLongHudText('error', 'The fuck do you think this is ?', 7000)
 	end
 end)
 
@@ -1519,9 +1519,9 @@ AddEventHandler('fullimpoundVehicle', function()
 				deleteVeh(targetVehicle)
 			end
 		end, licensePlate)
-		exports['mythic_notify']:SendAlert('inform', "Impounded with retrieval price of $1500")
+		exports['mythic_notify']:DoLongHudText('inform', "Impounded with retrieval price of $1500")
 	else
-		exports['mythic_notify']:SendAlert('error', 'The fuck do you think this is ?', 7000)
+		exports['mythic_notify']:DoLongHudText('error', 'The fuck do you think this is ?', 7000)
 	end
 end)
 
@@ -1548,7 +1548,7 @@ RegisterCommand('impound', function(source, args, raw)
 	if pData.job.name == 'police' or pData.job.name == 'ambulance' then
 		TriggerEvent('impoundVehicle')
 	else
-		exports["mythic_notify"]:SendAlert('error', 'you dont have permissions for this')
+		exports["mythic_notify"]:DoLongHudText('error', 'you dont have permissions for this')
 	end
 end)
 RegisterCommand('impoundfull', function(source, args, raw)
@@ -1556,7 +1556,7 @@ RegisterCommand('impoundfull', function(source, args, raw)
 	if pData.job.name == 'mechanic' then
 		TriggerEvent('fullimpoundVehicle')
 	else
-		exports["mythic_notify"]:SendAlert('error', 'you dont have permissions for this')
+		exports["mythic_notify"]:DoLongHudText('error', 'you dont have permissions for this')
 	end
 end)
 

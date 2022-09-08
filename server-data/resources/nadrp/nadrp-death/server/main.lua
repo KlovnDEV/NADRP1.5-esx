@@ -12,7 +12,7 @@ AddEventHandler('nadrp-death:cpr', function(toPlayer)
             user.removeMoney(1500)
             TriggerClientEvent('nadrp-death:revive', toPlayer)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Do you really think this is free, come back when you have something to offer'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'Do you really think this is free, come back when you have something to offer'})
         end
     end
 end)

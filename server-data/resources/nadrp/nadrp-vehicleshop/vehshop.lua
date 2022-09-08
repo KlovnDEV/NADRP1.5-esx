@@ -519,7 +519,7 @@ AddEventHandler("car:testdrive", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -544,7 +544,7 @@ AddEventHandler("car:testdrive", function()
 		TaskWarpPedIntoVehicle(PlayerPedId(),veh,-1)
 		myspawnedvehs[veh] = true
 	else
-		exports["mythic_notify"]:SendAlert('error', 'A car is on the spawn point.')
+		exports["mythic_notify"]:DoLongHudText('error', 'A car is on the spawn point.')
 	end
 end)
 
@@ -556,7 +556,7 @@ AddEventHandler("finance", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -571,7 +571,7 @@ AddEventHandler("buyEnable", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -632,13 +632,13 @@ function BuyMenu()
 			end
 			DisableControlAction(0,23)
 			if IsControlJustReleased(0,47) and buyPlate[addplate] ~= nil then
-				exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+				exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 				AttemptBuy(i,false)
 			end
 
 			if IsControlJustReleased(0,23) or IsDisabledControlJustReleased(0,23) then
 				if financedPlates[addplate] ~= nil then
-					exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+					exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 					AttemptBuy(i,true)
 				end
 			end
@@ -650,7 +650,7 @@ function AttemptBuy(tableid,financed)
 
 	local veh = GetClosestVehicle(carspawns[tableid]["x"],carspawns[tableid]["y"],carspawns[tableid]["z"], 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -665,7 +665,7 @@ function AttemptBuy(tableid,financed)
 	local price = baseprice + (baseprice * commission/ 100)
 
 	--if baseprice > 10000 and not financed then
-	--	exports['mythic_notify']:SendAlert('error', 'This vehicle must be financed.')
+	--	exports['mythic_notify']:DoLongHudText('error', 'This vehicle must be financed.')
 	--	return
 	--end
 
@@ -685,7 +685,7 @@ function OwnerMenu()
 			ownerMenu = true
 			currentCarSpawnLocation = i
 			if IsControlJustReleased(0,38) then
-				exports['mythic_notify']:SendAlert('inform', 'We Opened')
+				exports['mythic_notify']:DoLongHudText('inform', 'We Opened')
 				if vehshop.opened then
 					CloseCreator()
 				else
@@ -1403,7 +1403,7 @@ RegisterCommand('finance', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('finance_bikeshop')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1418,7 +1418,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then 
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'pdm', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'tuner' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1426,7 +1426,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'tuner', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'cardealer' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1434,7 +1434,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'imports', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'bikedealer' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1442,10 +1442,10 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'bikedealer', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1459,7 +1459,7 @@ RegisterCommand('testdrive', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('bike:testdrive')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1473,7 +1473,7 @@ RegisterCommand('enableBuy', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('bikeshop:enable_buy')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1485,7 +1485,7 @@ RegisterCommand('refreshDisplay', function()
 	elseif job == 'cardealer' then
 		TriggerServerEvent('imports:refreshDisplay')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 

@@ -236,9 +236,9 @@ function DoDropOff()
 		if success then
 			GetPayed()
 			Citizen.Wait(2000)
-			exports['mythic_notify']:SendAlert('inform', 'The delivery was on point, your pager will be updated with the next drop off')
+			exports['mythic_notify']:DoLongHudText('inform', 'The delivery was on point, your pager will be updated with the next drop off')
 		else
-			exports['mythic_notify']:SendAlert('error', 'The drop off failed')
+			exports['mythic_notify']:DoLongHudText('error', 'The drop off failed')
 		end
 	
 		DeleteCreatedPed()

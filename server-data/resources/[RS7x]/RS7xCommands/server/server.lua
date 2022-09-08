@@ -111,7 +111,7 @@ AddEventHandler('RS7x:canBuyID', function()
         user.removeMoney(500)
         TriggerClientEvent('player:receiveItem',user.source,'idcard', 1)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'error', text = "You don't have enough money for this"})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'error', text = "You don't have enough money for this"})
     end
 end)
 

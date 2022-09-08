@@ -2155,7 +2155,7 @@ AddEventHandler('housing:info', function(args)
 		house_name = rentedOffices[house_id]["name"]
 	end
 
-	exports['mythic_notify']:SendAlert('inform', "Looking up Information on " .. house_name)
+	exports['mythic_notify']:DoLongHudText('inform', "Looking up Information on " .. house_name)
 	TriggerServerEvent("house:checkavailability",house_id,house_model)
 end)
 
@@ -2175,7 +2175,7 @@ AddEventHandler('house:spawnpoints', function(spawns)
 		modifyingTable = spawns
 		startingGarages = modifyingTable["garage"]
 	end
-	exports['mythic_notify']:SendAlert('inform', "Loaded.")
+	exports['mythic_notify']:DoLongHudText('inform', "Loaded.")
 end)
 
 
@@ -2212,7 +2212,7 @@ AddEventHandler('houses:Mortgage', function()
 
 	local houseinfo = GetHouseInformation()
 	if houseinfo == nil then
-		exports['mythic_notify']:SendAlert('error', "No house found!")
+		exports['mythic_notify']:DoLongHudText('error', "No house found!")
 		return
 	end
 
@@ -2233,7 +2233,7 @@ AddEventHandler('houses:Mortgage', function()
 	end
 
 	TriggerServerEvent("house:dopayment",house_id,house_model)
-	exports['mythic_notify']:SendAlert('inform', "Attempting to pay Mortgage to house " .. house_name)
+	exports['mythic_notify']:DoLongHudText('inform', "Attempting to pay Mortgage to house " .. house_name)
 end)
 
 RegisterNetEvent('houses:removeHouseKey')
@@ -2303,11 +2303,11 @@ AddEventHandler('houses:GiveKey', function()
 	local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 	if(closestPlayer ~= -1 and closestDistance < 5) then
 		TriggerServerEvent("house:givekey",house_id,house_model,house_name,GetPlayerServerId(closestPlayer))
-		exports['mythic_notify']:SendAlert('inform', "Attempting to give key to house " .. house_name)
+		exports['mythic_notify']:DoLongHudText('inform', "Attempting to give key to house " .. house_name)
 		Wait(500)
 		return
 	end
-	exports['mythic_notify']:SendAlert('inform', 'Failed to find Player.')
+	exports['mythic_notify']:DoLongHudText('inform', 'Failed to find Player.')
 end)
 
 local housenameraid = "none"
@@ -2434,7 +2434,7 @@ AddEventHandler('housing:findsalecid', function(checkcid,price,house_id,house_mo
 	end
 
 	if buy then
-		exports['mythic_notify']:SendAlert('inform', 'Attempting purchase - please wait.')
+		exports['mythic_notify']:DoLongHudText('inform', 'Attempting purchase - please wait.')
 		if name ~= nil then
 			TriggerServerEvent("house:purchasehouse",house_id,house_model,3000,housename,true,x,y,z)
 		else
@@ -2485,7 +2485,7 @@ AddEventHandler('housing:sendPurchaseAttempt', function(cid,price)
 		if modifying then
 			TriggerServerEvent("housing:attemptsale",cid,price,modifyingTable["house_id"],modifyingTable["house_model"])
 		else
-			exports['mythic_notify']:SendAlert("error", "You must have a house in modify mode to sell it!")
+			exports['mythic_notify']:DoLongHudText("error", "You must have a house in modify mode to sell it!")
 		end
 	end
 end)
@@ -2496,7 +2496,7 @@ AddEventHandler('housing:transferHouseAttempt', function(cid)
 		if modifying then
 			TriggerServerEvent("house:transferHouse",modifyingTable["house_id"],modifyingTable["house_model"],cid)
 		else
-			exports['mythic_notify']:SendAlert("error", "You must have a house in modify mode to transfer it!")
+			exports['mythic_notify']:DoLongHudText("error", "You must have a house in modify mode to transfer it!")
 		end
 	end
 end)
@@ -2506,7 +2506,7 @@ AddEventHandler('housing:evictHouseAttempt', function()
 	if modifying then
 		TriggerServerEvent("house:evictHouse",modifyingTable["house_id"],modifyingTable["house_model"])
 	else
-		exports['mythic_notify']:SendAlert("error","You must have a house in modify mode to evict the residents!")
+		exports['mythic_notify']:DoLongHudText("error","You must have a house in modify mode to evict the residents!")
 	end
 end)
 
@@ -2516,14 +2516,14 @@ AddEventHandler('housing:info:realtor', function(args)
 	if modifying then
 		if args == "reset" then
 			resetModifyingTable()
-			exports['mythic_notify']:SendAlert('inform', 'Your house editing has been reset but has not saved!')
+			exports['mythic_notify']:DoLongHudText('inform', 'Your house editing has been reset but has not saved!')
 			return
 		end
 
 		if args == "stop" then
 			modifying = false
 			resetModifyingTable()
-			exports['mythic_notify']:SendAlert('inform', 'You have stopped!')
+			exports['mythic_notify']:DoLongHudText('inform', 'You have stopped!')
 			return
 		end
 
@@ -2531,7 +2531,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["wardrobe"] = { ["x"] = coords["x"], ["y"] = coords["y"], ["z"] = coords["z"], ["h"] = heading }
-			exports['mythic_notify']:SendAlert('inform', "A new clothing area has been set, there is " .. #modifyingTable["wardrobe"] .. " in total!")
+			exports['mythic_notify']:DoLongHudText('inform', "A new clothing area has been set, there is " .. #modifyingTable["wardrobe"] .. " in total!")
 			return
 		end
 
@@ -2539,7 +2539,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["storage"] = { ["x"] = coords["x"], ["y"] = coords["y"], ["z"] = coords["z"], ["h"] = heading }
-			exports['mythic_notify']:SendAlert('inform', "A new storage area has been set, there is " .. #modifyingTable["storage"] .. " in total!")
+			exports['mythic_notify']:DoLongHudText('inform', "A new storage area has been set, there is " .. #modifyingTable["storage"] .. " in total!")
 			return
 		end
 
@@ -2547,7 +2547,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["garages"] = { ["x"] = coords["x"], ["y"] = coords["y"], ["z"] = coords["z"], ["h"] = heading }
-			exports['mythic_notify']:SendAlert('inform', "A new garage has been set!")
+			exports['mythic_notify']:DoLongHudText('inform', "A new garage has been set!")
 			return
 		end
 
@@ -2555,7 +2555,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["garages"] = {}
-			exports['mythic_notify']:SendAlert('inform', "Garages for " .. modifyingTable["info"] .. " have been wiped!")
+			exports['mythic_notify']:DoLongHudText('inform', "Garages for " .. modifyingTable["info"] .. " have been wiped!")
 			garageswiped = true
 			return
 		end
@@ -2564,7 +2564,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["backdoorinside"] = { ["x"] = coords["x"], ["y"] = coords["y"], ["z"] = coords["z"], ["h"] = heading }
-			exports['mythic_notify']:SendAlert('inform', 'Door Set')
+			exports['mythic_notify']:DoLongHudText('inform', 'Door Set')
 			return
 		end
 
@@ -2572,13 +2572,13 @@ AddEventHandler('housing:info:realtor', function(args)
 			local coords = GetEntityCoords(PlayerPedId())
 			local heading = GetEntityHeading(PlayerPedId())
 			modifyingTable["backdooroutside"] = { ["x"] = coords["x"], ["y"] = coords["y"], ["z"] = coords["z"], ["h"] = heading }
-			exports['mythic_notify']:SendAlert('inform', 'Door Set')
+			exports['mythic_notify']:DoLongHudText('inform', 'Door Set')
 			return
 		end
 
 		if args == "update" then
 			TriggerServerEvent("house:updatespawns",modifyingTable,garageswiped,startingGarages)
-			exports['mythic_notify']:SendAlert('inform', 'Saved house')
+			exports['mythic_notify']:DoLongHudText('inform', 'Saved house')
 			return
 		end
 	end
@@ -2597,7 +2597,7 @@ AddEventHandler('housing:info:realtor', function(args)
 	elseif args == "modify" then
 		
 		if modifying then
-			exports['mythic_notify']:SendAlert('error', modifyingTable["info"] .. " is already being modified.")
+			exports['mythic_notify']:DoLongHudText('error', modifyingTable["info"] .. " is already being modified.")
 		else
 			garageswiped = false
 			local house_model = houseinfo[2]
@@ -2612,7 +2612,7 @@ AddEventHandler('housing:info:realtor', function(args)
 			modifyingTable["house_id"] = house_id
 			modifying = true
 			TriggerServerEvent("housing:requestSpawnTable",house_id,house_model)
-			exports['mythic_notify']:SendAlert('inform', house_name .. " is loading.")
+			exports['mythic_notify']:DoLongHudText('inform', house_name .. " is loading.")
 		end
 	end
 end)
@@ -2677,7 +2677,7 @@ function GetHouseInformation()
 		houseinfo = { [1] = house_id, [2] = house_model }
 		return houseinfo
 	else
-		exports['mythic_notify']:SendAlert('error', 'No house found!')
+		exports['mythic_notify']:DoLongHudText('error', 'No house found!')
 	end
 end
 
@@ -2949,7 +2949,7 @@ AddEventHandler('GPS:SetRoute', function(house_id,house_model)
 	SetBlipRoute(GPSblip, 1)
 	SetBlipAsFriendly(GPSblip, 1)
 	SetBlipColour(GPSblip, 6)
-	exports['mythic_notify']:SendAlert('inform', "Your GPS location has been set to " .. mygps["info"] .. "!")
+	exports['mythic_notify']:DoLongHudText('inform', "Your GPS location has been set to " .. mygps["info"] .. "!")
 end)
 
 RegisterNetEvent('GPSLocations')

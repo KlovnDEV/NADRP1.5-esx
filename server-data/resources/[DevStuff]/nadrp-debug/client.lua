@@ -219,20 +219,20 @@ Citizen.CreateThread( function()
             if IsControlJustReleased(0, 38) then
                 if inFreeze then
                     inFreeze = false
-                    exports['mythic_notify']:SendAlert('inform', 'Freeze Disabled')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Freeze Disabled')
                 else
                     inFreeze = true
 
-                    exports['mythic_notify']:SendAlert('inform', 'Freeze Enabled')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Freeze Enabled')
                 end
             end
             if IsControlJustReleased(0, 47) then
                 if lowGrav then
                     lowGrav = false
-                    exports['mythic_notify']:SendAlert('inform', 'Low Grav Disabled')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Low Grav Disabled')
                 else
                     lowGrav = true
-                    exports['mythic_notify']:SendAlert('inform', 'Low Grav Enabled')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Low Grav Enabled')
                 end
             end
         else

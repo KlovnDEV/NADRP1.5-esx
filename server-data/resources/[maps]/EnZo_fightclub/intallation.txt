@@ -1,1 +1,0 @@
-Copy this folder into your servers resources folder and add "ensure/start enzo_fightclub" to your server.cfg

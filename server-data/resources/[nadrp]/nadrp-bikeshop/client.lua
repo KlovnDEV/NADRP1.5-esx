@@ -216,7 +216,7 @@ AddEventHandler("bike:testdrive", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	
@@ -246,7 +246,7 @@ AddEventHandler("bike:testdrive", function()
 		TriggerEvent("ARPF:spawn:recivekeys",veh,GetVehicleNumberPlateText(veh))
 		myspawnedvehs[veh] = true
 	else
-		exports['mythic_notify']:SendAlert('inform', 'A bike is on the spawn point.')
+		exports['mythic_notify']:DoLongHudText('inform', 'A bike is on the spawn point.')
 	end
 end)
 
@@ -258,7 +258,7 @@ AddEventHandler("finance_bikeshop", function()
 	end
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -272,7 +272,7 @@ AddEventHandler("bikeshop:enable_buy", function()
 	end
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -339,7 +339,7 @@ function BuyMenu()
 			end
 			DisableControlAction(0,23)
 			if IsControlJustReleased(0,47) and buyPlates[addplate] ~= nil then
-				exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+				exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 				AttemptBuy(i,false)
 			end
 
@@ -347,7 +347,7 @@ function BuyMenu()
 				local veh = GetClosestVehicle(carspawns[i]["x"],carspawns[i]["y"],carspawns[i]["z"], 3.000, 0, 70)
 				local addplate = GetVehicleNumberPlateText(veh)
 				if financedPlates[addplate] ~= nil then
-					exports['mythic_notify']:SendAlert('inform', 'Attempting Purchase')
+					exports['mythic_notify']:DoLongHudText('inform', 'Attempting Purchase')
 					AttemptBuy(i,true)
 				end
 			end
@@ -360,7 +360,7 @@ function AttemptBuy(tableid,financed)
 	local veh = GetClosestVehicle(carspawns[tableid]["x"],carspawns[tableid]["y"],carspawns[tableid]["z"], 3.000, 0, 70)
 
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -391,7 +391,7 @@ function OwnerMenu()
 			ownerMenu = true
 			currentCarSpawnLocation = i
 			if IsControlJustReleased(0,38) then
-				exports['mythic_notify']:SendAlert('inform', 'We Opened')
+				exports['mythic_notify']:DoLongHudText('inform', 'We Opened')
 				if vehshop.opened then
 					CloseCreator()
 				else
@@ -479,7 +479,7 @@ function SpawnSaleVehicles()
 
 		if modelwait > 100 then
 			DespawnSaleVehicles()
-			exports['mythic_notify']:SendAlert('inform', 'Vehicles failed to load, please be patient')
+			exports['mythic_notify']:DoLongHudText('inform', 'Vehicles failed to load, please be patient')
 			Wait(10000)
 			return
 		end

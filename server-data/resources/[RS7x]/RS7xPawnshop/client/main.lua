@@ -111,7 +111,7 @@ AddEventHandler('RS7x:StartRun', function()
         if run == 12 then
             started = false
             OnRun = false
-            exports['mythic_notify']:SendAlert('success', 'You have completed your list.')
+            exports['mythic_notify']:DoLongHudText('success', 'You have completed your list.')
             run = 0
             return
         end
@@ -130,12 +130,12 @@ AddEventHandler('RS7x:StartRun', function()
                 OnRun = false
                 started = false
                 run = 0
-                exports['mythic_notify']:SendAlert('inform', 'You took to long your run has been cancelled.')
+                exports['mythic_notify']:DoLongHudText('inform', 'You took to long your run has been cancelled.')
                 return
             end
 
             if dist <= 50.0 and not pedSpawned then
-                exports['mythic_notify']:SendAlert('inform', 'You are close to the drop off point')
+                exports['mythic_notify']:DoLongHudText('inform', 'You are close to the drop off point')
                 DeleteCreatedPed()
                 CreatePawnPed()
                 pedSpawned = true
@@ -211,7 +211,7 @@ AddEventHandler('RS7x:DoDropOff', function()
         complete = true
 
         if complete then
-            exports['mythic_notify']:SendAlert('inform', 'I got the call in, Go await the next drop')
+            exports['mythic_notify']:DoLongHudText('inform', 'I got the call in, Go await the next drop')
             DeleteBlip()
             DeleteCreatedPed()
             run = run + 1

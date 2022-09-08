@@ -13,10 +13,10 @@ AddEventHandler('RS7x:RequestRun', function()
     local xPlayer = ESX.GetPlayerFromId(source)
     if xPlayer.getMoney() >= 100 then
         xPlayer.removeMoney(100)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Paid $100 Go await for the gps location'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Paid $100 Go await for the gps location'})
         TriggerClientEvent('RS7x:StartRun', source)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough money'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough money'})
     end
 end)
 
@@ -62,14 +62,14 @@ AddEventHandler('RS7x:payout', function(name, itemCount)
     if tonumber(itemCount) >= tonumber(rand) then
         TriggerClientEvent('inventory:removeItem',source, name, rand)
         xPlayer.addMoney(itemprice * rand)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You just got $' .. itemprice * rand})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You just got $' .. itemprice * rand})
     elseif tonumber(itemCount) == 1 then
         TriggerClientEvent('inventory:removeItem',source, name, 1)
         xPlayer.addMoney(itemprice)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You just got $' .. itemprice})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You just got $' .. itemprice})
     else
         TriggerClientEvent('RS7x:failed', source, true)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'The drop off failed - You dont have any stolen goods'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'The drop off failed - You dont have any stolen goods'})
     end
 end)
 
@@ -92,15 +92,15 @@ AddEventHandler('RS7x:payout', function(name)
        -- xPlayer.removeInventoryItem(name, amount)
         TriggerClientEvent('inventory:removeItem',source, name, amount) 
         xPlayer.addMoney(itemprice * amount)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You just got $' .. itemprice * amount})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You just got $' .. itemprice * amount})
     elseif Iamount == 1 then 
        -- xPlayer.removeInventoryItem(name, 1)
         TriggerClientEvent('inventory:removeItem',source, name, 1) 
         xPlayer.addMoney(itemprice)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You just got $' .. itemprice})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You just got $' .. itemprice})
     else
         TriggerClientEvent('RS7x:failed', source, true)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'The drop off failed - You dont have any stolen goods'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'The drop off failed - You dont have any stolen goods'})
     end
 end)
 

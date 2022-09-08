@@ -166,7 +166,7 @@ Citizen.CreateThread(function()
 				if exports["nadrp-inventory"]:hasEnoughOfItem("alivechicken",1,false) then
 					PortionChicken()
 				else
-					exports['mythic_notify']:SendAlert('error', 'You dont have enough chickens.')
+					exports['mythic_notify']:DoLongHudText('error', 'You dont have enough chickens.')
 				end
 			end
 		end
@@ -181,7 +181,7 @@ Citizen.CreateThread(function()
 				if	exports["nadrp-inventory"]:hasEnoughOfItem("alivechicken",1,false) then
 					PortionChicken()
 				else
-					exports['mythic_notify']:SendAlert('error', 'You dont have enough chickens.')
+					exports['mythic_notify']:DoLongHudText('error', 'You dont have enough chickens.')
 				end
 			end
 		end
@@ -244,7 +244,7 @@ function StopPacking(position)
 	
 		if DoesEntityExist(vehicle) then
 			packcar = false
-			exports['mythic_notify']:SendAlert('inform', 'You stored the chickens in the vehicle.')
+			exports['mythic_notify']:DoLongHudText('inform', 'You stored the chickens in the vehicle.')
 			LoadDict('anim@heists@narcotics@trash')
 			TaskPlayAnim(GetPlayerPed(-1), 'anim@heists@narcotics@trash', "throw_a", 3.0, -8, -1, 63, 0, 0, 0, 0 )
 			Citizen.Wait(900)
@@ -272,13 +272,13 @@ function PackChicken(position)
 		if hasItem then
 			TriggerEvent('inventory:removeItem',"slaughteredchicken", 2) 
 			TriggerEvent("player:receiveItem","packagedchicken",2)
-			exports['mythic_notify']:SendAlert('inform', 'Keep packing the chicken or go to the vehicle and store it.')
+			exports['mythic_notify']:DoLongHudText('inform', 'Keep packing the chicken or go to the vehicle and store it.')
 			ClearPedTasks(GetPlayerPed(-1))
 			DeleteEntity(box)
 			DeleteEntity(chick)
 		end
 	else
-		exports['mythic_notify']:SendAlert('error', 'You have nothing to pack!')
+		exports['mythic_notify']:DoLongHudText('error', 'You have nothing to pack!')
 	end
 end
 
@@ -304,7 +304,7 @@ function PortionChicken()
 	end
 	--Citizen.Wait(5000)
 	--ESX.ShowNotification("~b~Poćwiartowałeś chickena.")
-	exports['mythic_notify']:SendAlert('inform', 'You slaughtered a chicken!')
+	exports['mythic_notify']:DoLongHudText('inform', 'You slaughtered a chicken!')
 	FreezeEntityPosition(GetPlayerPed(-1),false)
 	DeleteEntity(chicken)
 	DeleteEntity(knife)
@@ -348,7 +348,7 @@ function Vehicle()
 		
 		if DoesEntityExist(vehicle) then
 			nearcar = false
-			exports['mythic_notify']:SendAlert('inform', 'You put the chicken in the vehicle!')
+			exports['mythic_notify']:DoLongHudText('inform', 'You put the chicken in the vehicle!')
 			LoadDict('anim@heists@narcotics@trash')
 			TaskPlayAnim(GetPlayerPed(-1), 'anim@heists@narcotics@trash', "throw_a", 3.0, -8, -1, 63, 0, 0, 0, 0 )
 			Citizen.Wait(900)
@@ -404,7 +404,7 @@ Citizen.CreateThread(function()
 				Caught3 = 0
 				NumberCaught = 0
 				start = false
-				exports['mythic_notify']:SendAlert('inform', 'Take the chickens to the vehicle!')
+				exports['mythic_notify']:DoLongHudText('inform', 'Take the chickens to the vehicle!')
 				Vehicle()
 			end
 
@@ -449,7 +449,7 @@ function CaughtChicken()
 	ragdoll = true
 	local Chance = math.random(1,100)
 	if Chance <= 60 then
-			exports['mythic_notify']:SendAlert('success', 'You managed to catch 1 chicken!')
+			exports['mythic_notify']:DoLongHudText('success', 'You managed to catch 1 chicken!')
 			if Caught1 == 1 then
 				DeleteEntity(chicken1)
 				Caught1 = 0
@@ -464,7 +464,7 @@ function CaughtChicken()
 				NumberCaught = NumberCaught +1
 			end
 		else
-		exports['mythic_notify']:SendAlert('error', 'The chicken escaped your arms!')
+		exports['mythic_notify']:DoLongHudText('error', 'The chicken escaped your arms!')
 	end
 end
 
@@ -505,7 +505,7 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('nadrp-log:SendDiscordLog', data)
 								end
 							else
-								exports['mythic_notify']:SendAlert('error', 'You moved too far!')
+								exports['mythic_notify']:DoLongHudText('error', 'You moved too far!')
 							end
 							if DumbFuckCount > 7 then
 								local data = {
@@ -519,7 +519,7 @@ Citizen.CreateThread(function()
 							DumbFuckCount = 0
 						end)
 					else
-						exports['mythic_notify']:SendAlert('error', 'You have nothing to sell!')
+						exports['mythic_notify']:DoLongHudText('error', 'You have nothing to sell!')
 					end
 				else
 					DumbFuckCount = DumbFuckCount + 1

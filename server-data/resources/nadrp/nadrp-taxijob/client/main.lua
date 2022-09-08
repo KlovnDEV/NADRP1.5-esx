@@ -163,7 +163,7 @@ function OpenVehicleSpawnerMenu()
 			}, function(data, menu)
 				if not ESX.Game.IsSpawnPointClear(Config.Zones.VehicleSpawnPoint.Pos, 5.0) then
 					--ESX.ShowNotification(_U('spawnpoint_blocked'))
-					exports['mythic_notify']:SendAlert('error', _U('spawnpoint_blocked'))
+					exports['mythic_notify']:DoLongHudText('error', _U('spawnpoint_blocked'))
 					return
 				end
 
@@ -197,7 +197,7 @@ function OpenVehicleSpawnerMenu()
 		}, function(data, menu)
 			if not ESX.Game.IsSpawnPointClear(Config.Zones.VehicleSpawnPoint.Pos, 5.0) then
 				--ESX.ShowNotification(_U('spawnpoint_blocked'))
-				exports['mythic_notify']:SendAlert('error', _U('spawnpoint_blocked'))
+				exports['mythic_notify']:DoLongHudText('error', _U('spawnpoint_blocked'))
 				return
 			end
 
@@ -235,7 +235,7 @@ function DeleteJobVehicle()
 			end
 		else
 			--ESX.ShowNotification(_U('only_taxi'))
-			exports['mythic_notify']:SendAlert('error', _U('only_taxi'))
+			exports['mythic_notify']:DoLongHudText('error', _U('only_taxi'))
 		end
 	end
 end
@@ -296,18 +296,18 @@ function OpenMobileTaxiActionsMenu()
 				local amount = tonumber(data.value)
 				if amount == nil then
 					--ESX.ShowNotification(_U('amount_invalid'))
-					exports['mythic_notify']:SendAlert('error', _U('amount_invalid'))
+					exports['mythic_notify']:DoLongHudText('error', _U('amount_invalid'))
 					
 				else
 					menu.close()
 					local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 					if closestPlayer == -1 or closestDistance > 3.0 then
 						--ESX.ShowNotification(_U('no_players_near'))
-						exports['mythic_notify']:SendAlert('error', _U('no_players_near'))
+						exports['mythic_notify']:DoLongHudText('error', _U('no_players_near'))
 					else
 						TriggerServerEvent('tp_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_taxi', 'Taxi', amount)
 						--ESX.ShowNotification(_U('billing_sent'))
-						exports['mythic_notify']:SendAlert('success', _U('billing_sent'))
+						exports['mythic_notify']:DoLongHudText('success', _U('billing_sent'))
 					end
 
 				end
@@ -332,17 +332,17 @@ function OpenMobileTaxiActionsMenu()
 								StartTaxiJob()
 							else
 								--ESX.ShowNotification(_U('must_in_taxi'))
-								exports['mythic_notify']:SendAlert('error', _U('must_in_taxi'))
+								exports['mythic_notify']:DoLongHudText('error', _U('must_in_taxi'))
 								
 							end
 						end
 					else
 						if tonumber(ESX.PlayerData.job.grade) >= 3 then
 							--ESX.ShowNotification(_U('must_in_vehicle'))
-							exports['mythic_notify']:SendAlert('error', _U('must_in_vehicle'))
+							exports['mythic_notify']:DoLongHudText('error', _U('must_in_vehicle'))
 						else
 							--ESX.ShowNotification(_U('must_in_taxi'))
-							exports['mythic_notify']:SendAlert('error', _U('must_in_taxi'))
+							exports['mythic_notify']:DoLongHudText('error', _U('must_in_taxi'))
 						end
 					end
 				end
@@ -391,7 +391,7 @@ function OpenGetStocksMenu()
 
 				if count == nil then
 					--ESX.ShowNotification(_U('quantity_invalid'))
-					exports['mythic_notify']:SendAlert('error', _U('quantity_invalid'))
+					exports['mythic_notify']:DoLongHudText('error', _U('quantity_invalid'))
 				else
 					menu2.close()
 					menu.close()
@@ -441,7 +441,7 @@ function OpenPutStocksMenu()
 
 				if count == nil then
 					--ESX.ShowNotification(_U('quantity_invalid'))
-					exports['mythic_notify']:SendAlert('error', _U('quantity_invalid'))
+					exports['mythic_notify']:DoLongHudText('error', _U('quantity_invalid'))
 				else
 					menu2.close()
 					menu.close()
@@ -605,14 +605,14 @@ Citizen.CreateThread(function()
 							TaskStandStill(CurrentCustomer, standTime)
 
 							--ESX.ShowNotification(_U('customer_found'))
-							exports['mythic_notify']:SendAlert('success', _U('customer_found'))
+							exports['mythic_notify']:DoLongHudText('success', _U('customer_found'))
 						end
 					end
 				end
 			else
 				if IsPedFatallyInjured(CurrentCustomer) then
 					--ESX.ShowNotification(_U('client_unconcious'))
-					exports['mythic_notify']:SendAlert('error', _U('client_unconcious'))
+					exports['mythic_notify']:DoLongHudText('error', _U('client_unconcious'))
 
 					if DoesBlipExist(CurrentCustomerBlip) then
 						RemoveBlip(CurrentCustomerBlip)
@@ -641,7 +641,7 @@ Citizen.CreateThread(function()
 								TaskLeaveVehicle(CurrentCustomer, vehicle, 0)
 
 								--ESX.ShowNotification(_U('arrive_dest'))
-								exports['mythic_notify']:SendAlert('success', _U('arrive_dest'))
+								exports['mythic_notify']:DoLongHudText('success', _U('arrive_dest'))
 								TaskGoStraightToCoord(CurrentCustomer, targetCoords.x, targetCoords.y, targetCoords.z, 1.0, -1, 0.0, 0.0)
 								SetEntityAsMissionEntity(CurrentCustomer, false, true)
 								TriggerServerEvent('tac_taxijob:success')
@@ -683,7 +683,7 @@ Citizen.CreateThread(function()
 							end
 
 							--ESX.ShowNotification(msg)
-							exports['mythic_notify']:SendAlert('inform', msg)
+							exports['mythic_notify']:DoLongHudText('inform', msg)
 
 							DestinationBlip = AddBlipForCoord(targetCoords.x, targetCoords.y, targetCoords.z)
 
@@ -702,7 +702,7 @@ Citizen.CreateThread(function()
 
 								if not IsNearCustomer then
 									--ESX.ShowNotification(_U('close_to_client'))
-									exports['mythic_notify']:SendAlert('inform', _U('close_to_client'))
+									exports['mythic_notify']:DoLongHudText('inform', _U('close_to_client'))
 									IsNearCustomer = true
 								end
 

@@ -24,7 +24,7 @@ AddEventHandler('carry:command', function()
 			TriggerServerEvent('carry:sync', GetPlayerServerId(closestPlayer))
 		end
 	else
-		exports['mythic_notify']:SendAlert('error', 'You are already carrying someone.')
+		exports['mythic_notify']:DoLongHudText('error', 'You are already carrying someone.')
 	end
 end,false)
 
@@ -33,7 +33,7 @@ AddEventHandler('carry:syncTarget', function(target)
 	local playerPed = GetPlayerPed(-1)
 	local targetPed = GetPlayerPed(GetPlayerFromServerId(target))
 	carrying = true
-	exports['mythic_notify']:SendAlert('error', 'Press E to release carry.')
+	exports['mythic_notify']:DoLongHudText('error', 'Press E to release carry.')
 
 	while carrying do
 		AttachEntityToEntity(GetPlayerPed(-1), targetPed, 1, -0.68, -0.2, 0.94, 180.0, 180.0, 60.0, 1, 1, 0, 1, 0, 1)
@@ -93,7 +93,7 @@ end)
 RegisterNetEvent('carry:syncMe')
 AddEventHandler('carry:syncMe', function()
     local playerPed = GetPlayerPed(-1)
-    exports['mythic_notify']:SendAlert('inform', 'Press E to release carry.')
+    exports['mythic_notify']:DoLongHudText('inform', 'Press E to release carry.')
     carrying = true
 
     while carrying do
@@ -133,7 +133,7 @@ AddEventHandler('carryAI', function()
 	if not holdingBody then
 		carryPedNow()
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You are already carrying someone.')
+		exports['mythic_notify']:DoLongHudText('inform', 'You are already carrying someone.')
 	end
 end)
 
@@ -160,7 +160,7 @@ function carryPedNow()
 end
 
 function carryPed(ped)
-	exports['mythic_notify']:SendAlert('inform', 'Press E to release carry.')
+	exports['mythic_notify']:DoLongHudText('inform', 'Press E to release carry.')
 
 	loadAnim('anim@narcotics@trash')
 	TaskPlayAnim(PlayerPedId(),'anim@narcotics@trash', 'drop_front',0.9, -8, 1500, 49, 3.0, 0, 0, 0) 

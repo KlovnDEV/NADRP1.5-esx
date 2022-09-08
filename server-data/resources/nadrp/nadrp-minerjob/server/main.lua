@@ -10,11 +10,11 @@ AddEventHandler('Ford:Trade', function(itemCount)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * math.random(180, 250))
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Diamonds For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Diamonds For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough Diamonds'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough Diamonds'})
     end
 end)
 
@@ -24,11 +24,11 @@ AddEventHandler('Ford:Gold', function(itemCount)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * math.random(125, 250))
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Gold For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Gold For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough Gold'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough Gold'})
     end
 end)
 
@@ -38,11 +38,11 @@ AddEventHandler('Ford:Copper', function(itemCount)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * math.random(5, 12))
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Copper For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Copper For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough Copper'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough Copper'})
     end
 end)
 
@@ -52,10 +52,10 @@ AddEventHandler('Ford:Iron', function(itemCount)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * math.random(15, 35))
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Iron For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Iron For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough Iron'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough Iron'})
     end
 end)

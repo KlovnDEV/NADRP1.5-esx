@@ -24,12 +24,12 @@ AddEventHandler('suku:buyLicense', function ()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	if xPlayer.getMoney() >= 5000 then
 		xPlayer.removeMoney(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'inform', text = 'You registered a Fire Arms license.'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'inform', text = 'You registered a Fire Arms license.'})
 		TriggerEvent('tac_license:addLicense', _source, 'weapon', function ()
 			GetLicenses(_source)
 		end)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error' ,text = 'You do not have enough money!'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error' ,text = 'You do not have enough money!'})
 	end
 end)
 
@@ -59,7 +59,7 @@ AddEventHandler('people-frisk', function(target)
     local cash = xPlayer.getMoney()
     local identifier = xPlayer.identifier
     TriggerEvent("server-frisk-player-inventory", source, cash, 0, identifier)
-    TriggerClientEvent('mythic_notify:client:SendAlert', target, {type = 'inform', text='You are currently being frisked'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', target, {type = 'inform', text='You are currently being frisked'})
 end)
 
 RegisterServerEvent("server-item-quality-update")
@@ -89,8 +89,8 @@ AddEventHandler('police:SeizeCash', function(target)
 
     local cash = zPlayer.getAccount('cash').money
     zPlayer.removeMoney(cash)
-    TriggerClientEvent('mythic_notify:client:SendAlert', target, {type = 'inform', text = 'Your cash and Marked Bills was seized'})
-    TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'inform', text = 'Seized persons cash'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', target, {type = 'inform', text = 'Your cash and Marked Bills was seized'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'inform', text = 'Seized persons cash'})
 end)
 
 RegisterServerEvent('steal:takeCash')

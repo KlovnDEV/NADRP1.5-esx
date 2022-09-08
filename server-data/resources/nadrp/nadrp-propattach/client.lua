@@ -29,7 +29,7 @@ AddEventHandler('attachPropPerm', function(attachModelSent,boneNumberSent,x,y,z,
 		removeAttachedPropPerm()
 		return
 	end
-	exports['mythic_notify']:SendAlert('inform', 'Press 7 to drop or pickup the object.')
+	exports['mythic_notify']:DoLongHudText('inform', 'Press 7 to drop or pickup the object.')
 
 	holdingPackage = true
 	attachModel = GetHashKey(attachModelSent)

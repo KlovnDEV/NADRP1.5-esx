@@ -129,6 +129,9 @@ local vehshopOwner = {
 				{name = "Vans", description = ''},
 			}
 		},
+
+		--CHANGE FROMM HERE
+
 		["jobvehicles"] = {
 			title = "job vehicles",
 			name = "job vehicles",
@@ -143,14 +146,14 @@ local vehshopOwner = {
 			title = "compacts",
 			name = "compacts",
 			buttons = {			
-				{name = "Blista", costs = 12000, description = {}, model = "blista"},
-				{name = "Brioso R/A", costs = 42000, description = {}, model = "brioso"},
+				{name = "Blista", costs = 8000, description = {}, model = "blista"},
+				{name = "Brioso R/A", costs = 35000, description = {}, model = "brioso"},
 				{name = "Dilettante", costs = 7000, description = {}, model = "Dilettante"},
-				{name = "Issi", costs = 14000, description = {}, model = "issi2"},
-				{name = "Panto", costs = 12000, description = {}, model = "panto"},
-				{name = "Prairie", costs = 20000, description = {}, model = "prairie"},
-				{name = "Rhapsody", costs = 12000, description = {}, model = "rhapsody"},
-				{name = "Caddy", costs = 12000, description = {}, model = "caddy"},
+				{name = "Issi", costs = 11000, description = {}, model = "issi2"},
+				{name = "Panto", costs = 1000, description = {}, model = "panto"},
+				{name = "Prairie", costs = 15000, description = {}, model = "prairie"},
+				{name = "Rhapsody", costs = 1500, description = {}, model = "rhapsody"},
+				{name = "Caddy", costs = 11000, description = {}, model = "caddy"},
 		
 			}
 		},
@@ -158,7 +161,7 @@ local vehshopOwner = {
 			title = "coupes",
 			name = "coupes",
 			buttons = {
-				{name = "Cognoscenti Cabrio", costs = 100000, description = {}, model = "cogcabrio"},
+				{name = "Cognoscenti Cabrio", costs = 90000, description = {}, model = "cogcabrio"},
 				{name = "Exemplar", costs = 80000, description = {}, model = "exemplar"},
 				{name = "F620", costs = 56000, description = {}, model = "f620"},
 				{name = "Felon", costs = 55000, description = {}, model = "felon"},
@@ -179,33 +182,33 @@ local vehshopOwner = {
 			name = "sports",
 			buttons = {
 				{name = "Futo", costs = 70000, description = {}, model = "futo"},
-				{name = "9F", costs = 120000, description = {}, model = "ninef"},
-				{name = "9F Cabrio", costs = 130000, description = {}, model = "ninef2"},
-				{name = "Alpha", costs = 150000, description = {}, model = "alpha"},
-				{name = "Banshee", costs = 165000, description = {}, model = "banshee"},
-				{name = "Bestia GTS", costs = 185000, description = {}, model = "bestiagts"},
-				{name = "Buffalo", costs = 40000, description = {}, model = "buffalo"},
+				{name = "9F", costs = 110000, description = {}, model = "ninef"},
+				{name = "9F Cabrio", costs = 120000, description = {}, model = "ninef2"},
+				{name = "Alpha", costs = 110000, description = {}, model = "alpha"},
+				{name = "Banshee", costs = 135000, description = {}, model = "banshee"},
+				{name = "Bestia GTS", costs = 140000, description = {}, model = "bestiagts"},
+				{name = "Buffalo", costs = 30000, description = {}, model = "buffalo"},
 				{name = "Buffalo S", costs = 89000, description = {}, model = "buffalo2"},
-				{name = "Carbonizzare", costs = 160000, description = {}, model = "carbonizzare"},
-				{name = "Comet", costs = 185000, description = {}, model = "comet2"},
-				{name = "Coquette", costs = 140000, description = {}, model = "coquette"},
-				{name = "Feltzer", costs = 120000, description = {}, model = "feltzer2"},
+				{name = "Carbonizzare", costs = 150000, description = {}, model = "carbonizzare"},
+				{name = "Comet", costs = 150000, description = {}, model = "comet2"},
+				{name = "Coquette", costs = 98000, description = {}, model = "coquette"},
+				{name = "Feltzer", costs = 110000, description = {}, model = "feltzer2"},
 				{name = "Furore GT", costs = 170000, description = {}, model = "furoregt"},
 				{name = "Fusilade", costs = 80000, description = {}, model = "fusilade"},
-				{name = "Jester", costs = 150000, description = {}, model = "jester"},
-				{name = "Kuruma", costs = 134000, description = {}, model = "kuruma"},
-				{name = "Lynx", costs = 160000, description = {}, model = "lynx"},
+				{name = "Jester", costs = 130000, description = {}, model = "jester"},
+				{name = "Kuruma", costs = 25500, description = {}, model = "kuruma"},
+				{name = "Lynx", costs = 140000, description = {}, model = "lynx"},
 				{name = "Massacro", costs = 130000, description = {}, model = "massacro"},
 				{name = "Omnis", costs = 156000, description = {}, model = "omnis"},
 				{name = "Penumbra", costs = 50000, description = {}, model = "penumbra"},
 				{name = "Rapid GT", costs = 100000, description = {}, model = "rapidgt"},
 				{name = "Rapid GT Convertible", costs = 120000, description = {}, model = "rapidgt2"},
 				{name = "Schafter V12", costs = 140000, description = {}, model = "schafter3"},
-				{name = "Sultan", costs = 100000, description = {}, model = "sultan"},
+				{name = "Sultan", costs = 90000, description = {}, model = "sultan"},
 				{name = "Surano", costs = 130000, description = {}, model = "surano"},
 				{name = "Tropos", costs = 170000, description = {}, model = "tropos"},
 				{name = "Verkierer", costs = 195000, description = {}, model = "verlierer2"},
-				{name = "Comet SR", costs = 220000, description = {}, model = "comet5"},
+				{name = "Comet SR", costs = 190000, description = {}, model = "comet5"},
 				{name = "Sentinel Classic", costs = 120000, description = {}, model = "sentinel3"},
 				{name = "Streiter", costs = 130000, description = {}, model = "streiter"},
 				{name = "Comet Safari", costs = 230000, description = {}, model = "comet4"},
@@ -218,12 +221,12 @@ local vehshopOwner = {
 				{name = "Turismo Classic ", costs = 252000, description = {}, model = "turismo2"},
 				{name = "Raptor ", costs = 125000, description = {}, model = "raptor"},
 				{name = "Comet Custom", costs = 320000, description = {}, model = "comet3"},
-				{name = "Flash GT", costs = 150000, description = {}, model = "flashgt"},
+				{name = "Flash GT", costs = 140000, description = {}, model = "flashgt"},
 				{name = "GB200", costs = 160000, description = {}, model = "gb200"},
 				{name = "Khamelion", costs = 120000, description = {}, model = "khamelion"},
 				{name = "Raiden", costs = 130000, description = {}, model = "raiden"},
 				{name = "schlagengt", costs = 300000, description = {}, model = "schlagen"},
-				{name = "neon", costs = 190000, description = {}, model = "neon"},
+				{name = "neon", costs = 170000, description = {}, model = "neon"},
 				{name = "Specter2", costs = 300000, description = {}, model = "specter2"},
 
 			}
@@ -232,25 +235,25 @@ local vehshopOwner = {
 			title = "sports classics",
 			name = "sportsclassics",
 			buttons = {
-				{name = "Casco", costs = 280000, description = {}, model = "casco"},
-				{name = "Coquette Classic", costs = 240000, description = {}, model = "coquette2"},
+				{name = "Casco", costs = 220000, description = {}, model = "casco"},
+				{name = "Coquette Classic", costs = 210000, description = {}, model = "coquette2"},
 				{name = "JB 700", costs = 190000, description = {}, model = "jb700"},
 				{name = "Pigalle", costs = 110000, description = {}, model = "pigalle"},
-				{name = "Stinger", costs = 210000, description = {}, model = "stinger"},
-				{name = "Stinger GT", costs = 235000, description = {}, model = "stingergt"},
-				{name = "Stirling GT", costs = 275000, description = {}, model = "feltzer3"},
-				{name = "Rapid GT Classic", costs = 260000, description = {}, model = "rapidgt3"},
+				{name = "Stinger", costs = 200000, description = {}, model = "stinger"},
+				{name = "Stinger GT", costs = 211000, description = {}, model = "stingergt"},
+				{name = "Stirling GT", costs = 221000, description = {}, model = "feltzer3"},
+				{name = "Rapid GT Classic", costs = 240000, description = {}, model = "rapidgt3"},
 				{name = "Retinue", costs = 150000, description = {}, model = "retinue"},
 				{name = "Viseris", costs = 230000, description = {}, model = "viseris"}, 
 				{name = "190z", costs = 240000, description = {}, model = "z190"},
-				{name = "GT500", costs = 270000, description = {}, model = "gt500"},
-				{name = "Savestra", costs = 165000, description = {}, model = "savestra"},
-				{name = "ElegyCustom", costs = 400000, description = {}, model = "elegy"},
-				{name = "Monroe", costs = 225000, description = {}, model = "monroe"},
-				{name = "Stafford", costs = 225000, description = {}, model = "stafford"},
-				{name = "btype1", costs = 170000, description = {}, model = "btype"},
-				{name = "btype2", costs = 190000, description = {}, model = "btype2"},
-				{name = "Swinger", costs = 300000, description = {}, model = "swinger"},
+				{name = "GT500", costs = 220000, description = {}, model = "gt500"},
+				{name = "Savestra", costs = 125000, description = {}, model = "savestra"},
+				{name = "ElegyCustom", costs = 300000, description = {}, model = "elegy"},
+				{name = "Monroe", costs = 205000, description = {}, model = "monroe"},
+				{name = "Stafford", costs = 205000, description = {}, model = "stafford"},
+				{name = "btype1", costs = 140000, description = {}, model = "btype"},
+				{name = "btype2", costs = 120000, description = {}, model = "btype2"},
+				{name = "Swinger", costs = 200000, description = {}, model = "swinger"},
 		
 				
 				
@@ -262,19 +265,19 @@ local vehshopOwner = {
 			title = "casino",
 			name = "casino",
 			buttons = {
-				{name = "Jugular", costs = 175000, description = {}, model = "jugular"},
+				{name = "Jugular", costs = 125000, description = {}, model = "jugular"},
 				{name = "Peyote", costs = 75000, description = {}, model = "peyote2"},
-				{name = "Gauntlet 4", costs = 150000, description = {}, model = "gauntlet4"},
-				{name = "Caracara", costs = 160000, description = {}, model = "caracara2"},
-				{name = "Novak", costs = 140000, description = {}, model = "Novak"},
-				{name = "Issi 7", costs = 140000, description = {}, model = "issi7"},
+				{name = "Gauntlet 4", costs = 120000, description = {}, model = "gauntlet4"},
+				{name = "Caracara", costs = 120000, description = {}, model = "caracara2"},
+				{name = "Novak", costs = 120000, description = {}, model = "Novak"},
+				{name = "Issi 7", costs = 130000, description = {}, model = "issi7"},
 				{name = "Hellion", costs = 110000, description = {}, model = "hellion"},
 				{name = "Dynasty", costs = 20000, description = {}, model = "Dynasty"},
 				{name = "Gauntlet 3", costs = 130000, description = {}, model = "gauntlet3"},
 				{name = "Nebula", costs = 83000, description = {}, model = "nebula"},
 				{name = "Zion 3", costs = 75000, description = {}, model = "zion3"},
-				{name = "Drafter", costs = 140000, description = {}, model = "drafter"},
-				{name = "Komoda", costs = 146000, description = {}, model = "komoda"},
+				{name = "Drafter", costs = 110000, description = {}, model = "drafter"},
+				{name = "Komoda", costs = 116000, description = {}, model = "komoda"},
 				{name = "Rebla", costs = 110000, description = {}, model = "rebla"},
 				{name = "Retinue", costs = 80000, description = {}, model = "retinue2"},
 				{name = "Sugoi", costs = 105000, description = {}, model = "sugoi"},
@@ -282,11 +285,11 @@ local vehshopOwner = {
 				{name = "VSTR", costs = 186000, description = {}, model = "vstr"},
 				{name = "KANJO", costs = 30000, description = {}, model = "kanjo"},
 				{name = "Everon", costs = 175000, description = {}, model = "everon"},
-				{name = "Outlaw", costs = 230000, description = {}, model = "outlaw"},
-				{name = "Vagrant", costs = 175000, description = {}, model = "vagrant"},
-				{name = "Asbo", costs = 29000, description = {"josh harris 2020"}, model = "asbo"},
+				{name = "Outlaw", costs = 190000, description = {}, model = "outlaw"},
+				{name = "Vagrant", costs = 165000, description = {}, model = "vagrant"},
+				{name = "Asbo", costs = 19000, description = {"josh harris 2020"}, model = "asbo"},
 				{name = "Locust", costs = 250000, description = {}, model = "locust"},
-				{name = "Paragon", costs = 375000, description = {}, model = "paragon"},
+				{name = "Paragon", costs = 225000, description = {}, model = "paragon"},
 				{name = "imorgon", costs = 320000, description = {}, model = "imorgon"},
 
 			}
@@ -300,26 +303,26 @@ local vehshopOwner = {
 				{name = "Buccaneer", costs = 36000, description = {}, model = "buccaneer"},
 				{name = "Chino", costs = 29000, description = {}, model = "chino"},
 				{name = "Coquette BlackFin", costs = 55500, description = {}, model = "coquette3"},
-				{name = "Dominator", costs = 100000, description = {}, model = "dominator"},
+				{name = "Dominator", costs = 90000, description = {}, model = "dominator"},
 				{name = "Dukes", costs = 40000, description = {}, model = "dukes"},
-				{name = "Gauntlet", costs = 75000, description = {}, model = "gauntlet"},
+				{name = "Gauntlet", costs = 65000, description = {}, model = "gauntlet"},
 				{name = "Faction", costs = 36000, description = {}, model = "faction"},
 				{name = "Picador", costs = 36000, description = {}, model = "picador"},
 				{name = "Sabre Turbo", costs = 57000, description = {}, model = "sabregt"},
 				{name = "Tampa", costs = 35000, description = {}, model = "tampa"},
 				{name = "Virgo", costs = 38000, description = {}, model = "virgo"},
-				{name = "Vigero", costs = 70000, description = {}, model = "vigero"},
-				{name = "Elliie", costs = 150000, description = {}, model = "ellie"},
+				{name = "Vigero", costs = 60000, description = {}, model = "vigero"},
+				{name = "Elliie", costs = 110000, description = {}, model = "ellie"},
 				{name = "Phoenix", costs = 35000, description = {}, model = "phoenix"},
 				{name = "Tulip", costs = 110000, description = {}, model = "tulip"},
 				{name = "Impaler", costs = 90000, description = {}, model = "impaler"},
-				{name = "Nightshade", costs = 130000, description = {}, model = "nightshade"},
-				{name = "Vamos", costs = 110000, description = {}, model = "vamos"},
-				{name = "Dominator gt", costs = 120000, description = {}, model = "dominator3"},
+				{name = "Nightshade", costs = 110000, description = {}, model = "nightshade"},
+				{name = "Vamos", costs = 96000, description = {}, model = "vamos"},
+				{name = "Dominator gt", costs = 110000, description = {}, model = "dominator3"},
 				{name = "Hotknife", costs = 90000, description = {}, model = "hotknife"},
 				{name = "Hustler", costs = 80000, description = {}, model = "hustler"},
-				{name = "Slam van custom", costs = 170000, description = {}, model = "slamvan3"},
-				{name = "Sabre GT custom", costs = 150000, description = {}, model = "sabregt2"},
+				{name = "Slam van custom", costs = 140000, description = {}, model = "slamvan3"},
+				{name = "Sabre GT custom", costs = 130000, description = {}, model = "sabregt2"},
 				{name = "Lurcher", costs = 60000, description = {}, model = "lurcher"},
 				
 			}
@@ -331,13 +334,13 @@ local vehshopOwner = {
 				{name = "Bifta", costs = 50000, description = {}, model = "bifta"},
 				{name = "Blazer", costs = 18000, description = {}, model = "blazer"},
 				{name = "Brawler", costs = 71500, description = {}, model = "brawler"},
-				{name = "Dune Buggy", costs = 19000, description = {}, model = "dune"},
+				--{name = "Dune Buggy", costs = 19000, description = {}, model = "dune"},
 				{name = "Rebel", costs = 45000, description = {}, model = "rebel2"},
 				{name = "Sandking", costs = 55000, description = {}, model = "sandking"},
 				{name = "Riata", costs = 75000, description = {}, model = "riata"},
-				{name = "Kamacho", costs = 90000, description = {}, model = "kamacho"},
-				{name = "Trophy Truck", costs = 200000, description = {}, model = "trophytruck"},
-				{name = "Mesa 3", costs = 130000, description = {}, model = "mesa3"},
+				{name = "Kamacho", costs = 80000, description = {}, model = "kamacho"},
+				--{name = "Trophy Truck", costs = 180000, description = {}, model = "trophytruck"},
+				--{name = "Mesa 3", costs = 110000, description = {}, model = "mesa3"},
 			}
 		},
 		["suvs"] = {
@@ -346,9 +349,9 @@ local vehshopOwner = {
 			buttons = {
 				{name = "Cavalcade", costs = 39000, description = {}, model = "cavalcade2"},
 				{name = "Granger", costs = 55000, description = {}, model = "granger"},
-				{name = "Huntley S", costs = 75000, description = {}, model = "huntley"},
+				--{name = "Huntley S", costs = 75000, description = {}, model = "huntley"},
 				{name = "Landstalker", costs = 38000, description = {}, model = "landstalker"},
-				{name = "Radius", costs = 46000, description = {}, model = "radi"},
+				--{name = "Radius", costs = 46000, description = {}, model = "radi"},
 				{name = "Rocoto", costs = 85000, description = {}, model = "rocoto"},
 				{name = "Seminole", costs = 31000, description = {}, model = "seminole"},
 				{name = "XLS", costs = 55000, description = {}, model = "xls"},
@@ -363,8 +366,8 @@ local vehshopOwner = {
 			name = "vans",
 			buttons = {
 				{name = "Bison", costs = 30000, description = {}, model = "bison"},
-				{name = "Bobcat XL", costs = 15000, description = {}, model = "bobcatxl"},
-				{name = "Gang Burrito", costs = 55000, description = {}, model = "gburrito"},
+				--{name = "Bobcat XL", costs = 15000, description = {}, model = "bobcatxl"},
+				--{name = "Gang Burrito", costs = 55000, description = {}, model = "gburrito"},
 				{name = "Journey", costs = 15000, description = {}, model = "journey"},
 				{name = "Minivan", costs = 13000, description = {}, model = "minivan"},
 				{name = "Paradise", costs = 15000, description = {}, model = "paradise"},
@@ -380,23 +383,23 @@ local vehshopOwner = {
 			buttons = {
 				{name = "Emperor", costs = 25000, description = {}, model = "emperor2"},
 				{name = "Tornado", costs = 22000, description = {}, model = "tornado3"},
-				{name = "Tornado +", costs = 34900, description = {}, model = "tornado6"},
-				{name = "Bodhi", costs = 25000, description = {}, model = "bodhi2"},		
+				--{name = "Tornado +", costs = 34900, description = {}, model = "tornado6"},
+				--{name = "Bodhi", costs = 25000, description = {}, model = "bodhi2"},		
 				{name = "Asea", costs = 31000, description = {}, model = "asea"},
 				{name = "Asterope", costs = 28000, description = {}, model = "asterope"},
-				{name = "Fugitive", costs = 37000, description = {}, model = "fugitive"},
+				{name = "Fugitive", costs = 21000, description = {}, model = "fugitive"},
 				{name = "Glendale", costs = 32000, description = {}, model = "glendale"},
 				{name = "Intruder", costs = 35000, description = {}, model = "intruder"},
 				{name = "Premier", costs = 36000, description = {}, model = "premier"},
 				{name = "Regina", costs = 32000, description = {}, model = "regina"},
-				{name = "Schafter", costs = 49000, description = {}, model = "schafter2"},
+				--{name = "Schafter", costs = 49000, description = {}, model = "schafter2"},
 				{name = "Stanier", costs = 25000, description = {}, model = "stanier"},
 				{name = "Stratum", costs =28000, description = {}, model = "stratum"},
-				{name = "Super Diamond", costs = 150000, description = {}, model = "superd"},
+				--{name = "Super Diamond", costs = 150000, description = {}, model = "superd"},
 				{name = "Warrener", costs = 54000, description = {}, model = "warrener"},
 				{name = "Washington", costs = 35000, description = {}, model = "washington"},
-				{name = "Tailgater", costs = 36000, description = {}, model = "tailgater"},
-				{name = "Cognoscenti", costs = 110000, description = {}, model = "cognoscenti"},
+				{name = "Tailgater", costs = 24000, description = {}, model = "tailgater"},
+				{name = "Cognoscenti", costs = 80000, description = {}, model = "cognoscenti"},
 		
 			}
 		},
@@ -404,52 +407,52 @@ local vehshopOwner = {
 			title = "motorcycles",
 			name = "motorcycles",
 			buttons = {
-				{name = "Akuma", costs = 80000, description = {}, model = "AKUMA"},
-				{name = "Bagger", costs = 60000, description = {}, model = "bagger"},
-				{name = "Bati 801", costs = 75000, description = {}, model = "bati"},
-				{name = "BF400", costs = 72000, description = {}, model = "bf400"},
-				{name = "Carbon RS", costs = 75000, description = {}, model = "carbonrs"},
+				{name = "Akuma", costs = 65000, description = {}, model = "AKUMA"},
+				{name = "Bagger", costs = 50000, description = {}, model = "bagger"},
+				--{name = "Bati 801", costs = 45000, description = {}, model = "bati"},
+				{name = "BF400", costs = 39000, description = {}, model = "bf400"},
+				--{name = "Carbon RS", costs = 65000, description = {}, model = "carbonrs"},
 				{name = "Daemon", costs = 45000, description = {}, model = "daemon"},
-				{name = "Enduro", costs = 59000, description = {}, model = "enduro"},
-				{name = "Faggio", costs = 15000, description = {}, model = "faggio"},
-				{name = "Gargoyle", costs = 65000, description = {}, model = "gargoyle"},
-				{name = "Hexer", costs = 65000, description = {}, model = "hexer"},
-				{name = "Innovation", costs = 75000, description = {}, model = "innovation"},
-				{name = "Nemesis", costs = 70000, description = {}, model = "nemesis"},
-				{name = "PCJ-600", costs = 75000, description = {}, model = "pcj"},
-				{name = "Ruffian", costs = 64000, description = {}, model = "ruffian"},
-				{name = "Sanchez", costs = 65000, description = {}, model = "sanchez"},
-				{name = "Sovereign", costs = 159000, description = {}, model = "sovereign"},
-				{name = "Zombiea", costs = 65000, description = {}, model = "zombiea"},
-				{name = "Vespa", costs = 75000, description = {}, model = "faggio2"},
-				{name = "Manchez", costs = 77000, description = {}, model = "manchez"},
-				{name = "Vortex", costs = 90000, description = {}, model = "vortex"},
-				{name = "Avarus", costs = 65000, description = {}, model = "avarus"},
-				{name = "Vader", costs = 75000, description = {}, model = "vader"},
-				{name = "Esskey", costs = 75000, description = {}, model = "esskey"},
-				{name = "Defiler", costs = 95000, description = {}, model = "defiler"},
-				{name = "Chimera", costs = 72000, description = {}, model = "chimera"},
-				{name = "Daemon", costs = 79000, description = {}, model = "daemon"},
-				{name = "DaemonHigh", costs = 85000, description = {}, model = "daemon2"},
-				{name = "Nightblade", costs = 80000, description = {}, model = "nightblade"},	
-				{name = "Sanctus", costs = 80000, description = {}, model = "sanctus"},	
-				{name = "Wolfsbane", costs = 65000, description = {}, model = "wolfsbane"},
-				{name = "Hakuchou Drag", costs = 100000, description = {}, model = "hakuchou2"},
-				{name = "Fcr1000", costs = 75000, description = {}, model = "fcr2"},
+				{name = "Enduro", costs = 48000, description = {}, model = "enduro"},
+				{name = "Faggio", costs = 10000, description = {}, model = "faggio"},
+				{name = "Gargoyle", costs = 61000, description = {}, model = "gargoyle"},
+				{name = "Hexer", costs = 55000, description = {}, model = "hexer"},
+				{name = "Innovation", costs = 65000, description = {}, model = "innovation"},
+				{name = "Nemesis", costs = 60000, description = {}, model = "nemesis"},
+				--{name = "PCJ-600", costs = 75000, description = {}, model = "pcj"},
+				{name = "Ruffian", costs = 59000, description = {}, model = "ruffian"},
+				{name = "Sanchez", costs = 61000, description = {}, model = "sanchez"},
+				{name = "Sovereign", costs = 87600, description = {}, model = "sovereign"},
+				{name = "Zombiea", costs = 55000, description = {}, model = "zombiea"},
+				--{name = "Vespa", costs = 75000, description = {}, model = "faggio2"},
+				{name = "Manchez", costs = 55000, description = {}, model = "manchez"},
+				{name = "Vortex", costs = 80500, description = {}, model = "vortex"},
+				{name = "Avarus", costs = 55000, description = {}, model = "avarus"},
+				{name = "Vader", costs = 62000, description = {}, model = "vader"},
+				{name = "Esskey", costs = 65000, description = {}, model = "esskey"},
+				{name = "Defiler", costs = 80000, description = {}, model = "defiler"},
+				{name = "Chimera", costs = 69050, description = {}, model = "chimera"},
+				{name = "Daemon", costs = 69500, description = {}, model = "daemon"},
+				--{name = "DaemonHigh", costs = 85000, description = {}, model = "daemon2"},
+				{name = "Nightblade", costs = 65000, description = {}, model = "nightblade"},	
+				{name = "Sanctus", costs = 65000, description = {}, model = "sanctus"},	
+				{name = "Wolfsbane", costs = 45000, description = {}, model = "wolfsbane"},
+				--{name = "Hakuchou Drag", costs = 100000, description = {}, model = "hakuchou2"},
+				--{name = "Fcr1000", costs = 75000, description = {}, model = "fcr2"},
 				--{name = "Shotaro", costs = 120000, description = {}, model = "shotaro"},
-				{name = "Hakuchou", costs = 80000, description = {}, model = "hakuchou"},
+				{name = "Hakuchou", costs = 64800, description = {}, model = "hakuchou"},
 				{name = "Stryder", costs = 95000, description = {}, model = "stryder"},
 				{name = "Cliffhanger", costs = 75000, description = {}, model = "cliffhanger"},
-				{name = "Diablous 2", costs = 100000, description = {}, model = "diablous2"},
+				--{name = "Diablous 2", costs = 100000, description = {}, model = "diablous2"},
 				{name = "Vindicator", costs = 75000, description = {}, model = "vindicator"},
 				{name = "Thrust", costs = 65000, description = {}, model = "thrust"},
 				{name = "Diablous", costs = 75500, description = {}, model = "diablous"},
 				{name = "Lectro", costs = 70000, description = {}, model = "lectro"},
-				{name = "Rat Bike", costs = 75000, description = {}, model = "ratbike"},
-				{name = "Faggio Mod", costs = 20000, description = {}, model = "faggio3"},
-				{name = "Yamaha R1", costs = 200000, description = {}, model = "r1"},--5
+				--{name = "Rat Bike", costs = 75000, description = {}, model = "ratbike"},
+				--{name = "Faggio Mod", costs = 20000, description = {}, model = "faggio3"},
+				--{name = "Yamaha R1", costs = 200000, description = {}, model = "r1"},--5
 				--{name = "Yamaha 1700 MAX", costs = 150000, description = {}, model = "Y1700MAX"},--5
-				{name = "Harley Davidson", costs = 170000, description = {}, model = "HDIron883"},--5
+				--{name = "Harley Davidson", costs = 170000, description = {}, model = "HDIron883"},--5
 				--{name = "KTM RC390 ", costs = 200000, description = {}, model = "KTMRC39019"},--5
 				--{name = "Honder CB650R", costs = 200000, description = {}, model = "cb650r"},--5
 			}
@@ -519,7 +522,7 @@ AddEventHandler("car:testdrive", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -544,7 +547,7 @@ AddEventHandler("car:testdrive", function()
 		TaskWarpPedIntoVehicle(PlayerPedId(),veh,-1)
 		myspawnedvehs[veh] = true
 	else
-		exports["mythic_notify"]:SendAlert('error', 'A car is on the spawn point.')
+		exports["mythic_notify"]:DoLongHudText('error', 'A car is on the spawn point.')
 	end
 end)
 
@@ -556,7 +559,7 @@ AddEventHandler("finance", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -571,7 +574,7 @@ AddEventHandler("buyEnable", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -632,13 +635,13 @@ function BuyMenu()
 			end
 			DisableControlAction(0,23)
 			if IsControlJustReleased(0,47) and buyPlate[addplate] ~= nil then
-				exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+				exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 				AttemptBuy(i,false)
 			end
 
 			if IsControlJustReleased(0,23) or IsDisabledControlJustReleased(0,23) then
 				if financedPlates[addplate] ~= nil then
-					exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+					exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 					AttemptBuy(i,true)
 				end
 			end
@@ -650,7 +653,7 @@ function AttemptBuy(tableid,financed)
 
 	local veh = GetClosestVehicle(carspawns[tableid]["x"],carspawns[tableid]["y"],carspawns[tableid]["z"], 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -665,7 +668,7 @@ function AttemptBuy(tableid,financed)
 	local price = baseprice + (baseprice * commission/ 100)
 
 	--if baseprice > 10000 and not financed then
-	--	exports['mythic_notify']:SendAlert('error', 'This vehicle must be financed.')
+	--	exports['mythic_notify']:DoLongHudText('error', 'This vehicle must be financed.')
 	--	return
 	--end
 
@@ -685,7 +688,7 @@ function OwnerMenu()
 			ownerMenu = true
 			currentCarSpawnLocation = i
 			if IsControlJustReleased(0,38) then
-				exports['mythic_notify']:SendAlert('inform', 'We Opened')
+				exports['mythic_notify']:DoLongHudText('inform', 'We Opened')
 				if vehshop.opened then
 					CloseCreator()
 				else
@@ -1403,7 +1406,7 @@ RegisterCommand('finance', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('finance_bikeshop')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1418,7 +1421,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then 
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'pdm', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'tuner' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1426,7 +1429,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'tuner', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'cardealer' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1434,7 +1437,7 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'imports', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	elseif job == 'bikedealer' then
 		if amount ~= nil and amount > 0 and amount < 50 then
@@ -1442,10 +1445,10 @@ RegisterCommand('commission', function(source, args, raw)
 		elseif amount ~= nil and amount < 0 then
 			exports['nadrp-log']:AddLog('exploiter', name, ident, 'bikedealer', log)
 		else
-			exports['mythic_notify']:SendAlert('inform', 'Invalid amount "/commision [amount]"')
+			exports['mythic_notify']:DoLongHudText('inform', 'Invalid amount "/commision [amount]"')
 		end
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1459,7 +1462,7 @@ RegisterCommand('testdrive', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('bike:testdrive')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1473,7 +1476,7 @@ RegisterCommand('enableBuy', function(source, args, raw)
 	elseif job == 'bikedealer' then
 		TriggerEvent('bikeshop:enable_buy')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 
@@ -1485,7 +1488,7 @@ RegisterCommand('refreshDisplay', function()
 	elseif job == 'cardealer' then
 		TriggerServerEvent('imports:refreshDisplay')
 	else
-		exports['mythic_notify']:SendAlert('inform', 'You dont have permissions for this')
+		exports['mythic_notify']:DoLongHudText('inform', 'You dont have permissions for this')
 	end
 end)
 

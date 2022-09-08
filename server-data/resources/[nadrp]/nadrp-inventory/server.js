@@ -490,9 +490,9 @@ onNet("server-inventory-open", async(coords, player, secondInventory, targetName
             var shopArray = PoliceArmory();
             var shopAmount = 19;
             emitNet("inventory-open-target", src, [invArray, arrayCount, playerinvname, shopArray, shopAmount, targetinvname, 500, false]);
-        } else if (secondInventory == "12") {
+        } else if (secondInventory == "580") {
             var targetinvname = targetName;
-            var shopArray = BurgieStore();
+            var shopArray = BurgerShot();
             var shopAmount = 10;
             emitNet("inventory-open-target", src, [invArray, arrayCount, playerinvname, shopArray, shopAmount, targetinvname, 500, false]);
         } else if (secondInventory == "11") {
@@ -1116,18 +1116,18 @@ function Mafia() {
     return JSON.stringify(shopItems);
 }
 
-function BurgieStore() {
+function BurgerShot() {
     var shopItems = [
-        { item_id: "heartstopper", id: 0, name: "craft", information: "{}", slot: 1, amount: 5 },
-        { item_id: "bleederburger", id: 0, name: "craft", information: "{}", slot: 2, amount: 1 },
-        { item_id: "meatfree", id: 0, name: "craft", information: "{}", slot: 3, amount: 1 },
-        { item_id: "hotdog", id: 0, name: "craft", information: "{}", slot: 4, amount: 1 },
-        { item_id: "pizza", id: 0, name: "craft", information: "{}", slot: 5, amount: 5 },
-        { item_id: "donut", id: 0, name: "craft", information: "{}", slot: 6, amount: 5 },
-        { item_id: "mshake", id: 0, name: "craft", information: "{}", slot: 7, amount: 1 },
-        { item_id: "icecream", id: 0, name: "craft", information: "{}", slot: 8, amount: 1 },
-        { item_id: "cola", id: 0, name: "craft", information: "{}", slot: 9, amount: 5 },
-        { item_id: "water", id: 0, name: "craft", information: "{}", slot: 10, amount: 5 },
+        { item_id: "heartstopper", id: 0, name: "shop", information: "{}", slot: 1, amount: 5 },
+        { item_id: "bleederburger", id: 0, name: "shop", information: "{}", slot: 2, amount: 1 },
+        { item_id: "meatfree", id: 0, name: "shop", information: "{}", slot: 3, amount: 1 },
+        { item_id: "hotdog", id: 0, name: "shop", information: "{}", slot: 4, amount: 1 },
+        { item_id: "pizza", id: 0, name: "shop", information: "{}", slot: 5, amount: 5 },
+        { item_id: "donut", id: 0, name: "shop", information: "{}", slot: 6, amount: 5 },
+        { item_id: "mshake", id: 0, name: "shop", information: "{}", slot: 7, amount: 1 },
+        { item_id: "icecream", id: 0, name: "shop", information: "{}", slot: 8, amount: 1 },
+        { item_id: "cola", id: 0, name: "shop", information: "{}", slot: 9, amount: 5 },
+        { item_id: "water", id: 0, name: "shop", information: "{}", slot: 10, amount: 5 },
     ];
     return JSON.stringify(shopItems);
 }

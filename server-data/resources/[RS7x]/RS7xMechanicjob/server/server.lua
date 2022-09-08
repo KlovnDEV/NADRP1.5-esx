@@ -16,7 +16,7 @@ local isCrafting = false
 RegisterServerEvent('RS7x:recipe')
 AddEventHandler('RS7x:recipe', function(item) --// chat message for Recipe when command is used
     if item == nil then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Invalid Item' })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'Invalid Item' })
         return
     else
         if item == 'lockpick' then
@@ -46,11 +46,11 @@ end)
 RegisterServerEvent('RS7x:craft')
 AddEventHandler('RS7x:craft', function(item)
     if item == nil then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Invalid Item' })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'Invalid Item' })
         return
     else
         if isCrafting then
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Already Crafting' })
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'Already Crafting' })
             return
         end
 
@@ -70,7 +70,7 @@ AddEventHandler('RS7x:craft', function(item)
                     xPlayer.addInventoryItem(craftTable[i]["name"], 1)
                     isCrafting = false
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have the right materials to craft this' })
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have the right materials to craft this' })
                     isCrafting = false
                 end
             else

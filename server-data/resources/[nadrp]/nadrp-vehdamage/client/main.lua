@@ -173,7 +173,7 @@ function preventVehicleExit()
             harness = false
             TriggerEvent("harness", false, harnessDurability)
             TriggerEvent("InteractSound_CL:PlayOnOne","seatbeltoff",0.7)
-            exports['mythic_notify']:SendAlert('inform', 'Harness Disabled')
+            exports['mythic_notify']:DoLongHudText('inform', 'Harness Disabled')
         end
         disableControl = false
     end)
@@ -388,11 +388,11 @@ function toggleHarness()
             if not harness then
                 TriggerEvent("harness", true, harnessDurability)
                 TriggerEvent("InteractSound_CL:PlayOnOne","seatbelt",0.1)
-                exports['mythic_notify']:SendAlert('inform', 'Harness Enabled')
+                exports['mythic_notify']:DoLongHudText('inform', 'Harness Enabled')
             else
                 TriggerEvent("harness", false, harnessDurability)
                 TriggerEvent("InteractSound_CL:PlayOnOne","seatbeltoff",0.7)
-                exports['mythic_notify']:SendAlert('inform', 'Harness Disabled')
+                exports['mythic_notify']:DoLongHudText('inform', 'Harness Disabled')
             end
             harness = not harness
             seatbelt = false
@@ -401,7 +401,7 @@ function toggleHarness()
             harnessDurability = 0.0
             TriggerEvent("harness", false, harnessDurability)
             TriggerEvent("InteractSound_CL:PlayOnOne","seatbeltoff",0.7)
-            exports['mythic_notify']:SendAlert('inform', 'Harness Disabled')
+            exports['mythic_notify']:DoLongHudText('inform', 'Harness Disabled')
             harness = false
             seatbelt = false
         end
@@ -413,11 +413,11 @@ function toggleSeatbelt()
     if seatbelt == false then
         TriggerEvent("seatbelt",true)
         TriggerEvent("InteractSound_CL:PlayOnOne","seatbelt",0.1)
-        exports['mythic_notify']:SendAlert('inform', 'Seat Belt Enabled')
+        exports['mythic_notify']:DoLongHudText('inform', 'Seat Belt Enabled')
     else
         TriggerEvent("seatbelt",false)
         TriggerEvent("InteractSound_CL:PlayOnOne","seatbeltoff",0.7)
-        exports['mythic_notify']:SendAlert('inform', 'Seat Belt Disabled')
+        exports['mythic_notify']:DoLongHudText('inform', 'Seat Belt Disabled')
     end
     seatbelt = not seatbelt
 end
@@ -425,7 +425,7 @@ end
 RegisterNetEvent('NosStatus')
 AddEventHandler('NosStatus', function()
     if not IsToggleModOn(currentVehicle,18) then
-        exports['mythic_notify']:SendAlert('error', 'Need a Turbo for Nos!!') 
+        exports['mythic_notify']:DoLongHudText('error', 'Need a Turbo for Nos!!') 
         return
     end
 
@@ -477,7 +477,7 @@ AddEventHandler('event:control:vehicleMod', function(useID)
         elseif harnessDurability <= 0.0 and harness then
             TriggerEvent("harness", false, harnessDurability)
             TriggerEvent("InteractSound_CL:PlayOnOne","seatbeltoff",0.7)
-            exports['mythic_notify']:SendAlert('inform', 'Harness Disabled')
+            exports['mythic_notify']:DoLongHudText('inform', 'Harness Disabled')
             harness = false
         else
             toggleSeatbelt()
@@ -994,7 +994,7 @@ Citizen.CreateThread(function()
                                     if harnessDurability <= 0.0 then
                                         harnessDurability = 0.0
                                         TriggerEvent("event:control:vehicleMod")
-                                        exports['mythic_notify']:SendAlert('error', 'Harness Broken!')
+                                        exports['mythic_notify']:DoLongHudText('error', 'Harness Broken!')
                                     end
                                 elseif not seatbelt then
                                     eject(30.5, lastCurrentVehicleSpeed, true)
@@ -1071,7 +1071,7 @@ RegisterCommand('nos', function(source, args, raw)
     if IsPedInAnyVehicle(PlayerPedId(),false) then 
         TriggerEvent('nos:help')
     else
-        exports['mythic_notify']:SendAlert('error', 'You are not in a vehicle!')
+        exports['mythic_notify']:DoLongHudText('error', 'You are not in a vehicle!')
     end
 end)
 

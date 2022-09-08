@@ -380,21 +380,21 @@ function DoLimbAlert()
                 limbDamageMsg = 'Your ' .. injured[1].label .. ' feels ' .. Config.WoundStates[injured[1].severity]
             end
 
-            exports['mythic_notify']:PersistentAlert('start', limbNotifId, 'inform', limbDamageMsg, { ['background-color'] = '#760036' })
+            exports['mythic_notify']:PersistentHudText('start', limbNotifId, 'inform', limbDamageMsg, { ['background-color'] = '#760036' })
         else
-            exports['mythic_notify']:PersistentAlert('end', limbNotifId)
+            exports['mythic_notify']:PersistentHudText('end', limbNotifId)
         end
     else
-        exports['mythic_notify']:PersistentAlert('end', limbNotifId)
+        exports['mythic_notify']:PersistentHudText('end', limbNotifId)
     end
 end
 
 function DoBleedAlert()
     local player = PlayerPedId()
     if not IsEntityDead(player) and isBleeding > 0 then
-        exports['mythic_notify']:PersistentAlert('start', bleedNotifId, 'inform', 'You Have ' .. Config.BleedingStates[isBleeding], { ['background-color'] = '#760036' })
+        exports['mythic_notify']:PersistentHudText('start', bleedNotifId, 'inform', 'You Have ' .. Config.BleedingStates[isBleeding], { ['background-color'] = '#760036' })
     else
-        exports['mythic_notify']:PersistentAlert('end', bleedNotifId)
+        exports['mythic_notify']:PersistentHudText('end', bleedNotifId)
     end
 end
 
@@ -613,12 +613,12 @@ Citizen.CreateThread(function()
                 local currPos = GetEntityCoords(player, true)
                 local moving = #(vector2(prevPos.x, prevPos.y) - vector2(currPos.x, currPos.y))
                 if (moving > 1 and not IsPedInAnyVehicle(player)) and isBleeding > 2 then
-                    exports['mythic_notify']:PersistentAlert('start', bleedMoveNotifId, 'inform', 'You notice blood oozing from your wounds faster when you\'re moving', { ['background-color'] = '#4d0e96' })
+                    exports['mythic_notify']:PersistentHudText('start', bleedMoveNotifId, 'inform', 'You notice blood oozing from your wounds faster when you\'re moving', { ['background-color'] = '#4d0e96' })
                     advanceBleedTimer = advanceBleedTimer + Config.BleedMovementAdvance
                     bleedTickTimer = bleedTickTimer + Config.BleedMovementTick
                     prevPos = currPos
                 else
-                    exports['mythic_notify']:PersistentAlert('end', bleedMoveNotifId)
+                    exports['mythic_notify']:PersistentHudText('end', bleedMoveNotifId)
                     advanceBleedTimer = advanceBleedTimer + 1
                     bleedTickTimer = bleedTickTimer + 1
                 end

@@ -337,7 +337,7 @@ AddEventHandler('client:useCig', function()
 		stresslevel = stresslevel - 2.0
 	end
 
-	exports['mythic_notify']:SendAlert('inform', 'Stress slightly relieved')
+	exports['mythic_notify']:DoLongHudText('inform', 'Stress slightly relieved')
 
 	if IsPedInAnyVehicle(PlayerPedId(), false) then
 		Citizen.Wait(5)
@@ -355,10 +355,10 @@ RegisterNetEvent('client:newStress')
 AddEventHandler('client:newStress', function(toggle, amount)
 	if toggle == true then
 		stresslevel = stresslevel + ToFloat(amount)
-		exports['mythic_notify']:SendAlert('inform', 'Stress increased')
+		exports['mythic_notify']:DoLongHudText('inform', 'Stress increased')
 	else
 		stresslevel = stresslevel - ToFloat(amount)
-		exports['mythic_notify']:SendAlert('inform', 'Stress reduced')
+		exports['mythic_notify']:DoLongHudText('inform', 'Stress reduced')
 	end
 	print(stresslevel)
 end)
@@ -802,7 +802,7 @@ RegisterNetEvent('client:useJoint')
 AddEventHandler('client:useJoint', function()
 	local plyPed = GetPlayerPed(-1)
 	local playerPed = PlayerPedId()
-	exports['mythic_notify']:SendAlert('inform', 'You Feel Good')
+	exports['mythic_notify']:DoLongHudText('inform', 'You Feel Good')
 
 	if IsPedInAnyVehicle(PlayerPedId(), false) then
 		Citizen.Wait(5)
@@ -818,7 +818,7 @@ AddEventHandler('client:useJoint', function()
 			stresslevel = stresslevel - ToFloat(takeStress)
 		end
 
-		exports['mythic_notify']:SendAlert('inform', 'Stress slightly relieved')
+		exports['mythic_notify']:DoLongHudText('inform', 'Stress slightly relieved')
 		AddArmourToPed(plyPed, 20)
 		if IsPedInAnyVehicle(PlayerPedId(), false) then
 			Citizen.Wait(5)
@@ -832,7 +832,7 @@ RegisterNetEvent('client:useDonut')
 AddEventHandler('client:useDonut', function()
 	local plyPed = GetPlayerPed(-1)
 	local playerPed = PlayerPedId()
-	exports['mythic_notify']:SendAlert('inform', 'Yum')
+	exports['mythic_notify']:DoLongHudText('inform', 'Yum')
 		local takeStress = math.random(5,10)
 		if stresslevel <= 0.001 then
 			Citizen.Wait(5)
@@ -840,7 +840,7 @@ AddEventHandler('client:useDonut', function()
 			stresslevel = stresslevel - ToFloat(takeStress)
 		end
 
-		exports['mythic_notify']:SendAlert('inform', 'Stress slightly relieved')
+		exports['mythic_notify']:DoLongHudText('inform', 'Stress slightly relieved')
 		AddArmourToPed(plyPed, 20)
 		if IsPedInAnyVehicle(PlayerPedId(), false) then
 			Citizen.Wait(5)

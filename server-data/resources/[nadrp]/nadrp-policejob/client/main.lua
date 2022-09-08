@@ -259,14 +259,14 @@ AddEventHandler('nadrp-policejob:getarrested', function(isCommand, playerheading
 		TaskPlayAnim(PlayerPedId(), 'mp_arrest_paired', 'crook_p2_back_right', 8.0, -8, 3750 , 2, 0, 0, 0, 0)
         local finished = exports['nadrp-skillbar']:taskBar(1000, math.random(10,15))
         if finished ~= 100 then
-            exports["mythic_notify"]:SendAlert('error', 'Failed...')
+            exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
             IsHandcuffed = true
             IsShackles = false
             TriggerEvent('nadrp-policejob:handcuff')
             LoadAnimDict('mp_arresting')
 			TaskPlayAnim(PlayerPedId(), 'mp_arresting', 'idle', 8.0, -8, -1, 49, 0.0, false, false, false)
         else
-            exports["mythic_notify"]:SendAlert('inform', 'Success')
+            exports["mythic_notify"]:DoLongHudText('inform', 'Success')
             IsHandcuffed = false
             IsShackles = false
 			ClearPedTasks(PlayerPedId())
@@ -345,14 +345,14 @@ AddEventHandler('nadrp-policejob:getarrestedhard', function(playerheading, playe
     if not isDead then
         local finished = exports['nadrp-skillbar']:taskBar(1000,math.random(5,15))
         if finished ~= 100 then
-            exports["mythic_notify"]:SendAlert('error', 'Failed...')
+            exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
             IsHandcuffed = true
             IsShackles = true
             TriggerEvent('nadrp-policejob:hardcuff')
             LoadAnimDict('mp_arresting')
 			TaskPlayAnim(PlayerPedId(), 'mp_arresting', 'idle', 8.0, -8, -1, 49, 0.0, false, false, false)
         else
-            exports["mythic_notify"]:SendAlert('inform', 'Success')
+            exports["mythic_notify"]:DoLongHudText('inform', 'Success')
             IsHandcuffed = false
             IsShackles = false
 			ClearPedTasks(PlayerPedId())
@@ -401,20 +401,20 @@ end)
 RegisterCommand("ref", function (src, args, raw)
 	if job == 'police' then
 		TriggerServerEvent("eblips:add", {name = "Police", src = src, color = 38})
-		exports['mythic_notify']:SendAlert('success','Your reference has been activated.')
+		exports['mythic_notify']:DoLongHudText('success','Your reference has been activated.')
 	elseif job == 'ambulance' then
 		TriggerServerEvent("eblips:add", {name = "EMS", src = src, color = 59})
-		exports['mythic_notify']:SendAlert('success','Your reference has been activated.')
+		exports['mythic_notify']:DoLongHudText('success','Your reference has been activated.')
 	end
 end, false)
 
 RegisterCommand("refoff", function (src, args, raw)
 	if job == 'police' then
 		TriggerServerEvent("eblips:remove", src)
-		exports['mythic_notify']:SendAlert('error','Your reference has been deactivated.')
+		exports['mythic_notify']:DoLongHudText('error','Your reference has been deactivated.')
 	elseif job == 'ambulance' then
 		TriggerServerEvent("eblips:remove", src)
-		exports['mythic_notify']:SendAlert('error','Your reference has been deactivated.')
+		exports['mythic_notify']:DoLongHudText('error','Your reference has been deactivated.')
 	end
 end, false)
 
@@ -483,7 +483,7 @@ AddEventHandler('pd:radio', function ()
 			exports['nadrp-voice']:removePlayerFromRadio()
 			exports["nadrp-voice"]:addPlayerToRadio(1)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)
@@ -495,7 +495,7 @@ AddEventHandler('pd90:radio', function ()
 		if radio then 
 			exports["nadrp-voice"]:addPlayerToRadio(2)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)
@@ -509,7 +509,7 @@ AddEventHandler('ptransport:radio', function ()
 		if radio then 
 			exports["nadrp-voice"]:addPlayerToRadio(3)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)
@@ -521,7 +521,7 @@ AddEventHandler('holdout:radio', function ()
 		if radio then 
 			exports["nadrp-voice"]:addPlayerToRadio(4)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)
@@ -535,7 +535,7 @@ AddEventHandler('pd:ems-radio', function ()
 			exports['nadrp-voice']:removePlayerFromRadio()
 			exports["nadrp-voice"]:addPlayerToRadio(5)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)
@@ -550,7 +550,7 @@ AddEventHandler('Mechanic:radio', function ()
 			exports['nadrp-voice']:removePlayerFromRadio()
 			exports["nadrp-voice"]:addPlayerToRadio(10)
 		else
-			exports['mythic_notify']:SendAlert('error','You do not have a radio for this')
+			exports['mythic_notify']:DoLongHudText('error','You do not have a radio for this')
 		end
 	end
 end)

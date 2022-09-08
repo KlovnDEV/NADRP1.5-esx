@@ -7,7 +7,7 @@ itemList["-1121678507"] = {
     decayrate: 2.0,
     displayname: "Skorpion Mk2",
     price: 250,
-    weight: 11,
+    weight: 2,
     craft: [{
         itemid: "rubber",
         amount: 10
@@ -31,7 +31,7 @@ itemList["-1045183535"] = {
     decayrate: 2.0,
     displayname: "Revolver",
     price: 250,
-    weight: 11,
+    weight: 2,
     craft: [{
         itemid: "scrapmetal",
         amount: 150
@@ -48,7 +48,7 @@ itemList["-879347409"] = {
     decayrate: 2.0,
     displayname: "Violence",
     price: 250,
-    weight: 11,
+    weight: 2,
     craft: [{
         itemid: "aluminium",
         amount: 70
@@ -78,7 +78,7 @@ itemList["-72657034"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 15,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_parachute.png",
@@ -101,7 +101,7 @@ itemList["-1074790547"] = {
         itemid: "rubber",
         amount: 10
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-shotgun.png",
@@ -113,7 +113,7 @@ itemList["-1075685676"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "PD 9mm",
-    price: 10,
+    price: 5,
     craft: [{
         itemid: "aluminium",
         amount: 1
@@ -124,7 +124,7 @@ itemList["-1075685676"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pistol.png",
@@ -136,7 +136,7 @@ itemList["-1355376991"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "RayGun",
-    price: 250,
+    price: 5,
     craft: [{
         itemid: "aluminium",
         amount: 155
@@ -147,7 +147,7 @@ itemList["-1355376991"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pistol-50.png",
@@ -159,7 +159,7 @@ itemList["-1357824103"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Adv Rifle Mk2",
-    price: 250,
+    price: 10,
     craft: [{
         itemid: "aluminium",
         amount: 140
@@ -170,7 +170,7 @@ itemList["-1357824103"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_advanced-rifle.png",
@@ -182,7 +182,7 @@ itemList["-1654528753"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "BP Shotgun Mk2",
-    price: 250,
+    price: 15,
     craft: [{
         itemid: "aluminium",
         amount: 80
@@ -193,7 +193,7 @@ itemList["-1654528753"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-shotgun.png",
@@ -206,7 +206,7 @@ itemList["-1810795771"] = {
     decayrate: 2.0,
     displayname: "Pool Cue",
     price: 0,
-    weight: 150,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_poolcue.png",
@@ -219,7 +219,7 @@ itemList["-2066285827"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "BP Rifle Mk2",
-    price: 250,
+    price: 15,
     craft: [{
         itemid: "aluminium",
         amount: 80
@@ -230,7 +230,7 @@ itemList["-2066285827"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_bullpup-rifle.png",
@@ -253,7 +253,7 @@ itemList["-2084633992"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 5,
     nonStack: true,
     model: "",
     image: "nadrp_carbine-rifle.png",
@@ -265,7 +265,7 @@ itemList["-270015777"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "ASMG Mk2",
-    price: 250,
+    price: 15,
     craft: [{
         itemid: "aluminium",
         amount: 155
@@ -276,7 +276,7 @@ itemList["-270015777"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-smg.png",
@@ -295,8 +295,8 @@ itemList["-538741184"] = {
         itemid: "ciggy",
         amount: 100
     }],
-    price: 250,
-    weight: 11,
+    price: 100,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_switchblade.png",
@@ -308,8 +308,8 @@ itemList["-619010992"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Tec 9 Mk2",
-    price: 250,
-    weight: 11,
+    price: 150,
+    weight: 3,
     craft: [{
         itemid: "aluminium",
         amount: 10
@@ -331,9 +331,9 @@ itemList["-771403250"] = {
     price: 250,
     craft: [{
         itemid: "goldbar",
-        amount: 7
+        amount: 2
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_heavy-pistol.png",
@@ -356,7 +356,7 @@ itemList["-86904375"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_762saltmaker.png",
@@ -379,7 +379,7 @@ itemList["100416529"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_sniper-rifle.png",
@@ -391,7 +391,7 @@ itemList["101631238"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Fire Ext",
-    price: 250,
+    price: 2,
     craft: [{
         itemid: "aluminium",
         amount: 100
@@ -402,7 +402,7 @@ itemList["101631238"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_fire-extinguisher.png",
@@ -414,7 +414,7 @@ itemList["1141786504"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Golfclub",
-    price: 1000,
+    price: 650,
     craft: [{
         itemid: "aluminium",
         amount: 15
@@ -422,7 +422,7 @@ itemList["1141786504"] = {
         itemid: "rubber",
         amount: 5
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_golfclub.png",
@@ -434,8 +434,8 @@ itemList["1198879012"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Flaregun",
-    price: 250,
-    weight: 11,
+    price: 25,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_flaregun.png",
@@ -447,8 +447,8 @@ itemList["1233104067"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Flare",
-    price: 250,
-    weight: 11,
+    price: 5,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_flare.png",
@@ -474,7 +474,7 @@ itemList["126349499"] = {
     decayrate: 2.0,
     displayname: "Snowball",
     price: 250,
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_snowball.png",
@@ -499,12 +499,12 @@ itemList["1317494643"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Hammer",
-    price: 1000,
+    price: 500,
     craft: [{
         itemid: "scrapmetal",
         amount: 10
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_hammer.png",
@@ -522,9 +522,9 @@ itemList["137902532"] = {
         amount: 1
     }, {
         itemid: "goldbar",
-        amount: 4
+        amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_vintage-pistol.png",
@@ -536,7 +536,7 @@ itemList["1432025498"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "PD Shotgun",
-    price: 100,
+    price: 10,
     craft: [{
         itemid: "aluminium",
         amount: 5
@@ -547,7 +547,7 @@ itemList["1432025498"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pump-shotgun.png",
@@ -559,7 +559,7 @@ itemList["1593441988"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Combat Pistol",
-    price: 1500,
+    price: 950,
     craft: [{
         itemid: "steel",
         amount: 65
@@ -570,7 +570,7 @@ itemList["1593441988"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_combat-pistol.png",
@@ -593,7 +593,7 @@ itemList["1627465347"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_gusenberg.png",
@@ -616,7 +616,7 @@ itemList["1649403952"] = {
         itemid: "rubber",
         amount: 10
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_cmp-rifle.png",
@@ -629,7 +629,7 @@ itemList["1672152130"] = {
     decayrate: 2.0,
     displayname: "Homing Launcher",
     price: 250,
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_homing-launcher.png",
@@ -641,7 +641,7 @@ itemList["171789620"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Combat PDW Mk2",
-    price: 250,
+    price: 10,
     craft: [{
         itemid: "aluminium",
         amount: 30
@@ -652,7 +652,7 @@ itemList["171789620"] = {
         itemid: "rubber",
         amount: 20
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_combat-pdw.png",
@@ -664,8 +664,8 @@ itemList["1737195953"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Nightstick",
-    price: 10,
-    weight: 6,
+    price: 1,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_nightstick.png",
@@ -685,7 +685,7 @@ itemList["2017895192"] = {
         itemid: "plastic",
         amount: 10
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_sawnoff-shotgun.png ",
@@ -697,7 +697,7 @@ itemList["2024373456"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "PD MP5 2",
-    price: 250,
+    price: 10,
     craft: [{
         itemid: "aluminium",
         amount: 155
@@ -708,7 +708,7 @@ itemList["2024373456"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_smg.png",
@@ -731,7 +731,7 @@ itemList["2132975508"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_bullpup-rifle.png",
@@ -754,7 +754,7 @@ itemList["2138347493"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_firework-launcher.png",
@@ -777,7 +777,7 @@ itemList["2144741730"] = {
         itemid: "rubber",
         amount: 80
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_mg.png",
@@ -800,7 +800,7 @@ itemList["2210333304"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_carbine-rifle.png",
@@ -812,12 +812,12 @@ itemList["2227010557"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Crowbar",
-    price: 1000,
+    price: 645,
     craft: [{
         itemid: "scrapmetal",
         amount: 15
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_crowbar.png",
@@ -829,7 +829,7 @@ itemList["2343591895"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Flash Light",
-    price: 250,
+    price: 1,
     weight: 2,
     nonStack: true,
     model: "",
@@ -855,12 +855,12 @@ itemList["2460120199"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Dagger",
-    price: 1000,
+    price: 875,
     craft: [{
         itemid: "aluminium",
         amount: 20
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_dagger.png",
@@ -872,8 +872,8 @@ itemList["2484171525"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Cue",
-    price: 1000,
-    weight: 11,
+    price: 750,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pool-cue.png",
@@ -885,8 +885,8 @@ itemList["2508868239"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Bat",
-    price: 1000,
-    weight: 11,
+    price: 750,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_baseball-bat.png",
@@ -898,7 +898,7 @@ itemList["2578377531"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Pistol 50",
-    price: 250,
+    price: 50,
     craft: [{
         itemid: "aluminium",
         amount: 155
@@ -909,7 +909,7 @@ itemList["2578377531"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_pistol-50.png",
@@ -921,8 +921,8 @@ itemList["2578778090"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Knife",
-    price: 250,
-    weight: 6,
+    price: 150,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_knife.png",
@@ -934,7 +934,7 @@ itemList["2640438543"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Bullpup Shotgun",
-    price: 250,
+    price: 150,
     craft: [{
         itemid: "aluminium",
         amount: 80
@@ -945,7 +945,7 @@ itemList["2640438543"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_assault-shotgun.png",
@@ -968,7 +968,7 @@ itemList["2726580491"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_grenade-launcher.png",
@@ -981,7 +981,7 @@ itemList["2828843422"] = {
     decayrate: 2.0,
     displayname: "Musket",
     price: 250,
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_musket.png",
@@ -994,7 +994,7 @@ itemList["2874559379"] = {
     decayrate: 2.0,
     displayname: "Proxi Mine",
     price: 250,
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_proximity-mine.png",
@@ -1006,7 +1006,7 @@ itemList["2937143193"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Advanced Rifle",
-    price: 250,
+    price: 50,
     craft: [{
         itemid: "aluminium",
         amount: 140
@@ -1017,7 +1017,7 @@ itemList["2937143193"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_advanced-rifle.png",
@@ -1029,7 +1029,7 @@ itemList["2982836145"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "RPG",
-    price: 250,
+    price: 50,
     craft: [{
         itemid: "aluminium",
         amount: 100
@@ -1040,7 +1040,7 @@ itemList["2982836145"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_rpg.png",
@@ -1052,8 +1052,8 @@ itemList["3125143736"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Pipebomb",
-    price: 250,
-    weight: 11,
+    price: 100,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_pipe-bomb.png",
@@ -1065,7 +1065,7 @@ itemList["317205821"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Autoshotgun",
-    price: 250,
+    price: 100,
     craft: [{
         itemid: "aluminium",
         amount: 25
@@ -1076,7 +1076,7 @@ itemList["317205821"] = {
         itemid: "rubber",
         amount: 25
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_sweeper-shotgun.png",
@@ -1089,13 +1089,13 @@ itemList["3173288789"] = {
     decayrate: 2.0,
     displayname: "Skorpion",
     price: 250,
-    weight: 11,
+    weight: 3,
     craft: [{
         itemid: "valuablegoods",
         amount: 1
     }, {
         itemid: "goldbar",
-        amount: 4
+        amount: 2
     }],
     nonStack: true,
     model: "",
@@ -1113,7 +1113,7 @@ itemList["3218215474"] = {
         itemid: "scrapmetal",
         amount: 8
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_sns-pistol.png",
@@ -1136,7 +1136,7 @@ itemList["3219281620"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pistol.png",
@@ -1148,7 +1148,7 @@ itemList["3220176749"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Assault Rifle",
-    price: 250,
+    price: 50,
     craft: [{
         itemid: "aluminium",
         amount: 50
@@ -1159,7 +1159,7 @@ itemList["3220176749"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-shotgun.png",
@@ -1190,9 +1190,9 @@ itemList["324215364"] = {
         amount: 1
     }, {
         itemid: "goldbar",
-        amount: 4
+        amount: 2
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_micro-smg.png",
@@ -1205,7 +1205,7 @@ itemList["3342088282"] = {
     decayrate: 2.0,
     displayname: "Mark Rifle",
     price: 250,
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_marksman-rifle.png",
@@ -1217,7 +1217,7 @@ itemList["3441901897"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Metal Hatchet",
-    price: 1000,
+    price: 750,
     craft: [{
         itemid: "aluminium",
         amount: 15
@@ -1225,7 +1225,7 @@ itemList["3441901897"] = {
         itemid: "scrapmetal",
         amount: 30
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_hatchet.png",
@@ -1240,9 +1240,9 @@ itemList["3523564046"] = {
     price: 250,
     craft: [{
         itemid: "goldbar",
-        amount: 7
+        amount: 2
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_heavy-pistol.png",
@@ -1262,7 +1262,7 @@ itemList["3638508604"] = {
         amount: 10
     }],
     price: 250,
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_knuckle-dusters.png",
@@ -1275,13 +1275,13 @@ itemList["3675956304"] = {
     decayrate: 2.0,
     displayname: "Tec 9",
     price: 250,
-    weight: 11,
+    weight: 3,
     craft: [{
         itemid: "valuablegoods",
         amount: 1
     }, {
         itemid: "goldbar",
-        amount: 4
+        amount: 2
     }],
     nonStack: true,
     model: "",
@@ -1295,7 +1295,7 @@ itemList["3696079510"] = {
     decayrate: 2.0,
     displayname: "Mrk Pistol",
     price: 250,
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pistol.png",
@@ -1307,12 +1307,12 @@ itemList["3713923289"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Machete",
-    price: 1000,
+    price: 650,
     craft: [{
         itemid: "aluminium",
         amount: 10
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_machete.png",
@@ -1335,7 +1335,7 @@ itemList["3800352039"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-shotgun.png",
@@ -1348,7 +1348,7 @@ itemList["4019527611"] = {
     decayrate: 2.0,
     displayname: "DB Shotgun",
     price: 250,
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_db-shotgun.png",
@@ -1371,7 +1371,7 @@ itemList["4024951519"] = {
         itemid: "rubber",
         amount: 10
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_assault-smg.png",
@@ -1388,7 +1388,7 @@ itemList["4191993645"] = {
         itemid: "aluminium",
         amount: 15
     }   ],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_hatchet.png",
@@ -1405,7 +1405,7 @@ itemList["4192643659"] = {
         itemid: "glass",
         amount: 50
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_glass-bottle.png",
@@ -1417,12 +1417,12 @@ itemList["419712736"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Wrench",
-    price: 1000,
+    price: 550,
     craft: [{
         itemid: "aluminium",
         amount: 15
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_wrench.png",
@@ -1434,7 +1434,7 @@ itemList["453432689"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "Pistol",
-    price: 1500,
+    price: 950,
     craft: [{
         itemid: "aluminium",
         amount: 1
@@ -1445,7 +1445,7 @@ itemList["453432689"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     information: "Crosshair not included.... ",
@@ -1469,7 +1469,7 @@ itemList["487013001"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_pump-shotgun2.png",
@@ -1489,7 +1489,7 @@ itemList["584646201"] = {
         itemid: "rubber",
         amount: 20
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_ap-pistol.png",
@@ -1509,7 +1509,7 @@ itemList["615608432"] = {
         amount: 25
     }],
     price: 250,
-    weight: 11,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_molotov.png",
@@ -1521,7 +1521,7 @@ itemList["736523883"] = {
     fullyDegrades: false,
     decayrate: 2.0,
     displayname: "PD MP5",
-    price: 20,
+    price: 10,
     craft: [{
         itemid: "aluminium",
         amount: 155
@@ -1532,7 +1532,7 @@ itemList["736523883"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 3,
     nonStack: true,
     model: "",
     image: "nadrp_smg.png",
@@ -1555,7 +1555,7 @@ itemList["741814745"] = {
         itemid: "rubber",
         amount: 100
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_sticky-bomb.png",
@@ -1568,7 +1568,7 @@ itemList["883325847"] = {
     decayrate: 2.0,
     displayname: "Petrol Can",
     price: 250,
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_petrol-can.png",
@@ -1591,7 +1591,7 @@ itemList["911657153"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_stun-gun.png",
@@ -1611,7 +1611,7 @@ itemList["940833800"] = {
         itemid: "string",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_homemade.png",
@@ -1634,7 +1634,7 @@ itemList["984333226"] = {
         itemid: "rubber",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_heavy-shotgun.png",
@@ -1655,7 +1655,7 @@ itemList["extended_ap"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_ap-pistol-clip.png",
@@ -1675,7 +1675,7 @@ itemList["extended_micro"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_micro-smg-clip.png",
@@ -1692,7 +1692,7 @@ itemList["extended_sns"] = {
         itemid: "scrapmetal",
         amount: 6
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_sns-pistol-clip.png",
@@ -1712,7 +1712,7 @@ itemList["extended_tec9"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 2,
     nonStack: true,
     model: "",
     image: "nadrp_micro-smg-clip.png",
@@ -1735,7 +1735,7 @@ itemList["silencer_l"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_lsilencer.png",
@@ -1758,7 +1758,7 @@ itemList["silencer_l2"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_lsilencer.png",
@@ -1773,7 +1773,7 @@ itemList["silencer_s"] = {
     price: 510,
     craft: [{
         itemid: "goldbar",
-        amount: 3
+        amount: 1
     }, {
         itemid: "copper",
         amount: 20
@@ -1781,7 +1781,7 @@ itemList["silencer_s"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_ssilencer.png",
@@ -1804,7 +1804,7 @@ itemList["silencer_s2"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_ssilencer.png",
@@ -1821,7 +1821,7 @@ itemList["SmallScope"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_sscope.png",
@@ -1843,7 +1843,7 @@ itemList["sniperammo"] = {
         amount: 1
     }],
     price: 10,
-    weight: 7,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_rifle-ammo.png",
@@ -1864,8 +1864,8 @@ itemList["subammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 10,
-    weight: 5,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_sub-ammo.png",
@@ -1882,7 +1882,7 @@ itemList["TinyScope"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_tscope.png",
@@ -1903,8 +1903,8 @@ itemList["heavyammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 10,
-    weight: 7,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_rifle-ammo.png",
@@ -1947,8 +1947,8 @@ itemList["shotgunammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 10,
-    weight: 7,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_shotgun-ammo.png",
@@ -1965,7 +1965,7 @@ itemList["MediumScope"] = {
         itemid: "goldbar",
         amount: 1
     }],
-    weight: 11,
+    weight: 1,
     nonStack: true,
     model: "",
     image: "nadrp_lscope.png",
@@ -1986,8 +1986,8 @@ itemList["pistolammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 50,
-    weight: 3,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_pistol-ammo.png",
@@ -2008,8 +2008,8 @@ itemList["stungunammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 50,
-    weight: 3,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_tazerammo.png",
@@ -2105,10 +2105,10 @@ itemList["repairkit"] = {
     displayname: "Repair Kit",
     craft: [{
         itemid: "electronics",
-        amount: 25
+        amount: 1
     }],
-    price: 500,
-    weight: 5,
+    price: 100,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_basic_repair-kit.png",
@@ -2119,7 +2119,7 @@ itemList["sponge"] = {
     fullyDegrades: true,
     decayrate: 0.0,
     displayname: "Sponge",
-    price: 200,
+    price: 50,
     weight: 1,
     nonStack: false,
     model: "",
@@ -2141,7 +2141,7 @@ itemList["1gcocaine"] = {
         itemid: "coke5g",
         amount: 0.1
     }],
-    price: 100,
+    price: 150,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2194,7 +2194,7 @@ itemList["coke5g"] = {
         itemid: "coke50g",
         amount: 0.1
     }],
-    price: 150,
+    price: 350,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2215,7 +2215,7 @@ itemList["joint"] = {
         itemid: "rollingpaper",
         amount: 1
     }],
-    price: 20,
+    price: 10,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2228,7 +2228,7 @@ itemList["maleseed"] = {
     fullyDegrades: true,
     decayrate: 2.0,
     displayname: "Male Seed",
-    price: 100,
+    price: 50,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2241,7 +2241,7 @@ itemList["femaleseed"] = {
     fullyDegrades: true,
     decayrate: 2.0,
     displayname: "Female Seed",
-    price: 100,
+    price: 50,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2283,7 +2283,7 @@ itemList["oxy"] = {
     illegal: true,
     decayrate: 0.75,
     displayname: "Oxy 100mg",
-    price: 150,
+    price: 250,
     weight: 0,
     nonStack: false,
     model: "",
@@ -2499,7 +2499,7 @@ itemList["vodka"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Vodka",
-    price: 55,
+    price: 45,
     weight: 1,
     nonStack: false,
     model: "",
@@ -2640,7 +2640,7 @@ itemList["beer"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Beer",
-    price: 45,
+    price: 15,
     weight: 1,
     nonStack: false,
     model: "",
@@ -3080,8 +3080,8 @@ itemList["cola"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 15,
-    weight: 1,
+    price: 10,
+    weight: 0,
     nonStack: false,
     model: "",
     image: "nadrp_coke.png",
@@ -3156,8 +3156,8 @@ itemList["foodingredient"] = {
     fullyDegrades: true,
     decayrate: 0.01,
     displayname: "Ingredients",
-    price: 50,
-    weight: 5,
+    price: 20,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_ingredients.png",
@@ -3247,7 +3247,7 @@ itemList["bleederburger"] = {
             amount: 1
         }],
     price: 50,
-    weight: 1,
+    weight: 0,
     nonStack: false,
     model: "",
     image: "nadrp_the-bleeder.png",
@@ -3259,8 +3259,8 @@ itemList["water"] = {
     fullyDegrades: true,
     decayrate: 0.00,
     displayname: "Water",
-    price: 10,
-    weight: 1,
+    price: 5,
+    weight: 0,
     craft: [{
         itemid: "foodingredient",
         amount: 1
@@ -3327,7 +3327,7 @@ itemList["sandwich"] = {
         amount: 1
     }],
     displayname: "Sandwich",
-    price: 25,
+    price: 5,
     weight: 1,
     nonStack: false,
     model: "",
@@ -3366,8 +3366,8 @@ itemList["hamburger"] = {
     fullyDegrades: true,
     decayrate: 0.001,
     displayname: "Hamburger",
-    price: 30,
-    weight: 1,
+    price: 6,
+    weight: 0,
     nonStack: false,
     model: "",
     image: "nadrp_hamburger.png",
@@ -3428,7 +3428,7 @@ itemList["heartstopper"] = {
     },
     {
         itemid: "cookedpatty",
-        amount: 5
+        amount: 3
     }],
     price: 50,
     weight: 1,
@@ -3474,7 +3474,7 @@ itemList["mshake"] = {
         amount: 1
     }],
     price: 10,
-    weight: 12,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_milkshake.png",
@@ -3594,7 +3594,7 @@ itemList["advlockpick"] = {
         amount: 1
     }],
     price: 750,
-    weight: 8,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_advanced-lockpick.png",
@@ -3614,8 +3614,8 @@ itemList["armor"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 500,
-    weight: 30,
+    price: 375,
+    weight: 4,
     nonStack: false,
     model: "",
     image: "HeavyArmor.png",
@@ -3637,8 +3637,8 @@ itemList["armor2"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 50,
-    weight: 30,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "HeavyArmor.png",
@@ -3647,7 +3647,7 @@ itemList["armor2"] = {
 }
 itemList["bandage"] = {
     displayname: "Bandage",
-    price: 50,
+    price: 35,
     weight: 1,
     nonStack: false,
     model: "prop_ld_health_pack",
@@ -3724,7 +3724,7 @@ itemList["turtle"] = {
 }
 itemList["bait"] = {
     displayname: "Bait",
-    price: 50,
+    price: 10,
     weight: 1,
     nonStack: false,
     image: "bait.png",
@@ -3753,7 +3753,7 @@ itemList["fishingrod"] = {
     fullyDegrades: true,
     decayrate: 0.0,
     displayname: "Fishing Rod",
-    price: 250,
+    price: 75,
     weight: 1,
     nonStack: false,
     model: "",
@@ -3762,7 +3762,7 @@ itemList["fishingrod"] = {
 }
 itemList["acetone"] = {
     displayname: "Acetone",
-    price: 300,
+    price: 120,
     weight: 2,
     nonStack: false,
     image: "acetone.png",
@@ -3798,10 +3798,10 @@ itemList["advrepairkit"] = {
     displayname: "Adv Repair Kit",
     craft: [{
         itemid: "electronics",
-        amount: 3
+        amount: 2
     }],
     price: 800,
-    weight: 5,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_repair-toolkit.png",
@@ -3852,7 +3852,7 @@ itemList["packagedchicken"] = {
     fullyDegrades: true,
     decayrate: 0.0,
     displayname: "Packaged Chicken",
-    price: 10,
+    price: 35,
     weight: 1,
     nonStack: false,
     model: "",
@@ -3864,7 +3864,7 @@ itemList["packagedfish"] = {
     fullyDegrades: true,
     decayrate: 0.0,
     displayname: "Packaged Fish",
-    price: 10,
+    price: 31,
     weight: 1,
     nonStack: false,
     model: "",
@@ -4202,7 +4202,7 @@ itemList["cashroll"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Rolls of dirty cash",
-    price: 1,
+    price: 245,
     weight: 0,
     nonStack: false,
     model: "",
@@ -4215,7 +4215,7 @@ itemList["cashstack"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Stack of Cash",
-    price: 1,
+    price: 125,
     weight: 0,
     nonStack: false,
     model: "",
@@ -4242,7 +4242,7 @@ itemList["band"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Band of Notes",
-    price: 1,
+    price: 154,
     weight: 0,
     nonStack: false,
     model: "",
@@ -4254,7 +4254,7 @@ itemList["rollcash"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Roll of Small Notes",
-    price: 1,
+    price: 111,
     weight: 0,
     nonStack: false,
     model: "",
@@ -4301,8 +4301,8 @@ itemList["binoculars"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 250,
-    weight: 5,
+    price: 50,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_binoculars.png",
@@ -4407,8 +4407,8 @@ itemList["camera"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Fordkon nadrp1000",
-    price: 250,
-    weight: 8,
+    price: 100,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_camera.png",
@@ -4529,7 +4529,7 @@ itemList["ciggy"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Cigarette",
-    price: 75,
+    price: 45,
     weight: 0,
     nonStack: false,
     model: "",
@@ -4565,8 +4565,8 @@ itemList["cleaninggoods"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Cleaning goods",
-    price: 500,
-    weight: 3,
+    price: 175,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_cleaning-goods.png",
@@ -4939,7 +4939,7 @@ itemList["drill"] = {
         amount: 1
     }],
     price: 150,
-    weight: 80,
+    weight: 5,
     nonStack: false,
     model: "",
     information: "Drill drill ",
@@ -4950,7 +4950,7 @@ itemList["drillbit"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Drill Bit",
-    price: 100,
+    price: 75,
     weight: 2,
     nonStack: false,
     model: "",
@@ -4985,7 +4985,7 @@ itemList["DuffelBag"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Black Duffel Bag",
-    price: 350,
+    price: 50,
     weight: 0,
     nonStack: false,
     model: "",
@@ -5027,7 +5027,7 @@ itemList["electronickit"] = {
         amount: 230
     }],
     price: 900,
-    weight: 15,
+    weight: 5,
     nonStack: false,
     model: "",
     information: "Ha Voltage or something ",
@@ -5038,8 +5038,8 @@ itemList["emptybaggies"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Pack of Empty Baggies",
-    price: 50,
-    weight: 1,
+    price: 10,
+    weight: 0,
     nonStack: false,
     model: "",
     image: "nadrp_pack-of-empty-baggies.png",
@@ -5234,8 +5234,8 @@ itemList["fertilizer"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Fertilizer",
-    price: 500,
-    weight: 3,
+    price: 120,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_fertilizer.png",
@@ -5405,7 +5405,7 @@ itemList["goldbar"] = {
         itemid: "rolexwatch",
         amount: 100
     }],
-    price: 550,
+    price: 2500,
     weight: 1,
     nonStack: false,
     model: "",
@@ -5665,7 +5665,7 @@ itemList["harness"] = {
     displayname: "Racing Harness",
     craft: [{
         itemid: "rubber",
-        amount: 10
+        amount: 2
     }],
     price: 10000,
     weight: 1,
@@ -5680,7 +5680,7 @@ itemList["heavycutters"] = {
     decayrate: 0.0,
     displayname: "Heavy Cutters",
     price: 700,
-    weight: 9,
+    weight: 3,
     nonStack: false,
     model: "",
     image: "nadrp_heavy-cutters.png",
@@ -5701,7 +5701,7 @@ itemList["heavydutydrill"] = {
         amount: 1
     }],
     price: 300,
-    weight: 5,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_heavy-duty-drill.png",
@@ -5795,7 +5795,7 @@ itemList["IFAK"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "IFAK",
-    price: 100,
+    price: 45,
     weight: 1,
     nonStack: false,
     model: "",
@@ -5975,7 +5975,7 @@ itemList["lighter"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Lighter",
-    price: 100,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -5997,7 +5997,7 @@ itemList["lockpick"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 400,
+    price: 175,
     weight: 1,
     nonStack: false,
     model: "",
@@ -6320,7 +6320,7 @@ itemList["MedicalBag"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Medical Bag",
-    price: 350,
+    price: 1,
     weight: 0,
     nonStack: false,
     model: "",
@@ -6332,7 +6332,7 @@ itemList["Galaxy"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Galaxy",
-    price: 350,
+    price: 1,
     weight: 0,
     nonStack: false,
     model: "",
@@ -6391,7 +6391,7 @@ itemList["mobilephone"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Mobile Phone",
-    price: 400,
+    price: 250,
     weight: 1,
     nonStack: false,
     model: "",
@@ -6524,10 +6524,10 @@ itemList["nitrous"] = {
     displayname: "Nitrous Oxide",
     craft: [{
         itemid: "steel",
-        amount: 10
+        amount: 2
     }],
     price: 300,
-    weight: 5,
+    weight: 2,
     nonStack: false,
     model: "",
     image: "nadrp_nitrous-oxide.png",
@@ -6573,7 +6573,7 @@ itemList["oil"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Oil",
-    price: 10,
+    price: 2,
     weight: 0,
     nonStack: false,
     model: "",
@@ -6616,8 +6616,8 @@ itemList["onion"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 12,
+    price: 5,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_onion.png",
@@ -6632,8 +6632,8 @@ itemList["bun"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 3,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_bun.png",
@@ -6648,8 +6648,8 @@ itemList["lettuce"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 2,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_lettuce.png",
@@ -6664,8 +6664,8 @@ itemList["ketchup"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_ketchup.png",
@@ -6680,8 +6680,8 @@ itemList["cheddar"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_cheddar.png",
@@ -6696,8 +6696,8 @@ itemList["mayo"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_mayo.png",
@@ -6712,8 +6712,8 @@ itemList["patty"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 6,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_patty.png",
@@ -6728,8 +6728,8 @@ itemList["cookedpatty"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 7,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_pattyc.png",
@@ -6744,8 +6744,8 @@ itemList["cookedvpatty"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 8,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_pattyv.png",
@@ -6761,8 +6761,8 @@ itemList["frozenfries"] = {
         itemid: "foodingredient",
         amount: 1
     }],
-    price: 10,
-    weight: 3,
+    price: 2,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_friesf.png",
@@ -6784,7 +6784,7 @@ itemList["oxygentank"] = {
         itemid: "rubber",
         amount: 10
     }],
-    price: 1000,
+    price: 500,
     weight: 1,
     nonStack: false,
     model: "",
@@ -7058,8 +7058,8 @@ itemList["radio"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 450,
-    weight: 3,
+    price: 150,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_radio.png",
@@ -7081,7 +7081,7 @@ itemList["radio2"] = {
         amount: 1
     }],
     price: 0,
-    weight: 3,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_radio.png",
@@ -7233,7 +7233,7 @@ itemList["repairtoolkit"] = {
         amount: 1
     }],
     price: 50,
-    weight: 15,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_repair-toolkit.png",
@@ -7254,8 +7254,8 @@ itemList["rifleammo"] = {
         itemid: "rubber",
         amount: 1
     }],
-    price: 10,
-    weight: 7,
+    price: 1,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_rifle-ammo.png",
@@ -7311,7 +7311,7 @@ itemList["rolexwatch"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Rolex Watch",
-    price: 5,
+    price: 15,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7327,14 +7327,14 @@ itemList["sheriffb"] = {
     nonStack: false,
     model: "",
     image: "nadrp_sheriffb.png",
-    information: "If found Return to Sheriff Henrikson",
+    information: "If found Return to Sheriff Dawson",
     deg: false
 }
 itemList["rollingpaper"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Rolling Paper",
-    price: 75,
+    price: 35,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7607,7 +7607,7 @@ itemList["SecurityCase"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Security Case",
-    price: 350,
+    price: 100,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7926,7 +7926,7 @@ itemList["stolen10ctchain"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "10ct Gold Chain",
-    price: 5,
+    price: 15,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7937,7 +7937,7 @@ itemList["stolen2ctchain"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "2ct Gold Chain",
-    price: 5,
+    price: 4,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7959,7 +7959,7 @@ itemList["stolen8ctchain"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "8ct Gold Chain",
-    price: 5,
+    price: 10,
     weight: 0,
     nonStack: false,
     model: "",
@@ -7992,7 +7992,7 @@ itemList["stoleniphone"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Apple Iphone",
-    price: 5,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8003,7 +8003,7 @@ itemList["stolennokia"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Nokia Phone",
-    price: 5,
+    price: 45,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8014,7 +8014,7 @@ itemList["stolenoakleys"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Oakley Sunglasses",
-    price: 8,
+    price: 18,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8025,7 +8025,7 @@ itemList["stolenadrpixel3"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Pixel 3 Phone",
-    price: 5,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8036,7 +8036,7 @@ itemList["stolenadrpsp"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "PSP",
-    price: 5,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8047,7 +8047,7 @@ itemList["stolenraybans"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Ray Ban Sunglasses",
-    price: 5,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8058,7 +8058,7 @@ itemList["stolens8"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Samsung S8",
-    price: 5,
+    price: 45,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8069,7 +8069,7 @@ itemList["stooth"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Shark Tooth",
-    price: 1,
+    price: 21,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8081,7 +8081,7 @@ itemList["Suitcase"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Suitcase",
-    price: 150,
+    price: 10,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8246,7 +8246,7 @@ itemList["Toolbox"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Toolbox",
-    price: 350,
+    price: 100,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8308,7 +8308,7 @@ itemList["usbdevice"] = {
     decayrate: 0.0,
     displayname: "Unknown USB Device",
     price: 300,
-    weight: 5,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_unknown-usb-device.png",
@@ -8323,7 +8323,7 @@ itemList["valuablegoods"] = {
         amount: 7
     }],
     price: 4000,
-    weight: 4,
+    weight: 1,
     nonStack: false,
     model: "",
     image: "nadrp_valuable-goods.png",
@@ -8404,7 +8404,7 @@ itemList["watch"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Watch",
-    price: 1000,
+    price: 25,
     weight: 0,
     nonStack: false,
     model: "",
@@ -8558,7 +8558,7 @@ itemList["wlilies"] = {
 itemList["xscondom"] = {
     fullyDegrades: false,
     decayrate: 0.0,
-    displayname: "XSmall Condom",
+    displayname: "Harry Swans",
     price: 150,
     weight: 0,
     nonStack: false,

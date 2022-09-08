@@ -6,8 +6,8 @@ local found = false
 local spawnedPeds = {}
 local whitelisted = {
    --27, -- Reece
-   1,
-   540,
+   4,
+   2,
    1186,
 }
 local locations = {
@@ -22,11 +22,11 @@ local pedLocations = {
 	[4] =  { ['x'] = 1092.6,['y'] = -3196.67,['z'] = -38.99,['h'] = 350.64, ['model'] = 'mp_f_cocaine_01' },
 }
 local workAreas = {
-    [1] =  { ['x'] = 1089.95,['y'] = -3198.86,['z'] = -38.99,['h'] = 184.41, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "Rubber" },
-    [2] =  { ['x'] = 1093.53,['y'] = -3199.12,['z'] = -38.99,['h'] = 178.7, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "Rubber" },
-    [3] =  { ['x'] = 1100.16,['y'] = -3198.62,['z'] = -38.99,['h'] = 196.58, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "Rubber" },
-    [4] =  { ['x'] = 1100.93,['y'] = -3193.77,['z'] = -38.99,['h'] = 353.0, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "Rubber" },
-    [5] =  { ['x'] = 1087.29,['y'] = -3196.9,['z'] = -38.99,['h'] = 81.27, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "Rubber" },
+    [1] =  { ['x'] = 1089.95,['y'] = -3198.86,['z'] = -38.99,['h'] = 184.41, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "rubber" },
+    [2] =  { ['x'] = 1093.53,['y'] = -3199.12,['z'] = -38.99,['h'] = 178.7, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "rubber" },
+    [3] =  { ['x'] = 1100.16,['y'] = -3198.62,['z'] = -38.99,['h'] = 196.58, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "rubber" },
+    [4] =  { ['x'] = 1100.93,['y'] = -3193.77,['z'] = -38.99,['h'] = 353.0, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "rubber" },
+    [5] =  { ['x'] = 1087.29,['y'] = -3196.9,['z'] = -38.99,['h'] = 81.27, ['info'] = ' Check Product', ["itemid"] = 33, ["name"] = "rubber" },
 }
 
 Citizen.CreateThread(function()
@@ -83,7 +83,7 @@ AddEventHandler('nadrp-gangs:startTask', function(passedid,amount)
 		local itemname = workAreas[passedid]["name"]
 		local dstCheck = #(GetEntityCoords(PlayerPedId()) - vector3(x,y,z))
 		if dstCheck < 20.0 then
-			DrawText3D(x,y,z, "[E]" .. msg .. "")
+			DrawText3Ds(x,y,z, "[E]" .. msg .. "")
 			if IsControlJustPressed(0, 38) and dstCheck < 3.0 then
 				AttemptTask(passedid,amount)
 			end
@@ -196,11 +196,11 @@ function IsCokeWhitelisted()
 end
 
 function AttemptTask(workNumber,amountRequired)
-	--local itemid = workAreas[workNumber]["itemid"]
+	local itemid = workAreas[workNumber]["itemid"]
 	currentTaskId = 0
     TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_CLIPBOARD", 0, false)
 	Citizen.Wait(10000)
-    exports['mythic_notify']:SendAlert('inform', 'You have fixed the problems.')
+    exports['mythic_notify']:DoLongHudText('inform', 'You have fixed the problems.')
 	TriggerServerEvent("nadrp-gangs:coke:updatepercent")
 	Citizen.Wait(1500)
     ClearPedTasks(PlayerPedId())

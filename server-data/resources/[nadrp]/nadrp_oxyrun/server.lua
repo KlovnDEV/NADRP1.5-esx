@@ -10,7 +10,7 @@ AddEventHandler('oxydelivery:server', function()
 		xPlayer.removeMoney(Config.StartOxyPayment)
 		TriggerClientEvent("oxydelivery:startDealing", source)
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, {type = 'error',  text='You don\'t have enough money to start an oxy run'})
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, {type = 'error',  text='You don\'t have enough money to start an oxy run'})
 	end
 end)
 

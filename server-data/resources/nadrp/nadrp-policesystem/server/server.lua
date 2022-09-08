@@ -13,15 +13,15 @@ RegisterCommand('fine', function(source, args, raw)
 
             if moneytake ~= nil then
                -- TriggerClientEvent('DoLongHudText',source, 'You have fined ID - [' .. bitchId .. '] for $' .. moneytake .. '.')
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You have fined ID - [' .. bitchId .. '] for $' .. moneytake .. '.'})
-                TriggerClientEvent('mythic_notify:client:SendAlert', bitchId, { type = 'inform', text = 'You have been sent a Fine for $' .. moneytake .. '.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You have fined ID - [' .. bitchId .. '] for $' .. moneytake .. '.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', bitchId, { type = 'inform', text = 'You have been sent a Fine for $' .. moneytake .. '.'})
 
                 --TriggerClientEvent('DoLongHudText',bitchId, 'You have been sent a Fine for $' .. moneytake .. '.')
                 TriggerClientEvent('drp-fines:Anim', source)
                 xSource.removeAccountMoney('bank', moneytake)
             else
                 --TriggerClientEvent('DoLongHudText',source, 'Incorrect Amount')
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Incorrect Amount'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Incorrect Amount'})
             end
         end
     end
@@ -70,7 +70,7 @@ RegisterCommand('paytow', function(source, args, raw)
                 args = { }
             })
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'No Player Found'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'No Player Found'})
         end
     end
 end)

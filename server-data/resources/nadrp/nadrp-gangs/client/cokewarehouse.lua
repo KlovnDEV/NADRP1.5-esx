@@ -200,7 +200,7 @@ function AttemptTask(workNumber,amountRequired)
 	currentTaskId = 0
     TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_CLIPBOARD", 0, false)
 	Citizen.Wait(10000)
-    exports['mythic_notify']:SendAlert('inform', 'You have fixed the problems.')
+    exports['mythic_notify']:DoLongHudText('inform', 'You have fixed the problems.')
 	TriggerServerEvent("nadrp-gangs:coke:updatepercent")
 	Citizen.Wait(1500)
     ClearPedTasks(PlayerPedId())

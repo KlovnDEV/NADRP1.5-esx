@@ -4,19 +4,19 @@ AddEventHandler('mythic_notify:client:PersistentHudText', function(data)
 end)
 
 function DoShortHudText(type, text, style)
-    SendAlert(type, text, 1000, style)
+    DoLongHudText(type, text, 1000, style)
 end
 
 function DoHudText(type, text, style)
-    SendAlert(type, text, 2500, style)
+    DoLongHudText(type, text, 2500, style)
 end
 
 function DoLongHudText(type, text, style)
-    SendAlert(type, text, 5000, style)
+    DoLongHudText(type, text, 5000, style)
 end
 
 function DoCustomHudText(type, text, length, style)
-    SendAlert(type, text, length, style)
+    DoLongHudText(type, text, length, style)
 end
 
 function PersistentHudText(action, id, type, text, style)

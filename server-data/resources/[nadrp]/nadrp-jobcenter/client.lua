@@ -51,7 +51,7 @@ function SetJob(job)
     else
         TriggerServerEvent("jobsystem:Job", job)
         TriggerEvent('nadrp:playerBecameJob', job)
-        exports['mythic_notify']:SendAlert('inform', 'Your job has been set to '..job)
+        exports['mythic_notify']:DoLongHudText('inform', 'Your job has been set to '..job)
     end
 end
 

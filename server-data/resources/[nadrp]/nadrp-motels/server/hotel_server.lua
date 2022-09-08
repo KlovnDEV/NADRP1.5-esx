@@ -190,10 +190,10 @@ AddEventHandler('nadrp-motels:RequestEntry', function(room)
 				TriggerClientEvent('nadrp-motels:CommandEnter',src, room, 1)
 				TriggerClientEvent('nadrp-motels:interactState', src, false)
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'Room is locked.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'Room is locked.'})
             end
 		else
-			TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'Room doesnt exist?.'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'Room doesnt exist?.'})
 		end
     end
 end)

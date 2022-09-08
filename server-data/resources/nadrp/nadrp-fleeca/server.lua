@@ -90,7 +90,7 @@ function nadrp:RewardPlayer(data,id)
     local payment = math.random(2000, 4000)
     --xPlayer.addMoney(payment)
     TriggerClientEvent("player:receiveItem",source ,"cashroll",math.random(20,40))
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = ("You Found $".. payment .. " In Cash") })
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = ("You Found $".. payment .. " In Cash") })
   else
       local chance = math.random(1,14)
       if (chance == 7) or (chance == 8) then

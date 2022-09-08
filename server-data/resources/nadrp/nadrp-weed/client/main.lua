@@ -95,7 +95,7 @@ AddEventHandler("nadrp-weed:startcrop", function(seedType)
 	local plyCoords = GetEntityCoords(PlayerPedId())
 
 	if not inhouse then
-		exports['mythic_notify']:SendAlert('error', 'You can\'t do that here!')
+		exports['mythic_notify']:DoLongHudText('error', 'You can\'t do that here!')
 		return
 	end
 
@@ -126,7 +126,7 @@ AddEventHandler("nadrp-weed:startcrop", function(seedType)
     if success then
         InsertPlant(Seed, seedType)
 	else
-		exports['mythic_notify']:SendAlert('error', 'Bruh back the fuck up, (Cant stack plants)')
+		exports['mythic_notify']:DoLongHudText('error', 'Bruh back the fuck up, (Cant stack plants)')
 	end
 end)
 
@@ -281,19 +281,19 @@ Citizen.CreateThread( function()
 							TriggerEvent("nadrp-weed:giveitems",crops[close]["strain"])
 						else
 							if crops[close]["status"] == 1 then
-								exports['mythic_notify']:SendAlert('inform','This crop doesnt need any attention.')
+								exports['mythic_notify']:DoLongHudText('inform','This crop doesnt need any attention.')
 							else
 								if crops[close]["strain"] == "Seeded" then
 									if exports["nadrp-inventory"]:hasEnoughOfItem("fertilizer",1,false) then
 										TriggerEvent("status:setState",4,1600)
 										if math.random(100) > 85 then
-											exports['mythic_notify']:SendAlert('inform','You just consumed all the Fertilizer.')
+											exports['mythic_notify']:DoLongHudText('inform','You just consumed all the Fertilizer.')
 											TriggerEvent("inventory:removeItem", "fertilizer", 1)
 										end
 										local new = crops[close]["growth"] + math.random(15,25)
 										TriggerServerEvent("nadrp-weed:UpdateWeedGrowth",crops[close]["dbID"],new, crops[close]['status'])
 									else
-										exports['mythic_notify']:SendAlert('error','You need Fertilizer for this!')
+										exports['mythic_notify']:DoLongHudText('error','You need Fertilizer for this!')
 									end
 								else
 									if exports["nadrp-inventory"]:hasEnoughOfItem("water",1,false) then
@@ -302,7 +302,7 @@ Citizen.CreateThread( function()
 										local new = crops[close]["growth"] + math.random(14,17)
 										TriggerServerEvent("nadrp-weed:UpdateWeedGrowth",crops[close]["dbID"],new, crops[close]['status'])
 									else
-										exports['mythic_notify']:SendAlert('error','You need 1 bottle of water for this!')
+										exports['mythic_notify']:DoLongHudText('error','You need 1 bottle of water for this!')
 									end
 								end
 							end

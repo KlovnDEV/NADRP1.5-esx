@@ -350,7 +350,7 @@ end
 function nadrp.Admin.Bring(self, player, target)
     local pTarget = GetPlayerFromServerId(target)
     if tonumber(player) == GetPlayerPed(pTarget) then 
-        exports['mythic_notify']:SendAlert('error', "You can't target your self.")
+        exports['mythic_notify']:DoLongHudText('error', "You can't target your self.")
         return
     end
     local pCoords = GetEntityCoords(PlayerPedId())

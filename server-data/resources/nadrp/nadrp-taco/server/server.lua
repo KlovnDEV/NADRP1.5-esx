@@ -11,7 +11,7 @@ AddEventHandler('nadrp-taco:payTruckBill', function()
             user.removeMoney(500)
             TriggerClientEvent('nadrp-truck:requestTruck', user.source)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You don\'t have enough for another truck'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You don\'t have enough for another truck'})
         end
     end
 end)

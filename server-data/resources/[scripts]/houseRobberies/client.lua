@@ -787,7 +787,7 @@ RegisterCommand('breach', function(source, args, raw)
             end
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'You are not police')
+        exports['mythic_notify']:DoLongHudText('error', 'You are not police')
     end
 end)
 
@@ -837,11 +837,11 @@ AddEventHandler('houseRobberies:attempt', function(lockpicks)
             end
         end
     elseif lockpicks == 0 and not isRobbing then
-        exports['mythic_notify']:SendAlert('error', 'No lockpick')
+        exports['mythic_notify']:DoLongHudText('error', 'No lockpick')
     elseif not isNight() and not isRobbing then
-        exports['mythic_notify']:SendAlert('error', 'It\'s too bright out')
+        exports['mythic_notify']:DoLongHudText('error', 'It\'s too bright out')
     else
-        exports['mythic_notify']:SendAlert('error', 'House isn\'t robbable')
+        exports['mythic_notify']:DoLongHudText('error', 'House isn\'t robbable')
     end
 end)
 
@@ -990,12 +990,12 @@ Citizen.CreateThread(function()
 									TriggerEvent('client:newStress', true,math.random(3,6))
                                     ClearPedTasks(PlayerPedId())
                                 else
-                                    exports['mythic_notify']:SendAlert('error', 'You moved to far away')
+                                    exports['mythic_notify']:DoLongHudText('error', 'You moved to far away')
                                     searching = false
                                 end	
 							end
                         else
-                            exports['mythic_notify']:SendAlert('error', 'You think you can just speed run this you dummy?')
+                            exports['mythic_notify']:DoLongHudText('error', 'You think you can just speed run this you dummy?')
                         end
                     end
                 end

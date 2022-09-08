@@ -304,32 +304,32 @@ AddEventHandler('nadrp-death:cpr', function()
             if closestDistance < 3.0 then
                 local finished = exports['nadrp-skillbar']:taskBar(4000,math.random(5,15))
                 if finished ~= 100 then
-                    exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                    exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                 else
                     local finished2 = exports['nadrp-skillbar']:taskBar(3000,math.random(5,15))
                     if finished2 ~= 100 then
-                        exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                        exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                     else
                         local finished3 = exports['nadrp-skillbar']:taskBar(2000,math.random(5,15))
                         if finished3 ~= 100 then
-                            exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                            exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                         else
                             local finished4 = exports['nadrp-skillbar']:taskBar(1500,math.random(5,15))
                             if finished4 ~= 100 then
-                                exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                                exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                             else
-                                exports["mythic_notify"]:SendAlert('inform', 'Success')
+                                exports["mythic_notify"]:DoLongHudText('inform', 'Success')
                                 TriggerServerEvent("nadrp-death:cpr", GetPlayerServerId(closestPlayer))
                             end
                         end
                     end
                 end
             else
-                exports['mythic_notify']:SendAlert('inform', 'No Player Found')
+                exports['mythic_notify']:DoLongHudText('inform', 'No Player Found')
             end
         end
     else
-        exports['mythic_notify']:SendAlert('inform', 'You are not near the rest house')
+        exports['mythic_notify']:DoLongHudText('inform', 'You are not near the rest house')
     end
 end)
 
@@ -351,7 +351,7 @@ function releaseBody()
     Citizen.Wait(1000)
     DoScreenFadeIn(500)
     Citizen.Wait(1000)
-    exports['mythic_notify']:SendAlert('inform', 'You woke up in hospital and can\'t seem to remember what happened')
+    exports['mythic_notify']:DoLongHudText('inform', 'You woke up in hospital and can\'t seem to remember what happened')
     FreezeEntityPosition(PlayerPedId(), false)
     SetEntityInvincible(PlayerPedId(), false)
     ClearPedBloodDamage(PlayerPedId())

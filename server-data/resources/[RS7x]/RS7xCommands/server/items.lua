@@ -8,7 +8,7 @@ ESX.RegisterUsableItem('joint', function(source)
         TriggerClientEvent('status:setState', source, 3, 400)
         TriggerClientEvent('tac_status:remove','stress', 200000)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'error', text = 'You dont have this item on you ?'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'error', text = 'You dont have this item on you ?'})
     end
 end)
 
@@ -22,7 +22,7 @@ ESX.RegisterUsableItem('blunt', function(source)
         TriggerClientEvent('status:setState', source, 3, 400)
         TriggerClientEvent('tac_status:remove','stress', 400000)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'error', text = 'You dont have this item on you ?'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'error', text = 'You dont have this item on you ?'})
     end
 end)
 
@@ -33,7 +33,7 @@ ESX.RegisterUsableItem('papers', function(source)
     if item >= 1 and item2 >= 1 then
         TriggerClientEvent('RS7x:Rolljoints', source, 'joints')
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'error', text = 'You dont have the items to do this ?'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'error', text = 'You dont have the items to do this ?'})
     end
 end)
 
@@ -42,7 +42,7 @@ ESX.RegisterUsableItem('bread', function(source)
 	xPlayer.removeInventoryItem('bread', 1)
 	TriggerClientEvent('tac_status:add', source, 'hunger', 200000)
     TriggerClientEvent('RS7x:EatBread', source)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less hungry'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less hungry'})
 
 end)
 
@@ -51,7 +51,7 @@ ESX.RegisterUsableItem('water', function(source)
 	xPlayer.removeInventoryItem('water', 1)
 	TriggerClientEvent('tac_status:add', source, 'thirst', 200000)
 	TriggerClientEvent('RS7x:Drinkwater', source)
-	TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less thirsty' })
+	TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less thirsty' })
 end)
 
 ESX.RegisterUsableItem('beer', function(source)
@@ -59,7 +59,7 @@ ESX.RegisterUsableItem('beer', function(source)
 	xPlayer.removeInventoryItem('beer', 1)
 	TriggerClientEvent('tac_status:add', source, 'drunk', 250000)
     TriggerClientEvent('RS7x:DrinkBeer', source)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less thirsty' })
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less thirsty' })
 end)
 
 ESX.RegisterUsableItem('donut', function(source)
@@ -67,7 +67,7 @@ ESX.RegisterUsableItem('donut', function(source)
     xPlayer.removeInventoryItem('donut', 1)
     TriggerClientEvent('tac_status:add', source, 'hunger', 200000)
     TriggerClientEvent('RS7x:EatDonut', source)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less hungry' })
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less hungry' })
 end)
 
 ESX.RegisterUsableItem('vodka', function(source)
@@ -75,7 +75,7 @@ ESX.RegisterUsableItem('vodka', function(source)
 	xPlayer.removeInventoryItem('vodka', 1)
 	TriggerClientEvent('tac_status:add', source, 'thirst', 200000)
     TriggerClientEvent('RS7x:DrinkVodka', source)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less thirsty' })
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less thirsty' })
 end)
 
 ESX.RegisterUsableItem('coffee', function(source)
@@ -83,7 +83,7 @@ ESX.RegisterUsableItem('coffee', function(source)
 	xPlayer.removeInventoryItem('coffee', 1)
 	TriggerClientEvent('tac_status:add', source, 'thirst', 200000)
 	TriggerClientEvent('RS7x:DrinkCoffee', source)
-	TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less thirsty' })
+	TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less thirsty' })
 
 end)
 
@@ -93,7 +93,7 @@ ESX.RegisterUsableItem('cigarette', function(source)
 
     xPlayer.removeInventoryItem('cigarette', 1)
     TriggerClientEvent('tac_cigarette:startSmoke', source)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You feel less stressed' })
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You feel less stressed' })
     --TriggerClientEvent('status:setState', source, 4, 400)
     --TriggerClientEvent('status:setState', source, 3, 400)
     TriggerClientEvent('tac_status:remove','stress', 400000)

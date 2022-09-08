@@ -15,6 +15,6 @@ AddEventHandler("carfill:checkmoney", function(costs,loc)
         target.removeMoney(costs)
         TriggerClientEvent("RefuelCarServerReturn", src)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'error', text = 'You need $' .. costs})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'error', text = 'You need $' .. costs})
     end
 end)

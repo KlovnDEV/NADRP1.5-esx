@@ -16,10 +16,10 @@ AddEventHandler('nadrp-paycheck:hasPaycheck', function()
 
             if payslip > 0 then
                 user.addAccountMoney('bank', totalSlip)
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'inform', text = 'A paycheck of $'..totalSlip..' has been added to your bank account', length = 7500})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'inform', text = 'A paycheck of $'..totalSlip..' has been added to your bank account', length = 7500})
                 MySQL.Async.execute('UPDATE users SET payslip=@payslip WHERE identifier=@identifier', {['@identifier'] = identifier, ['@payslip'] = 0})
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'inform', text = "You don't currently have a payslip here"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'inform', text = "You don't currently have a payslip here"})
             end
         end
     end)
@@ -40,7 +40,7 @@ AddEventHandler('nadrp-paycheck:addPaycheck', function(amount)
                 local totalSlip = math.ceil(((payslip + amount) - payslipTax))
 
                 MySQL.Async.execute('UPDATE users SET payslip=@payslip WHERE identifier=@identifier', {['@identifier'] = identifier, ['@payslip'] = payslip + amount})
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'inform', text = 'A paycheck of $'..amount..' making a total of $'..totalSlip..' with $'..payslipTax..' tax witheld on your last payment, go to Life Invader to pick up your payment!', length = 7500})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'inform', text = 'A paycheck of $'..amount..' making a total of $'..totalSlip..' with $'..payslipTax..' tax witheld on your last payment, go to Life Invader to pick up your payment!', length = 7500})
             else
                 local data = {
                     name = GetPlayerName(user.source),
@@ -51,7 +51,7 @@ AddEventHandler('nadrp-paycheck:addPaycheck', function(amount)
                 exports['nadrp-log']:DiscordLog(data)
             end
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = "There was an error adding this paycheck"})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = "There was an error adding this paycheck"})
         end
     end)
 end)

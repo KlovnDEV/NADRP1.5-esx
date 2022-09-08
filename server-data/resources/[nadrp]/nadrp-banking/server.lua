@@ -105,7 +105,7 @@ AddEventHandler('nadrp-bank:deposit', function(amount)
     TriggerEvent('es:getPlayerFromId', source, function(user)
         local rounded = math.ceil(tonumber(amount))
         if(string.len(rounded) >= 9) then
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "Input too high!"})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "Input too high!"})
         else
             if(rounded <= user.getMoney()) then
                 TriggerClientEvent("nadrp-banking:updateBalance", source, (user.getBank() + rounded))
@@ -114,7 +114,7 @@ AddEventHandler('nadrp-bank:deposit', function(amount)
                 deposit(source, rounded)
                 local new_balance = user.getBank()
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "Input too high!"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "Input too high!"})
             end
         end
     end)
@@ -128,7 +128,7 @@ AddEventHandler('nadrp-bank:withdraw', function(amount)
     TriggerEvent('es:getPlayerFromId', source, function(user)
         local rounded = round(tonumber(amount), 0)
         if(string.len(rounded) >= 9) then
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "Input too high!"})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "Input too high!"})
         else
             local bankbalance = user.getBank()
             if(tonumber(rounded) <= tonumber(bankbalance)) then
@@ -136,7 +136,7 @@ AddEventHandler('nadrp-bank:withdraw', function(amount)
                 TriggerClientEvent("nadrp-banking:removeBalance", source, rounded)
                 withdraw(source, rounded)
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "Not enough money in account!"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "Not enough money in account!"})
             end
         end
     end)
@@ -157,15 +157,15 @@ AddEventHandler('nadrp-bank:transfer', function(to, amountt)
 		zbalance = xTarget.getAccount('bank').money
 
 		if tonumber(_source) == tonumber(to) then
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = "error", text = "You cannot transfer money to yourself"})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = "error", text = "You cannot transfer money to yourself"})
 		else
 			if balance <= 0 or balance < tonumber(amount) or tonumber(amount) <= 0 then
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = "error", text = "You don't have enough money for this transfer"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = "error", text = "You don't have enough money for this transfer"})
 			else
 				xPlayer.removeAccountMoney('bank', tonumber(amount))
 				xTarget.addAccountMoney('bank', tonumber(amount))
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = "success", text = "You successfully transfered $" .. amount})
-                TriggerClientEvent('mythic_notify:client:SendAlert', to, {type = "success", text = "You have just received $" .. amount .. ' via transfer'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = "success", text = "You successfully transfered $" .. amount})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', to, {type = "success", text = "You have just received $" .. amount .. ' via transfer'})
                 TriggerClientEvent('nadrp-banking:viewBalance', to)
 			end
 		end
@@ -182,14 +182,14 @@ AddEventHandler('nadrp-bank:givecash', function(toPlayer, amount)
             recipient.addMoney(amount)
             user.removeMoney(amount)
             --TriggerClientEvent('nadrp-banking:updateCash', user.getMoney(), true)
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "inform", text = "You just gave $" .. amount})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "inform", text = "You just gave $" .. amount})
         else
             if (tonumber(user.getMoney()) < tonumber(amount)) then
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "Not enough money in wallet!"})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "Not enough money in wallet!"})
             end
         end
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = "error", text = "You cant give yourself money!"})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = "error", text = "You cant give yourself money!"})
     end
 end)
 

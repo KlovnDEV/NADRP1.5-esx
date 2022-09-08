@@ -28,7 +28,7 @@ SpawnLocalVehicle = function(data)
 	end
 
 	if not ESX.Game.IsSpawnPointClear(spawnpoint["position"], 3.0) then 
-        exports['mythic_notify']:SendAlert('error', 'Please move the vehicle off the road')
+        exports['mythic_notify']:DoLongHudText('error', 'Please move the vehicle off the road')
 		return
 	end
 
@@ -56,7 +56,7 @@ SpawnVehicle = function(data,recuperar)
 	end
 
 	if not ESX.Game.IsSpawnPointClear(spawnpoint["position"], 3.0) then 
-        exports['mythic_notify']:SendAlert('error', 'Please move the vehicle off the road')
+        exports['mythic_notify']:DoLongHudText('error', 'Please move the vehicle off the road')
 		return
 	end
 	CloseMenu()
@@ -67,7 +67,7 @@ SpawnVehicle = function(data,recuperar)
 
         if DoesEntityExist(vehicle) then
 			if Config.Trim(GetVehicleNumberPlateText(vehicle)) == Config.Trim(vehicleProps["plate"]) then
-                exports['mythic_notify']:SendAlert('error', 'Your vehicle is already in the city streets')
+                exports['mythic_notify']:DoLongHudText('error', 'Your vehicle is already in the city streets')
 				return HandleCamera(cachedData["currentGarage"])
 			end
 		end
@@ -87,7 +87,7 @@ SpawnVehicle = function(data,recuperar)
         HandleCamera(cachedData["currentGarage"])
     end)
     if recuperar then
-        exports['mythic_notify']:SendAlert('error', 'You paid $200 to recover your vehicle!')
+        exports['mythic_notify']:DoLongHudText('error', 'You paid $200 to recover your vehicle!')
         TriggerServerEvent('nadrp_garages:pay')
     end
     ClearMenu()
@@ -105,7 +105,7 @@ PutInVehicle = function()
 				AbrirMenuGuardar()
             else
                 CloseMenu()
-                exports['mythic_notify']:SendAlert('error', 'This vehicle does not belong to you')
+                exports['mythic_notify']:DoLongHudText('error', 'This vehicle does not belong to you')
 			end
 		end, vehicleProps)
 	end
@@ -127,7 +127,7 @@ SaveInGarage = function(garage)
     Citizen.Wait(300)
 
 
-    exports['mythic_notify']:SendAlert('inform',  'You saved your vehicle in garage '..garage)
+    exports['mythic_notify']:DoLongHudText('inform',  'You saved your vehicle in garage '..garage)
     Citizen.Wait(500)
 
     deleteCar(vehicle)
@@ -332,7 +332,7 @@ WaitForModel = function(model)
     end
 
     if not IsModelValid(model) then
-        return exports['mythic_notify']:SendAlert('error', 'This model does not exist in the game, send a report')
+        return exports['mythic_notify']:DoLongHudText('error', 'This model does not exist in the game, send a report')
     end
 
 	if not HasModelLoaded(model) then

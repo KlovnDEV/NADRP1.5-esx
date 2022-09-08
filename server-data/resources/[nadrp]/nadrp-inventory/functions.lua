@@ -59,7 +59,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
 
     local ItemInfo = GetItemInfo(slot)
     if tonumber(ItemInfo.quality) <= 1 then
-        exports['mythic_notify']:SendAlert('error', 'This item is not useable anymore')
+        exports['mythic_notify']:DoLongHudText('error', 'This item is not useable anymore')
         if isWeapon then
             TriggerEvent("brokenWeapon")
         end
@@ -217,7 +217,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
 
     if (itemid == "bait") then
       TriggerEvent('fishing:setbait', "fish")
-      TriggerEvent('mythic_notify:client:SendAlert', { type = 'inform', text = 'You attached the bait onto the fishing rod', length = 5000})
+      TriggerEvent('mythic_notify:client:DoLongHudText', { type = 'inform', text = 'You attached the bait onto the fishing rod', length = 5000})
       remove = true
     end
 
@@ -227,13 +227,13 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
 
     if (itemid == "turtlebait") then
         TriggerEvent('fishing:setbait', "turtle")
-        TriggerEvent('mythic_notify:client:SendAlert', { type = 'inform', text = 'You attached the turtle bait onto the fishing rod', length = 5000})
+        TriggerEvent('mythic_notify:client:DoLongHudText', { type = 'inform', text = 'You attached the turtle bait onto the fishing rod', length = 5000})
         remove = true
     end
 
     if (itemid == "turtle") then
         TriggerEvent('fishing:setbait', "shark")
-	    TriggerEvent('mythic_notify:client:SendAlert', { type = 'inform', text = 'You attached the turtle meat onto the fishing rod', length = 5000})
+	    TriggerEvent('mythic_notify:client:DoLongHudText', { type = 'inform', text = 'You attached the turtle meat onto the fishing rod', length = 5000})
         remove = true
     end
 
@@ -246,7 +246,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
         local itemInfo = GetItemInfo(slot)
         local data = itemInfo.information
         if data == '{}' then
-            exports['mythic_notify']:SendAlert('inform', 'Start collecting evidence!')
+            exports['mythic_notify']:DoLongHudText('inform', 'Start collecting evidence!')
             TriggerEvent("inventory:updateItem", itemid, slot, '{"used": "true"}')
             --
         else
@@ -368,7 +368,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
             if myJob ~= "news" then
                 TriggerEvent('inv:advancedLockpick',inventoryName,slot)
             else
-                exports['mythic_notify']:SendAlert('inform', 'Nice news reporting.')
+                exports['mythic_notify']:DoLongHudText('inform', 'Nice news reporting.')
             end
         end
     end
@@ -485,10 +485,15 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
         TriggerEvent('phoneGui2')
     end
 
+    --RecordVid
+    if (itemid == "videorecord") then
+        TriggerEvent('giveVideoRecord')
+    end
+
     if (itemid == "nitrous") then
         local currentVehicle = GetVehiclePedIsIn(player, false)
         if not IsToggleModOn(currentVehicle,18) then
-            exports['mythic_notify']:SendAlert('inform', 'You need a Turbo to use NOS!')
+            exports['mythic_notify']:DoLongHudText('inform', 'You need a Turbo to use NOS!')
         else
             local finished = 0
             local cancelNos = false
@@ -511,7 +516,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
                     DumFuk = true
                 end
             else
-                exports['mythic_notify']:SendAlert('inform', 'You can\'t drive and hook up nos at the same time.')
+                exports['mythic_notify']:DoLongHudText('inform', 'You can\'t drive and hook up nos at the same time.')
             end
         end
     end
@@ -521,7 +526,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
         if myJob ~= "news" then
             TriggerEvent("inv:lockPick",false,inventoryName,slot)
         else
-            exports['mythic_notify']:SendAlert('error', "Nice news reporting, you stoopid fuck.")
+            exports['mythic_notify']:DoLongHudText('error', "Nice news reporting, you stoopid fuck.")
         end
     end
 
@@ -842,7 +847,7 @@ function hasEnoughOfItem(itemid,amount,shouldReturnText)
     if shouldReturnText == nil then shouldReturnText = true end
     if itemid == nil or itemid == 0 or amount == nil or amount == 0 then
         if shouldReturnText then
-            exports['mythic_notify']:SendAlert('error', "I dont seem to have " .. itemid .. " in my pockets.")
+            exports['mythic_notify']:DoLongHudText('error', "I dont seem to have " .. itemid .. " in my pockets.")
         end
         return false
     end
@@ -854,7 +859,7 @@ function hasEnoughOfItem(itemid,amount,shouldReturnText)
         return true
     end
     if (shouldReturnText) then
-        exports['mythic_notify']:SendAlert('error', "You dont have enough of that item.")
+        exports['mythic_notify']:DoLongHudText('error', "You dont have enough of that item.")
     end
     return false
 end
@@ -868,7 +873,7 @@ function isValidUseCase(itemID,isWeapon)
             if IsEntityInAir(playerVeh) then
                 Wait(1000)
                 if IsEntityInAir(playerVeh) then
-                    exports['mythic_notify']:SendAlert('error', "You appear to be flying through the air")
+                    exports['mythic_notify']:DoLongHudText('error', "You appear to be flying through the air")
                     return false
                 end
             end
@@ -881,13 +886,13 @@ function isValidUseCase(itemID,isWeapon)
             Wait(700)
             local plyCoords = GetEntityCoords(player, 0)
             if #(targetCoords - plyCoords) > 1.3 then
-                exports['mythic_notify']:SendAlert('error', "Cannot be moving while swimming to use this.")
+                exports['mythic_notify']:DoLongHudText('error', "Cannot be moving while swimming to use this.")
                 return false
             end
         end
 
         if IsPedSwimmingUnderWater(player) then
-            exports['mythic_notify']:SendAlert('error', "Cannot be underwater to use this.")
+            exports['mythic_notify']:DoLongHudText('error', "Cannot be underwater to use this.")
             return false
         end
     end
@@ -895,11 +900,15 @@ function isValidUseCase(itemID,isWeapon)
     return true
 end
 
+RegisterNetEvent('Night:weights')
+AddEventHandler('Night:weights', function()
+    TriggerEvent("status:setState",4,600)
+end)
 
 
 RegisterNetEvent('evidence:addDnaSwab')
 AddEventHandler('evidence:addDnaSwab', function(dna)
-    exports['mythic_notify']:SendAlert('error', "DNA Result: " .. dna)
+    exports['mythic_notify']:DoLongHudText('error', "DNA Result: " .. dna)
 end)
 
 RegisterNetEvent('CheckDNA')
@@ -917,7 +926,7 @@ end)
 
 RegisterNetEvent('evidence:swabNotify')
 AddEventHandler('evidence:swabNotify', function()
-    exports['mythic_notify']:SendAlert('error', "DNA swab taken.")
+    exports['mythic_notify']:DoLongHudText('error', "DNA swab taken.")
 end)
 
 function GetPlayers()
@@ -1116,7 +1125,7 @@ AddEventHandler('inv:lockPick', function(isForced,inventoryName,slot)
             local chance = math.random(50)
             if #(GetEntityCoords(targetVehicle) - GetEntityCoords(PlayerPedId())) < 10.0 and targetVehicle ~= 0 and GetEntitySpeed(targetVehicle) < 5.0 then
                 SetVehicleDoorsLocked(targetVehicle, 1)
-                exports['mythic_notify']:SendAlert('inform', 'Vehicle Unlocked.')
+                exports['mythic_notify']:DoLongHudText('inform', 'Vehicle Unlocked.')
                 TriggerEvent('InteractSound_CL:PlayOnOne', 'unlock', 0.1)
             end
         end
@@ -1173,7 +1182,7 @@ AddEventHandler('inv:lockPick', function(isForced,inventoryName,slot)
             TriggerEvent("civilian:alertPolice",20.0,"lockpick",targetVehicle)
             local finished = exports["nadrp-skillbar"]:taskBar(1500,math.random(5,15))
             if finished ~= 100 then
-                exports['mythic_notify']:SendAlert('error', 'The lockpick bent out of shape.')
+                exports['mythic_notify']:DoLongHudText('error', 'The lockpick bent out of shape.')
                 TriggerEvent("inventory:removeItem","lockpick", 1)
                 lockpicking = false
                 return
@@ -1190,7 +1199,7 @@ AddEventHandler('inv:lockPick', function(isForced,inventoryName,slot)
                     SetVehicleDoorsLocked(targetVehicle, 1)
                     TriggerEvent("ARPF:spawn:recivekeys",targetVehicle,plate)
                     TriggerEvent("civilian:alertPolice",20.0,"lockpick",targetVehicle)
-                    exports['mythic_notify']:SendAlert('inform', 'Ignition Working.')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Ignition Working.')
                     SetEntityAsMissionEntity(targetVehicle,false,true)
                     SetVehicleHasBeenOwnedByPlayer(targetVehicle,true)
                 end
@@ -1201,7 +1210,7 @@ AddEventHandler('inv:lockPick', function(isForced,inventoryName,slot)
             if hasLockpick then 
                 TriggerEvent('disc-hotwire:hotwire', true)
             else
-                exports['mythic_notify']:SendAlert('inform', 'You dont have this item on you?')
+                exports['mythic_notify']:DoLongHudText('inform', 'You dont have this item on you?')
             end
         end
     end
@@ -1253,7 +1262,7 @@ AddEventHandler('police:targetCheckInventory', function(bool, isFrisk)
     if(distance ~= -1 and distance < 5) then
         TriggerServerEvent("server-inventory-openPlayer", GetPlayerServerId(t), isFrisk, _bool)
     else
-        exports['mythic_notify']:SendAlert('inform', 'No player near you!')
+        exports['mythic_notify']:DoLongHudText('inform', 'No player near you!')
     end
 end)
 
@@ -1296,7 +1305,7 @@ end)]]
             TriggerServerEvent("people-search", GetPlayerServerId(closestPlayer))
             --TriggerServerEvent('steal:takeCash', GetPlayerServerId(closestPlayer))
         else
-            exports['mythic_notify']:SendAlert('inform', 'They need to do /e handsup or be dead')
+            exports['mythic_notify']:DoLongHudText('inform', 'They need to do /e handsup or be dead')
         end
     end
 end)]]
@@ -1375,7 +1384,7 @@ Citizen.CreateThread(function()
                     if Licenses['weapon'] == nil then
                         OpenBuyLicenseMenu()
                     else
-                        exports['mythic_notify']:SendAlert('inform', 'You already got a weapons license')
+                        exports['mythic_notify']:DoLongHudText('inform', 'You already got a weapons license')
                     end
                     Citizen.Wait(2000)
                 end
@@ -1435,7 +1444,7 @@ Citizen.CreateThread(function()
                 local finished = exports["nadrp-taskbar"]:taskBar(15000, "Knocking On Door")
                 if (finished == 100) then
                     TriggerEvent("server-inventory-open", "31", "Craft");
-                    exports['mythic_notify']:SendAlert('inform', 'Get what you need, and leave.')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Get what you need, and leave.')
                 end
             end
         end]]
@@ -1511,6 +1520,23 @@ Citizen.CreateThread(function()
             end
         end
 
+        if #(vector3(-1192.73, -894.583, 13.995) - pos) <= 1.2 then
+            found = true
+            DrawText3D(-1192.73, -894.583, 13.995, "[E] - Open BergerShot")
+            if IsControlJustReleased(0, 86) then
+                TriggerEvent("server-inventory-open", "580", "Burger");
+            end
+        end
+
+        if #(vector3( -629.028, 238.681, 81.899) - pos) <= 1.2 then
+            found = true
+            DrawText3D( -629.028, 238.681, 81.899, "[E] - Open BeanMachine")
+            if IsControlJustReleased(0, 86) then
+                TriggerEvent("server-inventory-open", "429", "Shop");
+            end
+        end
+        
+
         if #(vector3(-1172.252,-1572.145,4.664) - pos) <= 1.2 then
             found = true
             DrawText3D(-1172.252,-1572.145,4.664, "[E] - Open Shop")
@@ -1531,7 +1557,7 @@ RegisterCommand('inventory', function(source, args, raw)
     if not isDisabled then
         TriggerEvent("OpenInv")
     else
-        exports['mythic_notify']:SendAlert('error', 'Currently performing action!')
+        exports['mythic_notify']:DoLongHudText('error', 'Currently performing action!')
     end
 end, true)
 

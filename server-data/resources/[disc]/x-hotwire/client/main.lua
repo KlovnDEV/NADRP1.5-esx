@@ -47,15 +47,15 @@ RegisterCommand("givekeys", function(source,args,raw)
                 if (distance ~= -1 and distance < 3) then
                     if plate ~= nil then
                         TriggerServerEvent("ARPF:GiveKeys", GetPlayerServerId(t),vehicle,plate)
-                        exports['mythic_notify']:SendAlert('success', 'You gave your keys to [ '..plate..' ]', 5000)
+                        exports['mythic_notify']:DoLongHudText('success', 'You gave your keys to [ '..plate..' ]', 5000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
+                        exports['mythic_notify']:DoLongHudText('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
                     end
                 else
-                    exports['mythic_notify']:SendAlert('error', 'No one near you to give your keys to have them get closer', 5000)
+                    exports['mythic_notify']:DoLongHudText('error', 'No one near you to give your keys to have them get closer', 5000)
                 end
             else
-                exports['mythic_notify']:SendAlert('error', 'You dont have keys to this car', 5000)
+                exports['mythic_notify']:DoLongHudText('error', 'You dont have keys to this car', 5000)
             end
         end
     elseif IsPedInAnyVehicle(ped, false) then
@@ -67,19 +67,19 @@ RegisterCommand("givekeys", function(source,args,raw)
                 if (distance ~= -1 and distance < 3) then
                     if plate ~= nil then
                         TriggerServerEvent("ARPF:GiveKeys", GetPlayerServerId(t),veh,plate)
-                        exports['mythic_notify']:SendAlert('success', 'You gave your keys to'.. GetPlayerName(GetPlayerServerId(t)), 5000)
+                        exports['mythic_notify']:DoLongHudText('success', 'You gave your keys to'.. GetPlayerName(GetPlayerServerId(t)), 5000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You need to be outside looking at your car to give your keys OR be sitting in the car', 6000)
+                        exports['mythic_notify']:DoLongHudText('error', 'You need to be outside looking at your car to give your keys OR be sitting in the car', 6000)
                     end
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
+                    exports['mythic_notify']:DoLongHudText('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
                 end
             else
-                exports['mythic_notify']:SendAlert('error', 'You dont have keys to this car', 5000)
+                exports['mythic_notify']:DoLongHudText('error', 'You dont have keys to this car', 5000)
             end
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'No one near you to give your keys to have them get closer', 5000)
+        exports['mythic_notify']:DoLongHudText('error', 'No one near you to give your keys to have them get closer', 5000)
     end
 end, false)
 
@@ -96,15 +96,15 @@ AddEventHandler('x-hotwire:givekey', function()
                 if (distance ~= -1 and distance < 3) then
                     if plate ~= nil then
                         TriggerServerEvent("ARPF:GiveKeys", GetPlayerServerId(t),vehicle,plate)
-                        exports['mythic_notify']:SendAlert('success', 'You gave your keys to [ '..plate..' ]', 5000)
+                        exports['mythic_notify']:DoLongHudText('success', 'You gave your keys to [ '..plate..' ]', 5000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
+                        exports['mythic_notify']:DoLongHudText('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
                     end
                 else
-                    exports['mythic_notify']:SendAlert('error', 'No one near you to give your keys to have them get closer', 5000)
+                    exports['mythic_notify']:DoLongHudText('error', 'No one near you to give your keys to have them get closer', 5000)
                 end
             else
-                exports['mythic_notify']:SendAlert('error', 'You dont have keys to this car', 5000)
+                exports['mythic_notify']:DoLongHudText('error', 'You dont have keys to this car', 5000)
             end
         end
     elseif IsPedInAnyVehicle(ped, false) then
@@ -116,19 +116,19 @@ AddEventHandler('x-hotwire:givekey', function()
                 if (distance ~= -1 and distance < 3) then
                     if plate ~= nil then
                         TriggerServerEvent("ARPF:GiveKeys", GetPlayerServerId(t),veh,plate)
-                        exports['mythic_notify']:SendAlert('success', 'You gave your keys to'.. GetPlayerName(GetPlayerServerId(t)), 5000)
+                        exports['mythic_notify']:DoLongHudText('success', 'You gave your keys to'.. GetPlayerName(GetPlayerServerId(t)), 5000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You need to be outside looking at your car to give your keys OR be sitting in the car', 6000)
+                        exports['mythic_notify']:DoLongHudText('error', 'You need to be outside looking at your car to give your keys OR be sitting in the car', 6000)
                     end
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
+                    exports['mythic_notify']:DoLongHudText('error', 'You were unable to pass keys because the cars plate # was unable to be found ¯\\_(ツ)_/¯', 5000)
                 end
             else
-                exports['mythic_notify']:SendAlert('error', 'You dont have keys to this car', 5000)
+                exports['mythic_notify']:DoLongHudText('error', 'You dont have keys to this car', 5000)
             end
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'No one near you to give your keys to have them get closer', 5000)
+        exports['mythic_notify']:DoLongHudText('error', 'No one near you to give your keys to have them get closer', 5000)
     end
 end)
 
@@ -145,7 +145,7 @@ RegisterNetEvent('x-hotwire:spawncar')
 AddEventHandler('x-hotwire:spawncar', function(args)
     local car = args[1]
     if car == nil then
-        exports['mythic_notify']:SendAlert('error', 'Model not found spawing adder instead (prevting crash)')
+        exports['mythic_notify']:DoLongHudText('error', 'Model not found spawing adder instead (prevting crash)')
         car = "adder"
     end
 
@@ -201,7 +201,7 @@ AddEventHandler('ARPF:recivekeys', function(name,vehicle,plates)
         if plates == plate then
             TrackVehicle(plate, veh)
             trackedVehicles[plate].canTurnOver = true
-            exports['mythic_notify']:SendAlert('error', 'You recived keys from'..name.."for the vehicle with plate:"..plate, 6000)
+            exports['mythic_notify']:DoLongHudText('error', 'You recived keys from'..name.."for the vehicle with plate:"..plate, 6000)
         else
             print("[Debug - Error]: The vehicle plates did not match!")
         end
@@ -211,7 +211,7 @@ AddEventHandler('ARPF:recivekeys', function(name,vehicle,plates)
         if plates == plate then 
             TrackVehicle(plate, veh)
             trackedVehicles[plate].canTurnOver = true
-            exports['mythic_notify']:SendAlert('error', 'You recived keys from'..name.."for the vehicle with plate:"..plate, 6000)
+            exports['mythic_notify']:DoLongHudText('error', 'You recived keys from'..name.."for the vehicle with plate:"..plate, 6000)
         else
             print("[Debug - Error]: The vehicle plates did not match!")
         end
@@ -251,21 +251,21 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
         time = 10000
         local finished = exports['nadrp-skillbar']:taskBar(5000, math.random(5,15))
         if finished ~= 100 then
-            exports['mythic_notify']:SendAlert('error', 'failed')
+            exports['mythic_notify']:DoLongHudText('error', 'failed')
             lockpicking = false
         else
             local finished2 = exports['nadrp-skillbar']:taskBar(4000, math.random(5,15))
             if finished2 ~= 100 then
-                exports['mythic_notify']:SendAlert('error', 'failed')
+                exports['mythic_notify']:DoLongHudText('error', 'failed')
                 lockpicking = false
             else
                 local finished3 = exports['nadrp-skillbar']:taskBar(2000, math.random(5,15))
                 if finished3 ~= 100 then
-                    exports['mythic_notify']:SendAlert('error', 'failed')
+                    exports['mythic_notify']:DoLongHudText('error', 'failed')
                     lockpicking = false
                 else
                     lockpicking = true
-                    exports['mythic_notify']:SendAlert('success', 'Doors Unlocked!')
+                    exports['mythic_notify']:DoLongHudText('success', 'Doors Unlocked!')
                 end
             end
         end
@@ -274,7 +274,7 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
 
         if chance == 2 then
             TriggerServerEvent('ARPF:removeKit')
-            exports['mythic_notify']:SendAlert('inform', 'Your lockpick broke.')
+            exports['mythic_notify']:DoLongHudText('inform', 'Your lockpick broke.')
         end
             alarmChance = math.random(100)
         if alarmChance <= 55 then
@@ -316,25 +316,25 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
         TriggerEvent("animation:repaircar", 28)
         local finished = exports['nadrp-skillbar']:taskBar(5000,math.random(5,15))
         if finished ~= 100 then
-            exports["mythic_notify"]:SendAlert('error', 'Failed...')
+            exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
             giveKeysHotwire(false, veh, true)
         else
             local finished2 = exports['nadrp-skillbar']:taskBar(4000,math.random(5,15))
             if finished2 ~= 100 then
-                exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                 giveKeysHotwire(false, veh, true)
             else
                 local finished3 = exports['nadrp-skillbar']:taskBar(3000,math.random(5,15))
                 if finished3 ~= 100 then
-                    exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                    exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                     giveKeysHotwire(false, veh, true)
                 else
                     local finished4 = exports['nadrp-skillbar']:taskBar(1500,math.random(5,15))
                     if finished4 ~= 100 then
-                        exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                        exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                         giveKeysHotwire(false, veh, true)
                     else
-                        exports["mythic_notify"]:SendAlert('inform', 'Success')
+                        exports["mythic_notify"]:DoLongHudText('inform', 'Success')
                         giveKeysHotwire(true, veh, true)
                     end
                 end
@@ -369,10 +369,10 @@ AddEventHandler('disc-hotwire:hotwire', function(useditem)
         if finished == 100 then
             local chance = math.random(1,100)
             if chance <= 75 then 
-                exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                 giveKeysHotwire(false, veh, false)
             else
-                exports["mythic_notify"]:SendAlert('error', 'Failed...')
+                exports["mythic_notify"]:DoLongHudText('error', 'Failed...')
                 giveKeysHotwire(true, veh, false)
             end
         else
@@ -409,7 +409,7 @@ function giveKeysHotwire(complete, veh, lockpick)
         local chance = math.random(1,10)
         if chance == 2 and lockpick then
             TriggerServerEvent('ARPF:removeKit')
-            exports['mythic_notify']:SendAlert('inform', 'Your lockpick bent out of shape.')
+            exports['mythic_notify']:DoLongHudText('inform', 'Your lockpick bent out of shape.')
         end
         Citizen.Wait(1000)
         ClearPedTasks(PlayerPedId())
@@ -425,7 +425,7 @@ function searchvehicle()
     if  trackedVehicles[plate].canTurnOver == false then
 
         if not IsPedInAnyVehicle(GetPlayerPed(-1), false) then
-            exports['mythic_notify']:SendAlert('error', 'You are not in a car?')
+            exports['mythic_notify']:DoLongHudText('error', 'You are not in a car?')
             return
         end
         exports["t0sic_loadingbar"]:StartDelayedFunction("Searching...", 5000, function()
@@ -433,7 +433,7 @@ function searchvehicle()
             local luck = math.random(50,69)
 
             if not IsPedInAnyVehicle(GetPlayerPed(-1), false) then
-                exports['mythic_notify']:SendAlert('error', 'You are not in a car?')
+                exports['mythic_notify']:DoLongHudText('error', 'You are not in a car?')
                 return
             end
             if luck >= 68 then
@@ -444,7 +444,7 @@ function searchvehicle()
                 exports["t0sic_loadingbar"]:StartDelayedFunction("Found cash...", 2000, function()
                     cashreward = math.random(80,150)
                     TriggerServerEvent('disc-hotwire:givecash', cashreward)
-                    exports['mythic_notify']:SendAlert('inform', 'Found $'..cashreward)
+                    exports['mythic_notify']:DoLongHudText('inform', 'Found $'..cashreward)
                 end)
             elseif luck >= 56 and luck < 68 then
                 maths = math.random(1,4)
@@ -452,33 +452,33 @@ function searchvehicle()
                     item = "hamburger"
                     count = 2
                     exports["t0sic_loadingbar"]:StartDelayedFunction("Found burger", 2000, function()
-                        exports['mythic_notify']:SendAlert('inform', 'Found '..count.." "..item)
+                        exports['mythic_notify']:DoLongHudText('inform', 'Found '..count.." "..item)
                         TriggerEvent('player:receiveItem', item, count)
                     end)
                 elseif maths == 2 then
                     item = "bandage"
                     count = 2
                     exports["t0sic_loadingbar"]:StartDelayedFunction("Found "..item, 2000, function()
-                        exports['mythic_notify']:SendAlert('inform', 'Found '..count.." "..item)
+                        exports['mythic_notify']:DoLongHudText('inform', 'Found '..count.." "..item)
                         TriggerEvent('player:receiveItem', item, count)
                     end)
                 elseif maths == 3 then
                     item = "water"
                     count = 1
                     exports["t0sic_loadingbar"]:StartDelayedFunction("Found water", 2000, function()
-                        exports['mythic_notify']:SendAlert('inform', 'Found '..count.." "..item)
+                        exports['mythic_notify']:DoLongHudText('inform', 'Found '..count.." "..item)
                         TriggerEvent('player:receiveItem', item, count)
                     end)
                 elseif maths == 4 then
                     item = "lockpick"
                     count = 1
                     exports["t0sic_loadingbar"]:StartDelayedFunction("Found lockpick", 2000, function()
-                        exports['mythic_notify']:SendAlert('inform', 'Found '..count.." "..item)
+                        exports['mythic_notify']:DoLongHudText('inform', 'Found '..count.." "..item)
                         TriggerEvent('player:receiveItem', item, count)
                     end)
                 end
             else
-                exports['mythic_notify']:SendAlert('inform', 'You did not find anything in the car!')
+                exports['mythic_notify']:DoLongHudText('inform', 'You did not find anything in the car!')
             end
         end)
         hassearched[plate] = true
@@ -513,7 +513,7 @@ Citizen.CreateThread(function()
                     useds = false
                     TriggerEvent("disc-hotwire:hotwire", useds)
                 else
-                    exports["mythic_notify"]:SendAlert('error', 'You attempted to hotwire this and failed, move on')
+                    exports["mythic_notify"]:DoLongHudText('error', 'You attempted to hotwire this and failed, move on')
                 end
             end
             if IsControlJustPressed(0, 47) and not hassearched[plate] == true then
@@ -541,7 +541,7 @@ Citizen.CreateThread( function()
                         local finished = exports['nadrp-taskbar']:taskBar(3000, 'Taking Keys')
                         if finished == 100 then 
                             --Citizen.Wait(4500)
-                            exports['mythic_notify']:SendAlert('inform', 'You got the keys to the car')
+                            exports['mythic_notify']:DoLongHudText('inform', 'You got the keys to the car')
                             trackedVehicles[plate].canTurnOver = true
                         end
                     else
@@ -552,7 +552,7 @@ Citizen.CreateThread( function()
                             local finished = exports['nadrp-taskbar']:taskBar(3000, 'Taking Keys')
                             if finished == 100 then
                                 --Citizen.Wait(4500)
-                                exports['mythic_notify']:SendAlert('inform', 'You got the keys to the car')
+                                exports['mythic_notify']:DoLongHudText('inform', 'You got the keys to the car')
                                 trackedVehicles[plate].canTurnOver = true
                             end
                         else
@@ -902,7 +902,7 @@ AddEventHandler('control:cardoors', function()
                 TriggerEvent("keys:unlockDoor", targetVehicle, true)
             end
         else
-            exports['mythic_notify']:SendAlert('inform', "You don't have keys to this vehicle")
+            exports['mythic_notify']:DoLongHudText('inform', "You don't have keys to this vehicle")
         end
     end
     Citizen.Wait(500)

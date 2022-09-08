@@ -118,7 +118,7 @@ Citizen.CreateThread(function()
             found = true
             DrawText3Ds(122.49, 6406.1, 31.36, 'Press ~g~[E]~w~ to start doing truck job')
             if IsControlJustPressed(0, 38) then
-                exports["mythic_notify"]:SendAlert('inform', 'Go pick up the trailer on the side of and deliver it to the docks')
+                exports["mythic_notify"]:DoLongHudText('inform', 'Go pick up the trailer on the side of and deliver it to the docks')
                 local str = [[ You can finish anytime you like just come back here and collect your paycheck. Also
                     Remember to return the truck at the side of the building.
                 ]]
@@ -152,7 +152,7 @@ Citizen.CreateThread(function()
                         DeleteVehicle(GetVehiclePedIsIn(PlayerPedId(), false))
                         Returned = true
                     else
-                        exports["mythic_notify"]:SendAlert('error', 'This is not the company truck')
+                        exports["mythic_notify"]:DoLongHudText('error', 'This is not the company truck')
                     end
                 end
             end
@@ -243,7 +243,7 @@ Citizen.CreateThread(function()
                 finished = true
                 RemoveBlip(Blip)
                 RemoveBlip(Blip2)
-                exports['mythic_notify']:SendAlert('error', 'You have Completed your list go back and return the truck then collect your paycheck')
+                exports['mythic_notify']:DoLongHudText('error', 'You have Completed your list go back and return the truck then collect your paycheck')
             end
             if currentRuns < 5 then 
                 if not DoesBlipExist(Blip) then

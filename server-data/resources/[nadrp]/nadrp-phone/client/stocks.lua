@@ -237,7 +237,7 @@ function sendStocksToPhone(isRefresh)
 end
 
 RegisterNUICallback('btnStocks', function()
-  exports['mythic_notify']:SendAlert('inform', 'Coming soon.', 4000)
+  exports['mythic_notify']:DoLongHudText('inform', 'Coming soon.', 4000)
   sendStocksToPhone();
   --[[
     for i = 1, #serverstockvalues do

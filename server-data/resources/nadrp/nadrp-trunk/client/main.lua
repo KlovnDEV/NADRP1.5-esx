@@ -85,7 +85,7 @@ function PutInTrunk(veh)
 	if not DoesVehicleHaveDoor(veh, 6) and DoesVehicleHaveDoor(veh, 5) and IsThisModelACar(GetEntityModel(veh)) then
  
 		if lockStatus == 4 or lockStatus == 2 then
-			exports['mythic_notify']:SendAlert('error', 'This Vehicle is locked.')
+			exports['mythic_notify']:DoLongHudText('error', 'This Vehicle is locked.')
 			return
 		elseif GetVehicleDoorAngleRatio(veh, 5) ~= 0.0 then
 			SetVehicleDoorOpen(veh, 5, 1, 1)
@@ -175,7 +175,7 @@ function PutInTrunk(veh)
 			end
 			DoScreenFadeIn(2000)
 		else
-			exports["mythic_notify"]:SendAlert('error', 'The trunk seems to be closed ?')
+			exports["mythic_notify"]:DoLongHudText('error', 'The trunk seems to be closed ?')
 		end
     end
 end

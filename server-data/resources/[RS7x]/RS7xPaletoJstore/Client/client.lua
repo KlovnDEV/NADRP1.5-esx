@@ -176,13 +176,13 @@ function AttackGlass(num)
 
 		end
 		TriggerServerEvent("jewel:isSmashed",num)
-        exports['mythic_notify']:SendAlert('inform', 'You broke the glass and got some items!')
+        exports['mythic_notify']:DoLongHudText('inform', 'You broke the glass and got some items!')
         TriggerEvent('client:newStress', true,math.random(1,3))
 		giveitems()
         isSmashed[num] = true
         trying = false
 	else
-        exports['mythic_notify']:SendAlert('inform', "You failed to break the glass - more force would help.")
+        exports['mythic_notify']:DoLongHudText('inform', "You failed to break the glass - more force would help.")
         ClearPedTasks(PlayerPedId())
         TriggerEvent('client:newStress', true,math.random(3,5))
         trying = false
@@ -229,7 +229,7 @@ Citizen.CreateThread(function()
                                 if cops >= CopsNeeded then
                                     TriggerEvent('Attempt:jewelRob', i)
                                 else
-                                    exports['mythic_notify']:SendAlert('inform', 'There is not enough cops around')
+                                    exports['mythic_notify']:DoLongHudText('inform', 'There is not enough cops around')
                                 end
                             end
                         end
@@ -276,7 +276,7 @@ Citizen.CreateThread(function()
              		TriggerServerEvent("nadrp-doors:alterlockstate",173)
              		TriggerServerEvent("nadrp-doors:alterlockstate",174)
                  else
-                    exports['mythic_notify']:SendAlert('error', 'You do not have the required resources!')
+                    exports['mythic_notify']:DoLongHudText('error', 'You do not have the required resources!')
              	end
              end
 		else

@@ -140,9 +140,9 @@ AddEventHandler('RS7x:TradeBars', function(itemCount)
     if itemCount and itemCount > 0 then
 		TriggerClientEvent('inventory:removeItem', xPlayer.source, "goldbar", itemCount)
         local payment  = (itemCount * math.random(1500, 2000))
-		TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'inform', text = 'Traded ' .. itemCount .. ' GoldBars For $' .. payment })
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'inform', text = 'Traded ' .. itemCount .. ' GoldBars For $' .. payment })
 		xPlayer.addMoney(payment)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'error', text = 'You do not have enough Goldbars!' })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'error', text = 'You do not have enough Goldbars!' })
     end
 end)

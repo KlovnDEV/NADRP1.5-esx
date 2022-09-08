@@ -87,7 +87,7 @@ AddEventHandler("cctv:camera", function(camNumber)
 			PlaySoundFrontend(-1, "HACKING_SUCCESS", false)
 			TriggerEvent("cctv:startcamera",camNumber)
 		else
-			exports['mythic_notify']:SendAlert('error', "This camera appears to be faulty")
+			exports['mythic_notify']:DoLongHudText('error', "This camera appears to be faulty")
 		end
 	end
 end)

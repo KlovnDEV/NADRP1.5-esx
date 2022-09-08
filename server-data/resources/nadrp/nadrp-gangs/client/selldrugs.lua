@@ -229,7 +229,7 @@ end
 RegisterNetEvent('nadrp-selldrugs:start')
 AddEventHandler('nadrp-selldrugs:start', function()
 	if cooldown then
-		exports['mythic_notify']:SendAlert('error', 'You can only set up on corner once every 1 minute.')
+		exports['mythic_notify']:DoLongHudText('error', 'You can only set up on corner once every 1 minute.')
 		return
 	end
 
@@ -248,30 +248,30 @@ AddEventHandler('nadrp-selldrugs:start', function()
     local dst = #(plyCoords - vector3(143.62,-1766.86,28.4))
 	print(MyStreetName)
     if (MyStreetName == "Forum Dr" or MyStreetName == "Brouge Ave" or MyStreetName == "Grove St" or MyStreetName == "Macdonald St" or MyStreetName == "Carson Ave") and exports["nadrp-inventory"]:hasEnoughOfItem("weedq",1,false) or exports["nadrp-inventory"]:hasEnoughOfItem("weedq2",1,false) and dst < 500.0 then
-		exports['mythic_notify']:SendAlert('inform', 'You are corner selling weed.')
+		exports['mythic_notify']:DoLongHudText('inform', 'You are corner selling weed.')
 	    sellingweed = true
 	    cooldown = true
     elseif (MyStreetName == "Lindsay Circus" or MyStreetName == "Ginger St" or MyStreetName == "Jamestown St" or MyStreetName == "West Eclipse Blvd") then
-		exports['mythic_notify']:SendAlert('inform', 'You are corner selling cocaine')
+		exports['mythic_notify']:DoLongHudText('inform', 'You are corner selling cocaine')
 		sellingcocaine = true
 		cooldown = true
 	else
 	    if not hotSpots[Area] then
-			exports['mythic_notify']:SendAlert('error', 'You cant do that here..')
+			exports['mythic_notify']:DoLongHudText('error', 'You cant do that here..')
 	    	return
 	    end
 		if hotSpots[Area]["zone"] == 18 then
-			exports['mythic_notify']:SendAlert('inform', 'This spot is too hot.')
+			exports['mythic_notify']:DoLongHudText('inform', 'This spot is too hot.')
 			return
 	    end
 
 		-- if hotSpots[Area]["zone"] == 1 then
-		-- 	exports['mythic_notify']:SendAlert('inform', 'You are corner selling crack.')
+		-- 	exports['mythic_notify']:DoLongHudText('inform', 'You are corner selling crack.')
 	    -- 	sellingcrack = true
 	    -- 	cooldown = true		
 		-- end
 		if hotSpots[Area]["zone"] == 1 then
-			exports['mythic_notify']:SendAlert('inform', 'You are corner selling meth.')
+			exports['mythic_notify']:DoLongHudText('inform', 'You are corner selling meth.')
 			sellingmeth = true
 			cooldown = true
 		end
@@ -281,12 +281,12 @@ AddEventHandler('nadrp-selldrugs:start', function()
     TriggerEvent('nadrp-density:SetPedDensity', 0.6)
     while sellingcocaine or sellingcrack or sellingweed or sellingmeth do
     	Wait(15000)
-		exports['mythic_notify']:SendAlert('inform', 'Corner Selling Active.')
+		exports['mythic_notify']:DoLongHudText('inform', 'Corner Selling Active.')
     	local curCoords = GetEntityCoords(PlayerPedId())
 		local dstCheck = #(plyStartCoords - curCoords)
 
 		if dstCheck > 45.0 then
-			exports['mythic_notify']:SendAlert('error', 'You moved too far and now we have reset your corner sales.')
+			exports['mythic_notify']:DoLongHudText('error', 'You moved too far and now we have reset your corner sales.')
 			EndSelling()
 		end
 
@@ -317,7 +317,7 @@ AddEventHandler('nadrp-selldrugs:start', function()
 		end
 		TriggerEvent("nadrp-selldrugs:AllowSale", RandomNPC, saleprice, sellAmount)
     end
-	exports['mythic_notify']:SendAlert('error', 'Sales Ended')
+	exports['mythic_notify']:DoLongHudText('error', 'Sales Ended')
 	TriggerEvent('nadrp-density:SetPedDensity', 0.4)
     Wait(60000)
     cooldown = false
@@ -389,7 +389,7 @@ AddEventHandler('nadrp-selldrugs:AllowSale', function(NPC,saleprice,amount)
 		DrawText3D(x,y,z, "[E] to sell drugs for "..saleprice.." rolls of cash! " .. " [H] to shoo")
 		if IsControlJustReleased(1, 38) and #(plyCoords - vector3(x,y,z)) < 3.0 then
 			if IsPedModel(NPC,416176080) or IsPedInAnyVehicle(PlayerPedId(), false) then
-				exports['mythic_notify']:SendAlert('inform', 'He seems to have changed his mind', 5000)
+				exports['mythic_notify']:DoLongHudText('inform', 'He seems to have changed his mind', 5000)
 				if math.random(1, 5) == 1 then
 					TriggerEvent("civilian:alertPolice",25.0,"drugsale",0)
 				end
@@ -528,7 +528,7 @@ RegisterNetEvent('nadrp-gangs:corner:amount')
 AddEventHandler('nadrp-gangs:corner:amount', function(newAmount)
 	sellAmount = tonumber(newAmount)
 	if sellAmount > 3 then
-		exports['mythic_notify']:SendAlert('inform', 'You can only set amount between 1-3, setting amount to 3')
+		exports['mythic_notify']:DoLongHudText('inform', 'You can only set amount between 1-3, setting amount to 3')
 		sellAmount = 3
 	end
 end)
@@ -575,16 +575,16 @@ RegisterCommand("postup", function(source, args, rawCommand)
 						TriggerEvent('nadrp-selldrugs:start', CopsConnected)
 						TriggerEvent('nadrp-gangs:corner:amount', amount)
 					else
-						exports['mythic_notify']:SendAlert('error', 'I think you must be stupid.')
+						exports['mythic_notify']:DoLongHudText('error', 'I think you must be stupid.')
 					end
 				else
-					exports['mythic_notify']:SendAlert('error', '/postup [amount 1-3]')
+					exports['mythic_notify']:DoLongHudText('error', '/postup [amount 1-3]')
 				end
 			else
-				exports['mythic_notify']:SendAlert('error', 'There are no authorities in the city to do this!!')
+				exports['mythic_notify']:DoLongHudText('error', 'There are no authorities in the city to do this!!')
 			end
 		else
-			exports['mythic_notify']:SendAlert('error', 'You\'re a cop!')
+			exports['mythic_notify']:DoLongHudText('error', 'You\'re a cop!')
 		end
 	end)
 end, false)

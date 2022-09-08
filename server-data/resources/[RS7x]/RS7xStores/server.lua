@@ -72,10 +72,10 @@ AddEventHandler('store:robbery:register', function(storeid, regid)
                 registers[regid]["beingHit"] = true
                 --stores[storeid]["lastRobbed"] = os.time()
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
             end
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = 'This register seems to be empt. Almost like it just got hit it. :)'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = 'This register seems to be empt. Almost like it just got hit it. :)'})
         end
     end
 end)
@@ -90,7 +90,7 @@ AddEventHandler('store:robbery:safe', function(storeid)
                     stores[storeid]["beingHit"] = true
                     TriggerClientEvent('store:dosafe', user.source)
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
                 end
             elseif storeid == 4 or storeid == 8 or storeid == 12 or storeid == 16 then
                 if stores[storeid]["reg"] == 1 then
@@ -98,17 +98,17 @@ AddEventHandler('store:robbery:safe', function(storeid)
                         stores[storeid]["beingHit"] = true
                         TriggerClientEvent('store:dosafe', user.source)
                     else
-                        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
+                        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = "Someone is already hitting this safe you, Shitlord fuck."})
                     end
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = 'You need to finish robbing the front before doing the safe.'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = 'You need to finish robbing the front before doing the safe.'})
                 end
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = 'You need to finish robbing the front before doing the safe.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = 'You need to finish robbing the front before doing the safe.'})
             end
         end
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, { type = 'inform', text = 'This safe seems to be empty come back later.'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, { type = 'inform', text = 'This safe seems to be empty come back later.'})
     end
 end)
 

@@ -3,7 +3,7 @@
 	if PlayerData.job.name == "police" then
 		OpenJailMenu()
 	else
-        exports['mythic_notify']:SendAlert('error', 'You are not a ppolice officer!')
+        exports['mythic_notify']:DoLongHudText('error', 'You are not a ppolice officer!')
 	end
 end)]]
 
@@ -168,7 +168,7 @@ function TeleportPlayer(pos)
 			if action == "Boiling Broke" or action == "Security" then
 
 				if PlayerData.job.name ~= "police" then
-                    exports['mythic_notify']:SendAlert('error', "You don't have an key to go here!")
+                    exports['mythic_notify']:DoLongHudText('error', "You don't have an key to go here!")
 					return
 				end
 			end

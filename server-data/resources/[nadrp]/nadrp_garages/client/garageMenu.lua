@@ -68,7 +68,7 @@ function pagorecupero(data)
             recuperar()
         else
             recuperar()
-            exports['mythic_notify']:SendAlert('error', 'You dont have enough money')
+            exports['mythic_notify']:DoLongHudText('error', 'You dont have enough money')
         end
     end)
 end

@@ -284,6 +284,6 @@ RegisterCommand('menu', function()
     if group ~= "user" then
         TriggerEvent('nadrp-admin:openMenu')
     else
-        exports['mythic_notify']:SendAlert('error', "You don't have permissions for this")
+        exports['mythic_notify']:DoLongHudText('error', "You don't have permissions for this")
     end
 end)

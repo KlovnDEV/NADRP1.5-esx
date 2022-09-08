@@ -73,7 +73,7 @@ end)
 function WyciagnijPojazd()
     if ESX.Game.IsSpawnPointClear(Config.Strefy.Spawn.Pos, 7) then
         if posiadaVana == true then
-            exports['mythic_notify']:SendAlert('inform', 'You got a car already! Cancel the mission to get a new one!', 10000)
+            exports['mythic_notify']:DoLongHudText('inform', 'You got a car already! Cancel the mission to get a new one!', 10000)
          --   TriggerEvent('pNotify:SendNotification', {text = 'You got a car already! Cancel the mission to get a new one!', timeout = 20000})
         elseif posiadaVana == false then
             ESX.Game.SpawnVehicle('foodcar4', Config.Strefy.Spawn.Pos, Config.Strefy.Spawn.Heading, function(vehicle)
@@ -95,7 +95,7 @@ function WyciagnijPojazd()
             posiadaVana = true
         end
     else
-        exports['mythic_notify']:SendAlert('inform', 'Parking slot is taken by an other vehicle!', 10000)
+        exports['mythic_notify']:DoLongHudText('inform', 'Parking slot is taken by an other vehicle!', 10000)
       --  TriggerEvent("pNotify:SendNotification", {text = 'Parking slot is taken by an other vehicle!'})
     end
 end
@@ -136,7 +136,7 @@ end)
 function LosujCel()
     local LosowyPunkt = math.random(1, 21)
     if LiczbaDostaw == 4 then
-        exports['mythic_notify']:SendAlert('success', 'You delivered all Pizzas! Go back to Pizza This!', 10000)
+        exports['mythic_notify']:DoLongHudText('success', 'You delivered all Pizzas! Go back to Pizza This!', 10000)
        -- TriggerEvent('pNotify:SendNotification', {text = 'You delivered all Pizzas! Go back to Pizza This!'})
         UsunBlipaAnulowania()
         SetBlipRoute(BlipCelu, false)
@@ -148,7 +148,7 @@ function LosujCel()
     else
       local pizza = 4 - LiczbaDostaw
       if pizza == 1 then
-        exports['mythic_notify']:SendAlert('inform', 'You have got one pizza left to deliver!', 10000)
+        exports['mythic_notify']:DoLongHudText('inform', 'You have got one pizza left to deliver!', 10000)
       --  TriggerEvent('pNotify:SendNotification', {text = 'You have got one pizza left.'})
       else
         if pizza == 4 then
@@ -158,7 +158,7 @@ function LosujCel()
         elseif pizza == 2 then
           pizza = 'two'
         end
-        exports['mythic_notify']:SendAlert('inform', 'You have got '..pizza..' pizzas left.', 10000)
+        exports['mythic_notify']:DoLongHudText('inform', 'You have got '..pizza..' pizzas left.', 10000)
    --     TriggerEvent('pNotify:SendNotification', {text = 'You have got '..pizza..' pizzas left.'})
       end
         if OstatniCel == LosowyPunkt then
@@ -271,7 +271,7 @@ function LosujCel()
                 OstatniCel = 21
             end
             DodajBlipaDoCelu(PozycjaCelu)
-            exports['mythic_notify']:SendAlert('inform', 'Deliver pizza to the client!', 10000)
+            exports['mythic_notify']:DoLongHudText('inform', 'Deliver pizza to the client!', 10000)
 		 --   TriggerEvent('pNotify:SendNotification', {text = 'Deliver pizza to the client!'})
         end
     end
@@ -467,7 +467,7 @@ Citizen.CreateThread(function()
                     if DystansOdStrefyZakonczenia <= 7 then
                         sleep = 0
                         if IsControlJustReleased(0, 38) then
-                            exports['mythic_notify']:SendAlert('success', 'You ended your shift. Thank you!', 10000)
+                            exports['mythic_notify']:DoLongHudText('success', 'You ended your shift. Thank you!', 10000)
                            -- TriggerEvent('pNotify:SendNotification', {text = 'You ended your shift. Thank you!'})
                             KoniecPracy()
                         end
@@ -485,7 +485,7 @@ Citizen.CreateThread(function()
                     if DystansOdStrefyAnulowania <= 7 then
                         sleep = 0
                         if IsControlJustReleased(0, 38) then
-                            exports['mythic_notify']:SendAlert('error', 'Job was canceled', 10000)
+                            exports['mythic_notify']:DoLongHudText('error', 'Job was canceled', 10000)
                           --  TriggerEvent('pNotify:SendNotification', {text = 'Job was canceled!'})
 							KoniecPracy()
                         end
@@ -521,8 +521,8 @@ function KoniecPracy()
             posiadaVana = false
             Rozwieziono = false
         else
-            exports['mythic_notify']:SendAlert('error', "You have to return Pizza This' panto!", 10000)
-            exports['mythic_notify']:SendAlert('error', "If you lost your panto, Cancel the job on feet!", 10000)
+            exports['mythic_notify']:DoLongHudText('error', "You have to return Pizza This' panto!", 10000)
+            exports['mythic_notify']:DoLongHudText('error', "If you lost your panto, Cancel the job on feet!", 10000)
            --TriggerEvent('pNotify:SendNotification', {text = "You have to return Pizza This' panto!"})
          --TriggerEvent('pNotify:SendNotification', {text = "If you lost your panto, Cancel the job on feet!"})
         end

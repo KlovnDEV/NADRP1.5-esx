@@ -160,7 +160,7 @@ Citizen.CreateThread(function()
 			
 			if IsControlJustPressed(0, Keys['E']) or IsDisabledControlJustPressed(0, Keys['E']) then
 				fishing = false
-				exports['mythic_notify']:SendAlert('error', 'Stopped fishing')
+				exports['mythic_notify']:DoLongHudText('error', 'Stopped fishing')
 				ClearPedTasks(PlayerPedId())
 			end
 
@@ -172,10 +172,10 @@ Citizen.CreateThread(function()
 					
 				else
 					fishing = false
-					--exports['mythic_notify']:SendAlert('error', 'Stopped fishing')
+					--exports['mythic_notify']:DoLongHudText('error', 'Stopped fishing')
 				end
 				if IsEntityDead(playerPed) or IsEntityInWater(playerPed) then
-					--exports['mythic_notify']:SendAlert('error', 'Stopped fishing')
+					--exports['mythic_notify']:DoLongHudText('error', 'Stopped fishing')
 				end
 			end
 
@@ -189,7 +189,7 @@ Citizen.CreateThread(function()
 					print('CAUGHT')
 					TriggerServerEvent('fishing:catch', bait)
 				else
-					exports['mythic_notify']:SendAlert('error', 'Fish got free')
+					exports['mythic_notify']:DoLongHudText('error', 'Fish got free')
 				end
 				pause = false
 			end
@@ -231,7 +231,7 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('nadrp-log:SendDiscordLog', data)
 								end
 							else
-								exports['mythic_notify']:SendAlert('error', 'You moved too far!')
+								exports['mythic_notify']:DoLongHudText('error', 'You moved too far!')
 							end
 							if DumbFuckCount > 15 then
 								local data = {
@@ -245,7 +245,7 @@ Citizen.CreateThread(function()
 							DumbFuckCount = 0
 						end)
 					else
-						exports['mythic_notify']:SendAlert('error', 'You have nothing to sell!')
+						exports['mythic_notify']:DoLongHudText('error', 'You have nothing to sell!')
 					end
 				else
 					DumbFuckCount = DumbFuckCount + 1
@@ -289,7 +289,7 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('nadrp-log:SendDiscordLog', data)
 								end
 							else
-								exports['mythic_notify']:SendAlert('error', 'You moved too far!')
+								exports['mythic_notify']:DoLongHudText('error', 'You moved too far!')
 							end
 							if DumbFuckCount > 15 then
 								local data = {
@@ -303,7 +303,7 @@ Citizen.CreateThread(function()
 							DumbFuckCount = 0
 						end)
 					else
-						exports['mythic_notify']:SendAlert('error', 'You have nothing to sell!')
+						exports['mythic_notify']:DoLongHudText('error', 'You have nothing to sell!')
 					end
 				else
 					DumbFuckCount = DumbFuckCount + 1
@@ -347,7 +347,7 @@ Citizen.CreateThread(function()
 									TriggerServerEvent('nadrp-log:SendDiscordLog', data)
 								end
 							else
-								exports['mythic_notify']:SendAlert('error', 'You moved too far!')
+								exports['mythic_notify']:DoLongHudText('error', 'You moved too far!')
 							end
 							if DumbFuckCount > 15 then
 								local data = {
@@ -361,7 +361,7 @@ Citizen.CreateThread(function()
 							DumbFuckCount = 0
 						end)
 					else
-						exports['mythic_notify']:SendAlert('error', 'You have nothing to sell!')
+						exports['mythic_notify']:DoLongHudText('error', 'You have nothing to sell!')
 					end
 				else
 					DumbFuckCount = DumbFuckCount + 1
@@ -400,7 +400,7 @@ Citizen.CreateThread(function()
 				if exports["nadrp-inventory"]:hasEnoughOfItem("fish",10,false) then
 					PortionFish()
 				else
-					exports['mythic_notify']:SendAlert('error', 'You dont have enough fish.')
+					exports['mythic_notify']:DoLongHudText('error', 'You dont have enough fish.')
 				end
 			end
 		end
@@ -415,7 +415,7 @@ Citizen.CreateThread(function()
 				if exports["nadrp-inventory"]:hasEnoughOfItem("fish",10,false) then
 					PortionFish()
 				else
-					exports['mythic_notify']:SendAlert('error', 'You dont have enough fish.')
+					exports['mythic_notify']:DoLongHudText('error', 'You dont have enough fish.')
 				end
 			end
 		end
@@ -445,7 +445,7 @@ function StopPackingFish(position)
 	
 		if DoesEntityExist(vehicle) then
 			packcar = false
-			exports['mythic_notify']:SendAlert('inform', 'You stored the chickens in the vehicle.')
+			exports['mythic_notify']:DoLongHudText('inform', 'You stored the chickens in the vehicle.')
 			LoadDict('anim@heists@narcotics@trash')
 			TaskPlayAnim(GetPlayerPed(-1), 'anim@heists@narcotics@trash', "throw_a", 3.0, -8, -1, 63, 0, 0, 0, 0 )
 			Citizen.Wait(900)
@@ -469,7 +469,7 @@ function PortionFish()
 		chicken = CreateObject(GetHashKey('prop_int_cf_chick_01'),-94.87, 6207.008, 30.08, true, true, true)
 		SetEntityRotation(chicken,90.0, 0.0, 45.0, 1,true)
 	end
-	exports['mythic_notify']:SendAlert('inform', 'You cut up the fish into fillets!')
+	exports['mythic_notify']:DoLongHudText('inform', 'You cut up the fish into fillets!')
 	FreezeEntityPosition(GetPlayerPed(-1),false)
 	DeleteEntity(chicken)
 	DeleteEntity(knife)
@@ -501,8 +501,8 @@ Citizen.CreateThread(function()
 			pause = true
 			correct = math.random(6,9)
 			TriggerEvent("InteractSound_CL:PlayOnOne", 'pinpull', 0.5)
-			exports['mythic_notify']:SendAlert('inform', 'You feel a bite...', 10000)
-			exports['mythic_notify']:SendAlert('inform', "Fish is taking the bait \n Press " .. correct .. " to catch it")
+			exports['mythic_notify']:DoLongHudText('inform', 'You feel a bite...', 10000)
+			exports['mythic_notify']:DoLongHudText('inform', "Fish is taking the bait \n Press " .. correct .. " to catch it")
 			input = 0
 			pausetimer = 0
 		end
@@ -544,17 +544,17 @@ AddEventHandler('fishing:fishstart', function()
 	local pos = GetEntityCoords(GetPlayerPed(-1))
 	print('started fishing' .. pos)
 	if IsPedInAnyVehicle(playerPed) then
-		exports['mythic_notify']:SendAlert('error', 'You can not fish from a vehicle', 7000)
+		exports['mythic_notify']:DoLongHudText('error', 'You can not fish from a vehicle', 7000)
 		--ESX.ShowNotification("~y~You can not fish from a vehicle")
 	else
 		if GetWaterHeight(pos.x, pos.y, pos.z-2, pos.z-3.0)  then
-			exports['mythic_notify']:SendAlert('success', 'Fishing started', 7000)
-			exports['mythic_notify']:SendAlert('inform', 'Press [E] to cancel', 15000)
+			exports['mythic_notify']:DoLongHudText('success', 'Fishing started', 7000)
+			exports['mythic_notify']:DoLongHudText('inform', 'Press [E] to cancel', 15000)
 			--ESX.ShowNotification("~b~Fishing started")
 			TaskStartScenarioInPlace(GetPlayerPed(-1), "WORLD_HUMAN_STAND_FISHING", 0, true)
 			fishing = true
 		else
-			exports['mythic_notify']:SendAlert('error', 'You need to go further away from shore', 12000)
+			exports['mythic_notify']:DoLongHudText('error', 'You need to go further away from shore', 12000)
 			--ESX.ShowNotification("~y~You need to go further away from the shore")
 		end
 	end
@@ -643,7 +643,7 @@ function OpenBoatsMenu(x, y , z)
 			ESX.UI.Menu.CloseAll()
 			local plate = GetVehicleNumberPlateText(veh)
 			TriggerServerEvent("fishing:lowmoney", 250) 
-			exports['mythic_notify']:SendAlert('inform', 'You rented a boat for $250', 12000)
+			exports['mythic_notify']:DoLongHudText('inform', 'You rented a boat for $250', 12000)
 			SetPedCoordsKeepVehicle(ped, x, y , z)
 			RequestModel(`dinghy`)
 			while not HasModelLoaded(`dinghy`) do 

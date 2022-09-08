@@ -178,7 +178,7 @@ AddEventHandler('RS7x:onTow', function()
     end
 
     if job ~= 'mechanic' then
-        exports['mythic_notify']:SendAlert('error', 'You are not a mechanic?')
+        exports['mythic_notify']:DoLongHudText('error', 'You are not a mechanic?')
         return
     end
 
@@ -199,15 +199,15 @@ AddEventHandler('RS7x:onTow', function()
                             TriggerEvent('InteractSound_CL:PlayOnOne', 'towtruck2', 0.8)
                             AttachEntityToEntity(targetVehicle, vehicle, 20, -0.5, -5.0, 1.0, 0.0, 0.0, 0.0, false, false, false, false, 20, true)
                             currentlyTowedVehicle = targetVehicle
-                            exports['mythic_notify']:SendAlert('inform', 'Vehicle successfully attached to towtruck!')
+                            exports['mythic_notify']:DoLongHudText('inform', 'Vehicle successfully attached to towtruck!')
                             ClearPedTasks(playerped)
                         end)
 					else
-						exports['mythic_notify']:SendAlert('error', 'You can\'t tow your own vehicle')
+						exports['mythic_notify']:DoLongHudText('error', 'You can\'t tow your own vehicle')
 					end
 				end
 			else
-				exports['mythic_notify']:SendAlert('error', 'No vehicle found')
+				exports['mythic_notify']:DoLongHudText('error', 'No vehicle found')
 			end
         else
             if not IsEntityPlayingAnim(playerped, "mini@repair", "fixing_a_player", 3) then
@@ -220,7 +220,7 @@ AddEventHandler('RS7x:onTow', function()
                 DetachEntity(currentlyTowedVehicle, true, true)
                 SetVehicleOnGroundProperly(currentlyTowedVehicle)
                 currentlyTowedVehicle = nil
-                exports['mythic_notify']:SendAlert('inform', 'Vehicle successfully dettached')
+                exports['mythic_notify']:DoLongHudText('inform', 'Vehicle successfully dettached')
                 ClearPedTasks(playerped)
             end)
 		end
@@ -255,10 +255,10 @@ AddEventHandler('RS7x:onHijack', function()
 					SetVehicleDoorsLocked(vehicle, 1)
 					SetVehicleDoorsLockedForAllPlayers(vehicle, false)
 					ClearPedTasks(playerPed)
-                    exports['mythic_notify']:SendAlert('inform', 'Vehicle unlocked')
+                    exports['mythic_notify']:DoLongHudText('inform', 'Vehicle unlocked')
                     lockpicking = false
 				else
-                    exports['mythic_notify']:SendAlert('error', 'Hijack failed')
+                    exports['mythic_notify']:DoLongHudText('error', 'Hijack failed')
                     ClearPedTasks(playerPed)
                     lockpicking = false
 				end
@@ -274,7 +274,7 @@ AddEventHandler('RS7x:OnClean', function()
     local coords    = GetEntityCoords(playerPed)
 
     if IsPedSittingInAnyVehicle(playerPed) then
-        exports['mythic_notify']:SendAlert('inform', 'Can\'t do this from inside the vehicle')
+        exports['mythic_notify']:DoLongHudText('inform', 'Can\'t do this from inside the vehicle')
         return
     end
 
@@ -285,11 +285,11 @@ AddEventHandler('RS7x:OnClean', function()
             Citizen.Wait(10000)
             SetVehicleDirtLevel(vehicle, 0)
             ClearPedTasksImmediately(playerPed)
-            exports['mythic_notify']:SendAlert('inform', 'Vehicle cleaned')
+            exports['mythic_notify']:DoLongHudText('inform', 'Vehicle cleaned')
             isBusy = false
         end)
     else
-        exports['mythic_notify']:SendAlert('error', 'No vehicle found')
+        exports['mythic_notify']:DoLongHudText('error', 'No vehicle found')
     end
 end)
 
@@ -413,18 +413,18 @@ AddEventHandler('RS7x:Impound', function()
     if IsPedSittingInAnyVehicle(playerPed) then
         local vehicle = GetVehiclePedIsIn(playerPed, false)
         if GetPedInVehicleSeat(vehicle, -1) == playerPed then
-            exports['mythic_notify']:SendAlert('inform', 'Vehicle Impounded')
+            exports['mythic_notify']:DoLongHudText('inform', 'Vehicle Impounded')
             ESX.Game.DeleteVehicle(vehicle)
         else
-            exports['mythic_notify']:SendAlert('inform', 'Must be in the driver seat')
+            exports['mythic_notify']:DoLongHudText('inform', 'Must be in the driver seat')
         end
     else
         local vehicle = ESX.Game.GetVehicleInDirection()
         if DoesEntityExist(vehicle) then
-            exports['mythic_notify']:SendAlert('inform', 'Vehicle Impounded')
+            exports['mythic_notify']:DoLongHudText('inform', 'Vehicle Impounded')
             ESX.Game.DeleteVehicle(vehicle)
         else
-            exports['mythic_notify']:SendAlert('error', 'No vehicle found')
+            exports['mythic_notify']:DoLongHudText('error', 'No vehicle found')
         end
     end
 end)
@@ -553,7 +553,7 @@ RegisterCommand('tow', function(source, args)
     if job == 'mechanic' then
         TriggerEvent("RS7x:onTow")
     else
-        exports['mythic_notify']:SendAlert('error', 'You dont have permissions to do this')
+        exports['mythic_notify']:DoLongHudText('error', 'You dont have permissions to do this')
     end
 end, false)
 
@@ -696,16 +696,16 @@ AddEventHandler('RS7x:onTow', function()
 				            end
 
 						else
-                            exports['mythic_notify']:SendAlert('error', 'You can\'t tow that vehicle')
+                            exports['mythic_notify']:DoLongHudText('error', 'You can\'t tow that vehicle')
 						end
 					else
 						if DoesEntityExist(driverPed) then
-                            exports['mythic_notify']:SendAlert('error', 'It appears someone is in the vehicle, you can not do this.')
+                            exports['mythic_notify']:DoLongHudText('error', 'It appears someone is in the vehicle, you can not do this.')
 						end
 					end
 
 				else
-                    exports['mythic_notify']:SendAlert('error', 'No vehicle found')
+                    exports['mythic_notify']:DoLongHudText('error', 'No vehicle found')
 				end
 			end
 		else

@@ -49,7 +49,7 @@ ESX.RegisterServerCallback("esx_atmRobbery:getOnlinePoliceCount",function(source
 	for i = 1, #Players do
 		local xPlayer = ESX.GetPlayerFromId(Players[i])
 		if xPlayer["job"]["name"] == "police" then
-			policeOnline = policeOnline + 1
+			policeOnline = policeOnline + 0
 		end
 	end
 	if policeOnline >= Config.RequiredPolice then

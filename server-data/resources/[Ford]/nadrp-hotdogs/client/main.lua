@@ -189,9 +189,9 @@ function StartWorking()
             HotdogLoop()
             UpdateUI()
             CheckLoop()
-            exports['mythic_notify']:SendAlert('success', 'You paid £100, for the hotdog stand! Bring it back!!')
+            exports['mythic_notify']:DoLongHudText('success', 'You paid £100, for the hotdog stand! Bring it back!!')
         else
-            exports['mythic_notify']:SendAlert('error', 'You dont have enough cash for the deposit!')
+            exports['mythic_notify']:DoLongHudText('error', 'You dont have enough cash for the deposit!')
         end
     end)
 end
@@ -339,10 +339,10 @@ function ToggleSell()
                 end
             end)
         else
-            exports['mythic_notify']:SendAlert('error', 'You are too far away from hotdog stand!')
+            exports['mythic_notify']:DoLongHudText('error', 'You are too far away from hotdog stand!')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'You dont have a hotdog stand!')
+        exports['mythic_notify']:DoLongHudText('error', 'You dont have a hotdog stand!')
     end
 end
 
@@ -429,7 +429,7 @@ function SellToPed(ped)
                 HasTarget = false,
                 Hotdog = nil,
             }
-            exports['mythic_notify']:SendAlert('error', 'You are too far away from hotdog stand!')
+            exports['mythic_notify']:DoLongHudText('error', 'You are too far away from hotdog stand!')
             break
         end
         Citizen.Wait(100)
@@ -469,7 +469,7 @@ function SellToPed(ped)
                 DrawText3Ds2(pedCoords.x, pedCoords.y, pedCoords.z, '~y~[7] ~w~Selling ' .. HotdogsForSale .. 'x~w~ for ~r~$' .. (HotdogsForSale * SellingPrice) .. ',- / ~y~[8]~w~ Reject')
                 if IsControlJustPressed(0, Keys["7"]) or IsDisabledControlJustPressed(0, Keys["7"]) then
                     --     QBCore.Functions.Notify(HotdogsForSale..'x Hotdog(\'s) sell for €'..(HotdogsForSale * SellingPrice)..',-', 'success')
-                    exports['mythic_notify']:SendAlert('success', HotdogsForSale .. 'x Hotdog(\'s) sold for $' .. (HotdogsForSale * SellingPrice) .. ',-')
+                    exports['mythic_notify']:DoLongHudText('success', HotdogsForSale .. 'x Hotdog(\'s) sold for $' .. (HotdogsForSale * SellingPrice) .. ',-')
                     TriggerServerEvent('qb-hotdogjob:server:Sell', HotdogsForSale, SellingPrice)
                     SellingData.HasTarget = false
                     local Myped = GetPlayerPed(-1)
@@ -515,7 +515,7 @@ function SellToPed(ped)
                 end
                 
                 if IsControlJustPressed(0, Keys["8"]) or IsDisabledControlJustPressed(0, Keys["8"]) then
-                    exports['mythic_notify']:SendAlert('error', 'The customer refused!')
+                    exports['mythic_notify']:DoLongHudText('error', 'The customer refused!')
                     SellingData.HasTarget = false
                     
                     FreezeEntityPosition(ped, false)
@@ -534,7 +534,7 @@ function SellToPed(ped)
                     DrawText3Ds2(pedCoords.x, pedCoords.y, pedCoords.z, 'You dont have any hotdog.. / ~r~[8]~w~ Refuse the customer')
                     
                     if IsControlJustPressed(0, Keys["8"]) or IsDisabledControlJustPressed(0, Keys["8"]) then
-                        exports['mythic_notify']:SendAlert('error', 'The customer refused!')
+                        exports['mythic_notify']:DoLongHudText('error', 'The customer refused!')
                         SellingData.HasTarget = false
                         
                         FreezeEntityPosition(ped, false)
@@ -546,7 +546,7 @@ function SellToPed(ped)
                         break
                     end
                 elseif SellingData.HasTarget then
-                    exports['mythic_notify']:SendAlert('error', 'The customer refused!')
+                    exports['mythic_notify']:DoLongHudText('error', 'The customer refused!')
                     SellingData.HasTarget = false
 
                     FreezeEntityPosition(ped, false)
@@ -571,7 +571,7 @@ function SellToPed(ped)
                 HasTarget = false,
                 Hotdog = nil,
             }
-            exports['mythic_notify']:SendAlert('error', 'You are too far from your hotdog stand!')
+            exports['mythic_notify']:DoLongHudText('error', 'You are too far from your hotdog stand!')
             break
         end
         
@@ -628,7 +628,7 @@ function FinishMinigame(faults)
         --  TriggerServerEvent('qb-hotdogjob:server:UpdateReputation', Quality)
         if Config.MyLevel == 1 then
             TriggerEvent("player:receiveItem","hotdog",1)
-            exports['mythic_notify']:SendAlert('inform', 'You created ' .. Config.Stock[Quality].Label)
+            exports['mythic_notify']:DoLongHudText('inform', 'You created ' .. Config.Stock[Quality].Label)
             
             Config.Stock[Quality].Current = Config.Stock[Quality].Current + 1
         else
@@ -636,12 +636,12 @@ function FinishMinigame(faults)
             local LuckyNumber = math.random(1, 2)
             local LuckyAmount = math.random(1, Config.MyLevel)
             if Luck == LuckyNumber then
-                exports['mythic_notify']:SendAlert('inform', 'You created ' .. LuckyAmount .. ' ' .. Config.Stock[Quality].Label)
+                exports['mythic_notify']:DoLongHudText('inform', 'You created ' .. LuckyAmount .. ' ' .. Config.Stock[Quality].Label)
                 Config.Stock[Quality].Current = Config.Stock[Quality].Current + LuckyAmount
                 TriggerEvent("player:receiveItem","hotdog",1)
             else
                 TriggerEvent("player:receiveItem","hotdog",1)
-                exports['mythic_notify']:SendAlert('inform', 'You created ' .. Config.Stock[Quality].Label)
+                exports['mythic_notify']:DoLongHudText('inform', 'You created ' .. Config.Stock[Quality].Label)
                 Config.Stock[Quality].Current = Config.Stock[Quality].Current + 1
             end
         end
@@ -704,13 +704,13 @@ function StopWorking()
                 for _, v in pairs(Config.Stock) do
                     v.Current = 0
                 end
-                exports['mythic_notify']:SendAlert('success', 'You got your $100,- deposit back!')
+                exports['mythic_notify']:DoLongHudText('success', 'You got your $100,- deposit back!')
             else
-                exports['mythic_notify']:SendAlert('error', 'Something is not right!')
+                exports['mythic_notify']:DoLongHudText('error', 'Something is not right!')
             end
         end)
     else
-        exports['mythic_notify']:SendAlert('error', 'Your hotdog stand is nowhere to be seen, you will not get your money back!')
+        exports['mythic_notify']:DoLongHudText('error', 'Your hotdog stand is nowhere to be seen, you will not get your money back!')
         IsWorking = false
         StandObject = nil
         IsPushing = false
@@ -777,7 +777,7 @@ AddEventHandler('qb-hotdogjob:staff:DeletStand', function()
             Citizen.Wait(100)
             DeleteEntity(Object)
             --   QBCore.Functions.Notify('Hotdogstand verwijderd!')
-            exports['mythic_notify']:SendAlert('success', 'Hotdog stand removed!')
+            exports['mythic_notify']:DoLongHudText('success', 'Hotdog stand removed!')
         end
     end
 end)

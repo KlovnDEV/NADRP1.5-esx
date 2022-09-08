@@ -96,7 +96,7 @@ RegisterServerEvent('nadrp-admin:bringPlayer')
 AddEventHandler('nadrp-admin:bringPlayer', function(target, coords)
     local source = source
     TriggerClientEvent('es_admin:teleportUser', target, coords.x, coords.y, coords.z)
-    exports['mythic_notify']:SendAlert('inform', 'You brought this player.')
+    exports['mythic_notify']:DoLongHudText('inform', 'You brought this player.')
 end)
 
 function nadrp.Admin.AddAllPlayers(self)
@@ -174,13 +174,13 @@ RegisterCommand('cooldown', function(source, args, raw)
                     args = {}
                 })
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have permissions for this'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have permissions for this'})
             end
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'Invalid time - (/cooldown [id] [timer] - in seconds)'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'Invalid time - (/cooldown [id] [timer] - in seconds)'})
         end
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'Invalid Player id'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'Invalid Player id'})
     end
 end)
 

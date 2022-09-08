@@ -315,7 +315,7 @@ end)
 RegisterNUICallback('DelObj', function(data, cb)
     scanObjects()
     if #modifiedObjects == 0 then
-        exports['mythic_notify']:SendAlert('error', 'There are no objects in your house to delete?')
+        exports['mythic_notify']:DoLongHudText('error', 'There are no objects in your house to delete?')
     end
     delObj = 1
     curObject = modifiedObjects[delObj]["object"]

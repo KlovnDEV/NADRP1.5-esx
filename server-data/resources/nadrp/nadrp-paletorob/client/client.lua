@@ -118,7 +118,7 @@ AddEventHandler('nadrp-paletorob:useEleckit', function()
                                 TriggerEvent("mhacking:start",5,15,PowerGridCallback)
                             end
                         else
-                            exports["mythic_notify"]:SendAlert('error', 'This grid is already disabled!')
+                            exports["mythic_notify"]:DoLongHudText('error', 'This grid is already disabled!')
                         end
                     end
                 end
@@ -134,7 +134,7 @@ AddEventHandler('nadrp-paletorob:useEleckit', function()
                                         TriggerEvent("mhacking:show")
                                         TriggerEvent("mhacking:start",6,15,LootSpotCallback)
                                     else
-                                        exports["mythic_notify"]:SendAlert('inform', 'System Rebooting, Please Wait!')
+                                        exports["mythic_notify"]:DoLongHudText('inform', 'System Rebooting, Please Wait!')
                                     end
                                 end
                             end
@@ -143,7 +143,7 @@ AddEventHandler('nadrp-paletorob:useEleckit', function()
                 end
             end
         else
-            exports["mythic_notify"]:SendAlert('error', 'Not Enough Cops.')
+            exports["mythic_notify"]:DoLongHudText('error', 'Not Enough Cops.')
         end
     end)
 end)
@@ -162,20 +162,20 @@ AddEventHandler('nadrp-paletorob:useAdvlockpick', function()
                                 TriggerEvent('tac-dispatch:PaletoBank')
                                 local finished = exports['nadrp-skillbar']:taskBar(3000, math.random(5,15))
                                 if finished ~= 100 then
-                                    exports['mythic_notify']:SendAlert('error', 'failed')
+                                    exports['mythic_notify']:DoLongHudText('error', 'failed')
                                 else
                                     local finished2 = exports['nadrp-skillbar']:taskBar(2000, math.random(5,15))
                                     if finished2 ~= 100 then
-                                        exports['mythic_notify']:SendAlert('error', 'failed')
+                                        exports['mythic_notify']:DoLongHudText('error', 'failed')
                                     else
                                         local finished3 = exports['nadrp-skillbar']:taskBar(1000, math.random(5,15))
                                         if finished3 ~= 100 then
-                                            exports['mythic_notify']:SendAlert('error', 'failed')
+                                            exports['mythic_notify']:DoLongHudText('error', 'failed')
                                         else
                                             local finished = exports["nadrp-taskbar"]:taskBar(300000, "Unlocking door please wait 🔓")
                                             TriggerEvent('tac-dispatch:PaletoBank')
 	                                        if finished == 100 then
-                                            exports['mythic_notify']:SendAlert('success', 'Door Unlocked!')
+                                            exports['mythic_notify']:DoLongHudText('success', 'Door Unlocked!')
                                             TriggerServerEvent('nadrp-paletorob:updateStates', "doors", i, true)
                                             TriggerServerEvent('nadrp-doors:alterlockstate', doorCoords[i].doorNum, 0)
                                             end
@@ -184,13 +184,13 @@ AddEventHandler('nadrp-paletorob:useAdvlockpick', function()
                                 end
                             end
                         else
-                            exports["mythic_notify"]:SendAlert('error', 'Seems to risky, Try find a way to turn the power off.')
+                            exports["mythic_notify"]:DoLongHudText('error', 'Seems to risky, Try find a way to turn the power off.')
                         end
                     end
                 end
             end
         else
-            exports["mythic_notify"]:SendAlert('error', 'Not Enough Cops.')
+            exports["mythic_notify"]:DoLongHudText('error', 'Not Enough Cops.')
         end
     end)
 end)
@@ -259,10 +259,10 @@ function LootSpotCallback(success)
         GiveRareLoot()
     else
         cooldown = true
-        exports["mythic_notify"]:SendAlert('inform', 'System Rebooting, Please Wait!')
+        exports["mythic_notify"]:DoLongHudText('inform', 'System Rebooting, Please Wait!')
         Citizen.SetTimeout(45000, function()
             cooldown = false
-            exports["mythic_notify"]:SendAlert('inform', 'System has rebooted, Be careful next time', 5000)
+            exports["mythic_notify"]:DoLongHudText('inform', 'System has rebooted, Be careful next time', 5000)
         end)
     end
 	ClearPedTasks(ped)

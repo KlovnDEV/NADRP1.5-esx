@@ -29,9 +29,9 @@ Citizen.CreateThread(function()
                                 local IsAreaClear = GetClosestVehicle(locations[2]["x"], locations[2]["y"], locations[2]["z"], 3.000, 0, 70)
                                 if not DoesEntityExist(IsAreaClear) then
                                     SpawnTruck()
-                                    exports['mythic_notify']:SendAlert('inform', 'Remember to return the truck or you will be charged for a new one!', 7500)
+                                    exports['mythic_notify']:DoLongHudText('inform', 'Remember to return the truck or you will be charged for a new one!', 7500)
                                 else
-                                    exports['mythic_notify']:SendAlert('error', 'There seems to be a car in the way?', 6000)
+                                    exports['mythic_notify']:DoLongHudText('error', 'There seems to be a car in the way?', 6000)
                                 end
                             end
                         else
@@ -41,7 +41,7 @@ Citizen.CreateThread(function()
                                 if not DoesEntityExist(IsAreaClear) then
                                     TriggerServerEvent('nadrp-taco:payTruckBill')
                                 else
-                                    exports['mythic_notify']:SendAlert('error', 'There seems to be a car in the way?', 6000)
+                                    exports['mythic_notify']:DoLongHudText('error', 'There seems to be a car in the way?', 6000)
                                 end
                             end
                         end
@@ -56,7 +56,7 @@ Citizen.CreateThread(function()
                                         DeleteEntity(truck)
                                         TruckExists = false
                                     else
-                                        exports['mythic_notify']:SendAlert('error', 'This is not the truck we gave you!', 6000)
+                                        exports['mythic_notify']:DoLongHudText('error', 'This is not the truck we gave you!', 6000)
                                     end
                                 end
                             end

@@ -56,13 +56,13 @@ function FactorFunction(pos)
         end
         if factor == 0.5 and calm then
             calm = false
-            exports['mythic_notify']:SendAlert('inform', 'You are frustrated')
+            exports['mythic_notify']:DoLongHudText('inform', 'You are frustrated')
         end
         TriggerEvent("factor:restore")
     else
         if factor > 1.0 or factor == 0.9 then
             if not calm then
-                exports['mythic_notify']:SendAlert('inform', 'You are calm again')
+                exports['mythic_notify']:DoLongHudText('inform', 'You are calm again')
                 calm = true
             end
             factor = 1.0

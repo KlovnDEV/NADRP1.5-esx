@@ -35,7 +35,7 @@ AddEventHandler('nadrp-weed:createplant', function(pX,pY,pZ,strain,seed)
                         end
                     end)
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You have already reached the max number of crops (10)'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You have already reached the max number of crops (10)'})
                 end
             end
         end)

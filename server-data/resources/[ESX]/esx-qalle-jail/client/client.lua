@@ -71,7 +71,7 @@ function JailLogin()
     local rand = math.random(#Config.JailPositions)
     SetEntityCoords(PlayerPedId(), Config.JailPositions[rand]["x"], Config.JailPositions[rand]["y"], Config.JailPositions[rand]["z"] - 1) 
 
-    exports['mythic_notify']:SendAlert('inform', 'Last time you went to sleep you were jailed, because of that you are now put back!', 5000)
+    exports['mythic_notify']:DoLongHudText('inform', 'Last time you went to sleep you were jailed, because of that you are now put back!', 5000)
     InJail()
     inJail = true
 end
@@ -220,7 +220,7 @@ function finishTask()
     end
 
     if curTaskType == "Eat" then
-        exports['mythic_notify']:SendAlert('inform', 'Sit down and take a break')
+        exports['mythic_notify']:DoLongHudText('inform', 'Sit down and take a break')
         drink()
         factor = 0
         Citizen.Wait(60000)
@@ -229,7 +229,7 @@ function finishTask()
     if math.random(100) > factor then
         jailTime = jailTime - 5
         TriggerServerEvent("tac-qalle-jail:updateJailTime", jailTime)
-        exports['mythic_notify']:SendAlert('inform', 'Your jail sentence was reduced.')
+        exports['mythic_notify']:DoLongHudText('inform', 'Your jail sentence was reduced.')
     end
 
     jobProcess = false
@@ -348,7 +348,7 @@ Citizen.CreateThread(function()
         if waitCheck < 1.5 then
             if IsControlJustPressed(0,46) then
                 TriggerServerEvent("nadrp-jail:reclaimPossessions")
-                exports['mythic_notify']:SendAlert('inform', 'You have re-claimed your possessions.')
+                exports['mythic_notify']:DoLongHudText('inform', 'You have re-claimed your possessions.')
                 Wait(60000)
             end
         end

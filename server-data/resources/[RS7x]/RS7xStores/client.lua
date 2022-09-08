@@ -134,7 +134,7 @@ AddEventHandler("security:camera", function(camNumber)
 		if camNumber > 0 and camNumber < #SecurityCamLocations+1 then
 			TriggerEvent("security:startcamera",camNumber)
 		else
-			exports['mythic_notify']:SendAlert('error', 'This camera appears to be faulty')
+			exports['mythic_notify']:DoLongHudText('error', 'This camera appears to be faulty')
 		end
 	end
 end)
@@ -198,7 +198,7 @@ AddEventHandler("stores:onUse", function()
 				end
 
 				if #(GoodSpot - curCoords) > 1.0 then
-					exports['mythic_notify']:SendAlert('inform', 'You must be at the front of the register')
+					exports['mythic_notify']:DoLongHudText('inform', 'You must be at the front of the register')
 					isLockpicking = false
 					return
 				end
@@ -207,7 +207,7 @@ AddEventHandler("stores:onUse", function()
 					local objHead = GetEntityHeading(RegisterObject)
 					local plyHead = GetEntityHeading(PlayerPedId())
 					if objHead - plyHead > 20.0 and objHead - plyHead < 340.0 then
-						exports['mythic_notify']:SendAlert('inform', 'You must face the register')
+						exports['mythic_notify']:DoLongHudText('inform', 'You must face the register')
 						isLockpicking = false
 						return
 					end
@@ -218,7 +218,7 @@ AddEventHandler("stores:onUse", function()
 				print(storeid)
 			end
 		else
-			exports["mythic_notify"]:SendAlert('error', 'There is not enough police for this')
+			exports["mythic_notify"]:DoLongHudText('error', 'There is not enough police for this')
 			return
 		end
 	end)

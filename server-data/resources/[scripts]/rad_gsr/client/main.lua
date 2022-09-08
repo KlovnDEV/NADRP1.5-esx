@@ -44,16 +44,16 @@ Citizen.CreateThread(function()
         if Config.waterClean and hasShot then
             ped = PlayerPedId()
             if IsEntityInWater(ped) then
-				exports['mythic_notify']:SendAlert('inform', 'You begin cleaning off the Gunshot Residue... stay in the water', 5000)
+				exports['mythic_notify']:DoLongHudText('inform', 'You begin cleaning off the Gunshot Residue... stay in the water', 5000)
 				Wait(100)
                 local finished = exports['nadrp-taskbar']:taskBar(20000, 'Washing off GSR')
                 if finished == 100 then 
                     if IsEntityInWater(ped) then
                         hasShot = false
                         TriggerServerEvent('GSR:Remove')
-                        exports['mythic_notify']:SendAlert('success', 'You washed off all the Gunshot Residue in the water', 5000)
+                        exports['mythic_notify']:DoLongHudText('success', 'You washed off all the Gunshot Residue in the water', 5000)
                     else
-                        exports['mythic_notify']:SendAlert('error', 'You left the water too early and did not wash off the gunshot residue.', 5000)
+                        exports['mythic_notify']:DoLongHudText('error', 'You left the water too early and did not wash off the gunshot residue.', 5000)
                     end
                 end
         			--[[useWhileDead = false,
@@ -69,9 +69,9 @@ Citizen.CreateThread(function()
             			if IsEntityInWater(ped) then
                     		hasShot = false
                     		TriggerServerEvent('GSR:Remove')
-							exports['mythic_notify']:SendAlert('success', 'You washed off all the Gunshot Residue in the water', 5000)
+							exports['mythic_notify']:DoLongHudText('success', 'You washed off all the Gunshot Residue in the water', 5000)
                 		else
-							exports['mythic_notify']:SendAlert('error', 'You left the water too early and did not wash off the gunshot residue.', 5000)
+							exports['mythic_notify']:DoLongHudText('error', 'You left the water too early and did not wash off the gunshot residue.', 5000)
                 		end
         			end
     			end)]]

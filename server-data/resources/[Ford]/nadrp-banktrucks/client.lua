@@ -179,7 +179,7 @@ AddEventHandler('sec:usegroup6card', function()
             if finished == 100 then
                 TriggerEvent("sec:AttemptHeist", targetVehicle)
             else
-                exports["mythic_notify"]:SendAlert('inform', 'You need to do this from behind the vehicle.')
+                exports["mythic_notify"]:DoLongHudText('inform', 'You need to do this from behind the vehicle.')
             end
         end
     end

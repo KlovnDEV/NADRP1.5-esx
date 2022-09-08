@@ -144,7 +144,7 @@ AddEventHandler('unseatPlayer', function()
 		TriggerServerEvent('unseatAccepted',GetPlayerServerId(t),pos["x"], pos["y"], pos["z"])
 		Citizen.Wait(1000)
 	else
-		exports['mythic_notify']:SendAlert('error', 'No Player Found')
+		exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
 	end
 end)
 

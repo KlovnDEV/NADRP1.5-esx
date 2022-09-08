@@ -44,12 +44,12 @@ RegisterCommand('callsign', function(source, args, raw)
 		if callSign ~= nil then
 			if type(callSign) == 'number' then
 				if tonumber(callSign) < 99 or tonumber(callSign) > 999 then
-					exports['mythic_notify']:SendAlert('error', 'Invalid callsign')
+					exports['mythic_notify']:DoLongHudText('error', 'Invalid callsign')
 				else	
 					TriggerServerEvent('police:setCallSign', callSign)
 				end
 			else
-				exports['mythic_notify']:SendAlert('error', 'Your callsign must be a number')
+				exports['mythic_notify']:DoLongHudText('error', 'Your callsign must be a number')
 			end
 		end
 	end

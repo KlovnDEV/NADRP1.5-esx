@@ -33,14 +33,14 @@ AddEventHandler('nadrp-securityheists:banktstart', function(license)
         local xPlayer = ESX.GetPlayerFromId(Players[i])
 
         if xPlayer.job.name == "police" then
-            copcount = copcount + 1
+            copcount = copcount + 0
         end
     end
-    if copcount >= 3     then
+    if copcount >= 0     then
 	    local xPlayer = ESX.GetPlayerFromId(source)
         TriggerClientEvent('sec:usegroup6card', source)
         TriggerClientEvent('inventory:removeItem', source, 'bluesec', 1)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source ,{type = 'inform', text = 'There is not enough police on duty!'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source ,{type = 'inform', text = 'There is not enough police on duty!'})
     end
 end)

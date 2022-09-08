@@ -75,15 +75,15 @@ end)
 
 RegisterNUICallback('volumeup', function(data, cb)
   if radioVolume >= 1.0 then
-    exports['mythic_notify']:SendAlert('error', "Radio can't go any louder")
+    exports['mythic_notify']:DoLongHudText('error', "Radio can't go any louder")
     return
   end
   if (radioVolume + 0.1) >= 1.0 then
     radioVolume = 1.0 
-    exports['mythic_notify']:SendAlert('inform', 'Radio set to '..radioVolume)
+    exports['mythic_notify']:DoLongHudText('inform', 'Radio set to '..radioVolume)
   else
     radioVolume = radioVolume + 0.1
-    exports['mythic_notify']:SendAlert('inform', 'Radio set to '..radioVolume)
+    exports['mythic_notify']:DoLongHudText('inform', 'Radio set to '..radioVolume)
   end
   TriggerEvent('nadrp-voice:SetRadioVolume', radioVolume)
   cb('ok')
@@ -91,15 +91,15 @@ end)
 
 RegisterNUICallback('volumedown', function(data, cb)
   if radioVolume <= 0.1 then
-    exports['mythic_notify']:SendAlert('error', "Radio can't go any lower")
+    exports['mythic_notify']:DoLongHudText('error', "Radio can't go any lower")
     return
   end
   if (radioVolume - 0.1) <= 0.1 then
     radioVolume = 0.1
-    exports['mythic_notify']:SendAlert('inform', 'Radio set to '..radioVolume)
+    exports['mythic_notify']:DoLongHudText('inform', 'Radio set to '..radioVolume)
   else
     radioVolume = radioVolume - 0.1
-    exports['mythic_notify']:SendAlert('inform', 'Radio set to '..radioVolume)
+    exports['mythic_notify']:DoLongHudText('inform', 'Radio set to '..radioVolume)
   end
   TriggerEvent('nadrp-voice:SetRadioVolume', radioVolume)
   cb('ok')

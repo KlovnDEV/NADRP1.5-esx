@@ -534,7 +534,7 @@ AddEventHandler("mdt:newCall", function(details, caller, coords)
 		local xPlayer = ESX.GetPlayerFromId(source)
 		if xPlayer.job.name == 'police' then
 			TriggerClientEvent("mdt:newCall", source, details, caller, coords, call_index)
-			TriggerClientEvent("mythic_notify:client:SendAlert", source, {type="infrom", text="You have received a new call.", length=5000})
+			TriggerClientEvent("mythic_notify:client:DoLongHudText", source, {type="infrom", text="You have received a new call.", length=5000})
 		end
 	end
 end)

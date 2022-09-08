@@ -45,7 +45,7 @@ AddEventHandler('nadrp-bank:checkATM', function()
     openGui()
     bankOpen = true
   else
-    exports["mythic_notify"]:SendAlert('error', 'No ATM.')
+    exports["mythic_notify"]:DoLongHudText('error', 'No ATM.')
   end
 end)
 
@@ -324,7 +324,7 @@ RegisterNUICallback('withdrawSubmit', function(data, cb)
   if tonumber(data.amount) > 0 then
     TriggerEvent('nadrp-bank:withdraw', data.amount)
   else
-    exports['mythic_notify']:SendAlert('error', 'You might want to rethink the amount')
+    exports['mythic_notify']:DoLongHudText('error', 'You might want to rethink the amount')
   end
   cb('ok')
 end)
@@ -333,7 +333,7 @@ RegisterNUICallback('depositSubmit', function(data, cb)
   if tonumber(data.amount) > 0 then
     TriggerEvent('nadrp-bank:deposit', data.amount)
   else
-    exports['mythic_notify']:SendAlert('error', 'You might want to rethink the amount')
+    exports['mythic_notify']:DoLongHudText('error', 'You might want to rethink the amount')
   end
   cb('ok')
 end)
@@ -391,12 +391,12 @@ RegisterNetEvent('nadrp-bank:deposit')
 AddEventHandler('nadrp-bank:deposit', function(amount)
   if(IsNearBank() == true ) then
       if (IsInVehicle()) then
-          exports['mythic_notify']:SendAlert('error', 'You cant use the ATM in a vehicle')
+          exports['mythic_notify']:DoLongHudText('error', 'You cant use the ATM in a vehicle')
       else
           TriggerServerEvent("nadrp-bank:deposit", tonumber(amount))
       end
   else
-      exports['mythic_notify']:SendAlert('error', "You cant deposit at an ATM")
+      exports['mythic_notify']:DoLongHudText('error', "You cant deposit at an ATM")
   end
 end)
 
@@ -405,7 +405,7 @@ RegisterNetEvent('nadrp-bank:withdraw')
 AddEventHandler('nadrp-bank:withdraw', function(amount)
     if(IsNearATM() == true or IsNearBank() == true) then
         if (IsInVehicle()) then
-            exports['mythic_notify']:SendAlert('error', "You cant use the bank in a vehicle")
+            exports['mythic_notify']:DoLongHudText('error', "You cant use the bank in a vehicle")
         else
             TriggerServerEvent("nadrp-bank:withdraw", tonumber(amount))
         end
@@ -425,7 +425,7 @@ AddEventHandler('nadrp-dirtyMoney:givedm', function(toPlayer, amount)
     local userCoords = GetEntityCoords(GetPlayerPed(-1))
 
     if Vdist2(targetPos, userCoords) > 15.0 then
-        exports['mythic_notify']:SendAlert('error', "You are not near this player!")
+        exports['mythic_notify']:DoLongHudText('error', "You are not near this player!")
         return
     end
 
@@ -435,14 +435,14 @@ AddEventHandler('nadrp-dirtyMoney:givedm', function(toPlayer, amount)
     if (playing ~= false) then
         TriggerServerEvent("dirtyMoney:givedm", toPlayer, tonumber(amount))
     else
-        exports['mythic_notify']:SendAlert('error', "This player is not online!")
+        exports['mythic_notify']:DoLongHudText('error', "This player is not online!")
     end
 end)
 
 -- Process give cash if conditions met
 RegisterNetEvent('nadrp-bank:givecash')
 AddEventHandler('nadrp-bank:givecash', function(toPlayer, amount)
-    if not IsNearPlayer(toPlayer) then exports['mythic_notify']:SendAlert('error', "You are not near this player!") return end
+    if not IsNearPlayer(toPlayer) then exports['mythic_notify']:DoLongHudText('error', "You are not near this player!") return end
 
     local target = GetPlayerFromServerId(tonumber(toPlayer))
     local targetPos = GetEntityCoords(GetPlayerPed(target))
@@ -450,7 +450,7 @@ AddEventHandler('nadrp-bank:givecash', function(toPlayer, amount)
     local userCoords = GetEntityCoords(GetPlayerPed(-1))
 
     if Vdist2(targetPos, userCoords) > 15.0 then
-        exports['mythic_notify']:SendAlert('error', "You are not near this player!")
+        exports['mythic_notify']:DoLongHudText('error', "You are not near this player!")
         return
     end
 
@@ -465,7 +465,7 @@ AddEventHandler('nadrp-bank:givecash', function(toPlayer, amount)
     if (playing ~= false) then
         TriggerServerEvent("nadrp-bank:givecash", toPlayer, tonumber(amount))
     else
-        exports['mythic_notify']:SendAlert('error', "This player is not online!")
+        exports['mythic_notify']:DoLongHudText('error', "This player is not online!")
     end
 end)
 
@@ -477,7 +477,7 @@ AddEventHandler('nadrp-bank:transfer', function(fromPlayer, toPlayer, amount)
     if (playing ~= false) then
         TriggerServerEvent("nadrp-bank:transfer", toPlayer, tonumber(amount))
     else
-        exports['mythic_notify']:SendAlert('error', "This player is not online!")
+        exports['mythic_notify']:DoLongHudText('error', "This player is not online!")
     end
 end)
 

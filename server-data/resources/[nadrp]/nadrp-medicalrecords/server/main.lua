@@ -9,7 +9,7 @@ RegisterCommand("mtablet", function(source)
     if xplayer["job"]["name"] == "ambulance" or xplayer["job"]["name"] == "police" then
         TriggerClientEvent("nadrp-medicalrecords:client:open", source)
      else 
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You are not EMS 4Head' })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You are not EMS 4Head' })
     end
 end)
 

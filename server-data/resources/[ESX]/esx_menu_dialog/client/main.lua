@@ -82,7 +82,7 @@ Citizen.CreateThread(function()
 			if post then
 				menu.submit(data, menu)
 			else
-                exports['mythic_notify']:SendAlert('error', "That input is invalid")
+                exports['mythic_notify']:DoLongHudText('error', "That input is invalid")
 			end
 		end
 

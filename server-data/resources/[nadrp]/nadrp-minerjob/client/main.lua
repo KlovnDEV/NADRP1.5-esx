@@ -284,7 +284,7 @@ Citizen.CreateThread(function()
                         trading = false
                     end)
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You dont have enough diamonds or you are currently selling')
+                    exports['mythic_notify']:DoLongHudText('error', 'You dont have enough diamonds or you are currently selling')
                 end
             end
         end
@@ -323,7 +323,7 @@ Citizen.CreateThread(function()
                         trading = false
                     end)
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You dont have enough gold or you are currently selling')
+                    exports['mythic_notify']:DoLongHudText('error', 'You dont have enough gold or you are currently selling')
                 end
             end
         end
@@ -363,7 +363,7 @@ Citizen.CreateThread(function()
                         trading = false
                     end)
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You dont have enough copper or you are currently selling')
+                    exports['mythic_notify']:DoLongHudText('error', 'You dont have enough copper or you are currently selling')
                 end
             end
         end
@@ -402,7 +402,7 @@ Citizen.CreateThread(function()
                         trading = false
                     end)
                 else
-                    exports['mythic_notify']:SendAlert('error', 'You dont have enough gold or you are currently selling')
+                    exports['mythic_notify']:DoLongHudText('error', 'You dont have enough gold or you are currently selling')
                 end
             end
         end

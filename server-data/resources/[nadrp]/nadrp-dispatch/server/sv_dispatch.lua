@@ -133,14 +133,14 @@ AddEventHandler('police:setCallSign', function(pCallsign)
 				local callsign = result[1].callsign
 				if callsign ~= 0 then
 					TriggerClientEvent('ped:callSign', user.source, callsign)
-					TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'inform', text = 'Callsing already set (Refreshing Current Callsign)'})
+					TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'inform', text = 'Callsing already set (Refreshing Current Callsign)'})
 				elseif callsign ~= nil then
 					MySQL.Async.execute('UPDATE characters SET callsign=@pCallsign WHERE identifier=@identifier', {
 						['@identifier'] = ident,
 						['@pCallsign'] = pCallsign
 					}, function(res)
 						TriggerClientEvent('ped:callSign', user.source, pCallsign)
-						TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'inform',text = 'Setting callsing ('..pCallsign..')'})
+						TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'inform',text = 'Setting callsing ('..pCallsign..')'})
 					end)
 				end
 			end

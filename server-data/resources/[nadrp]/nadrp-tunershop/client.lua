@@ -99,13 +99,15 @@ local vehshopOwner = {
 			}
 		},
 
+		---CHANGE FROM HERE
+
 		["Drift"] = {
 			title = "Drift",
 			name = "Drift",
 			buttons = {
-				{model = "sultanrsv8", name = "Sultan RS MK2", costs = 400000, description = {} },
+				{model = "sultanrsv8", name = "Sultan RS MK2", costs = 300000, description = {} },
 				{model = "m235", name = "BMW M235", costs = 235000, description = {} },
-				{model = "schwarzer2", name = "6STR Schwartzer", costs = 435000, description = {} }, 
+				{model = "schwarzer2", name = "6STR Schwartzer", costs = 335000, description = {} }, 
 			}
 		},
 
@@ -114,33 +116,33 @@ local vehshopOwner = {
 			name = "Sports",
 			buttons = {
 				--{model = "zx10", name = "Kawasaki Ninja ZX10R", costs = 200000, description = {} },
-				{model = "filthynsx", name = "Liberty Walk NSX", costs = 362000, description = {} },
-				{model = "m3e46", name = "BMW M3 GTR", costs = 337000, description = {} },
+				{model = "filthynsx", name = "Liberty Walk NSX", costs = 274000, description = {} },
+				{model = "m3e46", name = "BMW M3 GTR", costs = 285000, description = {} },
 				-- New pack
-				{model = "tempesta2", name = "6STR Tempesta", costs = 725000, description = {} },
-				{model = "comet6str", name = "6STR Comet", costs = 500000, description = {} },
-				{model = "banshee2", name = "Banshee 900R", costs = 500000, description = {} },
-				{model = "revolution6str2", name = "6STR Revolution SR", costs = 550000, description = {} },
-				{model = "skyline", name = "Skyline R34", costs = 500000, description = {} }, 
+				--{model = "tempesta2", name = "6STR Tempesta", costs = 725000, description = {} },
+				--{model = "comet6str", name = "6STR Comet", costs = 500000, description = {} },
+				{model = "banshee2", name = "Banshee 900R", costs = 254000, description = {} },
+				--{model = "revolution6str2", name = "6STR Revolution SR", costs = 550000, description = {} },
+				--{model = "skyline", name = "Skyline R34", costs = 500000, description = {} }, 
 
 
-				{model = "gauntlet6str", name = "6STR Gauntlet", costs = 450000, description = {} },
-				{model = "c63", name = "Mercedes C63 AMG", costs = 510000, description = {} },
-				{model = "m4", name = "BMW LW M4", costs = 401000, description = {} },
-				{model = "rmodmustang", name = "Ford Mustang", costs = 467500, description = {}},
+				{model = "gauntlet6str", name = "6STR Gauntlet", costs = 224000, description = {} },
+				{model = "c63", name = "Mercedes C63 AMG", costs = 365000, description = {} },
+				{model = "m4", name = "BMW LW M4", costs = 345000, description = {} },
+				{model = "rmodmustang", name = "Ford Mustang", costs = 398000, description = {}},
 				--{model = "granlb", name = "Maserati Gran Turismo LW", costs = 556000, description = {} },
-				{model = "gtr", name = "Nissan GTR RB", costs = 550000, description = {} },
-				{model = "s15rb", name = "Nissan S15 Rocket bunny", costs = 340000, description = {} },
-				{model = "subwrx", name = "Scooby", costs = 450000, description = {} },
+				{model = "gtr", name = "Nissan GTR RB", costs = 475000, description = {} },
+				{model = "s15rb", name = "Nissan S15 Rocket bunny", costs = 285000, description = {} },
+				{model = "subwrx", name = "Scooby", costs = 324000, description = {} },
 			
-				{model = "510", name = "Datson", costs = 585000, description = {} },
-				{model = "golfp", name = "Golf", costs = 350000, description = {} },
-				{model = "rcf", name = "Lexus", costs = 420000, description = {} },
-				{model = "ap2", name = "Honda S2000", costs = 400000, description = {} },
-				{model = "dc5", name = "Honda Integra", costs = 455000, description = {} },
-				{model = "ar8lb", name = "Audi R8 LW", costs = 650000, description = {} },
+				{model = "510", name = "Datson", costs = 184000, description = {} },
+				{model = "golfp", name = "Golf", costs = 138000, description = {} },
+				{model = "rcf", name = "Lexus", costs = 290000, description = {} },
+				{model = "ap2", name = "Honda S2000", costs = 200000, description = {} },
+				{model = "dc5", name = "Honda Integra", costs = 255000, description = {} },
+				{model = "ar8lb", name = "Audi R8 LW", costs = 450000, description = {} },
 				{model = "infernus2custom", name = "Infernus 2", costs = 450000, description = {} },
-				{model = "sultanrs", name = "Sultan RS", costs = 550000, description = {} },
+				{model = "sultanrs", name = "Sultan RS", costs = 420000, description = {} },
 			}
 		},
 
@@ -1057,8 +1059,8 @@ AddEventHandler('playerSpawned', function(spawn)
 	end
 end)
 
-RegisterNetEvent('nadrp:playerBecameJob')
-AddEventHandler('nadrp:playerBecameJob', function(jobpassed)
+RegisterNetEvent('ffrp:playerBecameJob')
+AddEventHandler('ffrp:playerBecameJob', function(jobpassed)
 	job = jobpassed.name
 end)
 

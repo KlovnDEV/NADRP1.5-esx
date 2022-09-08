@@ -29,6 +29,7 @@ local cellcoords = {
 local tool_shops = {
 	{ ['x'] = 44.838947296143, ['y'] = -1748.5364990234, ['z'] = 29.549386978149 },
 	{ ['x'] = 2749.2309570313, ['y'] = 3472.3308105469, ['z'] = 55.679393768311 },
+	{ ["x"] = -1273.013, ["y"] = -1411.996, ["z"] = 4.374 },
 }
 
 local twentyfourseven_shops = {
@@ -57,6 +58,7 @@ local twentyfourseven_shops = {
 	{ ["x"] = 310.542, ["y"] = -586.192, ["z"] = 43.284},
 	{["x"] = -347.708, ["y"] = -130.206, ["z"] = 39.01},
 	{["x"] = -1988.892, ["y"] = 3327.522, ["z"] = 32.96},	
+	{["x"] = -1254.056, ["y"] = -1443.452, ["z"] = 4.374},--Beach
 }
 
 local weashop_locations = {
@@ -268,6 +270,90 @@ Citizen.CreateThread(function()
 				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
 				if IsControlJustPressed(1, 38) then
 					TriggerEvent("server-inventory-open", "61", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+		
+		if(Vdist(-1192.73, -894.583, 13.995, pos.x, pos.y, pos.z) < 20.0) then   --BurgerShot
+			found = true
+			DrawMarker(27, -1192.73, -894.583, 13.995 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1192.73, -894.583, 13.995, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open  ~g~BurgerShot.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "580", "BurgerShot");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist(-1271.919, -1417.128,4.374, pos.x, pos.y, pos.z) < 20.0) then   --Bar beath
+			found = true
+			DrawMarker(27, -1271.919, -1417.128,4.374 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1271.919, -1417.128,4.374, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "61", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist(-1226.74,  -1439.782,  4.374, pos.x, pos.y, pos.z) < 20.0) then   --Bar2 beath
+			found = true
+			DrawMarker(27, -1226.74,  -1439.782,  4.374 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1226.74,  -1439.782,  4.374, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "61", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist(-1249.632, -1448.417, 4.374, pos.x, pos.y, pos.z) < 20.0) then   --Weed2 beath
+			found = true
+			DrawMarker(27, -1249.632, -1448.417, 4.374 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1249.632, -1448.417, 4.374, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "420", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist(-1246.587, -1453.415, 4.374, pos.x, pos.y, pos.z) < 20.0) then   --Coffiee beath
+			found = true
+			DrawMarker(27, -1246.587, -1453.415, 4.374 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist(-1246.587, -1453.415, 4.374, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "62", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist( -629.028, 238.681, 81.899, pos.x, pos.y, pos.z) < 20.0) then   --Coffiee Bean
+			found = true
+			DrawMarker(27,  -629.028, 238.681, 81.899 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist( -629.028, 238.681, 81.899, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "62", "Shop");
+					Wait(1000)
+			    end
+			end
+		end
+
+		if(Vdist( 273.927,-833.658, 29.258, pos.x, pos.y, pos.z) < 20.0) then   --Coffiee Ligion
+			found = true
+			DrawMarker(27,  273.927,-833.658, 29.258 - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 0, 25, 165, 165, 0,0, 0,0)
+			if(Vdist( 273.927,-833.658, 29.258, pos.x, pos.y, pos.z) < 2.0)then
+				DisplayHelpText("Press ~INPUT_CONTEXT~ to open the ~g~shop.")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "62", "Shop");
 					Wait(1000)
 			    end
 			end

@@ -28,7 +28,7 @@ RegisterCommand('callmechanic', function()
     local pData = ESX.GetPlayerData()
     if pData.job.name == 'police' or  pData.job.name == 'ambulance'  then
         TriggerEvent('civilian:alertPolice', 100.0, 'mechanic', 0,0,0)
-        exports['mythic_notify']:SendAlert('inform', 'Mechanics have been notified!')
+        exports['mythic_notify']:DoLongHudText('inform', 'Mechanics have been notified!')
     else
         exports['mythic_notify']:DoHudText('error', 'Only for the use of emergency services!')
     end

@@ -45,11 +45,11 @@ end)
 		if xPlayer ~= nil then
             TriggerClientEvent('player:receiveItem', xPlayer.source, ""..item.."", count)
 		else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'Invalid Item'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'Invalid Item'})
 		end
 	else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'Invalid Amount'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'Invalid Amount'})
 	end
 end, function(source, args, user)
-    TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'You dont have permissions'})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'You dont have permissions'})
 end, {help='Spawn a item'})]]

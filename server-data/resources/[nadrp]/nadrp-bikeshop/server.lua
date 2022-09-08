@@ -60,7 +60,7 @@ AddEventHandler('bikeshop:buyEnable', function(plate)
             end
         end)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'There was an error getting the plate'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'There was an error getting the plate'})
     end
 end)
 
@@ -88,7 +88,7 @@ AddEventHandler('bikeshop:CheckMoneyForVeh', function(name, model,price,financed
             user.removeMoney(financedPrice)
             TriggerClientEvent('bikeshop:FinishMoneyCheckForVeh', user.source, name, model, price, financed, commission)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you'})
             TriggerClientEvent('bikeshop:failedpurchase', user.source)
         end
     else
@@ -96,7 +96,7 @@ AddEventHandler('bikeshop:CheckMoneyForVeh', function(name, model,price,financed
             user.removeMoney(price)
             TriggerClientEvent('bikeshop:FinishMoneyCheckForVeh',user.source, name, model, price, financed, commission)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you'})
             TriggerClientEvent('bikeshop:failedpurchase', user.source)
         end
     end

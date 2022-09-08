@@ -284,19 +284,19 @@ AddEventHandler('tac:giveInventoryItem', function(target, type, itemName, itemCo
 
 			if targetItem.limit ~= -1 and (targetItem.count + itemCount) > targetItem.limit then
                 --TriggerClientEvent('tac:showNotification', _source, _U('ex_inv_lim', targetXPlayer.name))
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('ex_inv_lim', targetXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('ex_inv_lim', targetXPlayer.name)})
 			else
 				sourceXPlayer.removeInventoryItem(itemName, itemCount)
 				targetXPlayer.addInventoryItem   (itemName, itemCount)
 
 				--TriggerClientEvent('tac:showNotification', _source, _U('gave_item', itemCount, ESX.Items[itemName].label, targetXPlayer.name))
                 --TriggerClientEvent('tac:showNotification', target,  _U('received_item', itemCount, ESX.Items[itemName].label, sourceXPlayer.name))
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('gave_item', itemCount, ESX.Items[itemName].label, targetXPlayer.name)})
-                TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text = _U('received_item', itemCount, ESX.Items[itemName].label, sourceXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('gave_item', itemCount, ESX.Items[itemName].label, targetXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text = _U('received_item', itemCount, ESX.Items[itemName].label, sourceXPlayer.name)})
 			end
 		else
             --TriggerClientEvent('tac:showNotification', _source, _U('imp_invalid_quantity'))
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('imp_invalid_amount')})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('imp_invalid_amount')})
 		end
 
 	elseif type == 'item_money' then
@@ -307,11 +307,11 @@ AddEventHandler('tac:giveInventoryItem', function(target, type, itemName, itemCo
 
 			--TriggerClientEvent('tac:showNotification', _source, _U('gave_money', ESX.Math.GroupDigits(itemCount), targetXPlayer.name))
             --TriggerClientEvent('tac:showNotification', target,  _U('received_money', ESX.Math.GroupDigits(itemCount), sourceXPlayer.name))
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('gave_money', ESX.Math.GroupDigits(itemCount), targetXPlayer.name)})
-            TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text = _U('received_money', ESX.Math.GroupDigits(itemCount), sourceXPlayer.name)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('gave_money', ESX.Math.GroupDigits(itemCount), targetXPlayer.name)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text = _U('received_money', ESX.Math.GroupDigits(itemCount), sourceXPlayer.name)})
 		else
             --TriggerClientEvent('tac:showNotification', _source, _U('imp_invalid_amount'))
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('imp_invalid_amount')})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('imp_invalid_amount')})
 		end
 
 	elseif type == 'item_account' then
@@ -322,10 +322,10 @@ AddEventHandler('tac:giveInventoryItem', function(target, type, itemName, itemCo
 
 			--TriggerClientEvent('tac:showNotification', _source, _U('gave_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], targetXPlayer.name))
             --TriggerClientEvent('tac:showNotification', target,  _U('received_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], sourceXPlayer.name))
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('gave_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], targetXPlayer.name)})
-            TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text = _U('received_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], sourceXPlayer.name)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('gave_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], targetXPlayer.name)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text = _U('received_account_money', ESX.Math.GroupDigits(itemCount), Config.AccountLabels[itemName], sourceXPlayer.name)})
 		else
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('imp_invalid_amount')})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('imp_invalid_amount')})
 		end
 
 	elseif type == 'item_weapon' then
@@ -339,17 +339,17 @@ AddEventHandler('tac:giveInventoryItem', function(target, type, itemName, itemCo
 			if itemCount > 0 then
 				--TriggerClientEvent('tac:showNotification', _source, _U('gave_weapon_ammo', weaponLabel, itemCount, targetXPlayer.name))
                 --TriggerClientEvent('tac:showNotification', target,  _U('received_weapon_ammo', weaponLabel, itemCount, sourceXPlayer.name))
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('gave_weapon_ammo', weaponLabel, itemCount, targetXPlayer.name)})
-                TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text = _U('received_weapon_ammo', weaponLabel, itemCount, sourceXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('gave_weapon_ammo', weaponLabel, itemCount, targetXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text = _U('received_weapon_ammo', weaponLabel, itemCount, sourceXPlayer.name)})
 			else
 				--TriggerClientEvent('tac:showNotification', _source, _U('gave_weapon', weaponLabel, targetXPlayer.name))
                 --TriggerClientEvent('tac:showNotification', target,  _U('received_weapon', weaponLabel, sourceXPlayer.name))
-                TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = _U('gave_weapon', weaponLabel, targetXPlayer.name)})
-                TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text =  _U('received_weapon', weaponLabel, sourceXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text = _U('gave_weapon', weaponLabel, targetXPlayer.name)})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text =  _U('received_weapon', weaponLabel, sourceXPlayer.name)})
 			end
 		else
-            TriggerClientEvent('mythic_notify:client:SendAlert', target, { type = 'inform', text =  _U('gave_weapon_hasalready', targetXPlayer.name, weaponLabel)})
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text =  _U('received_weapon_hasalready', sourceXPlayer.name, weaponLabel)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', target, { type = 'inform', text =  _U('gave_weapon_hasalready', targetXPlayer.name, weaponLabel)})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, { type = 'inform', text =  _U('received_weapon_hasalready', sourceXPlayer.name, weaponLabel)})
 		end
 
 	end

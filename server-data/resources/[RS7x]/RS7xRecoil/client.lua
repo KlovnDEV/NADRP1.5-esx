@@ -254,7 +254,7 @@ AddEventHandler('Start:workout', function(i)
     exports['t0sic_loadingbar']:StartDelayedFunction('Doing ' .. workoutAreas[i]["workType"], 30000, function()
         ClearPedTasks(GetPlayerPed(-1))
         TriggerEvent('client:newStress',false, 10)
-        exports['mythic_notify']:SendAlert('inform', 'Stress Removed', 3000)
+        exports['mythic_notify']:DoLongHudText('inform', 'Stress Removed', 3000)
         inprocess = false
     end)
 end)

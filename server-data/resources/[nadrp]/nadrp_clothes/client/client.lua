@@ -338,7 +338,7 @@ function LoadPed(data)
     --print(data.model)
     SetClothing(data.drawables, data.props, data.drawtextures, data.proptextures)
     --print(data.drawables)
-    --exports['mythic_notify']:SendAlert('inform', data.drawables, 22500)
+    --exports['mythic_notify']:DoLongHudText('inform', data.drawables, 22500)
     Citizen.Wait(500)
     SetPedHairColor(player, tonumber(data.hairColor[1]), tonumber(data.hairColor[2]))
     SetPedHeadBlend(data.headBlend)
@@ -1198,11 +1198,11 @@ RegisterCommand('outfitadd', function(source, args, raw)
         if slot ~= nil and name ~= nil then
             TriggerServerEvent('nadrp-clothes:set_outfit', slot, name, GetCurrentPed())
         else
-            --TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text ='Make Sure you do : /outfitadd [slot] [name]'})
-            exports['mythic_notify']:SendAlert('error', 'Make Sure you do : /outfitadd [slot] [name]')
+            --TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text ='Make Sure you do : /outfitadd [slot] [name]'})
+            exports['mythic_notify']:DoLongHudText('error', 'Make Sure you do : /outfitadd [slot] [name]')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'Not near a clothing point')
+        exports['mythic_notify']:DoLongHudText('error', 'Not near a clothing point')
     end
 
 end, false)
@@ -1215,7 +1215,7 @@ RegisterCommand('outfits', function(source, args, raw)
     if nearcloth < 10 or inMotel or inHouse then
         TriggerServerEvent("nadrp-clothes:list_outfits")
     else
-        exports['mythic_notify']:SendAlert('error', 'Not near a clothing point')
+        exports['mythic_notify']:DoLongHudText('error', 'Not near a clothing point')
     end
 
 end, false)
@@ -1230,10 +1230,10 @@ RegisterCommand('outfitdel', function(source, args, raw)
         if slot ~= nil then
             TriggerServerEvent("nadrp-clothes:remove_outfit", slot)
         else
-            exports['mythic_notify']:SendAlert('error', 'Invalid slot')
+            exports['mythic_notify']:DoLongHudText('error', 'Invalid slot')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'Not near a clothing point')
+        exports['mythic_notify']:DoLongHudText('error', 'Not near a clothing point')
     end
 end, false)
 
@@ -1247,10 +1247,10 @@ RegisterCommand('outfituse', function(source, args, raw)
             TriggerServerEvent("nadrp-clothes:get_outfit", slot)
             TriggerEvent('InteractSound_CL:PlayOnOne','Clothes1', 0.6)
         else
-            exports['mythic_notify']:SendAlert('error', 'Invalid slot')
+            exports['mythic_notify']:DoLongHudText('error', 'Invalid slot')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'Not near a clothing point')
+        exports['mythic_notify']:DoLongHudText('error', 'Not near a clothing point')
     end
 end, false)
 
@@ -1268,6 +1268,6 @@ end)
 RegisterNetEvent('hotel:list')
 AddEventHandler('hotel:list', function(skincheck)
 	for i = 1, #skincheck do
-        exports['mythic_notify']:SendAlert('inform', skincheck[i].slot .. " | " .. skincheck[i].name)
+        exports['mythic_notify']:DoLongHudText('inform', skincheck[i].slot .. " | " .. skincheck[i].name)
 	end
 end)

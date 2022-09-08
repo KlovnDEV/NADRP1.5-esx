@@ -76,7 +76,7 @@ function OpenDefaultMenu(menu)
         if getOrElse(actions[data.current.value], nil) then
             actions[data.current.value](data.current, m)
         else
-            exports['mythic_notify']:SendAlert('error', 'This menu has no action!')
+            exports['mythic_notify']:DoLongHudText('error', 'This menu has no action!')
         end
     end, function(data, m)
         if getOrElse(menu.close, nil) then
@@ -100,7 +100,7 @@ function OpenDialogMenu(menu)
                     menu.action(data.value)
                     m.close()
                 else
-                    exports['mythic_notify']:SendAlert('error', 'This menu has no action!')
+                    exports['mythic_notify']:DoLongHudText('error', 'This menu has no action!')
                 end
             end,
             function(data, m)

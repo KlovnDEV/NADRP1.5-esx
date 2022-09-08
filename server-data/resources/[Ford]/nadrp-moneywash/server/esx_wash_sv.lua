@@ -26,10 +26,10 @@ AddEventHandler('Ford:Wash', function(itemCount, payout)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * payout)
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You washed ' .. itemCount .. ' rolls of dirty cash For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You washed ' .. itemCount .. ' rolls of dirty cash For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough dirty money'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough dirty money'})
     end
 end)

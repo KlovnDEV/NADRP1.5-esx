@@ -122,7 +122,7 @@ AddEventHandler('tac_society:washMoney', function(society, amount)
 				--TriggerClientEvent('tac:showNotification', _source, _U('you_have', ESX.Math.GroupDigits(amount)))
 				xPlayer.removeAccountMoney('black_money', amount)
 				xPlayer.addMoney(amount)
-				TriggerClientEvent('mythic_notify:client:SendAlert', source ,{type = 'inform', text = 'Washed money and got '+ amount})
+				TriggerClientEvent('mythic_notify:client:DoLongHudText', source ,{type = 'inform', text = 'Washed money and got '+ amount})
 			end)
 		else
 			TriggerClientEvent('tac:showNotification', _source, _U('invalid_amount'))

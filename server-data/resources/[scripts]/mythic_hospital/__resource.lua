@@ -22,3 +22,4 @@ exports {
 server_exports {
     'GetCharsInjuries',
 }
+client_script "@Badger-Anticheat/acloader.lua"

@@ -15,10 +15,10 @@ TriggerEvent('es:addCommand', 'gsr', function(source, args, user)
             	gsrcheck(source, identifier)
         	end
     	else
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'You must be a cop to use the GSR test' })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'You must be a cop to use the GSR test' })
     	end
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'Correct Usage Is: /gsr (player id)' })
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'Correct Usage Is: /gsr (player id)' })
 	end
 end)
 
@@ -74,15 +74,15 @@ function gsrcheck(source, identifier)
 		Wait(100)
 		local fullName = string.format("%s %s", nameData.firstname, nameData.lastname)
 		if gsrData[identifier] ~= nil then
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'success', text = 'Test for '..fullName..' comes back POSITIVE (Has Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'success', text = 'Test for '..fullName..' comes back POSITIVE (Has Shot)', length = 5000 })
     	else
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'Test for '..fullName..' comes back NEGATIVE (Has Not Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'Test for '..fullName..' comes back NEGATIVE (Has Not Shot)', length = 5000 })
     	end
 	else
     	if gsrData[identifier] ~= nil then
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'success', text = 'Test comes back POSITIVE (Has Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'success', text = 'Test comes back POSITIVE (Has Shot)', length = 5000 })
     	else
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'Test comes back NEGATIVE (Has Not Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'Test comes back NEGATIVE (Has Not Shot)', length = 5000 })
     	end
 	end
 end
@@ -96,15 +96,15 @@ AddEventHandler('GSR:Status2', function(playerid)
 		Wait(100)
 		local fullName = string.format("%s %s", nameData.firstname, nameData.lastname)
 		if gsrData[identifier] ~= nil then
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'success', text = 'Test for '..fullName..' comes back POSITIVE (Has Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'success', text = 'Test for '..fullName..' comes back POSITIVE (Has Shot)', length = 5000 })
     	else
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'Test for '..fullName..' comes back NEGATIVE (Has Not Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'Test for '..fullName..' comes back NEGATIVE (Has Not Shot)', length = 5000 })
     	end
 	else
     	if gsrData[identifier] ~= nil then
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'success', text = 'Test comes back POSITIVE (Has Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'success', text = 'Test comes back POSITIVE (Has Shot)', length = 5000 })
     	else
-			TriggerClientEvent('mythic_notify:client:SendAlert', Source, { type = 'error', text = 'Test comes back NEGATIVE (Has Not Shot)', length = 5000 })
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', Source, { type = 'error', text = 'Test comes back NEGATIVE (Has Not Shot)', length = 5000 })
     	end
 	end
 end)

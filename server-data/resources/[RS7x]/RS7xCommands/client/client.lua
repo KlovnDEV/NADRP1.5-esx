@@ -402,7 +402,7 @@ AddEventHandler('RS7x:showid', function()
                 args = {firstname, dob, job, sex}
             })
         else
-            --exports['mythic_notify']:SendAlert('error', 'Alien?')
+            --exports['mythic_notify']:DoLongHudText('error', 'Alien?')
             print('Alien?')
         end
     end)
@@ -730,7 +730,7 @@ end
 -----BLIPS
 local blips = {
     -- Example {title="", colour=, id=, x=, y=, z=},
-    {title="Pillbox Hospital", colour=5, id=61, x = 306.07, y = -592.09, z = 43.28},
+    {title=" Hospital", colour=5, id=61, x = -1875.394, y = -318.236, z = 50.189},
     {title="Life Invader", colour=30, id=351, x=-1081.8293457031, y=-248.12872314453, z=37.763294219971},
     {title="Bennys", colour=1, id=72, x=-207.85, y=-1318.53, z=30.89},
     {title="Mission Row PD", colour=3, id=60, x=437.45, y=-981.8, z=30.7},

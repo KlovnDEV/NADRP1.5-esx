@@ -11,8 +11,8 @@ local locations = {
 }
 
 local whitelisted = {
-    27, -- Reece
-    17, -- Loke
+    4, -- Reece
+    2, -- Loke
     317,--Panduko
     751, --Vitaly
     --1, --Barry

@@ -57,7 +57,7 @@ AddEventHandler('nadrp-gangs:coke:removeBrick', function()
 		cocaine_amount = cocaine_amount - 1
 		TriggerClientEvent('player:receiveItem', src, 'coke50g', 1)
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'You dont have enough stock!'})
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'You dont have enough stock!'})
 	end
 end)
 

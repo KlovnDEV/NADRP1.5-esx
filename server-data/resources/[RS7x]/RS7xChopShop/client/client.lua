@@ -200,7 +200,7 @@ AddEventHandler('payment:chopshopscrap', function(rarity,playsound)
 			end
 		end
 	end
-	exports['mythic_notify']:SendAlert('inform', 'You got scrap items.')
+	exports['mythic_notify']:DoLongHudText('inform', 'You got scrap items.')
 end)
 
 RegisterNetEvent('chopshoppub:leave')
@@ -259,10 +259,10 @@ function CompleteScrapping(vehicle, originalVehicleLocation)
 					SetEntityAsNoLongerNeeded(veh,true)
 					DeleteEntity(veh)
 				else
-					exports['mythic_notify']:SendAlert('error', "Don't move your vehicle while we're trying to chop it")
+					exports['mythic_notify']:DoLongHudText('error', "Don't move your vehicle while we're trying to chop it")
 				end
 			else
-				exports['mythic_notify']:SendAlert('error', "You can't stay inside the vehicle while we're trying to chop it")
+				exports['mythic_notify']:DoLongHudText('error', "You can't stay inside the vehicle while we're trying to chop it")
 			end
 		end
 	end
@@ -284,7 +284,7 @@ Citizen.CreateThread(function()
 						if not IsPedInAnyVehicle(PlayerPedId(), false) then
 							CompleteScrapping(veh, GetEntityCoords(veh))
 						else
-							exports['mythic_notify']:SendAlert('error', 'You cant do this while in the car')
+							exports['mythic_notify']:DoLongHudText('error', 'You cant do this while in the car')
 						end
 					end
 				end

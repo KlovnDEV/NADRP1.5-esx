@@ -7489,7 +7489,7 @@ AddEventHandler('notepad', function()
         TriggerEvent("destroyProp69")
 
     else
-        exports['mythic_notify']:SendAlert('error', 'In Vehicle.')
+        exports['mythic_notify']:DoLongHudText('error', 'In Vehicle.')
     end
 end)
 

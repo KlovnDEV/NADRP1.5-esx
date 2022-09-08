@@ -184,7 +184,7 @@ AddEventHandler("nadrp-clothes:get_outfit",function(slot)
     }, function(result)
         if result and result[1] then
             if result[1].model == nil then
-                TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Can not use'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Can not use'})
                 return
             end
 
@@ -210,7 +210,7 @@ AddEventHandler("nadrp-clothes:get_outfit",function(slot)
             local set = "model = @model, drawables = @drawables, props = @props,drawtextures = @drawtextures,proptextures = @proptextures"
             MySQL.Async.execute("UPDATE character_current SET "..set.." WHERE cid=@cid", values)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'inform', text = 'No outfit on slot ' .. slot .. '.'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'inform', text = 'No outfit on slot ' .. slot .. '.'})
             return
         end
 	end)
@@ -245,7 +245,7 @@ AddEventHandler("nadrp-clothes:set_outfit",function(slot, name, data)
 
             local set = "model = @model,name = @name,drawables = @drawables,props = @props,drawtextures = @drawtextures,proptextures = @proptextures,hairColor = @hairColor"
             MySQL.Async.execute("UPDATE character_outfits SET "..set.." WHERE cid = @cid and slot = @slot",values)
-            TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'inform', text = 'Replaced outfit in slot ' .. slot})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'inform', text = 'Replaced outfit in slot ' .. slot})
         else
             local cols = "cid, model, name, slot, drawables, props, drawtextures, proptextures, hairColor"
             local vals = "@cid, @model, @name, @slot, @drawables, @props, @drawtextures, @proptextures, @hairColor"
@@ -264,7 +264,7 @@ AddEventHandler("nadrp-clothes:set_outfit",function(slot, name, data)
 
             MySQL.Async.execute("INSERT INTO character_outfits ("..cols..") VALUES ("..vals..")", values, function()
             end)
-            TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'inform', text = name.. ' stored in slot ' .. slot .. "."})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'inform', text = name.. ' stored in slot ' .. slot .. "."})
         end
 	end)
 end)
@@ -280,7 +280,7 @@ AddEventHandler("nadrp-clothes:remove_outfit",function(slot)
     if not cid then return end
 
     MySQL.Async.execute( "DELETE FROM character_outfits WHERE cid = @cid AND slot = @slot", { ['@cid'] = cid,  ["@slot"] = slot } )
-    TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'inform', text = ' Removed outfit in ' .. slot})
+    TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'inform', text = ' Removed outfit in ' .. slot})
 end)
 
 RegisterServerEvent("nadrp-clothes:list_outfits")
@@ -336,9 +336,9 @@ AddEventHandler("clothing:checkMoney", function(menu,askingPrice)
         if xPlayer.getMoney() >= askingPrice then
             xPlayer.removeMoney(askingPrice)
             TriggerClientEvent("nadrp-clothes:hasEnough",src,menu)
-            TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'inform', text = 'You paid 100$'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'inform', text = 'You paid 100$'})
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'error', text = 'You dont have enough money!'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'error', text = 'You dont have enough money!'})
         end
     end
 end)

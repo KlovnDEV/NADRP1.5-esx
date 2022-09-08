@@ -343,7 +343,7 @@ function nadrp.Admin.teleportMarker(self)
             Citizen.Wait(5)
         end
     else
-        exports['mythic_notify']:SendAlert('inform', 'Failed to find marker.')
+        exports['mythic_notify']:DoLongHudText('inform', 'Failed to find marker.')
     end
 end
 

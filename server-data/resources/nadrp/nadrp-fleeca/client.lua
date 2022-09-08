@@ -124,7 +124,7 @@ function nadrp:Interact(closest, card)
       TriggerEvent('MF_LockPicking:StartMinigame')
     else
       self.Interacting = false
-      exports['mythic_notify']:SendAlert('error', 'The Cashier is on holiday')
+      exports['mythic_notify']:DoLongHudText('error', 'The Cashier is on holiday')
     end
   elseif closest.val == "LootID" then
     self:LootHandler(closest,true)
@@ -397,7 +397,7 @@ function nadrp:cb2(success, timeremaining)
     self.CurAction = { key = actKey, val = actVal }
     self.UsedActions[closestKey] = true
     TriggerServerEvent('nadrp_fleeca:SyncBankData', closestKey)
-    exports['mythic_notify']:SendAlert('error', 'You Failed to hack this safe, Move on to the next one')
+    exports['mythic_notify']:DoLongHudText('error', 'You Failed to hack this safe, Move on to the next one')
     TriggerEvent('civilian:alertPolice', 90.0, 'fleeca', 0,0,0)
   end
   FreezeEntityPosition(PlayerPedId(),false)

@@ -19,14 +19,14 @@ ESX.StartPayCheck = function()
 								if account.money >= salary then -- does the society money to pay its employees?
 									xPlayer.addAccountMoney('bank', salary)
 									account.removeMoney(salary)
-                                    TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'inform', text = 'you received your salary: $' .. salary,})
+                                    TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'inform', text = 'you received your salary: $' .. salary,})
 								else
-                                    TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'inform', text = 'the company you\'re employeed at is too poor to pay out your salary.',})
+                                    TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'inform', text = 'the company you\'re employeed at is too poor to pay out your salary.',})
 								end
 							end)
 						else -- not a society
 							xPlayer.addAccountMoney('bank', salary)
-                            TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, { type = 'inform', text = 'you received your salary: $' .. salary,})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, { type = 'inform', text = 'you received your salary: $' .. salary,})
 						end
 					end)
 				else -- generic job

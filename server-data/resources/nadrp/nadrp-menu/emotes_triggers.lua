@@ -23,7 +23,7 @@ AddEventHandler('search:person', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
        exports['esx_policejob']:OpenBodySearchMenu(closestPlayer)
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -35,10 +35,10 @@ AddEventHandler('escort:person', function()
         if not handcuffed then 
             TriggerServerEvent('nadrp-policejob:drag', GetPlayerServerId(closestPlayer))
         else
-            exports['mythic_notify']:SendAlert('error', 'How do you expect to escort while cuffed ?')
+            exports['mythic_notify']:DoLongHudText('error', 'How do you expect to escort while cuffed ?')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -48,7 +48,7 @@ AddEventHandler('seat:person', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
         TriggerServerEvent('nadrp-policejob:putInVehicle', GetPlayerServerId(closestPlayer))
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -58,7 +58,7 @@ AddEventHandler('unseat:person', function()
     --if closestPlayer ~= -1 and closestDistance <= 2.0 then
     --    TriggerServerEvent('nadrp-policejob:OutVehicle', GetPlayerServerId(closestPlayer))
     --else
-    --    exports['mythic_notify']:SendAlert('error', 'No Player Found')
+    --    exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     --end
     TriggerEvent('unseatPlayer')
 end)
@@ -76,7 +76,7 @@ AddEventHandler('police:impound', function()
             exports['esx_policejob']:ImpoundVehicle(vehicle)
         end)
     else
-        exports['mythic_notify']:SendAlert('error', 'No Vehicle Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Vehicle Found')
     end
 end)
 
@@ -86,7 +86,7 @@ AddEventHandler('police:checkid', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
         exports['esx_policejob']:OpenIdentityCardMenu(closestPlayer)
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -110,7 +110,7 @@ AddEventHandler('police:revive', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
         TriggerServerEvent('die:cunt', GetPlayerServerId(closestPlayer))
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -129,10 +129,10 @@ AddEventHandler('police:cuff', function()
             Citizen.Wait(1500)
             TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3, 'handcuff', 0.4)
         else
-            exports['mythic_notify']:SendAlert('error', 'No Player Found')
+            exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
         end
     else
-        exports['mythic_notify']:SendAlert('Really trying to cuff someone while they are running?')
+        exports['mythic_notify']:DoLongHudText('Really trying to cuff someone while they are running?')
     end
 end)
 
@@ -149,7 +149,7 @@ AddEventHandler('nadrp-policejob:uncuff', function()
         Citizen.Wait(1200)
         --TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3, 'uncuff', 0.5)
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -168,10 +168,10 @@ AddEventHandler('nadrp-policejob:softcuff', function()
             Citizen.Wait(1500)
             TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 3, 'handcuff', 0.4)
         else
-            exports['mythic_notify']:SendAlert('error', 'No Player Found')
+            exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
         end
     else
-        exports['mythic_notify']:SendAlert('Really trying to cuff someone while they are running?')
+        exports['mythic_notify']:DoLongHudText('Really trying to cuff someone while they are running?')
     end
 end)
 
@@ -181,7 +181,7 @@ AddEventHandler('police:gsr', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
         TriggerServerEvent('rad:test', GetPlayerServerId(closestPlayer))
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -222,7 +222,7 @@ AddEventHandler('nadrp-ems:revive', function()
         KneelMedic()
         TriggerServerEvent('die:cunt', GetPlayerServerId(closestPlayer))
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -240,7 +240,7 @@ AddEventHandler('nadrp-ems:heal', function()
             ClearPedTasksImmediately(GetPlayerPed(-1))
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -260,7 +260,7 @@ AddEventHandler('nadrp-ems:bigheal', function()
             ClearPedTasksImmediately(GetPlayerPed(-1))
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -302,7 +302,7 @@ AddEventHandler('general:ExamineTarget', function()
     if closestPlayer ~= -1 and closestDistance <= 2.0 then
         TriggerServerEvent('RS7x:CheckTstate',GetPlayerServerId(closestPlayer))
     else
-        exports['mythic_notify']:SendAlert('error', 'No Player Found')
+        exports['mythic_notify']:DoLongHudText('error', 'No Player Found')
     end
 end)
 
@@ -634,7 +634,7 @@ AddEventHandler('FlipVehicle', function()
             SetVehicleOnGroundProperly(targetVehicle)
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'There is no vehicle near-by', 7000)
+        exports['mythic_notify']:DoLongHudText('error', 'There is no vehicle near-by', 7000)
     end
 end)
 

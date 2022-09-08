@@ -76,10 +76,10 @@ AddEventHandler('garages:CheckForSpawnVeh', function(id, carCount, impound, curG
 							TriggerClientEvent('garages:SpawnVehicle', _source, vehicle, state)
 							user.removeMoney(500)
 						else
-							TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'You dont have enough money on you'})
+							TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'You dont have enough money on you'})
 						end
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
+						TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
 					end
 				elseif state == 'Police Impound' then
 					if garage == curGarage then
@@ -87,16 +87,16 @@ AddEventHandler('garages:CheckForSpawnVeh', function(id, carCount, impound, curG
 							TriggerClientEvent('garages:SpawnVehicle', _source, vehicle, state)
 							user.removeMoney(1500)
 						else
-							TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'You dont have enough money on you'})
+							TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'You dont have enough money on you'})
 						end
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
+						TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
 					end
 				elseif garage ~= 'OUT' and tonumber(state) == 1 then
 					if garage == curGarage then
 						TriggerClientEvent('garages:SpawnVehicle', _source, vehicle, state)
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
+						TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
 					end
 				elseif tonumber(state) == 0 then
 					if garage == curGarage then
@@ -104,13 +104,13 @@ AddEventHandler('garages:CheckForSpawnVeh', function(id, carCount, impound, curG
 							TriggerClientEvent('garages:SpawnVehicle', _source, vehicle, state)
 							user.removeMoney(100)
 						else
-							TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'You dont have enough money on you'})
+							TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'You dont have enough money on you'})
 						end
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
+						TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'This vehicle is stored at Garage: '..garage..''})
 					end
 				else
-					TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'This vehicle is already out.'})
+					TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'This vehicle is already out.'})
 				end
 			end
 		end)
@@ -162,16 +162,16 @@ RegisterCommand('sellcar', function (source, args, raw)
 				if carOwner == user.identifier then
 					TriggerClientEvent('garages:SellToPlayer', user.source, target, plate, tonumber(price))
 				else
-					TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont own this car.'})
+					TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont own this car.'})
 				end
 			else
-				TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = "Plate doesn't exist?."})
+				TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = "Plate doesn't exist?."})
 			end
 		else
-			TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'Invalid plate.'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'Invalid plate.'})
 		end
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'Player not online.'})
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'Player not online.'})
 	end
 end)
 
@@ -213,10 +213,10 @@ AddEventHandler('garages:SellToPlayerEnd', function(plate,player,price)
 					TriggerClientEvent('garages:ClientEnd', targ.source)
 					TriggerClientEvent('garages:PlayerEnd', user.source)
 				else
-					TriggerClientEvent('mythic_notify:client:SendAlert', targ.source, {type = 'error', text = "You don't have enough money on you."})
+					TriggerClientEvent('mythic_notify:client:DoLongHudText', targ.source, {type = 'error', text = "You don't have enough money on you."})
 				end
 			else
-				TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = "You don't own this vehicle?."})
+				TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = "You don't own this vehicle?."})
 			end
 		end)
 	end
@@ -235,14 +235,14 @@ AddEventHandler('nadrp-garages:attemptRent', function(bike)
 			user.removeMoney(200)
 			TriggerClientEvent('nadrp-garages:SpawnRental', src, bike)
 		else
-			TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'You dont have enough money on you!'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'You dont have enough money on you!'})
 		end
 	elseif bike == 'scorcher' then
 		if cash >= 300 then
 			user.removeMoney(300)
 			TriggerClientEvent('nadrp-garages:SpawnRental', src, bike)
 		else
-			TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'You dont have enough money on you!'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'You dont have enough money on you!'})
 		end
 	end
 end)
@@ -254,7 +254,7 @@ AddEventHandler('nadrp-garages:returnRental', function()
 	if not recent then 
 		recent = true
 		user.addMoney(20)
-		TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'inform', text = 'Thank you for returning the bike here is your deposit.'})
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'inform', text = 'Thank you for returning the bike here is your deposit.'})
 		Citizen.Wait(2000)
 		recent = false
 	else
@@ -279,11 +279,11 @@ RegisterCommand('resetGarage', function(source, args, raw)
 				['@plate'] = plate
 			})
 		else
-			TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'No permissions'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'No permissions'})
 		end
 	else
 		if source > 0 then
-			TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'Invalid plate'})
+			TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'Invalid plate'})
 		end
 	end
 end)

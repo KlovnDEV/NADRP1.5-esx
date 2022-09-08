@@ -64,7 +64,7 @@ AddEventHandler('tuner:buyEnable', function(plate)
             end
         end)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'There was an error getting the plate'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'There was an error getting the plate'})
     end
 end)
 
@@ -94,7 +94,7 @@ AddEventHandler('tuner:CheckMoneyForVeh', function(name, model,price,financed, c
             user.removeMoney(financedPrice)
             TriggerClientEvent('tuner:FinishMoneyCheckForVeh', user.source, name, model, price, financed, commission)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you'})
             TriggerClientEvent('carshop_tuner:failedpurchase', user.source)
         end
     else
@@ -102,7 +102,7 @@ AddEventHandler('tuner:CheckMoneyForVeh', function(name, model,price,financed, c
             user.removeMoney(price)
             TriggerClientEvent('tuner:FinishMoneyCheckForVeh',user.source, name, model, price, financed, commission)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you'})
             TriggerClientEvent('carshop_tuner:failedpurchase', user.source)
         end
     end

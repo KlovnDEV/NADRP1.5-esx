@@ -39,11 +39,11 @@ AddEventHandler('tac_taxijob:success', function()
 		societyAccount.addMoney(societyMoney)
 
 		--TriggerClientEvent('esx:showNotification', xPlayer.source, _U('comp_earned', societyMoney, playerMoney))
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You earned the company: '}, societyMoney, ' and yourself ' , playerMoney )
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You earned the company: '}, societyMoney, ' and yourself ' , playerMoney )
 	else
 		xPlayer.addMoney(total)
 		--TriggerClientEvent('esx:showNotification', xPlayer.source, _U('have_earned', total))
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You earned: '}, total)
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'You earned: '}, total)
 	end
 
 end)

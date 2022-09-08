@@ -9,10 +9,10 @@ AddEventHandler('Ford:Trade2', function(itemCount)
     local xPlayer = ESX.GetPlayerFromId(_source)
     local payment  = (itemCount * math.random(155,170))
     if itemCount and itemCount > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Chicken For $' .. payment })
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'inform', text = 'Traded ' .. itemCount .. ' Chicken For $' .. payment })
         xPlayer.addMoney(payment)
     else
         Citizen.Wait(5000)
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough Chicken'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough Chicken'})
     end
 end)

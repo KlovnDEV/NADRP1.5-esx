@@ -165,12 +165,12 @@ AddEventHandler("RefuelCar",function()
                 DecorSetInt(targetVehicle, "CurrentFuel", 50)
             end
             DecorSetInt(targetVehicle, "CurrentFuel", 100)
-            exports['mythic_notify']:SendAlert('error', 'Refueled')
+            exports['mythic_notify']:DoLongHudText('error', 'Refueled')
         else
-            exports['mythic_notify']:SendAlert('error', 'No Target')
+            exports['mythic_notify']:DoLongHudText('error', 'No Target')
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'Need a Gas Can')
+        exports['mythic_notify']:DoLongHudText('error', 'Need a Gas Can')
     end
 end)
 
@@ -191,7 +191,7 @@ AddEventHandler("RefuelCarServerReturn",function()
         DecorSetInt(veh, "CurrentFuel", endFuel)
     end
     endanimation()
-    exports['mythic_notify']:SendAlert('inform', 'You paid $' .. round(costs) .. ' for your fuel')
+    exports['mythic_notify']:DoLongHudText('inform', 'You paid $' .. round(costs) .. ' for your fuel')
 end)
 
 local petrolCan = {title = "Petrol Can", name = "PetrolCan", costs = 100, description = {}, model = "WEAPON_PetrolCan"}
@@ -695,7 +695,7 @@ Citizen.CreateThread(function()
                     if IsControlJustPressed(1, Controlkey["generalUse"][1]) then
                         if curFuel >= 100 then
                             PlaySound(-1, "5_Second_Timer", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", 0, 0, 1)
-                            exports['mythic_notify']:SendAlert('error', 'Your gas tank is full')
+                            exports['mythic_notify']:DoLongHudText('error', 'Your gas tank is full')
                         else
                             costs = math.ceil(costs)
                             TriggerServerEvent("carfill:checkmoney",costs,loc)

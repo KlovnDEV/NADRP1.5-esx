@@ -274,7 +274,7 @@ AddEventHandler('nadrp-motels:teleportRoom', function(numMultiplier,roomType)
 	elseif (#(vector3(apartments1[numMultiplier]["x"],apartments1[numMultiplier]["y"],apartments1[numMultiplier]["z"]) - GetEntityCoords(PlayerPedId())) < 5 and roomType == 1) then
 		moveToMultiplierHotel(numMultiplier,roomType)
 	else
-		exports['mythic_notify']:SendAlert('error', 'No Entry Point.')
+		exports['mythic_notify']:DoLongHudText('error', 'No Entry Point.')
 	end
 end)
 
@@ -286,7 +286,7 @@ AddEventHandler("nadrp-motels:attemptringbell",function(apnm)
 		TriggerServerEvent("confirmbellring",apnm)
 		TriggerEvent("buzzer")
 	else
-		exports['mythic_notify']:SendAlert('error', 'You are not near a buzzer point.')
+		exports['mythic_notify']:DoLongHudText('error', 'You are not near a buzzer point.')
 	end
 end)
 
@@ -447,7 +447,7 @@ Citizen.CreateThread(function()
 				end
 
 				if IsControlJustReleased(1,Controlkey["housingMain"][1]) then
-					exports['mythic_notify']:SendAlert('inform', 'Please wait!')
+					exports['mythic_notify']:DoLongHudText('inform', 'Please wait!')
 
 					Citizen.Wait(300)
 					TriggerEvent("dooranim")
@@ -466,7 +466,7 @@ Citizen.CreateThread(function()
 						TriggerServerEvent("nadrp-motels:getInfo")
 						Citizen.Wait(500)
 					else
-						exports['mythic_notify']:SendAlert('inform', 'Moved too far away!')
+						exports['mythic_notify']:DoLongHudText('inform', 'Moved too far away!')
 					end
 				end
 			end
@@ -564,7 +564,7 @@ Citizen.CreateThread(function()
 
 						TriggerEvent("actionbar:setEmptyHanded")
 					else
-						exports['mythic_notify']:SendAlert('error', 'This is not your stash!')
+						exports['mythic_notify']:DoLongHudText('error', 'This is not your stash!')
 					end
 					Citizen.Wait(1900)
 				end
@@ -597,7 +597,7 @@ Citizen.CreateThread(function()
 					--TriggerServerEvent('nadrp-motels:GetInteract',maxRoomWeight,forcedID)
 					TriggerEvent("server-inventory-open", "1", "motel"..curRoomType.."-"..forcedID)
 				else
-					exports['mythic_notify']:SendAlert('error', 'This is not your stash!')
+					exports['mythic_notify']:DoLongHudText('error', 'This is not your stash!')
 				end
 				Citizen.Wait(1900)
 			end
@@ -682,11 +682,11 @@ Citizen.CreateThread(function()
 								SetPedIntoVehicle(PlayerPedId(), vehmove, - 1)
 								ingarage = false
 							else
-								exports['mythic_notify']:SendAlert('inform', 'Vehicle on spawn.')
+								exports['mythic_notify']:DoLongHudText('inform', 'Vehicle on spawn.')
 							end
 							--leaveappartment
 						else
-							exports['mythic_notify']:SendAlert('inform', 'Enter Vehicle First.')
+							exports['mythic_notify']:DoLongHudText('inform', 'Enter Vehicle First.')
 						end
 					end
 				end
@@ -1114,7 +1114,7 @@ function FloatTilSafe(numMultiplier,roomType,buildingsent)
 		elseif roomType == 1 then
 			SetEntityCoords(PlayerPedId(),312.96966552734,-218.2705078125,54.221797943115)
 		end
-		exports['mythic_notify']:SendAlert('error', 'Failed to load, please retry.')
+		exports['mythic_notify']:DoLongHudText('error', 'Failed to load, please retry.')
 	end
 	TriggerEvent("nadrp-death:revive")
 end
@@ -1383,7 +1383,7 @@ RegisterCommand('enterroom', function(source, args, raw)
 		if #(vector3(apartments1[roomNumber]["x"], apartments1[roomNumber]["y"], apartments1[roomNumber]["z"]) - coords) < 3.0 then
 			TriggerServerEvent('nadrp-motels:RequestEntry', tonumber(roomNumber))
 		else
-			exports["mythic_notify"]:SendAlert('error', 'You need to be near the door to enter, stoopid')
+			exports["mythic_notify"]:DoLongHudText('error', 'You need to be near the door to enter, stoopid')
 		end
 	end
 end)

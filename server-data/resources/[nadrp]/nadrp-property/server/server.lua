@@ -16,7 +16,7 @@ AddEventHandler('house:enterhouse', function(house_id, house_model, forced)
                 if result[1].locked == 0 or result[1].owner == user.identifier then
                     TriggerClientEvent('house:entersuccess', user.source, house_id, house_model, furniture)
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'This door is locked!.'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'This door is locked!.'})
                 end
             else
                 if furniture ~= nil or furniture == "[]" then
@@ -28,7 +28,7 @@ AddEventHandler('house:enterhouse', function(house_id, house_model, forced)
         elseif forced then
             TriggerClientEvent('house:entersuccess', user.source, house_id, house_model, {})
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'This door is locked!.'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'This door is locked!.'})
         end
     end)
 end)
@@ -54,7 +54,7 @@ AddEventHandler('house:enterhousebackdoor', function(house_id,house_model,forced
                         local furniture = json.decode(result[1].furniture)
                         TriggerClientEvent('house:entersuccessbackdoor', user.source, house_id,house_model,furniture,x,y,z,h)
                     else
-                        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have keys to enter!.'})
+                        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have keys to enter!.'})
                     end
                 end)
             end
@@ -67,7 +67,7 @@ AddEventHandler('housing:unlock', function(house_id, house_model, isRealtor)
     local src = source
     if isRealtor then
         ToggleLock(house_id, 0)
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'inform', text = 'Door unlocked.'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'inform', text = 'Door unlocked.'})
     else
         MySQL.Async.fetchAll('SELECT house_id FROM playerhousing_keys WHERE house_id=@house_id AND house_model=@house_model', {
             ['house_id'] = house_id,
@@ -76,7 +76,7 @@ AddEventHandler('housing:unlock', function(house_id, house_model, isRealtor)
             if result[1] ~= nil then
                 if result[1].house_id == house_id then
                     ToggleLock(house_id, 0)
-                    TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'inform', text = 'Door unlocked.'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'inform', text = 'Door unlocked.'})
                 end
             end
         end)
@@ -96,9 +96,9 @@ AddEventHandler('house:purchasehouse', function(house_id,house_model,price,house
             local timestamp = os.time()
             if result[1] ~= nil and result[1] ~= '[]' then
                 if result[1].owner ~= ident then
-                    TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'The residents of this house have not been evicted?'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'The residents of this house have not been evicted?'})
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'You already owns this house?'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'You already owns this house?'})
                 end
             else
                 MySQL.Async.fetchAll('SELECT id FROM houses WHERE owner=@owner', {
@@ -135,10 +135,10 @@ AddEventHandler('house:purchasehouse', function(house_id,house_model,price,house
                                 end
                             end)
                         else
-                            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
                         end
                     else
-                        TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You cant hold anymore keys!.'})
+                        TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You cant hold anymore keys!.'})
                     end
                 end)
             end
@@ -176,7 +176,7 @@ AddEventHandler('house:dopayment', function(house_id,house_model)
                                 user.removeMoney(payment)
                             end)
                         else
-                            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
                         end
                     elseif (amountOwed - payment > 0) then
                         if user.getMoney() >= payment then
@@ -189,7 +189,7 @@ AddEventHandler('house:dopayment', function(house_id,house_model)
                                 user.removeMoney(payment)
                             end)
                         else
-                            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
                         end
                     else
                         if user.getMoney() >= 1500 then
@@ -202,11 +202,11 @@ AddEventHandler('house:dopayment', function(house_id,house_model)
                                 user.removeMoney(1500)
                             end)
                         else
-                            TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'You dont have enough money on you!.'})
                         end
                     end
                 else
-                    TriggerClientEvent('mythic_notify:client:SendAlert', user.source, {type = 'error', text = 'Your payment is not due yet.'})
+                    TriggerClientEvent('mythic_notify:client:DoLongHudText', user.source, {type = 'error', text = 'Your payment is not due yet.'})
                 end
             end
         end)
@@ -340,13 +340,13 @@ AddEventHandler('house:givekey', function(house_id,house_model,house_name,player
                     if #result2 < 3 then 
                         AddKey(targ.identifier, house_id, house_model,house_name,1)
                     else
-                        TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'The player you are trying to give keys to have reached the max amount.'})
-                        TriggerClientEvent('mythic_notify:client:SendAlert', targ.source, {type = 'error', text = 'You cant hold anymore shared keys.'})
+                        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'The player you are trying to give keys to have reached the max amount.'})
+                        TriggerClientEvent('mythic_notify:client:DoLongHudText', targ.source, {type = 'error', text = 'You cant hold anymore shared keys.'})
                     end
                 end)
             else
-                TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'Player already has keys?.'})
-                TriggerClientEvent('mythic_notify:client:SendAlert', targ.source, {type = 'error', text = 'You already have keys?.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'Player already has keys?.'})
+                TriggerClientEvent('mythic_notify:client:DoLongHudText', targ.source, {type = 'error', text = 'You already have keys?.'})
             end
         end)
     end
@@ -428,12 +428,12 @@ AddEventHandler('house:transferHouse', function(house_id,house_model,cid)
                                 }, function()
                                     AddKey(newOwner, house_id, house_model,result2[1].house_name, 0)
                                 end)
-                                TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'inform', text = 'Successfully transferred house'})
+                                TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'inform', text = 'Successfully transferred house'})
                             else
-                                TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'They cant seem to hold anymore keys!.'})
+                                TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'They cant seem to hold anymore keys!.'})
                             end
                         else
-                            TriggerClientEvent('mythic_notify:client:SendAlert', src, {type = 'error', text = 'No one owns this house!.'})
+                            TriggerClientEvent('mythic_notify:client:DoLongHudText', src, {type = 'error', text = 'No one owns this house!.'})
                         end
                     end)
                 end

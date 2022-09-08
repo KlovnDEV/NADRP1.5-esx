@@ -15,7 +15,7 @@ AddEventHandler('nadrp-policejob:reference', function()
 	if xPlayer.job.name == 'police' then
 		TriggerClientEvent("nadrp-policejob:addBlip", -1, tonumber(_source))
 	else
-        TriggerClientEvent('mythic_notify:client:SendAlert', xPlayer.source, {type = 'error', text = 'You are not police'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', xPlayer.source, {type = 'error', text = 'You are not police'})
 	end
 end)
 
@@ -44,7 +44,7 @@ AddEventHandler('nadrp-policejob:requestarrest', function(isCommand, targetid, p
         if GetPlayerName(targetid) ~= nil then
             TriggerClientEvent('nadrp-policejob:getarrested', targetid, true)
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', _source, {type = 'error', text = 'Invalid playerid'})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', _source, {type = 'error', text = 'Invalid playerid'})
         end
     end
 end)

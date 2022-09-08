@@ -257,7 +257,7 @@ AddEventHandler('phone:sendSMS', function(receiver, message)
             end
         end
     else
-        exports['mythic_notify']:SendAlert('error', 'You cannot text yourself')
+        exports['mythic_notify']:DoLongHudText('error', 'You cannot text yourself')
     end
 end)
 
@@ -510,7 +510,7 @@ AddEventHandler('phone:checkPhoneCount', function()
 	if xPlayer.getInventoryItem('phone').count >= 1 then
 		TriggerClientEvent('phone:heHasPhone', _source)
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have a phone, Buy one at your local store', length = 7000})
+		TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have a phone, Buy one at your local store', length = 7000})
 	end
 end)
 
@@ -592,7 +592,7 @@ AddEventHandler('server:promoteGroup', function(groupid,rank,id)
             TriggerClientEvent('group:refresh', source)
         end
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'There was a error promoting this id, if this persists please contact a staff :('})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, {type = 'error', text = 'There was a error promoting this id, if this persists please contact a staff :('})
     end
 end)
 
@@ -625,7 +625,7 @@ AddEventHandler('server:bankGroup', function(job, amount)
             user.removeMoney(amount)
             MySQL.Async.execute("UPDATE addon_account_data SET money=@money WHERE account_name = @accountName", {['@accountName'] = job, ['@money'] = groupMoney[1].money + amount})
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have enough money on you (Need the money in your pockets)', length = 7000})
+            TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have enough money on you (Need the money in your pockets)', length = 7000})
         end
     end
 end)
@@ -642,14 +642,14 @@ AddEventHandler('requestPing', function(target, x,y,z)
         local name = hasName[1].firstname..','..hasName[1].lastname
         TriggerClientEvent('allowedPing', targ.source, x,y,z,src,name)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', src, { type = 'error', text = 'This player is not online (double check the id)', length = 4000})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', src, { type = 'error', text = 'This player is not online (double check the id)', length = 4000})
     end
 end)
 
 RegisterServerEvent('pingAccepted')
 AddEventHandler('pingAccepted', function(targ)
     if targ > 0 then
-        TriggerClientEvent('mythic_notify:client:SendAlert', targ, {type = 'inform', text = 'Your ping was accepted!'})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', targ, {type = 'inform', text = 'Your ping was accepted!'})
     end
 end)
 
@@ -663,7 +663,7 @@ RegisterCommand("payphone", function(source, args, raw)
         TriggerClientEvent('phone:makepayphonecall', src, pnumber, true)
         --xPlayer.removeMoney(25)
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'You dont have $25 for the payphone', length = 7000})
+        TriggerClientEvent('mythic_notify:client:DoLongHudText', source, { type = 'error', text = 'You dont have $25 for the payphone', length = 7000})
     end
 end, false)
 
