@@ -1,0 +1,2 @@
+You have only to paste this file in your add-on cars or just cars folder, and write in your server.cfg: start huracan. And it will work
+Solo tienes que pegar este archivo en tu carpeta de add-on cars o simplemente cars o coches , y escribe esto en el server.cfg: start huracan. Y funcionará
