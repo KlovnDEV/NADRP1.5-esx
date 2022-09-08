@@ -1,11 +1,11 @@
-local ffrp = ffrp_fleeca
+local nadrp = nadrp_fleeca
 
 
-function ffrp:Start(...)
+function nadrp:Start(...)
   while not ESX do Citizen.Wait(0); end
   while not ESX.IsPlayerLoaded() do Citizen.Wait(0); end
   self.PlayerData = ESX.GetPlayerData()
-  ESX.TriggerServerCallback('ffrp_fleeca:GetBankData', function(usedActions,cops) 
+  ESX.TriggerServerCallback('nadrp_fleeca:GetBankData', function(usedActions,cops) 
     self.PoliceOnline = cops or 0
     self.UsedActions = usedActions
     if self.dS and self.cS then self:Update(); end
@@ -23,7 +23,7 @@ local bankingBanks = {
   [8] = {["x"] = 1176.0833740234, ["y"] = 2706.3386230469, ["z"] = 37.157722473145}
 }
 
-function ffrp:Update()
+function nadrp:Update()
   local tick = 0
   local lastPolCheck = GetGameTimer()
   while self.dS and self.cS do
@@ -37,7 +37,7 @@ function ffrp:Update()
       if self.PoliceOnline and self.PoliceOnline >= self.MinPoliceOnline then
         if not self.CurBank or self.CurBank.key ~= closestKey then
           self.CurBank = { key = closestKey, val = closestVal }
-          ESX.TriggerServerCallback('ffrp_fleeca:GetPolCount', function(count) self.PoliceOnline = count; end)
+          ESX.TriggerServerCallback('nadrp_fleeca:GetPolCount', function(count) self.PoliceOnline = count; end)
         end
 
         local actKey,actVal,actDist = self:GetClosestAction(plyPos,closestKey)
@@ -82,7 +82,7 @@ function ffrp:Update()
   end
 end
 
-function ffrp:GetClosestBank(plyPos)
+function nadrp:GetClosestBank(plyPos)
   local closestKey,closestVal,closestDist
   for k,v in pairs(self.Banks) do
     local dist = Utils:GetVecDist(plyPos, v)
@@ -97,7 +97,7 @@ function ffrp:GetClosestBank(plyPos)
   end
 end
 
-function ffrp:GetClosestAction(plyPos,key)
+function nadrp:GetClosestAction(plyPos,key)
   local closestKey,closestVal,closestDist
   for k,v in pairs(self.Actions[key]) do
     local dist = Utils:GetVecDist(plyPos, k)
@@ -112,7 +112,7 @@ function ffrp:GetClosestAction(plyPos,key)
   end
 end
 local justHacked = false
-function ffrp:Interact(closest, card)
+function nadrp:Interact(closest, card)
   if self.Interacting then return; end
   self.Interacting = closest
   local playerCoords = GetEntityCoords(GetPlayerPed(-1))
@@ -152,8 +152,8 @@ function ffrp:Interact(closest, card)
   end
 end
 
-function ffrp:LootHandler(closest,idcard)
-  ESX.TriggerServerCallback('ffrp_fleeca:TryLoot',function(isLooted)
+function nadrp:LootHandler(closest,idcard)
+  ESX.TriggerServerCallback('nadrp_fleeca:TryLoot',function(isLooted)
     if not isLooted then
       local plyPed = GetPlayerPed(-1)
 
@@ -174,7 +174,7 @@ function ffrp:LootHandler(closest,idcard)
         TaskStartScenarioInPlace(plyPed, "PROP_HUMAN_BUM_BIN", 0, false)
         Wait(1500)
 
-        TriggerServerEvent('ffrp_fleeca:RewardPlayer', closest.key,idcard)
+        TriggerServerEvent('nadrp_fleeca:RewardPlayer', closest.key,idcard)
 
         ClearPedTasksImmediately(plyPed)
         FreezeEntityPosition(plyPed,false)
@@ -194,7 +194,7 @@ function ffrp:LootHandler(closest,idcard)
   end,closest)
 end
 
-function ffrp:LockpickComplete(result)
+function nadrp:LockpickComplete(result)
   Notify = false
   local plyPed = GetPlayerPed(-1)
   FreezeEntityPosition(plyPed,false)
@@ -223,10 +223,10 @@ function ffrp:LockpickComplete(result)
     local players = ESX.Game.GetPlayersInArea(self.Interacting.key,self.LoadDist)
     for k,v in pairs(players) do
       local newV = GetPlayerServerId(v)
-      TriggerServerEvent('ffrp_fleeca:SyncDoor', newV, self.Interacting.key)
+      TriggerServerEvent('nadrp_fleeca:SyncDoor', newV, self.Interacting.key)
     end
 
-    TriggerServerEvent('ffrp_fleeca:SyncBankData', self.Interacting.key)
+    TriggerServerEvent('nadrp_fleeca:SyncBankData', self.Interacting.key)
     timer = GetGameTimer()
     Citizen.CreateThread(function()
       while (GetGameTimer() - timer) < 500 do
@@ -267,13 +267,13 @@ function ffrp:LockpickComplete(result)
   end
 end
 
-function ffrp:Awake(...)
+function nadrp:Awake(...)
     while not ESX do Citizen.Wait(0); end
     while not ESX.IsPlayerLoaded() do Citizen.Wait(0); end
-    ESX.TriggerServerCallback('ffrp_fleeca:GetStartData', function(retVal) self.dS = true; self.cS = retVal; self:Start(); end)
+    ESX.TriggerServerCallback('nadrp_fleeca:GetStartData', function(retVal) self.dS = true; self.cS = retVal; self:Start(); end)
 end
 
-function ffrp:HandleVaultDoor(closest)
+function nadrp:HandleVaultDoor(closest)
   local plyPed = GetPlayerPed(-1)
 
   TaskTurnPedToFaceCoord(plyPed, closest.key.x, closest.key.y, closest.key.z, -1)
@@ -287,18 +287,18 @@ function ffrp:HandleVaultDoor(closest)
     Wait(1500)
 
     self.UsedActions[closest.key] = true
-    TriggerServerEvent('ffrp_fleeca:SyncBankData', closest.key)
+    TriggerServerEvent('nadrp_fleeca:SyncBankData', closest.key)
 
     ClearPedTasksImmediately(plyPed)
     FreezeEntityPosition(plyPed,false)
     Wait(100)
 
-    ffrp:LockpickComplete(true)
+    nadrp:LockpickComplete(true)
     self.SafeOpen = true
   end)
 end
 
-function ffrp:SyncDoor(location)
+function nadrp:SyncDoor(location)
   if not location then return; end
   Citizen.CreateThread(function(...)
     local isaVault = false
@@ -342,11 +342,11 @@ local RobberyTimers = {}
 
 RegisterNetEvent('securitycard:OnUse')
 AddEventHandler('securitycard:OnUse', function(card)
-  ffrp:cardUse(card)
+  nadrp:cardUse(card)
   
 end)
 
-function ffrp:cardUse(card)
+function nadrp:cardUse(card)
   local plyPos = GetEntityCoords(GetPlayerPed(-1))
   local closestKey,closestVal,closestDist = self:GetClosestBank(plyPos)
   local actKey,actVal,actDist = self:GetClosestAction(plyPos,closestKey)
@@ -354,7 +354,7 @@ function ffrp:cardUse(card)
     if self.PoliceOnline and self.PoliceOnline >= self.MinPoliceOnline then
       if not self.CurBank or self.CurBank.key ~= closestKey then
         self.CurBank = { key = closestKey, val = closestVal }
-        ESX.TriggerServerCallback('ffrp_fleeca:GetPolCount', function(count)
+        ESX.TriggerServerCallback('nadrp_fleeca:GetPolCount', function(count)
           self.PoliceOnline = count
         end)
       end
@@ -362,7 +362,7 @@ function ffrp:cardUse(card)
     if not self.UsedActions[actKey] and not self.Interacting then
       if actVal ~= "LootVault" or (actVal == "LootVault" and self.SafeOpen) then
         if (self.CurAction ~= nil) then
-          ffrp:Interact(self.CurAction, card)
+          nadrp:Interact(self.CurAction, card)
         end
       end
     end
@@ -377,7 +377,7 @@ AddEventHandler('fleeca:startHacking', function(cb)
   end)
 end)
 
-function ffrp:cb2(success, timeremaining)
+function nadrp:cb2(success, timeremaining)
   local plyPos = GetEntityCoords(GetPlayerPed(-1))
   local closestKey,closestVal,closestDist = self:GetClosestBank(plyPos)
   local actKey,actVal,actDist = self:GetClosestAction(plyPos,closestKey)
@@ -388,15 +388,15 @@ function ffrp:cb2(success, timeremaining)
       self.CurAction = { key = actKey, val = actVal }
       if not self.UsedActions[actKey] and not self.Interacting then
         self.UsedActions[closestKey] = true
-        TriggerServerEvent('ffrp_fleeca:SyncBankData', closestKey)
-        TriggerServerEvent('ffrp_fleeca:RewardPlayer', closestKey,false)
+        TriggerServerEvent('nadrp_fleeca:SyncBankData', closestKey)
+        TriggerServerEvent('nadrp_fleeca:RewardPlayer', closestKey,false)
       end
     end
     Hacking = false
   else
     self.CurAction = { key = actKey, val = actVal }
     self.UsedActions[closestKey] = true
-    TriggerServerEvent('ffrp_fleeca:SyncBankData', closestKey)
+    TriggerServerEvent('nadrp_fleeca:SyncBankData', closestKey)
     exports['mythic_notify']:SendAlert('error', 'You Failed to hack this safe, Move on to the next one')
     TriggerEvent('civilian:alertPolice', 90.0, 'fleeca', 0,0,0)
   end
@@ -405,7 +405,7 @@ function ffrp:cb2(success, timeremaining)
 end
 
 function cb1(success, timeremaining)
-  ffrp:cb2(success, timeremaining)
+  nadrp:cb2(success, timeremaining)
 end
 
 function closeBank()
@@ -508,30 +508,30 @@ end
 --TriggerServerEvent('fleeca:decrypt')
 --end)
 
-function ffrp.SetJob(source,job)
-  local self = ffrp
+function nadrp.SetJob(source,job)
+  local self = nadrp
   local lastData = self.PlayerData
   if lastData.job.name == self.PoliceJobName then
-    TriggerServerEvent('ffrp_fleeca:CopLeft')
+    TriggerServerEvent('nadrp_fleeca:CopLeft')
   elseif lastData.job.name ~= self.PoliceJobName and job.name == self.PoliceJobName then
-    TriggerServerEvent('ffrp_fleeca:CopEnter')
+    TriggerServerEvent('nadrp_fleeca:CopEnter')
   end
   self.PlayerData = ESX.GetPlayerData()
 end
 
 RegisterNetEvent('tac:setJob')
-AddEventHandler('tac:setJob', function(job) ffrp.SetJob(source,job); end)
+AddEventHandler('tac:setJob', function(job) nadrp.SetJob(source,job); end)
 
-RegisterNetEvent('ffrp_fleeca:SyncDoor')
-AddEventHandler('ffrp_fleeca:SyncDoor', function(location) ffrp:SyncDoor(location); end)
+RegisterNetEvent('nadrp_fleeca:SyncDoor')
+AddEventHandler('nadrp_fleeca:SyncDoor', function(location) nadrp:SyncDoor(location); end)
 
-RegisterNetEvent('ffrp_fleeca:SyncBankData')
-AddEventHandler('ffrp_fleeca:SyncBankData', function(data) ffrp.UsedActions = data; end)
+RegisterNetEvent('nadrp_fleeca:SyncBankData')
+AddEventHandler('nadrp_fleeca:SyncBankData', function(data) nadrp.UsedActions = data; end)
 
-RegisterNetEvent('ffrp_fleeca:SyncCops')
-AddEventHandler('ffrp_fleeca:SyncCops', function(count) ffrp.PoliceOnline = count; end)
+RegisterNetEvent('nadrp_fleeca:SyncCops')
+AddEventHandler('nadrp_fleeca:SyncCops', function(count) nadrp.PoliceOnline = count; end)
 
 RegisterNetEvent('MF_LockPicking:MinigameComplete')
-AddEventHandler('MF_LockPicking:MinigameComplete', function(result) ffrp:LockpickComplete(result); end)
+AddEventHandler('MF_LockPicking:MinigameComplete', function(result) nadrp:LockpickComplete(result); end)
 
 Citizen.CreateThread(function(...) ffrp:Awake(...); end)

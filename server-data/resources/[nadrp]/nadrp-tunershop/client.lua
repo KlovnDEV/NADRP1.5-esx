@@ -1059,8 +1059,8 @@ AddEventHandler('playerSpawned', function(spawn)
 	end
 end)
 
-RegisterNetEvent('ffrp:playerBecameJob')
-AddEventHandler('ffrp:playerBecameJob', function(jobpassed)
+RegisterNetEvent('nadrp:playerBecameJob')
+AddEventHandler('nadrp:playerBecameJob', function(jobpassed)
 	job = jobpassed.name
 end)
 

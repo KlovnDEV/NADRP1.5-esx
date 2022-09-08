@@ -1,5 +1,5 @@
-ffrp_fleeca = {}
-local ffrp = ffrp_fleeca
+nadrp_fleeca = {}
+local nadrp = nadrp_fleeca
 ESX = nil
 Citizen.CreateThread(function(...)
   while ESX == nil do
@@ -9,17 +9,17 @@ Citizen.CreateThread(function(...)
 end)
 
 
-ffrp.PoliceJobName = "police"
-ffrp.MinPoliceOnline = 1
+nadrp.PoliceJobName = "police"
+nadrp.MinPoliceOnline = 1
 
-ffrp.InteractKey = "E"
-ffrp.ResetTimer = 45 -- minutes?
-ffrp.InteractTimer = 10
+nadrp.InteractKey = "E"
+nadrp.ResetTimer = 45 -- minutes?
+nadrp.InteractTimer = 10
 
-ffrp.LoadDist = 50.0
-ffrp.ActionDist = 1.0
+nadrp.LoadDist = 50.0
+nadrp.ActionDist = 1.0
 
-ffrp.Banks = {
+nadrp.Banks = {
   [1] = vector3(314.62, -277.97, 54.15),
   [2] = vector3(149.30, -1040.3, 29.50),
   [3] = vector3(-1212.81, -330.15, 37.90),
@@ -27,7 +27,7 @@ ffrp.Banks = {
   [5] = vector3( 1175.24, 2705.68, 38.10),
 }
 
-ffrp.Actions = {
+nadrp.Actions = {
   [1] = {
     [vector3(309.58,-279.52,54.50)] = "LockpickDoor",
     [vector3(313.33,-281.85,54.50)] = "LootID",
@@ -129,20 +129,20 @@ ffrp.Actions = {
   },
 }
 
-ffrp.LootTable = { -- dont use this
+nadrp.LootTable = { -- dont use this
   ["rolex"]   = 3, -- change table in server.lua
   ["gold"]    = 3,
   ["diamond"] = 3,
 }
 
-ffrp.TextAddons = {
+nadrp.TextAddons = {
   ["LockpickDoor"] = "lockpick the door.",
   ["LootID"] = "Search",
   --["OpenVault"] = "request access to the vault.",
   ["LootVault"] = "open the safe.",
 }
 
-ffrp.DoorHashes = {
+nadrp.DoorHashes = {
   [2121050683] = "2121050683",
   [4163212883] = "4163212883",
   [4231427725] = "4231427725",

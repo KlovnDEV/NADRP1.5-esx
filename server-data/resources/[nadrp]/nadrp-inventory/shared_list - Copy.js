@@ -21,7 +21,7 @@ itemList["-1121678507"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_mini-smg.png",
+    image: "nadrp_mini-smg.png",
     weapon: true,
     deg: true
 }
@@ -38,7 +38,7 @@ itemList["-1045183535"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_revolver.png",
+    image: "nadrp_revolver.png",
     weapon: true,
     deg: false
 }
@@ -58,7 +58,7 @@ itemList["-879347409"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_revolvermk2.png",
+    image: "nadrp_revolvermk2.png",
     weapon: true,
     deg: false
 }
@@ -81,7 +81,7 @@ itemList["-72657034"] = {
     weight: 15,
     nonStack: true,
     model: "",
-    image: "ffrp_parachute.png",
+    image: "nadrp_parachute.png",
     weapon: false,
     deg: true
 }
@@ -104,7 +104,7 @@ itemList["-1074790547"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-shotgun.png",
+    image: "nadrp_assault-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -127,7 +127,7 @@ itemList["-1075685676"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol.png",
+    image: "nadrp_pistol.png",
     weapon: true,
     deg: true
 }
@@ -150,7 +150,7 @@ itemList["-1355376991"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol-50.png",
+    image: "nadrp_pistol-50.png",
     weapon: true,
     deg: true
 }
@@ -173,7 +173,7 @@ itemList["-1357824103"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_advanced-rifle.png",
+    image: "nadrp_advanced-rifle.png",
     weapon: true,
     deg: true
 }
@@ -196,7 +196,7 @@ itemList["-1654528753"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-shotgun.png",
+    image: "nadrp_assault-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -209,7 +209,7 @@ itemList["-1810795771"] = {
     weight: 150,
     nonStack: true,
     model: "",
-    image: "ffrp_poolcue.png",
+    image: "nadrp_poolcue.png",
     weapon: true,
     information: "-5 Jail <br> +3 Strength <br> -3 Intelligence <br> Its marked -DO NOT TAKE FROM CELLS- <br> Outside Jail this is considered Police Property <br> If it has roleplay stats, it must be roleplay.",
     deg: true
@@ -233,7 +233,7 @@ itemList["-2066285827"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_bullpup-rifle.png",
+    image: "nadrp_bullpup-rifle.png",
     weapon: true,
     deg: true
 }
@@ -256,7 +256,7 @@ itemList["-2084633992"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_carbine-rifle.png",
+    image: "nadrp_carbine-rifle.png",
     weapon: true,
     deg: true
 }
@@ -279,7 +279,7 @@ itemList["-270015777"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-smg.png",
+    image: "nadrp_assault-smg.png",
     weapon: true,
     deg: true
 }
@@ -299,7 +299,7 @@ itemList["-538741184"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_switchblade.png",
+    image: "nadrp_switchblade.png",
     weapon: true,
     deg: true
 }
@@ -319,7 +319,7 @@ itemList["-619010992"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_machine-pistol.png",
+    image: "nadrp_machine-pistol.png",
     weapon: true,
     deg: true
 }
@@ -336,7 +336,7 @@ itemList["-771403250"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_heavy-pistol.png",
+    image: "nadrp_heavy-pistol.png",
     weapon: true,
     deg: true
 }
@@ -359,7 +359,7 @@ itemList["-86904375"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_762saltmaker.png",
+    image: "nadrp_762saltmaker.png",
     weapon: true,
     deg: true
 }
@@ -382,7 +382,7 @@ itemList["100416529"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sniper-rifle.png",
+    image: "nadrp_sniper-rifle.png",
     weapon: true,
     deg: true
 }
@@ -405,7 +405,7 @@ itemList["101631238"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_fire-extinguisher.png",
+    image: "nadrp_fire-extinguisher.png",
     weapon: true,
     deg: false
 }
@@ -425,7 +425,7 @@ itemList["1141786504"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_golfclub.png",
+    image: "nadrp_golfclub.png",
     weapon: true,
     deg: false
 }
@@ -438,7 +438,7 @@ itemList["1198879012"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_flaregun.png",
+    image: "nadrp_flaregun.png",
     weapon: true,
     deg: false
 }
@@ -451,7 +451,7 @@ itemList["1233104067"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_flare.png",
+    image: "nadrp_flare.png",
     weapon: true,
     deg: false
 }
@@ -464,7 +464,7 @@ itemList["125959754"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_cmp-launcher.png",
+    image: "nadrp_cmp-launcher.png",
     weapon: true,
     deg: true
 }
@@ -477,7 +477,7 @@ itemList["126349499"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_snowball.png",
+    image: "nadrp_snowball.png",
     weapon: true,
     deg: false
 }
@@ -490,7 +490,7 @@ itemList["1305664598"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_grenade-launcher.png",
+    image: "nadrp_grenade-launcher.png",
     weapon: true,
     deg: false
 }
@@ -507,7 +507,7 @@ itemList["1317494643"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_hammer.png",
+    image: "nadrp_hammer.png",
     weapon: true,
     deg: false
 }
@@ -527,7 +527,7 @@ itemList["137902532"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_vintage-pistol.png",
+    image: "nadrp_vintage-pistol.png",
     weapon: true,
     deg: true
 }
@@ -550,7 +550,7 @@ itemList["1432025498"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pump-shotgun.png",
+    image: "nadrp_pump-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -573,7 +573,7 @@ itemList["1593441988"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_combat-pistol.png",
+    image: "nadrp_combat-pistol.png",
     weapon: true,
     deg: true
 }
@@ -596,7 +596,7 @@ itemList["1627465347"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_gusenberg.png",
+    image: "nadrp_gusenberg.png",
     weapon: true,
     deg: true
 }
@@ -619,7 +619,7 @@ itemList["1649403952"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_cmp-rifle.png",
+    image: "nadrp_cmp-rifle.png",
     weapon: true,
     deg: true
 }
@@ -632,7 +632,7 @@ itemList["1672152130"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_homing-launcher.png",
+    image: "nadrp_homing-launcher.png",
     weapon: true,
     deg: true
 }
@@ -655,7 +655,7 @@ itemList["171789620"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_combat-pdw.png",
+    image: "nadrp_combat-pdw.png",
     weapon: true,
     deg: true
 }
@@ -668,7 +668,7 @@ itemList["1737195953"] = {
     weight: 6,
     nonStack: true,
     model: "",
-    image: "ffrp_nightstick.png",
+    image: "nadrp_nightstick.png",
     weapon: true,
     deg: false
 }
@@ -688,7 +688,7 @@ itemList["2017895192"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sawnoff-shotgun.png ",
+    image: "nadrp_sawnoff-shotgun.png ",
     weapon: true,
     deg: true
 }
@@ -711,7 +711,7 @@ itemList["2024373456"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_smg.png",
+    image: "nadrp_smg.png",
     weapon: true,
     deg: true
 }
@@ -734,7 +734,7 @@ itemList["2132975508"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_bullpup-rifle.png",
+    image: "nadrp_bullpup-rifle.png",
     weapon: true,
     deg: true
 }
@@ -757,7 +757,7 @@ itemList["2138347493"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_firework-launcher.png",
+    image: "nadrp_firework-launcher.png",
     weapon: true,
     deg: true
 }
@@ -780,7 +780,7 @@ itemList["2144741730"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_mg.png",
+    image: "nadrp_mg.png",
     weapon: true,
     deg: true
 }
@@ -803,7 +803,7 @@ itemList["2210333304"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_carbine-rifle.png",
+    image: "nadrp_carbine-rifle.png",
     weapon: true,
     deg: true
 }
@@ -820,7 +820,7 @@ itemList["2227010557"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_crowbar.png",
+    image: "nadrp_crowbar.png",
     weapon: true,
     deg: false
 }
@@ -833,7 +833,7 @@ itemList["2343591895"] = {
     weight: 2,
     nonStack: true,
     model: "",
-    image: "ffrp_flashlight.png",
+    image: "nadrp_flashlight.png",
     weapon: true,
     deg: false
 }
@@ -846,7 +846,7 @@ itemList["uvlight"] = {
     weight: 2,
     nonStack: true,
     model: "",
-    image: "ffrp_flashlight2.png",
+    image: "nadrp_flashlight2.png",
     weapon: true,
     deg: false
 }
@@ -863,7 +863,7 @@ itemList["2460120199"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_dagger.png",
+    image: "nadrp_dagger.png",
     weapon: true,
     deg: false
 }
@@ -876,7 +876,7 @@ itemList["2484171525"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pool-cue.png",
+    image: "nadrp_pool-cue.png",
     weapon: true,
     deg: false
 }
@@ -889,7 +889,7 @@ itemList["2508868239"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_baseball-bat.png",
+    image: "nadrp_baseball-bat.png",
     weapon: true,
     deg: false
 }
@@ -912,7 +912,7 @@ itemList["2578377531"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol-50.png",
+    image: "nadrp_pistol-50.png",
     weapon: true,
     deg: true
 }
@@ -925,7 +925,7 @@ itemList["2578778090"] = {
     weight: 6,
     nonStack: true,
     model: "",
-    image: "ffrp_knife.png",
+    image: "nadrp_knife.png",
     weapon: true,
     deg: false
 }
@@ -948,7 +948,7 @@ itemList["2640438543"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-shotgun.png",
+    image: "nadrp_assault-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -971,7 +971,7 @@ itemList["2726580491"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_grenade-launcher.png",
+    image: "nadrp_grenade-launcher.png",
     weapon: true,
     deg: true
 }
@@ -984,7 +984,7 @@ itemList["2828843422"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_musket.png",
+    image: "nadrp_musket.png",
     weapon: true,
     deg: true
 }
@@ -997,7 +997,7 @@ itemList["2874559379"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_proximity-mine.png",
+    image: "nadrp_proximity-mine.png",
     weapon: true,
     deg: false
 }
@@ -1020,7 +1020,7 @@ itemList["2937143193"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_advanced-rifle.png",
+    image: "nadrp_advanced-rifle.png",
     weapon: true,
     deg: true
 }
@@ -1043,7 +1043,7 @@ itemList["2982836145"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_rpg.png",
+    image: "nadrp_rpg.png",
     weapon: true,
     deg: true
 }
@@ -1056,7 +1056,7 @@ itemList["3125143736"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pipe-bomb.png",
+    image: "nadrp_pipe-bomb.png",
     weapon: true,
     deg: false
 }
@@ -1079,7 +1079,7 @@ itemList["317205821"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sweeper-shotgun.png",
+    image: "nadrp_sweeper-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -1099,7 +1099,7 @@ itemList["3173288789"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_mini-smg.png",
+    image: "nadrp_mini-smg.png",
     weapon: true,
     deg: true
 }
@@ -1116,7 +1116,7 @@ itemList["3218215474"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sns-pistol.png",
+    image: "nadrp_sns-pistol.png",
     weapon: true,
     deg: true
 }
@@ -1139,7 +1139,7 @@ itemList["3219281620"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol.png",
+    image: "nadrp_pistol.png",
     weapon: true,
     deg: true
 }
@@ -1162,7 +1162,7 @@ itemList["3220176749"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-shotgun.png",
+    image: "nadrp_assault-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -1175,7 +1175,7 @@ itemList["3231910285"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_special-carbine.png",
+    image: "nadrp_special-carbine.png",
     weapon: true,
     deg: true
 }
@@ -1195,7 +1195,7 @@ itemList["324215364"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_micro-smg.png",
+    image: "nadrp_micro-smg.png",
     weapon: true,
     deg: true
 }
@@ -1208,7 +1208,7 @@ itemList["3342088282"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_marksman-rifle.png",
+    image: "nadrp_marksman-rifle.png",
     weapon: true,
     deg: true
 }
@@ -1228,7 +1228,7 @@ itemList["3441901897"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_hatchet.png",
+    image: "nadrp_hatchet.png",
     weapon: true,
     deg: true
 }
@@ -1245,7 +1245,7 @@ itemList["3523564046"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_heavy-pistol.png",
+    image: "nadrp_heavy-pistol.png",
     weapon: true,
     deg: true
 }
@@ -1265,7 +1265,7 @@ itemList["3638508604"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_knuckle-dusters.png",
+    image: "nadrp_knuckle-dusters.png",
     weapon: true,
     deg: false
 }
@@ -1285,7 +1285,7 @@ itemList["3675956304"] = {
     }],
     nonStack: true,
     model: "",
-    image: "ffrp_machine-pistol.png",
+    image: "nadrp_machine-pistol.png",
     weapon: true,
     deg: true
 }
@@ -1298,7 +1298,7 @@ itemList["3696079510"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol.png",
+    image: "nadrp_pistol.png",
     weapon: true,
     deg: true
 }
@@ -1315,7 +1315,7 @@ itemList["3713923289"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_machete.png",
+    image: "nadrp_machete.png",
     weapon: true,
     deg: false
 }
@@ -1338,7 +1338,7 @@ itemList["3800352039"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-shotgun.png",
+    image: "nadrp_assault-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -1351,7 +1351,7 @@ itemList["4019527611"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_db-shotgun.png",
+    image: "nadrp_db-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -1374,7 +1374,7 @@ itemList["4024951519"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_assault-smg.png",
+    image: "nadrp_assault-smg.png",
     weapon: true,
     deg: true
 }
@@ -1391,7 +1391,7 @@ itemList["4191993645"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_hatchet.png",
+    image: "nadrp_hatchet.png",
     weapon: true,
     deg: false
 }
@@ -1408,7 +1408,7 @@ itemList["4192643659"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_glass-bottle.png",
+    image: "nadrp_glass-bottle.png",
     weapon: true,
     deg: false
 }
@@ -1425,7 +1425,7 @@ itemList["419712736"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_wrench.png",
+    image: "nadrp_wrench.png",
     weapon: true,
     deg: false
 }
@@ -1449,7 +1449,7 @@ itemList["453432689"] = {
     nonStack: true,
     model: "",
     information: "Crosshair not included.... ",
-    image: "ffrp_pistol.png",
+    image: "nadrp_pistol.png",
     weapon: true,
     deg: true
 }
@@ -1472,7 +1472,7 @@ itemList["487013001"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_pump-shotgun2.png",
+    image: "nadrp_pump-shotgun2.png",
     weapon: true,
     deg: true
 }
@@ -1492,7 +1492,7 @@ itemList["584646201"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_ap-pistol.png",
+    image: "nadrp_ap-pistol.png",
     weapon: true,
     deg: true
 }
@@ -1512,7 +1512,7 @@ itemList["615608432"] = {
     weight: 11,
     nonStack: false,
     model: "",
-    image: "ffrp_molotov.png",
+    image: "nadrp_molotov.png",
     weapon: true,
     deg: false
 }
@@ -1535,7 +1535,7 @@ itemList["736523883"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_smg.png",
+    image: "nadrp_smg.png",
     weapon: true,
     deg: true
 }
@@ -1558,7 +1558,7 @@ itemList["741814745"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sticky-bomb.png",
+    image: "nadrp_sticky-bomb.png",
     weapon: true,
     deg: false
 }
@@ -1571,7 +1571,7 @@ itemList["883325847"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_petrol-can.png",
+    image: "nadrp_petrol-can.png",
     weapon: true,
     deg: false
 }
@@ -1594,7 +1594,7 @@ itemList["911657153"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_stun-gun.png",
+    image: "nadrp_stun-gun.png",
     weapon: true,
     deg: false
 }
@@ -1614,7 +1614,7 @@ itemList["940833800"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_homemade.png",
+    image: "nadrp_homemade.png",
     weapon: true,
     deg: true
 }
@@ -1637,7 +1637,7 @@ itemList["984333226"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_heavy-shotgun.png",
+    image: "nadrp_heavy-shotgun.png",
     weapon: true,
     deg: true
 }
@@ -1658,7 +1658,7 @@ itemList["extended_ap"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_ap-pistol-clip.png",
+    image: "nadrp_ap-pistol-clip.png",
     deg: false
 }
 
@@ -1678,7 +1678,7 @@ itemList["extended_micro"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_micro-smg-clip.png",
+    image: "nadrp_micro-smg-clip.png",
     deg: false
 }
 
@@ -1695,7 +1695,7 @@ itemList["extended_sns"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sns-pistol-clip.png",
+    image: "nadrp_sns-pistol-clip.png",
     deg: false
 }
 
@@ -1715,7 +1715,7 @@ itemList["extended_tec9"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_micro-smg-clip.png",
+    image: "nadrp_micro-smg-clip.png",
     deg: false
 }
 
@@ -1738,7 +1738,7 @@ itemList["silencer_l"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_lsilencer.png",
+    image: "nadrp_lsilencer.png",
     deg: false
 }
 
@@ -1761,7 +1761,7 @@ itemList["silencer_l2"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_lsilencer.png",
+    image: "nadrp_lsilencer.png",
     deg: false
 }
 
@@ -1784,7 +1784,7 @@ itemList["silencer_s"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_ssilencer.png",
+    image: "nadrp_ssilencer.png",
     deg: false
 }
 
@@ -1807,7 +1807,7 @@ itemList["silencer_s2"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_ssilencer.png",
+    image: "nadrp_ssilencer.png",
     deg: false
 }
 
@@ -1824,7 +1824,7 @@ itemList["SmallScope"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_sscope.png",
+    image: "nadrp_sscope.png",
     deg: false
 }
 
@@ -1846,7 +1846,7 @@ itemList["sniperammo"] = {
     weight: 7,
     nonStack: false,
     model: "",
-    image: "ffrp_rifle-ammo.png",
+    image: "nadrp_rifle-ammo.png",
     deg: false
 }
 
@@ -1868,7 +1868,7 @@ itemList["subammo"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_sub-ammo.png",
+    image: "nadrp_sub-ammo.png",
     deg: false
 }
 
@@ -1885,7 +1885,7 @@ itemList["TinyScope"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_tscope.png",
+    image: "nadrp_tscope.png",
     deg: false
 }
 
@@ -1907,7 +1907,7 @@ itemList["heavyammo"] = {
     weight: 7,
     nonStack: false,
     model: "",
-    image: "ffrp_rifle-ammo.png",
+    image: "nadrp_rifle-ammo.png",
     deg: false
 }
 
@@ -1929,7 +1929,7 @@ itemList["lmgammo"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_lmg-ammo.png",
+    image: "nadrp_lmg-ammo.png",
     deg: false
 }
 
@@ -1951,7 +1951,7 @@ itemList["shotgunammo"] = {
     weight: 7,
     nonStack: false,
     model: "",
-    image: "ffrp_shotgun-ammo.png",
+    image: "nadrp_shotgun-ammo.png",
     deg: false
 }
 
@@ -1968,7 +1968,7 @@ itemList["MediumScope"] = {
     weight: 11,
     nonStack: true,
     model: "",
-    image: "ffrp_lscope.png",
+    image: "nadrp_lscope.png",
     deg: false
 }
 
@@ -1990,7 +1990,7 @@ itemList["pistolammo"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_pistol-ammo.png",
+    image: "nadrp_pistol-ammo.png",
     deg: false
 }
 
@@ -2012,7 +2012,7 @@ itemList["stungunammo"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_tazerammo.png",
+    image: "nadrp_tazerammo.png",
     deg: false
 }
 
@@ -2094,7 +2094,7 @@ itemList["tuner"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tuner.png",
+    image: "nadrp_tuner.png",
     information: "Use inside a tuner vehicle to tune it..",
     deg: false
 }
@@ -2111,7 +2111,7 @@ itemList["repairkit"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_basic_repair-kit.png",
+    image: "nadrp_basic_repair-kit.png",
     deg: false
 }
 
@@ -2145,7 +2145,7 @@ itemList["1gcocaine"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cocaine-baggy.png",
+    image: "nadrp_cocaine-baggy.png",
     information: "35% Cut Cocaine. ",
     deg: false
 }
@@ -2166,7 +2166,7 @@ itemList["1gcrack"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_crack.png",
+    image: "nadrp_crack.png",
     information: "Crack... ",
     deg: false
 }
@@ -2180,7 +2180,7 @@ itemList["coke50g"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_cocaine-brick.png",
+    image: "nadrp_cocaine-brick.png",
     information: "Increases your Stamina and Movement Speed <br> Breaks down into product.",
     deg: false
 }
@@ -2198,7 +2198,7 @@ itemList["coke5g"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cocaine-baggy.png",
+    image: "nadrp_cocaine-baggy.png",
     information: "Increases your Stamina and Movement Speed",
     deg: false
 }
@@ -2219,7 +2219,7 @@ itemList["joint"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_joint.png",
+    image: "nadrp_joint.png",
     information: "Its a Joint, man. ",
     deg: false
 }
@@ -2232,7 +2232,7 @@ itemList["maleseed"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_weed_seed.png",
+    image: "nadrp_weed_seed.png",
     information: "Plant near females to make them produce seeds. ",
     deg: false
 }
@@ -2245,7 +2245,7 @@ itemList["femaleseed"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_weed_seed.png",
+    image: "nadrp_weed_seed.png",
     information: "Thank you.",
     deg: false
 }
@@ -2259,7 +2259,7 @@ itemList["assmeth"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_ass-meth.png",
+    image: "nadrp_ass-meth.png",
     information: "-7 Jail <br> +5 Stink <br> Increases your Stamina and Movement Speed - smells funny though <br> If it has roleplay stats, it must be roleplay.",
     deg: false
 }
@@ -2273,7 +2273,7 @@ itemList["methbag"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_meth-baggy.png",
+    image: "nadrp_meth-baggy.png",
     information: "Increases your Stamina and Movement Speed",
     deg: false
 }
@@ -2287,7 +2287,7 @@ itemList["oxy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_Oxy.png",
+    image: "nadrp_Oxy.png",
     information: "Limits Stress to 0 for an extended period of time <br> Increases Thirst <br> Has addiction properties ",
     deg: false
 }
@@ -2315,7 +2315,7 @@ itemList["weed12oz"] = {
     weight: 35,
     nonStack: false,
     model: "",
-    image: "ffrp_box-of-weed-12-18-oz.png",
+    image: "nadrp_box-of-weed-12-18-oz.png",
     information: "Lowers Stress <br> Breaks Down into other Product",
     deg: false
 }
@@ -2329,7 +2329,7 @@ itemList["weed5oz"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_weed-brick-40-Oz.png",
+    image: "nadrp_weed-brick-40-Oz.png",
     information: "Lowers Stress <br> Breaks Down into other Product",
     deg: false
 }
@@ -2343,7 +2343,7 @@ itemList["weedoz"] = {
     weight: 2,
     nonStack: false,
     model: "",
-    image: "ffrp_weed-4-Oz.png",
+    image: "nadrp_weed-4-Oz.png",
     information: "Lowers Stress",
     deg: false
 }
@@ -2361,7 +2361,7 @@ itemList["weedq"] = {
     weight: 2,
     nonStack: false,
     model: "",
-    image: "ffrp_weed-oz.png",
+    image: "nadrp_weed-oz.png",
     information: "Lowers Stress",
     deg: false
 }
@@ -2396,7 +2396,7 @@ itemList["lsdtab"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_drug-x.png",
+    image: "nadrp_drug-x.png",
     information: "Bottle of wonders.",
     deg: true
 }
@@ -2410,7 +2410,7 @@ itemList["badlsdtab"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_drug-x.png",
+    image: "nadrp_drug-x.png",
     information: "Bottle of wonders.",
     deg: true
 }
@@ -2425,7 +2425,7 @@ itemList["aspirin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_aspirin.png",
+    image: "nadrp_aspirin.png",
     information: "Its an Aspirin",
     deg: false
 }
@@ -2438,7 +2438,7 @@ itemList["cabsinthe"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cannabis-absinthe.png",
+    image: "nadrp_cannabis-absinthe.png",
     information: "Duuude..bro...",
     deg: false
 }
@@ -2451,7 +2451,7 @@ itemList["redwine"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_red-wine-bottle.png",
+    image: "nadrp_red-wine-bottle.png",
     information: "No crime just wine",
     deg: false
 }
@@ -2464,7 +2464,7 @@ itemList["rum"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rum.png",
+    image: "nadrp_rum.png",
     information: "Why is it gone?",
     deg: false
 }
@@ -2477,7 +2477,7 @@ itemList["tequila"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tequila.png",
+    image: "nadrp_tequila.png",
     information: "Tequilya brand",
     deg: false
 }
@@ -2490,7 +2490,7 @@ itemList["tequilashot"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tequila-shot.png",
+    image: "nadrp_tequila-shot.png",
     information: "Uno mas por favor",
     deg: false
 }
@@ -2503,7 +2503,7 @@ itemList["vodka"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_vodka.png",
+    image: "nadrp_vodka.png",
     information: "Sates Thirst",
     deg: false
 }
@@ -2516,7 +2516,7 @@ itemList["whiskey"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_whiskey.png",
+    image: "nadrp_whiskey.png",
     information: "Sates Thirst",
     deg: false
 }
@@ -2542,7 +2542,7 @@ itemList["420bar"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_420-bar.png",
+    image: "nadrp_420-bar.png",
     information: "Duuuude brah...",
     deg: false
 }
@@ -2554,7 +2554,7 @@ itemList["69box"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_69-cigar-box.png",
+    image: "nadrp_69-cigar-box.png",
     information: "A taste of Cuba",
     deg: false
 }
@@ -2566,7 +2566,7 @@ itemList["69pack"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_69-brand-pack.png",
+    image: "nadrp_69-brand-pack.png",
     information: "Just one more",
     deg: false
 }
@@ -2579,7 +2579,7 @@ itemList["champagne"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_champagne.png",
+    image: "nadrp_champagne.png",
     information: "Time to celebrate",
     deg: false
 }
@@ -2592,7 +2592,7 @@ itemList["cgummies"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cannabis-gummies.png",
+    image: "nadrp_cannabis-gummies.png",
     information: "Duuude...",
     deg: false
 }
@@ -2605,7 +2605,7 @@ itemList["chloroform"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chloroform.png",
+    image: "nadrp_chloroform.png",
     information: "Special Cross recipe",
     deg: false
 }
@@ -2617,7 +2617,7 @@ itemList["ibuprofen"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ibuprofen.png",
+    image: "nadrp_ibuprofen.png",
     information: "Cures all. Right?",
     deg: false
 }
@@ -2629,7 +2629,7 @@ itemList["drugx"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_drug-x.png",
+    image: "nadrp_drug-x.png",
     information: "Now in testing by Humane Labs",
     deg: false
 }
@@ -2644,7 +2644,7 @@ itemList["beer"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_beer.png",
+    image: "nadrp_beer.png",
     information: "Sates Thirst",
     deg: false
 }
@@ -2656,7 +2656,7 @@ itemList["guiness"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_guiness.png",
+    image: "nadrp_guiness.png",
     information: "For the Irish Boys!",
     deg: false
 }
@@ -2670,7 +2670,7 @@ itemList["bfsandwich"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_breakfast-sandwich.png",
+    image: "nadrp_breakfast-sandwich.png",
     information: "Rise and grind",
     deg: false
 }
@@ -2683,7 +2683,7 @@ itemList["cbballs"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cluckin-balls.png",
+    image: "nadrp_cluckin-balls.png",
     information: "Ooh..salty. 440Cal",
     deg: false
 }
@@ -2695,7 +2695,7 @@ itemList["cbbucket"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chicken-bucket.png",
+    image: "nadrp_chicken-bucket.png",
     information: "I like chicken! 2350Cal",
     deg: false
 }
@@ -2707,7 +2707,7 @@ itemList["cbclucker"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_little-clucker.png",
+    image: "nadrp_little-clucker.png",
     information: "Cluckin toy not included",
     deg: false
 }
@@ -2719,7 +2719,7 @@ itemList["cbdrink"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cluckin-drink.png",
+    image: "nadrp_cluckin-drink.png",
     information: "Hell Cluckin Yeah",
     deg: false
 }
@@ -2731,7 +2731,7 @@ itemList["cbfarmers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_farmers-surprise.png",
+    image: "nadrp_farmers-surprise.png",
     information: "The chewy bits arent harmful",
     deg: false
 }
@@ -2743,7 +2743,7 @@ itemList["cbfowl"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_fowl-burger.png",
+    image: "nadrp_fowl-burger.png",
     information: "If you enjoyed it, the chicken didnt die in vain! 900Cal",
     deg: false
 }
@@ -2755,7 +2755,7 @@ itemList["cbfries"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cluckin-fries.png",
+    image: "nadrp_cluckin-fries.png",
     information: "Cluckinsize included. 680Cal",
     deg: false
 }
@@ -2767,7 +2767,7 @@ itemList["cbrings"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cluckin-rings.png",
+    image: "nadrp_cluckin-rings.png",
     information: "Suffering never tasted so good! 850Cal",
     deg: false
 }
@@ -2779,7 +2779,7 @@ itemList["cbrownie"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cannabis-brownie.png",
+    image: "nadrp_cannabis-brownie.png",
     information: "Dude...",
     deg: false
 }
@@ -2791,7 +2791,7 @@ itemList["cbveggy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_veggy-salad.png",
+    image: "nadrp_veggy-salad.png",
     information: "Mystery chewy bits included. 750Cal",
     deg: false
 }
@@ -2804,7 +2804,7 @@ itemList["cocoab"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cocoa-butter.png",
+    image: "nadrp_cocoa-butter.png",
     information: "Hecho en Guatemala",
     deg: false
 }
@@ -2817,7 +2817,7 @@ itemList["cookie"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cookie.png",
+    image: "nadrp_cookie.png",
     information: "Baked with love",
     deg: false
 }
@@ -2829,7 +2829,7 @@ itemList["crabcakes"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_crab-cakes.png",
+    image: "nadrp_crab-cakes.png",
     information: "Scrumptious",
     deg: false
 }
@@ -2842,7 +2842,7 @@ itemList["energybar"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_energy-bar.png",
+    image: "nadrp_energy-bar.png",
     information: "Ego Chaser bars for chads",
     deg: false
 }
@@ -2856,7 +2856,7 @@ itemList["pizza"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_pizza-slice.png",
+    image: "nadrp_pizza-slice.png",
     information: "Check for pineapple",
     deg: false
 }
@@ -2869,7 +2869,7 @@ itemList["sushiplate"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sushi-plate.png",
+    image: "nadrp_sushi-plate.png",
     information: "Dip fish-side first",
     deg: false
 }
@@ -2881,7 +2881,7 @@ itemList["sushiroll"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sushi-rolls.png",
+    image: "nadrp_sushi-rolls.png",
     information: "Made fresh",
     deg: false
 }
@@ -2894,7 +2894,7 @@ itemList["wings"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_wings.png",
+    image: "nadrp_wings.png",
     information: "Dont lick your fingers",
     deg: false
 }
@@ -2907,7 +2907,7 @@ itemList["chips"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chips.png",
+    image: "nadrp_chips.png",
     information: "Phat Chips yeeeaaah.",
     deg: false
 }
@@ -2920,7 +2920,7 @@ itemList["chocobar"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chocolate-bar.png",
+    image: "nadrp_chocolate-bar.png",
     information: "Mmm...Meteorite Bar",
     deg: false
 }
@@ -2933,7 +2933,7 @@ itemList["maccheese"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_macn-cheese.png",
+    image: "nadrp_macn-cheese.png",
     information: "Sapid",
     deg: false
 }
@@ -2946,7 +2946,7 @@ itemList["meteorite"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_fukang-meteorite.png",
+    image: "nadrp_fukang-meteorite.png",
     information: "Out of this world",
     deg: false
 }
@@ -2959,7 +2959,7 @@ itemList["pancakes"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pancakes.png",
+    image: "nadrp_pancakes.png",
     information: "Flat but tasty",
     deg: false
 }
@@ -2971,7 +2971,7 @@ itemList["panini"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_panini-sandwich.png",
+    image: "nadrp_panini-sandwich.png",
     information: "Piquant",
     deg: false
 }
@@ -2984,7 +2984,7 @@ itemList["pinacolada"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pina-colada.png",
+    image: "nadrp_pina-colada.png",
     information: "And getting caught in the rain",
     deg: false
 }
@@ -2997,7 +2997,7 @@ itemList["popcorn"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_popcorn.png",
+    image: "nadrp_popcorn.png",
     information: "Dis gon b gud",
     deg: false
 }
@@ -3010,7 +3010,7 @@ itemList["ramen"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ramen.png",
+    image: "nadrp_ramen.png",
     information: "Itadakimasu!",
     deg: false
 }
@@ -3023,7 +3023,7 @@ itemList["spaghetti"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_spaghetti.png",
+    image: "nadrp_spaghetti.png",
     information: "Knees weak...",
     deg: false
 }
@@ -3035,7 +3035,7 @@ itemList["spaghettican"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_spaghetti-can.png",
+    image: "nadrp_spaghetti-can.png",
     information: "Fresh from the trunk, awight?",
     deg: false
 }
@@ -3048,7 +3048,7 @@ itemList["torta"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_torta.png",
+    image: "nadrp_torta.png",
     information: "El mejor jamon",
     deg: false
 }
@@ -3084,7 +3084,7 @@ itemList["cola"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_coke.png",
+    image: "nadrp_coke.png",
     information: "Sates Thirst",
     deg: false
 }
@@ -3101,7 +3101,7 @@ itemList["burrito"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_burrito.png",
+    image: "nadrp_burrito.png",
     information: "Burrito",
     deg: false
 }
@@ -3118,7 +3118,7 @@ itemList["eggsbacon"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_eggs-and-bacon.png",
+    image: "nadrp_eggs-and-bacon.png",
     information: "Great start to your morning",
     deg: false
 }
@@ -3135,7 +3135,7 @@ itemList["donut"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_donut.png",
+    image: "nadrp_donut.png",
     information: "Powered by Watson™",
     deg: false
 }
@@ -3148,7 +3148,7 @@ itemList["foodgoods"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_food-goods.png",
+    image: "nadrp_food-goods.png",
     deg: false
 }
 
@@ -3160,7 +3160,7 @@ itemList["foodingredient"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_ingredients.png",
+    image: "nadrp_ingredients.png",
     information: "Used to craft food - be aware, food doesnt last forever!",
     deg: false
 }
@@ -3173,7 +3173,7 @@ itemList["fries"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_fries.png",
+    image: "nadrp_fries.png",
     information: "Sates Hunger and reduces stress.",
     deg: false
 }
@@ -3190,7 +3190,7 @@ itemList["greencow"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_green-cow.png",
+    image: "nadrp_green-cow.png",
     information: "Slightly Increases Stamina and Speed",
     deg: false
 }
@@ -3207,7 +3207,7 @@ itemList["churro"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_churro.png",
+    image: "nadrp_churro.png",
     information: "Basically a long donut.",
     deg: false
 }
@@ -3220,7 +3220,7 @@ itemList["bakingsoda"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bakingsoda.png",
+    image: "nadrp_bakingsoda.png",
     information: "Its Baking Soda..?",
     deg: false
 }
@@ -3250,7 +3250,7 @@ itemList["bleederburger"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_the-bleeder.png",
+    image: "nadrp_the-bleeder.png",
     information: "Sates Hunger and reduces stress.",
     deg: false
 }
@@ -3267,7 +3267,7 @@ itemList["water"] = {
     }],
     nonStack: false,
     model: "",
-    image: "ffrp_water.png",
+    image: "nadrp_water.png",
     information: "Sates Thirst",
     deg: false
 }
@@ -3284,7 +3284,7 @@ itemList["hotdog"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_hotdog.png",
+    image: "nadrp_hotdog.png",
     information: "Dont ask what is in it",
     deg: false
 }
@@ -3301,7 +3301,7 @@ itemList["icecream"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_icecream.png",
+    image: "nadrp_icecream.png",
     information: "Made from real human titty milk.",
     deg: false
 }
@@ -3314,7 +3314,7 @@ itemList["jailfood"] = {
     weight: 50,
     nonStack: false,
     model: "",
-    image: "ffrp_jailfood.png",
+    image: "nadrp_jailfood.png",
     information: "+5 fat <br> Looks as bad as the tates aim.",
     deg: false
 }
@@ -3331,7 +3331,7 @@ itemList["sandwich"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_sandwich.png",
+    image: "nadrp_sandwich.png",
     information: "Sates Hunger",
     deg: false
 }
@@ -3344,7 +3344,7 @@ itemList["torpedo"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_torpedo.png",
+    image: "nadrp_torpedo.png",
     information: "Sates Hunger and reduces stress.",
     deg: false
 }
@@ -3357,7 +3357,7 @@ itemList["treat"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_treat.png",
+    image: "nadrp_treat.png",
     information: "Feed to dog",
     deg: false
 }
@@ -3370,7 +3370,7 @@ itemList["hamburger"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_hamburger.png",
+    image: "nadrp_hamburger.png",
     information: "Sates Hunger",
     deg: false
 }
@@ -3387,7 +3387,7 @@ itemList["weedtaco"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_paperbag.png",
+    image: "nadrp_paperbag.png",
     information: "This aint free taco.",
     deg: false
 }
@@ -3404,7 +3404,7 @@ itemList["fishtaco"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_fishtaco.png",
+    image: "nadrp_fishtaco.png",
     information: "Make like the fishes.",
     deg: false
 }
@@ -3434,7 +3434,7 @@ itemList["heartstopper"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_heartstopper.png",
+    image: "nadrp_heartstopper.png",
     information: "This could feed you for a week",
     deg: false
 }
@@ -3460,7 +3460,7 @@ itemList["meatfree"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_meat-free.png",
+    image: "nadrp_meat-free.png",
     information: "Sates Hunger and reduces stress.",
     deg: false
 }
@@ -3477,7 +3477,7 @@ itemList["mshake"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_milkshake.png",
+    image: "nadrp_milkshake.png",
     information: "I heard it brings all the boys to the yard....",
     deg: false
 }
@@ -3493,7 +3493,7 @@ itemList["taco"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_taco.png",
+    image: "nadrp_taco.png",
     information: "This aint free taco.",
     deg: false
 }
@@ -3510,7 +3510,7 @@ itemList["aluminium"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_aluminum.png",
+    image: "nadrp_aluminum.png",
     deg: false
 }
 itemList["plastic"] = {
@@ -3521,7 +3521,7 @@ itemList["plastic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_plastic.png",
+    image: "nadrp_plastic.png",
     deg: false
 }
 itemList["copper"] = {
@@ -3532,7 +3532,7 @@ itemList["copper"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_copper.png",
+    image: "nadrp_copper.png",
     deg: false
 }
 itemList["electronics"] = {
@@ -3543,7 +3543,7 @@ itemList["electronics"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_electronics.png",
+    image: "nadrp_electronics.png",
     deg: false
 }
 itemList["rubber"] = {
@@ -3554,7 +3554,7 @@ itemList["rubber"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rubber.png",
+    image: "nadrp_rubber.png",
     deg: false
 }
 itemList["scrapmetal"] = {
@@ -3565,7 +3565,7 @@ itemList["scrapmetal"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_scrap-metal.png",
+    image: "nadrp_scrap-metal.png",
     deg: false
 }
 itemList["steel"] = {
@@ -3576,7 +3576,7 @@ itemList["steel"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_steel.png",
+    image: "nadrp_steel.png",
     deg: false
 }
 itemList["advlockpick"] = {
@@ -3597,7 +3597,7 @@ itemList["advlockpick"] = {
     weight: 8,
     nonStack: false,
     model: "",
-    image: "ffrp_advanced-lockpick.png",
+    image: "nadrp_advanced-lockpick.png",
     deg: false
 }
 itemList["armor"] = {
@@ -3651,7 +3651,7 @@ itemList["bandage"] = {
     weight: 1,
     nonStack: false,
     model: "prop_ld_health_pack",
-    image: "ffrp_bandage.png",
+    image: "nadrp_bandage.png",
     information: "Heals Wounds and Reduces Bleeding",
     deg: false
 }
@@ -4017,7 +4017,7 @@ itemList["aluminiumoxide"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_aluminum-oxide.png",
+    image: "nadrp_aluminum-oxide.png",
     deg: false
 }
 itemList["advrepairkit"] = {
@@ -4032,7 +4032,7 @@ itemList["advrepairkit"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_repair-toolkit.png",
+    image: "nadrp_repair-toolkit.png",
     information: "1 Time use - degrades engine parts more than basic tool kits, repairs engine to full.",
     deg: false
 }
@@ -4045,7 +4045,7 @@ itemList["assphone"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_poophone.png",
+    image: "nadrp_poophone.png",
     information: "-7 Jail <br> +5 Vibrate <br> You cant seem to work out the lock code? <br> If it has roleplay stats, it must be roleplay.",
     deg: false
 }
@@ -4125,7 +4125,7 @@ itemList["ace"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ace-of-spades.png",
+    image: "nadrp_ace-of-spades.png",
     information: "Up your sleeve",
     deg: false
 }
@@ -4137,7 +4137,7 @@ itemList["action"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_action-figure.png",
+    image: "nadrp_action-figure.png",
     information: "Superhero: Impotent Rage",
     deg: false
 }
@@ -4149,7 +4149,7 @@ itemList["agothic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_american-gothic.png",
+    image: "nadrp_american-gothic.png",
     information: "Wood 1930",
     deg: false
 }
@@ -4161,7 +4161,7 @@ itemList["armxray"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_arm-xray.png",
+    image: "nadrp_arm-xray.png",
     information: "Ouch...",
     deg: false
 }
@@ -4173,7 +4173,7 @@ itemList["atacos"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tacos-de-asada.png",
+    image: "nadrp_tacos-de-asada.png",
     information: "I could eat ten",
     deg: false
 }
@@ -4185,7 +4185,7 @@ itemList["azpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_aztecas-papers.png",
+    image: "nadrp_aztecas-papers.png",
     information: "Orale",
     deg: false
 }
@@ -4198,7 +4198,7 @@ itemList["anime"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_anime-poster.png",
+    image: "nadrp_anime-poster.png",
     information: "Weebs in uwu",
     deg: false
 }
@@ -4210,7 +4210,7 @@ itemList["antlers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_antlers.png",
+    image: "nadrp_antlers.png",
     information: "A fine prize",
     deg: false
 }
@@ -4222,7 +4222,7 @@ itemList["aodcut"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_aod-cut.png",
+    image: "nadrp_aod-cut.png",
     information: "The fruits of Lester Arnold's labor",
     deg: false
 }
@@ -4235,7 +4235,7 @@ itemList["blackbelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_black-belt.png",
+    image: "nadrp_black-belt.png",
     information: "Master Rank 4/4",
     deg: false
 }
@@ -4247,7 +4247,7 @@ itemList["blackchip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_black-chip.png",
+    image: "nadrp_black-chip.png",
     information: "Feel nice in your hand",
     deg: false
 }
@@ -4259,7 +4259,7 @@ itemList["bglass"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glass-of-beer.png",
+    image: "nadrp_glass-of-beer.png",
     information: "Wait for this all to blow over",
     deg: false
 }
@@ -4271,7 +4271,7 @@ itemList["bobross"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bob-ross-photo.png",
+    image: "nadrp_bob-ross-photo.png",
     information: "Happy little loose ends...",
     deg: false
 }
@@ -4283,7 +4283,7 @@ itemList["bondicut"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bondi-cut.png",
+    image: "nadrp_bondi-cut.png",
     information: "And an old rocking chair",
     deg: false
 }
@@ -4297,7 +4297,7 @@ itemList["bspapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ballas-papers.png",
+    image: "nadrp_ballas-papers.png",
     information: "You good?",
     deg: false
 }
@@ -4309,7 +4309,7 @@ itemList["bucket"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_bucket.png",
+    image: "nadrp_bucket.png",
     deg: false
 }
 itemList["burialmask"] = {
@@ -4320,7 +4320,7 @@ itemList["burialmask"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_burial-mask.png",
+    image: "nadrp_burial-mask.png",
     information: "Mask of Tutankhamun",
     deg: false
 }
@@ -4333,7 +4333,7 @@ itemList["braab"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_braab-tshirt.png",
+    image: "nadrp_braab-tshirt.png",
     information: "Yikes",
     deg: false
 }
@@ -4345,7 +4345,7 @@ itemList["brain"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_brain-mri.png",
+    image: "nadrp_brain-mri.png",
     information: "Ow...",
     deg: false
 }
@@ -4358,7 +4358,7 @@ itemList["bonsai"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bonsai-tree.png",
+    image: "nadrp_bonsai-tree.png",
     information: "Be one with nature",
     deg: false
 }
@@ -4371,7 +4371,7 @@ itemList["cactus"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cactus.png",
+    image: "nadrp_cactus.png",
     information: "For the lazy",
     deg: false
 }
@@ -4384,7 +4384,7 @@ itemList["cathat"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_childrens-book.png",
+    image: "nadrp_childrens-book.png",
     information: "Its story time...",
     deg: false
 }
@@ -4397,7 +4397,7 @@ itemList["camille"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_camille.png",
+    image: "nadrp_camille.png",
     information: "Monet 1866",
     deg: false
 }
@@ -4410,7 +4410,7 @@ itemList["carbattery"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_car-battery.png",
+    image: "nadrp_car-battery.png",
     information: "Car Battery",
     deg: false
 }
@@ -4422,7 +4422,7 @@ itemList["carhood"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_car-hood.png",
+    image: "nadrp_car-hood.png",
     information: "Car Hood",
     deg: false
 }
@@ -4434,7 +4434,7 @@ itemList["cashroll"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cash-roll.png",
+    image: "nadrp_cash-roll.png",
     information: "Whats the count..",
     deg: false
 }
@@ -4447,7 +4447,7 @@ itemList["cashstack"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cash-stack.png",
+    image: "nadrp_cash-stack.png",
     information: "All nice and sequential.",
     deg: false
 }
@@ -4460,7 +4460,7 @@ itemList["bdiamond"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_blue-diamond.png",
+    image: "nadrp_blue-diamond.png",
     information: "Bavaria 1918.",
     deg: false
 }
@@ -4474,7 +4474,7 @@ itemList["band"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cash-stack.png",
+    image: "nadrp_cash-stack.png",
     information: "Lots of low denominators - Indicates drug sales.",
     deg: false
 }
@@ -4486,7 +4486,7 @@ itemList["rollcash"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cash-roll.png",
+    image: "nadrp_cash-roll.png",
     information: "Lots of low denominators - Indicates drug sales.",
     deg: false
 }
@@ -4499,7 +4499,7 @@ itemList["battery"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_battery.png",
+    image: "nadrp_battery.png",
     deg: false
 }
 itemList["bazooka"] = {
@@ -4510,7 +4510,7 @@ itemList["bazooka"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bazooka-suppressor.png",
+    image: "nadrp_bazooka-suppressor.png",
     information: "Good for a single shot.",
     deg: false
 }
@@ -4533,7 +4533,7 @@ itemList["binoculars"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_binoculars.png",
+    image: "nadrp_binoculars.png",
     deg: false
 }
 itemList["bloodbag"] = {
@@ -4544,7 +4544,7 @@ itemList["bloodbag"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_blood-bag.png",
+    image: "nadrp_blood-bag.png",
     information: "Just my type",
     deg: false
 }
@@ -4556,7 +4556,7 @@ itemList["bloodvial"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_blood-tube.png",
+    image: "nadrp_blood-tube.png",
     information: "Simon ese",
     deg: false
 }
@@ -4568,7 +4568,7 @@ itemList["blueb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_blue-bandana.png",
+    image: "nadrp_blue-bandana.png",
     information: "Simon ese",
     deg: false
 }
@@ -4580,7 +4580,7 @@ itemList["bluechip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_blue-chip.png",
+    image: "nadrp_blue-chip.png",
     information: "Double or nothing",
     deg: false
 }
@@ -4592,7 +4592,7 @@ itemList["bmary"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_bloody-mary.png",
+    image: "nadrp_bloody-mary.png",
     information: "With a hint of lemon",
     deg: false
 }
@@ -4604,7 +4604,7 @@ itemList["Boombox"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_boombox.png",
+    image: "nadrp_boombox.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -4616,7 +4616,7 @@ itemList["Box"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_box.png",
+    image: "nadrp_box.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -4628,18 +4628,18 @@ itemList["breadboard"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_breadboard.png",
+    image: "nadrp_breadboard.png",
     deg: false
 }
 itemList["camera"] = {
     fullyDegrades: false,
     decayrate: 0.0,
-    displayname: "Fordkon FFRP1000",
+    displayname: "Fordkon nadrp1000",
     price: 250,
     weight: 8,
     nonStack: false,
     model: "",
-    image: "ffrp_camera.png",
+    image: "nadrp_camera.png",
     information: "Works 100% of the time 60% of the time.",
     deg: false
 }
@@ -4651,7 +4651,7 @@ itemList["notepad"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_notepad.png",
+    image: "nadrp_notepad.png",
     information: "Doodle on it or something smh",
     deg: false
 }
@@ -4664,7 +4664,7 @@ itemList["casing"] = {
     weight: 0,
     nonStack: true,
     model: "",
-    image: "ffrp_pistol-ammo.png",
+    image: "nadrp_pistol-ammo.png",
     deg: false
 }
 
@@ -4676,7 +4676,7 @@ itemList["certificate"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_certificate.png",
+    image: "nadrp_certificate.png",
     information: "You made it!",
     deg: false
 }
@@ -4688,7 +4688,7 @@ itemList["cgpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cg-papers.png",
+    image: "nadrp_cg-papers.png",
     information: "Wata woozers",
     deg: false
 }
@@ -4701,7 +4701,7 @@ itemList["chalice"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pimp-chalice.png",
+    image: "nadrp_pimp-chalice.png",
     information: "Morgan Freidmans Legendary Pimp Chalice.",
     deg: false
 }
@@ -4714,7 +4714,7 @@ itemList["champion"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_champion-belt.png",
+    image: "nadrp_champion-belt.png",
     information: "Money is in the rematch. Current Champion: Dale Bond",
     deg: false
 }
@@ -4726,7 +4726,7 @@ itemList["chestxray"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chest-xray.png",
+    image: "nadrp_chest-xray.png",
     information: "Argh...",
     deg: false
 }
@@ -4738,7 +4738,7 @@ itemList["chglass"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_champagne-glass.png",
+    image: "nadrp_champagne-glass.png",
     information: "To us",
     deg: false
 }
@@ -4750,7 +4750,7 @@ itemList["cigar"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cigar.png",
+    image: "nadrp_cigar.png",
     deg: false
 }
 itemList["ciggy"] = {
@@ -4761,7 +4761,7 @@ itemList["ciggy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cigarette.png",
+    image: "nadrp_cigarette.png",
     information: "Smoking Kills",
     deg: false
 }
@@ -4773,7 +4773,7 @@ itemList["civtrophy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_civ-trophy.png",
+    image: "nadrp_civ-trophy.png",
     information: "The greatest law-abiding citizen",
     deg: false
 }
@@ -4785,7 +4785,7 @@ itemList["ckatana"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cursed-katana.png",
+    image: "nadrp_cursed-katana.png",
     information: "Very honorable katana to slay Gojira",
     deg: false
 }
@@ -4797,7 +4797,7 @@ itemList["cleaninggoods"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_cleaning-goods.png",
+    image: "nadrp_cleaning-goods.png",
     deg: false
 }
 itemList["clotion"] = {
@@ -4808,7 +4808,7 @@ itemList["clotion"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cannabis-lotion.png",
+    image: "nadrp_cannabis-lotion.png",
     information: "Bro..duuudee..",
     deg: false
 }
@@ -4820,7 +4820,7 @@ itemList["clover"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_clover.png",
+    image: "nadrp_clover.png",
     information: "+255 Luck",
     deg: false
 }
@@ -4832,7 +4832,7 @@ itemList["clutch"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_clutch.png",
+    image: "nadrp_clutch.png",
     deg: false
 }
 
@@ -4844,7 +4844,7 @@ itemList["comp"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_composition.png",
+    image: "nadrp_composition.png",
     information: "What do you think it means?",
     deg: false
 }
@@ -4881,7 +4881,7 @@ itemList["coupon10"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_coupon-ten.png",
+    image: "nadrp_coupon-ten.png",
     information: "Limit only one per sale!",
     deg: false
 }
@@ -4893,7 +4893,7 @@ itemList["coupon15"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_coupon-fifteen.png",
+    image: "nadrp_coupon-fifteen.png",
     information: "Does not include jail time",
     deg: false
 }
@@ -4905,7 +4905,7 @@ itemList["coupon25"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_coupon-25.png",
+    image: "nadrp_coupon-25.png",
     information: "Expires 01/2045",
     deg: false
 }
@@ -4917,7 +4917,7 @@ itemList["cpelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cougar-pelt.png",
+    image: "nadrp_cougar-pelt.png",
     information: "The hunter becomes the hunted",
     deg: false
 }
@@ -4930,7 +4930,7 @@ itemList["crane"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_origami-crane.png",
+    image: "nadrp_origami-crane.png",
     information: "Gaff approved",
     deg: false
 }
@@ -4942,7 +4942,7 @@ itemList["csuey"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_chop-suey.png",
+    image: "nadrp_chop-suey.png",
     information: "Hopper 1929",
     deg: false
 }
@@ -4954,7 +4954,7 @@ itemList["ctooth"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cougar-tooth.png",
+    image: "nadrp_cougar-tooth.png",
     information: "Stalks its prey",
     deg: false
 }
@@ -4966,7 +4966,7 @@ itemList["ctrophy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cooking-trophy.png",
+    image: "nadrp_cooking-trophy.png",
     information: "Shokugeki victory",
     deg: false
 }
@@ -4982,7 +4982,7 @@ itemList["cuffs"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_hand-cuffs.png",
+    image: "nadrp_hand-cuffs.png",
     information: "Pink fluffy type ",
     deg: false
 }
@@ -4994,7 +4994,7 @@ itemList["cultneck"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_cult-necklace.png",
+    image: "nadrp_cult-necklace.png",
     information: "One of us...",
     deg: false
 }
@@ -5006,7 +5006,7 @@ itemList["dcboard"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_diamond-chessboard.png",
+    image: "nadrp_diamond-chessboard.png",
     information: "Deep Blue cant appreciate this",
     deg: false
 }
@@ -5018,7 +5018,7 @@ itemList["dcert"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_d-certificate.png",
+    image: "nadrp_d-certificate.png",
     information: "In memoriam",
     deg: false
 }
@@ -5030,7 +5030,7 @@ itemList["decrypterenzo"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_decrypter-enzo.png",
+    image: "nadrp_decrypter-enzo.png",
     deg: false
 }
 itemList["decrypterfv2"] = {
@@ -5041,7 +5041,7 @@ itemList["decrypterfv2"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_decrypter-fv2.png",
+    image: "nadrp_decrypter-fv2.png",
     deg: false
 }
 itemList["decryptersess"] = {
@@ -5052,7 +5052,7 @@ itemList["decryptersess"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_decrypter-sess.png",
+    image: "nadrp_decrypter-sess.png",
     deg: false
 }
 itemList["dhide"] = {
@@ -5063,7 +5063,7 @@ itemList["dhide"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_deer-hide.png",
+    image: "nadrp_deer-hide.png",
     information: "Call peta",
     deg: false
 }
@@ -5075,7 +5075,7 @@ itemList["diamondrec"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_diamond-record.png",
+    image: "nadrp_diamond-record.png",
     information: "10 Million units sold!!",
     deg: false
 }
@@ -5087,7 +5087,7 @@ itemList["dice"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dice.png",
+    image: "nadrp_dice.png",
     information: "Just takin out the trash",
     deg: false
 }
@@ -5099,7 +5099,7 @@ itemList["dodo"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dodo-statue.png",
+    image: "nadrp_dodo-statue.png",
     information: "Arent these extinct?",
     deg: false
 }
@@ -5111,7 +5111,7 @@ itemList["dodospit"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dodo-spit.png",
+    image: "nadrp_dodo-spit.png",
     information: "What the..why?!",
     deg: false
 }
@@ -5123,7 +5123,7 @@ itemList["doramaar"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dora-maar-auchat.png",
+    image: "nadrp_dora-maar-auchat.png",
     information: "Picasso 1941",
     deg: false
 }
@@ -5135,7 +5135,7 @@ itemList["dragon"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dragon.png",
+    image: "nadrp_dragon.png",
     information: "Hopefully its not useless like in GOT",
     deg: false
 }
@@ -5147,7 +5147,7 @@ itemList["dream"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dreamcatcher.png",
+    image: "nadrp_dreamcatcher.png",
     information: "Sleep well",
     deg: false
 }
@@ -5171,7 +5171,7 @@ itemList["drill"] = {
     nonStack: false,
     model: "",
     information: "Drill drill ",
-    image: "ffrp_drill.png",
+    image: "nadrp_drill.png",
     deg: false
 }
 itemList["drillbit"] = {
@@ -5182,7 +5182,7 @@ itemList["drillbit"] = {
     weight: 2,
     nonStack: false,
     model: "",
-    image: "ffrp_drill-bit.png",
+    image: "nadrp_drill-bit.png",
     deg: false
 }
 
@@ -5194,7 +5194,7 @@ itemList["drivingtest"] = {
     weight: 1,
     nonStack: true,
     model: "",
-    image: "ffrp_driving-test.png",
+    image: "nadrp_driving-test.png",
     deg: false
 }
 itemList["dskull"] = {
@@ -5205,7 +5205,7 @@ itemList["dskull"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_diamond-skull.png",
+    image: "nadrp_diamond-skull.png",
     information: "For the Love of God - Hirst 2007",
     deg: false
 }
@@ -5217,7 +5217,7 @@ itemList["DuffelBag"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_duffel.png",
+    image: "nadrp_duffel.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -5229,7 +5229,7 @@ itemList["dusche"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dusche-gold.png",
+    image: "nadrp_dusche-gold.png",
     information: "Let it pour",
     deg: false
 }
@@ -5241,7 +5241,7 @@ itemList["dye"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dye.png",
+    image: "nadrp_dye.png",
     deg: false
 }
 
@@ -5259,7 +5259,7 @@ itemList["electronickit"] = {
     nonStack: false,
     model: "",
     information: "Ha Voltage or something ",
-    image: "ffrp_electronic-kit.png",
+    image: "nadrp_electronic-kit.png",
     deg: false
 }
 itemList["emptybaggies"] = {
@@ -5270,7 +5270,7 @@ itemList["emptybaggies"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_pack-of-empty-baggies.png",
+    image: "nadrp_pack-of-empty-baggies.png",
     deg: false
 }
 itemList["enchiladas"] = {
@@ -5281,7 +5281,7 @@ itemList["enchiladas"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_enchiladas.png",
+    image: "nadrp_enchiladas.png",
     information: "Mas chile por favor",
     deg: false
 }
@@ -5293,7 +5293,7 @@ itemList["ering"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_engagement-ring.png",
+    image: "nadrp_engagement-ring.png",
     information: "Hope its a yes...",
     deg: false
 }
@@ -5305,7 +5305,7 @@ itemList["goldring"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_engagement-ring.png",
+    image: "nadrp_engagement-ring.png",
     information: "Savanna + Ford",
     deg: false
 }
@@ -5317,7 +5317,7 @@ itemList["goldring2"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_engagement-ring.png",
+    image: "nadrp_engagement-ring.png",
     information: "Roxxy",
     deg: false
 }
@@ -5330,7 +5330,7 @@ itemList["goldring3"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_engagement-ring.png",
+    image: "nadrp_engagement-ring.png",
     information: "Harlee + Kelly",
     deg: false
 }
@@ -5343,7 +5343,7 @@ itemList["goldring4"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp-ring.png",
+    image: "nadrp-ring.png",
     information: "Roxxy Frost + Rusty Frost | 05/01/2021",
     deg: false
 }
@@ -5356,7 +5356,7 @@ itemList["goldring5"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp-ring2.png",
+    image: "nadrp-ring2.png",
     information: "Roxxy Frost + Rusty Frost | 05/01/2021",
     deg: false
 }
@@ -5368,7 +5368,7 @@ itemList["evidence"] = {
     weight: 1,
     nonStack: true,
     model: "",
-    image: "ffrp_evidence.png",
+    image: "nadrp_evidence.png",
     deg: false
 }
 itemList["evidencebag"] = {
@@ -5379,7 +5379,7 @@ itemList["evidencebag"] = {
     weight: 0,
     nonStack: true,
     model: "",
-    image: "ffrp_evidence-bag.png",
+    image: "nadrp_evidence-bag.png",
     deg: false
 }
 itemList["faberge"] = {
@@ -5390,7 +5390,7 @@ itemList["faberge"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_faberge-egg.png",
+    image: "nadrp_faberge-egg.png",
     information: "Rockford Hills easter egg",
     deg: false
 }
@@ -5402,7 +5402,7 @@ itemList["failtest"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_failed-test.png",
+    image: "nadrp_failed-test.png",
     information: "Try again later",
     deg: false
 }
@@ -5418,7 +5418,7 @@ itemList["fakeplate"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_plate.png",
+    image: "nadrp_plate.png",
     information: "Use on a vehicle to alter its plate or change it back - 1 time use..",
     deg: false
 }
@@ -5430,7 +5430,7 @@ itemList["fbumper"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_front-bumper.png",
+    image: "nadrp_front-bumper.png",
     information: "Ill have the tuna, no crust",
     deg: false
 }
@@ -5442,7 +5442,7 @@ itemList["feathers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_feathers.png",
+    image: "nadrp_feathers.png",
     information: "Get plucked",
     deg: false
 }
@@ -5454,7 +5454,7 @@ itemList["femmes"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_les-femmes-dalger.png",
+    image: "nadrp_les-femmes-dalger.png",
     information: "Picasso 1955",
     deg: false
 }
@@ -5466,7 +5466,7 @@ itemList["fertilizer"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_fertilizer.png",
+    image: "nadrp_fertilizer.png",
     information: "Cool.",
     deg: false
 }
@@ -5478,7 +5478,7 @@ itemList["filetm"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_filet-mignon.png",
+    image: "nadrp_filet-mignon.png",
     information: "Succulent",
     deg: false
 }
@@ -5490,7 +5490,7 @@ itemList["flowers"] = {
     weight: 10,
     nonStack: false,
     model: "",
-    image: "ffrp_flowers.png",
+    image: "nadrp_flowers.png",
     information: "Wow, so beautiful.",
     deg: false
 }
@@ -5502,7 +5502,7 @@ itemList["flyer"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_flyer.png",
+    image: "nadrp_flyer.png",
     information: "Invite people to your business or event!",
     deg: false
 }
@@ -5514,7 +5514,7 @@ itemList["flyer"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_flyer.png",
+    image: "nadrp_flyer.png",
     information: "Invite people to your business or event!",
     deg: false
 }
@@ -5526,7 +5526,7 @@ itemList["frappuccino"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_frappuccino.png",
+    image: "nadrp_frappuccino.png",
     information: "Its like I have ESPN or something",
     deg: false
 }
@@ -5538,7 +5538,7 @@ itemList["frisbee"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_frisbee.png",
+    image: "nadrp_frisbee.png",
     information: "And she would throw it back to me",
     deg: false
 }
@@ -5550,7 +5550,7 @@ itemList["ftartlet"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_fruit-tartlet.png",
+    image: "nadrp_fruit-tartlet.png",
     information: "Flavorsome",
     deg: false
 }
@@ -5562,7 +5562,7 @@ itemList["ftoast"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_french-toast.png",
+    image: "nadrp_french-toast.png",
     information: "Delectable",
     deg: false
 }
@@ -5574,7 +5574,7 @@ itemList["fuse"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_fuse.png",
+    image: "nadrp_fuse.png",
     deg: false
 }
 itemList["gachet"] = {
@@ -5585,7 +5585,7 @@ itemList["gachet"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_portrait-of-drgachet.png",
+    image: "nadrp_portrait-of-drgachet.png",
     information: "Van Gogh 1890",
     deg: false
 }
@@ -5597,7 +5597,7 @@ itemList["glass"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glass.png",
+    image: "nadrp_glass.png",
     deg: false
 }
 itemList["glowing"] = {
@@ -5608,7 +5608,7 @@ itemList["glowing"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glowing-substance.png",
+    image: "nadrp_glowing-substance.png",
     information: "May cause unexpected mutations",
     deg: false
 }
@@ -5620,7 +5620,7 @@ itemList["glucose"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glucose.png",
+    image: "nadrp_glucose.png",
     information: "Mmmm Glucose.",
     deg: false
 }
@@ -5637,7 +5637,7 @@ itemList["goldbar"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_gold-bar.png",
+    image: "nadrp_gold-bar.png",
     deg: false
 }
 itemList["goldchip"] = {
@@ -5648,7 +5648,7 @@ itemList["goldchip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gold-chip.png",
+    image: "nadrp_gold-chip.png",
     information: "All in",
     deg: false
 }
@@ -5660,7 +5660,7 @@ itemList["goldcoin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gold-coin.png",
+    image: "nadrp_gold-coin.png",
     information: "Check inside for chocolate",
     deg: false
 }
@@ -5672,7 +5672,7 @@ itemList["goldrec"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gold-record.png",
+    image: "nadrp_gold-record.png",
     information: "500, 000 units sold",
     deg: false
 }
@@ -5684,7 +5684,7 @@ itemList["grandtete"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_grand-tete-mince.png",
+    image: "nadrp_grand-tete-mince.png",
     information: "Giacometti 1954",
     deg: false
 }
@@ -5696,7 +5696,7 @@ itemList["greekbust"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_greek-bust.png",
+    image: "nadrp_greek-bust.png",
     information: "You sure its Greek?",
     deg: false
 }
@@ -5708,7 +5708,7 @@ itemList["greenb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_green-bandana.png",
+    image: "nadrp_green-bandana.png",
     information: "Ay yo my mans",
     deg: false
 }
@@ -5720,7 +5720,7 @@ itemList["greenbelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_green-belt.png",
+    image: "nadrp_green-belt.png",
     information: "Adept Rank 2/4",
     deg: false
 }
@@ -5732,7 +5732,7 @@ itemList["greenchip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_green-chip.png",
+    image: "nadrp_green-chip.png",
     information: "Fold em",
     deg: false
 }
@@ -5847,7 +5847,7 @@ itemList["gsfpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gsf-papers.png",
+    image: "nadrp_gsf-papers.png",
     information: "Triple OG approved",
     deg: false
 }
@@ -5859,7 +5859,7 @@ itemList["gticket"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_golden-ticket.png",
+    image: "nadrp_golden-ticket.png",
     information: "Ask Coop",
     deg: false
 }
@@ -5871,7 +5871,7 @@ itemList["gum"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gum.png",
+    image: "nadrp_gum.png",
     information: "Release Gum. You chew, you suck then POW",
     deg: false
 }
@@ -5883,7 +5883,7 @@ itemList["hairtonic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_hair-tonic.png",
+    image: "nadrp_hair-tonic.png",
     information: "If youre malding try this",
     deg: false
 }
@@ -5899,7 +5899,7 @@ itemList["harness"] = {
     weight: 1,
     nonStack: true,
     model: "",
-    image: "ffrp_harness.png",
+    image: "nadrp_harness.png",
     information: "Stops you from being YEETED",
     deg: false
 }
@@ -5911,7 +5911,7 @@ itemList["heavycutters"] = {
     weight: 9,
     nonStack: false,
     model: "",
-    image: "ffrp_heavy-cutters.png",
+    image: "nadrp_heavy-cutters.png",
     deg: false
 }
 itemList["heavydutydrill"] = {
@@ -5932,7 +5932,7 @@ itemList["heavydutydrill"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_heavy-duty-drill.png",
+    image: "nadrp_heavy-duty-drill.png",
     deg: false
 }
 itemList["hlights"] = {
@@ -5943,7 +5943,7 @@ itemList["hlights"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_headlights.png",
+    image: "nadrp_headlights.png",
     information: "Cant detail a car with the cover on",
     deg: false
 }
@@ -5955,7 +5955,7 @@ itemList["holybook"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_holy-book.png",
+    image: "nadrp_holy-book.png",
     information: "For followers only...",
     deg: false
 }
@@ -5968,7 +5968,7 @@ itemList["holyhum"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_holy-hummus.png",
+    image: "nadrp_holy-hummus.png",
     information: "Praise be",
     deg: false
 }
@@ -5980,7 +5980,7 @@ itemList["homme"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lhomme-qui-marche.png",
+    image: "nadrp_lhomme-qui-marche.png",
     information: "Giacometti 1960",
     deg: false
 }
@@ -5992,7 +5992,7 @@ itemList["horchata"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_horchata.png",
+    image: "nadrp_horchata.png",
     information: "A la gran puchica!",
     deg: false
 }
@@ -6004,7 +6004,7 @@ itemList["icbelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_intercontinental-belt.png",
+    image: "nadrp_intercontinental-belt.png",
     information: "Bah gawd!",
     deg: false
 }
@@ -6016,7 +6016,7 @@ itemList["idcard"] = {
     weight: 0,
     nonStack: true,
     model: "",
-    image: "ffrp_citizen-card.png",
+    image: "nadrp_citizen-card.png",
     deg: false
 }
 itemList["IFAK"] = {
@@ -6040,7 +6040,7 @@ itemList["inkedmoneybag"] = {
     weight: 35,
     nonStack: false,
     model: "",
-    image: "ffrp_inked-money-bag.png",
+    image: "nadrp_inked-money-bag.png",
     information: "This belongs to the Vault Bank",
     deg: false
 }
@@ -6053,7 +6053,7 @@ itemList["inkset"] = {
     weight: 15,
     nonStack: false,
     model: "",
-    image: "ffrp_inked-money-bag.png",
+    image: "nadrp_inked-money-bag.png",
     deg: false
 }
 itemList["ironoxide"] = {
@@ -6064,7 +6064,7 @@ itemList["ironoxide"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_iron-oxide.png",
+    image: "nadrp_iron-oxide.png",
     deg: false
 }
 itemList["jadeite"] = {
@@ -6075,7 +6075,7 @@ itemList["jadeite"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_jadeite-stone.png",
+    image: "nadrp_jadeite-stone.png",
     information: "With envy",
     deg: false
 }
@@ -6087,7 +6087,7 @@ itemList["joker"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_joker.png",
+    image: "nadrp_joker.png",
     information: "How bout a magic trick?",
     deg: false
 }
@@ -6099,7 +6099,7 @@ itemList["katana"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_katana.png",
+    image: "nadrp_katana.png",
     information: "Steel folded over 1000 times",
     deg: false
 }
@@ -6111,7 +6111,7 @@ itemList["key1"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_key1.png",
+    image: "nadrp_key1.png",
     information: "Numbered Key",
     deg: false
 }
@@ -6123,7 +6123,7 @@ itemList["key2"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_key2.png",
+    image: "nadrp_key2.png",
     information: "Numbered Key",
     deg: false
 }
@@ -6135,7 +6135,7 @@ itemList["key3"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_key3.png",
+    image: "nadrp_key3.png",
     information: "Numbered Key",
     deg: false
 }
@@ -6147,7 +6147,7 @@ itemList["keya"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_keya.png",
+    image: "nadrp_keya.png",
     information: "Lettered Key",
     deg: false
 }
@@ -6159,7 +6159,7 @@ itemList["keyb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_keyb.png",
+    image: "nadrp_keyb.png",
     information: "Lettered Key",
     deg: false
 }
@@ -6171,7 +6171,7 @@ itemList["keyc"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_keyc.png",
+    image: "nadrp_keyc.png",
     information: "Lettered Key",
     deg: false
 }
@@ -6183,7 +6183,7 @@ itemList["latte"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_latte.png",
+    image: "nadrp_latte.png",
     information: "Thats so fetch",
     deg: false
 }
@@ -6195,7 +6195,7 @@ itemList["lbpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lb-papers.png",
+    image: "nadrp_lb-papers.png",
     information: "I plead guilty mon",
     deg: false
 }
@@ -6207,7 +6207,7 @@ itemList["lighter"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lighter.png",
+    image: "nadrp_lighter.png",
     information: "Dont start a fire with this. ",
     deg: false
 }
@@ -6229,7 +6229,7 @@ itemList["lockpick"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_lockpick-set.png",
+    image: "nadrp_lockpick-set.png",
     deg: false
 }
 itemList["locksystem"] = {
@@ -6253,7 +6253,7 @@ itemList["log"] = {
     weight: 2,
     nonStack: false,
     model: "",
-    image: "ffrp_wood.png",
+    image: "nadrp_wood.png",
     deg: false
 }
 itemList["logger"] = {
@@ -6264,7 +6264,7 @@ itemList["logger"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_logger-beer.png",
+    image: "nadrp_logger-beer.png",
     information: "Ming Ha Ling Bev. 2013",
     deg: false
 }
@@ -6276,7 +6276,7 @@ itemList["lostcut"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter",
     deg: false
 }
@@ -6288,7 +6288,7 @@ itemList["lostcut_aw"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of BJ",
     deg: false
 }
@@ -6300,7 +6300,7 @@ itemList["lostcut_cc"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Cooch Cassidy",
     deg: false
 }
@@ -6312,7 +6312,7 @@ itemList["lostcut_cs"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Catherine Scratch",
     deg: false
 }
@@ -6324,7 +6324,7 @@ itemList["lostcut_ga"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Gary Adams",
     deg: false
 }
@@ -6336,7 +6336,7 @@ itemList["lostcut_gm"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Gazza Maloo",
     deg: false
 }
@@ -6348,7 +6348,7 @@ itemList["lostcut_gs"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Greyson Sparks",
     deg: false
 }
@@ -6360,7 +6360,7 @@ itemList["lostcut_jp"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Jason Paul",
     deg: false
 }
@@ -6372,7 +6372,7 @@ itemList["lostcut_ng"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Negan Graham",
     deg: false
 }
@@ -6384,7 +6384,7 @@ itemList["lostcut_rc"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Reginald Campbell",
     deg: false
 }
@@ -6396,7 +6396,7 @@ itemList["lostcut_rd"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Reid Dankleaf",
     deg: false
 }
@@ -6408,7 +6408,7 @@ itemList["lostcut_rr"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Rudi Rinsen",
     deg: false
 }
@@ -6420,7 +6420,7 @@ itemList["lostcut_so"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Samuel O'Faolain",
     deg: false
 }
@@ -6432,7 +6432,7 @@ itemList["lostcut_vm"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Victor Mason",
     deg: false
 }
@@ -6444,7 +6444,7 @@ itemList["lostcut_wd"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-cut.png",
+    image: "nadrp_lost-cut.png",
     information: "Sandy Shores Chapter<br />Property of Wyatt Derp",
     deg: false
 }
@@ -6456,7 +6456,7 @@ itemList["lostpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_lost-papers.png",
+    image: "nadrp_lost-papers.png",
     information: "Does not work with meth",
     deg: false
 }
@@ -6468,7 +6468,7 @@ itemList["lotion"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_hand-lotion.png",
+    image: "nadrp_hand-lotion.png",
     information: "My hands are dry I swear",
     deg: false
 }
@@ -6480,7 +6480,7 @@ itemList["lspapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ls-papers.png",
+    image: "nadrp_ls-papers.png",
     information: "The city with the safest banks",
     deg: false
 }
@@ -6492,7 +6492,7 @@ itemList["madamelr"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_madame-lr.png",
+    image: "nadrp_madame-lr.png",
     information: "Brancusi 1918",
     deg: false
 }
@@ -6504,7 +6504,7 @@ itemList["maneki"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_maneki-neko.png",
+    image: "nadrp_maneki-neko.png",
     information: "Good fortune beckons",
     deg: false
 }
@@ -6517,7 +6517,7 @@ itemList["markedbills"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_inked-money-bag.png",
+    image: "nadrp_inked-money-bag.png",
     deg: false
 }
 itemList["martini"] = {
@@ -6528,7 +6528,7 @@ itemList["martini"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_martini.png",
+    image: "nadrp_martini.png",
     information: "Shaken, not stirred",
     deg: false
 }
@@ -6540,7 +6540,7 @@ itemList["mdiptych"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_marilyn-diptych.png",
+    image: "nadrp_marilyn-diptych.png",
     information: "Warhol 1962",
     deg: false
 }
@@ -6552,7 +6552,7 @@ itemList["MedicalBag"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_medbag.png",
+    image: "nadrp_medbag.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -6564,7 +6564,7 @@ itemList["Galaxy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_medbag.png",
+    image: "nadrp_medbag.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -6576,7 +6576,7 @@ itemList["mfalcon"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_maltese-falcon.png",
+    image: "nadrp_maltese-falcon.png",
     information: "Highly prized movie prop",
     deg: false
 }
@@ -6588,7 +6588,7 @@ itemList["misfit"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_headphones.png",
+    image: "nadrp_headphones.png",
     information: "We out here cuh",
     deg: false
 }
@@ -6600,7 +6600,7 @@ itemList["mixtape"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_mixtape.png",
+    image: "nadrp_mixtape.png",
     information: "Check it, yo",
     deg: false
 }
@@ -6612,7 +6612,7 @@ itemList["mk2usbdevice"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_mkii-usb-device.png",
+    image: "nadrp_mkii-usb-device.png",
     deg: false
 }
 itemList["mobilephone"] = {
@@ -6623,7 +6623,7 @@ itemList["mobilephone"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_phone.png",
+    image: "nadrp_phone.png",
     deg: false
 }
 itemList["monalisa"] = {
@@ -6634,7 +6634,7 @@ itemList["monalisa"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_mona-lisa.png",
+    image: "nadrp_mona-lisa.png",
     information: "Da Vinci 1517",
     deg: false
 }
@@ -6646,7 +6646,7 @@ itemList["moneyshot"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_money-shot.png",
+    image: "nadrp_money-shot.png",
     information: "Sates Hunger and reduces stress.",
     deg: false
 }
@@ -6658,7 +6658,7 @@ itemList["moonshine"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_moonshine-jug.png",
+    image: "nadrp_moonshine-jug.png",
     information: "Using the same jugs since 1910",
     deg: false
 }
@@ -6670,7 +6670,7 @@ itemList["moonshinej"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_jar-of-moonshine.png",
+    image: "nadrp_jar-of-moonshine.png",
     information: "Almost paint thinner",
     deg: false
 }
@@ -6682,7 +6682,7 @@ itemList["mtrophy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_mic-trophy.png",
+    image: "nadrp_mic-trophy.png",
     information: "A star is born",
     deg: false
 }
@@ -6694,7 +6694,7 @@ itemList["muffin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_muffin.png",
+    image: "nadrp_muffin.png",
     information: "Is your muffin buttered?",
     deg: false
 }
@@ -6706,7 +6706,7 @@ itemList["mugbeer"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_mug-of-beer.png",
+    image: "nadrp_mug-of-beer.png",
     information: "Cheers!",
     deg: false
 }
@@ -6718,7 +6718,7 @@ itemList["mvial"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_mysterious-vial.png",
+    image: "nadrp_mysterious-vial.png",
     information: "Do not drink",
     deg: false
 }
@@ -6730,7 +6730,7 @@ itemList["nachos"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_nachos.png",
+    image: "nadrp_nachos.png",
     information: "Delicioso",
     deg: false
 }
@@ -6742,7 +6742,7 @@ itemList["negg"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_napoleonic-egg.png",
+    image: "nadrp_napoleonic-egg.png",
     information: "Faberge Series (2/3)",
     deg: false
 }
@@ -6758,7 +6758,7 @@ itemList["nitrous"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_nitrous-oxide.png",
+    image: "nadrp_nitrous-oxide.png",
     deg: false
 }
 itemList["nmenu"] = {
@@ -6769,7 +6769,7 @@ itemList["nmenu"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_nanakaze-menu.png",
+    image: "nadrp_nanakaze-menu.png",
     information: "Take a look feller",
     deg: false
 }
@@ -6781,7 +6781,7 @@ itemList["no10"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_no10.png",
+    image: "nadrp_no10.png",
     information: "Rothko 1950",
     deg: false
 }
@@ -6793,7 +6793,7 @@ itemList["no5"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_no5.png",
+    image: "nadrp_no5.png",
     information: "Pollock 1948",
     deg: false
 }
@@ -6805,7 +6805,7 @@ itemList["oil"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_oil.png",
+    image: "nadrp_oil.png",
     deg: false
 }
 itemList["okaylockpick"] = {
@@ -6820,7 +6820,7 @@ itemList["okaylockpick"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shitlockpick.png",
+    image: "nadrp_shitlockpick.png",
     information: "TBH its still shit, so shit its almost identical... almost.",
     deg: false
 } //'Heavy Shotgun'
@@ -6832,7 +6832,7 @@ itemList["onigiri"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_onigiri.png",
+    image: "nadrp_onigiri.png",
     information: "Delicious rice balls",
     deg: false
 }
@@ -6848,7 +6848,7 @@ itemList["onion"] = {
     weight: 12,
     nonStack: false,
     model: "",
-    image: "ffrp_onion.png",
+    image: "nadrp_onion.png",
     information: "Are your eyes watering?",
     deg: false
 }
@@ -6864,7 +6864,7 @@ itemList["bun"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_bun.png",
+    image: "nadrp_bun.png",
     deg: false
 }
 
@@ -6880,7 +6880,7 @@ itemList["lettuce"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_lettuce.png",
+    image: "nadrp_lettuce.png",
     deg: false
 }
 
@@ -6896,7 +6896,7 @@ itemList["ketchup"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_ketchup.png",
+    image: "nadrp_ketchup.png",
     deg: false
 }
 
@@ -6912,7 +6912,7 @@ itemList["cheddar"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_cheddar.png",
+    image: "nadrp_cheddar.png",
     deg: false
 }
 
@@ -6928,7 +6928,7 @@ itemList["mayo"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_mayo.png",
+    image: "nadrp_mayo.png",
     deg: false
 }
 
@@ -6944,7 +6944,7 @@ itemList["patty"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_patty.png",
+    image: "nadrp_patty.png",
     deg: false
 }
 
@@ -6960,7 +6960,7 @@ itemList["cookedpatty"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_pattyc.png",
+    image: "nadrp_pattyc.png",
     deg: false
 }
 
@@ -6976,7 +6976,7 @@ itemList["cookedvpatty"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_pattyv.png",
+    image: "nadrp_pattyv.png",
     deg: false
 }
 
@@ -6993,7 +6993,7 @@ itemList["frozenfries"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_friesf.png",
+    image: "nadrp_friesf.png",
     deg: false
 }
 
@@ -7016,7 +7016,7 @@ itemList["oxygentank"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_oxygen-tank.png",
+    image: "nadrp_oxygen-tank.png",
     deg: false
 }
 itemList["pallet"] = {
@@ -7027,7 +7027,7 @@ itemList["pallet"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pallet-of-boxes.png",
+    image: "nadrp_pallet-of-boxes.png",
     information: "Transportable goods",
     deg: false
 }
@@ -7039,7 +7039,7 @@ itemList["passtest"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_passed-test.png",
+    image: "nadrp_passed-test.png",
     information: "Excellent work",
     deg: false
 }
@@ -7051,7 +7051,7 @@ itemList["paynepic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_payne-portrait.png",
+    image: "nadrp_payne-portrait.png",
     information: "Cue tongue pop",
     deg: false
 }
@@ -7063,7 +7063,7 @@ itemList["pearlneck"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_dragon",
+    image: "nadrp_dragon",
     information: "Good way to finish a date",
     deg: false
 }
@@ -7075,7 +7075,7 @@ itemList["pegg"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pink-faberge-egg.png",
+    image: "nadrp_pink-faberge-egg.png",
     information: "Faberge Series (3/3)",
     deg: false
 }
@@ -7087,7 +7087,7 @@ itemList["petchicken"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pet-chicken.png",
+    image: "nadrp_pet-chicken.png",
     information: "Careful around Cluckin Bell",
     deg: false
 }
@@ -7099,7 +7099,7 @@ itemList["petfish"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pet-fish.png",
+    image: "nadrp_pet-fish.png",
     information: "Gold fish memory",
     deg: false
 }
@@ -7111,7 +7111,7 @@ itemList["petrock"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pet-rock.png",
+    image: "nadrp_pet-rock.png",
     information: "You dont even have to feed it",
     deg: false
 }
@@ -7136,7 +7136,7 @@ itemList["petturtle"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pet-turtle.png",
+    image: "nadrp_pet-turtle.png",
     information: "Cowabunga",
     deg: false
 }
@@ -7150,7 +7150,7 @@ itemList["pix1"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_decrypter-fv2.png",
+    image: "nadrp_decrypter-fv2.png",
     deg: false
 }
 itemList["pix2"] = {
@@ -7162,7 +7162,7 @@ itemList["pix2"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_decrypter-enzo.png",
+    image: "nadrp_decrypter-enzo.png",
     deg: false
 }
 
@@ -7174,7 +7174,7 @@ itemList["platinumrec"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_platinum-record.png",
+    image: "nadrp_platinum-record.png",
     information: "1 Million units sold!",
     deg: false
 }
@@ -7186,7 +7186,7 @@ itemList["popsicle"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_popsicle.png",
+    image: "nadrp_popsicle.png",
     information: "Is that sea salt?",
     deg: false
 }
@@ -7198,7 +7198,7 @@ itemList["portal"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_portal.png",
+    image: "nadrp_portal.png",
     information: "Paden 2012",
     deg: false
 }
@@ -7210,7 +7210,7 @@ itemList["ppapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_prison-papers.png",
+    image: "nadrp_prison-papers.png",
     information: "Dont ask where its been...",
     deg: false
 }
@@ -7222,7 +7222,7 @@ itemList["pupusas"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pupusas.png",
+    image: "nadrp_pupusas.png",
     information: "Mas curtido vos",
     deg: false
 }
@@ -7234,7 +7234,7 @@ itemList["purpleb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_purple-bandana.png",
+    image: "nadrp_purple-bandana.png",
     information: "Straight outta da cul-de-sac",
     deg: false
 }
@@ -7246,7 +7246,7 @@ itemList["qhearts"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_queen-of-hearts.png",
+    image: "nadrp_queen-of-hearts.png",
     information: "Off with their heads!",
     deg: false
 }
@@ -7290,7 +7290,7 @@ itemList["radio"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_radio.png",
+    image: "nadrp_radio.png",
     information: "Used to chat with other people on private radio channels.",
     deg: false
 }
@@ -7312,7 +7312,7 @@ itemList["radio2"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_radio.png",
+    image: "nadrp_radio.png",
     information: "Used to chat with other people on private radio channels.",
     deg: false
 }
@@ -7324,7 +7324,7 @@ itemList["rbumper"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rear-bumper.png",
+    image: "nadrp_rear-bumper.png",
     information: "You owe me a ten second car",
     deg: false
 }
@@ -7336,7 +7336,7 @@ itemList["recoupon10"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_recoupon10.png",
+    image: "nadrp_recoupon10.png",
     information: "May not be used for drugs",
     deg: false
 }
@@ -7348,7 +7348,7 @@ itemList["recoupon15"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_recoupon15.png",
+    image: "nadrp_recoupon15.png",
     information: "We are not liable for any raids or robberies",
     deg: false
 }
@@ -7360,7 +7360,7 @@ itemList["recoupon20"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_coupon-25.png",
+    image: "nadrp_coupon-25.png",
     information: "May or may not be exchanged for a hug from Mr.Ford",
     deg: false
 }
@@ -7372,7 +7372,7 @@ itemList["recoupon5"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_recoupon5.png",
+    image: "nadrp_recoupon5.png",
     information: "Southside shootings are complimentary",
     deg: false
 }
@@ -7384,7 +7384,7 @@ itemList["recyclablematerial"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_recyclable-material.png",
+    image: "nadrp_recyclable-material.png",
     deg: false
 }
 itemList["redb"] = {
@@ -7395,7 +7395,7 @@ itemList["redb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_red-bandana.png",
+    image: "nadrp_red-bandana.png",
     information: "Lean with me",
     deg: false
 }
@@ -7407,7 +7407,7 @@ itemList["redbelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_red-belt.png",
+    image: "nadrp_red-belt.png",
     information: "Expert Rank 3/4",
     deg: false
 }
@@ -7419,7 +7419,7 @@ itemList["redchip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_red-chip.png",
+    image: "nadrp_red-chip.png",
     information: "Calling your bluff",
     deg: false
 }
@@ -7431,7 +7431,7 @@ itemList["redpack"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_redwood-pack.png",
+    image: "nadrp_redwood-pack.png",
     information: "I can stop anytime",
     deg: false
 }
@@ -7443,7 +7443,7 @@ itemList["refinedwood"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_wood.png",
+    image: "nadrp_wood.png",
     deg: false
 }
 itemList["repairtoolkit"] = {
@@ -7464,7 +7464,7 @@ itemList["repairtoolkit"] = {
     weight: 15,
     nonStack: false,
     model: "",
-    image: "ffrp_repair-toolkit.png",
+    image: "nadrp_repair-toolkit.png",
     information: "Used by Tow Truck drivers and repair people.",
     deg: false
 }
@@ -7486,7 +7486,7 @@ itemList["rifleammo"] = {
     weight: 7,
     nonStack: false,
     model: "",
-    image: "ffrp_rifle-ammo.png",
+    image: "nadrp_rifle-ammo.png",
     deg: false
 }
 itemList["riflebody"] = {
@@ -7497,7 +7497,7 @@ itemList["riflebody"] = {
     weight: 10,
     nonStack: false,
     model: "",
-    image: "ffrp_rifle-body.png",
+    image: "nadrp_rifle-body.png",
     deg: false
 }
 itemList["riflebodybox"] = {
@@ -7508,7 +7508,7 @@ itemList["riflebodybox"] = {
     weight: 85,
     nonStack: false,
     model: "",
-    image: "ffrp_rifle-box.png",
+    image: "nadrp_rifle-box.png",
     deg: false
 }
 itemList["rims"] = {
@@ -7519,7 +7519,7 @@ itemList["rims"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_racing-rims.png",
+    image: "nadrp_racing-rims.png",
     information: "Best rims for the job",
     deg: false
 }
@@ -7531,7 +7531,7 @@ itemList["rnovel"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_romance-novel.png",
+    image: "nadrp_romance-novel.png",
     information: "A hurricane of passion",
     deg: false
 }
@@ -7543,7 +7543,7 @@ itemList["rolexwatch"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rolex-watch.png",
+    image: "nadrp_rolex-watch.png",
     deg: false
 }
 itemList["sheriffb"] = {
@@ -7554,7 +7554,7 @@ itemList["sheriffb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sheriffb.png",
+    image: "nadrp_sheriffb.png",
     information: "If found Return to Sheriff Henrikson",
     deg: false
 }
@@ -7566,7 +7566,7 @@ itemList["rollingpaper"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rolling-paper.png",
+    image: "nadrp_rolling-paper.png",
     information: "Required to roll dem joints!",
     deg: false
 }
@@ -7578,7 +7578,7 @@ itemList["rooster"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rooster-pin.png",
+    image: "nadrp_rooster-pin.png",
     information: "With egg in hand...",
     deg: false
 }
@@ -7590,7 +7590,7 @@ itemList["rose"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rose.png",
+    image: "nadrp_rose.png",
     information: "Cue dramatic monologue",
     deg: false
 }
@@ -7602,7 +7602,7 @@ itemList["rpelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_rabbit-pelt.png",
+    image: "nadrp_rabbit-pelt.png",
     information: "Magdumping ruins the pelt",
     deg: false
 }
@@ -7614,7 +7614,7 @@ itemList["rtrophy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_racing-trophy.png",
+    image: "nadrp_racing-trophy.png",
     information: "All I do is win",
     deg: false
 }
@@ -7626,7 +7626,7 @@ itemList["ruby"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ruby.png",
+    image: "nadrp_ruby.png",
     information: "Like a sunrise",
     deg: false
 }
@@ -7638,7 +7638,7 @@ itemList["russian"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_matryoshka-doll.png",
+    image: "nadrp_matryoshka-doll.png",
     information: "If he dies, he dies, cyka.",
     deg: false
 }
@@ -7650,7 +7650,7 @@ itemList["sake"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sake.png",
+    image: "nadrp_sake.png",
     information: "Kampai!",
     deg: false
 }
@@ -7662,7 +7662,7 @@ itemList["salvator"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_salvator-mundi.png",
+    image: "nadrp_salvator-mundi.png",
     information: "Da Vinci 1500",
     deg: false
 }
@@ -7674,7 +7674,7 @@ itemList["sbsxray"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sbs-xray.png",
+    image: "nadrp_sbs-xray.png",
     information: "Warlord size",
     deg: false
 }
@@ -7696,7 +7696,7 @@ itemList["scanner"] = {
     weight: 15,
     nonStack: false,
     model: "",
-    image: "ffrp_radio-scanner.png",
+    image: "nadrp_radio-scanner.png",
     information: "Used to receive random radio chatter.",
     deg: false
 }
@@ -7708,7 +7708,7 @@ itemList["scissors"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_scissors.png",
+    image: "nadrp_scissors.png",
     information: "Fuck me up fam",
     deg: false
 }
@@ -7720,7 +7720,7 @@ itemList["scoin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_secret-coin.png",
+    image: "nadrp_secret-coin.png",
     information: "Ens causa sui",
     deg: false
 }
@@ -7732,7 +7732,7 @@ itemList["scream"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_the-scream.png",
+    image: "nadrp_the-scream.png",
     information: "Munch 1893",
     deg: false
 }
@@ -7744,7 +7744,7 @@ itemList["screen"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_screen.png",
+    image: "nadrp_screen.png",
     deg: false
 }
 itemList["scripted"] = {
@@ -7755,7 +7755,7 @@ itemList["scripted"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_script.png",
+    image: "nadrp_script.png",
     information: "Scripted? Reee",
     deg: false
 }
@@ -7767,7 +7767,7 @@ itemList["sealedbucket"] = {
     weight: 1,
     nonStack: true,
     model: "",
-    image: "ffrp_sealed-bucket.png",
+    image: "nadrp_sealed-bucket.png",
     deg: false
 }
 itemList["sealedevidencebag"] = {
@@ -7778,7 +7778,7 @@ itemList["sealedevidencebag"] = {
     weight: 0,
     nonStack: true,
     model: "",
-    image: "ffrp_sealed-evidence-bag.png",
+    image: "nadrp_sealed-evidence-bag.png",
     deg: false
 }
 itemList["seat"] = {
@@ -7789,7 +7789,7 @@ itemList["seat"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_seat.png",
+    image: "nadrp_seat.png",
     information: "Only for the most hardcore of racers",
     deg: false
 }
@@ -7801,7 +7801,7 @@ itemList["secretfile"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_secret-file.png",
+    image: "nadrp_secret-file.png",
     information: "High level clearance required",
     deg: false
 }
@@ -7839,7 +7839,7 @@ itemList["SecurityCase"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_securitycase.png",
+    image: "nadrp_securitycase.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -7903,7 +7903,7 @@ itemList["sfinger"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_severed-finger.png",
+    image: "nadrp_severed-finger.png",
     information: "Now we're even",
     deg: false
 }
@@ -7915,7 +7915,7 @@ itemList["sgrace"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_saying-grace.png",
+    image: "nadrp_saying-grace.png",
     information: "Rockwell 1951",
     deg: false
 }
@@ -7927,7 +7927,7 @@ itemList["shampoo"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shampoo.png",
+    image: "nadrp_shampoo.png",
     information: "Full of body and volume",
     deg: false
 }
@@ -7939,7 +7939,7 @@ itemList["shearsoj"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shears-of-justice.png",
+    image: "nadrp_shears-of-justice.png",
     information: "Justice prevails",
     deg: false
 }
@@ -7951,7 +7951,7 @@ itemList["shipbox"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shipping-box.png",
+    image: "nadrp_shipping-box.png",
     information: "Free 2day shipping",
     deg: false
 }
@@ -7963,7 +7963,7 @@ itemList["shipcrate"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shipping-crate.png",
+    image: "nadrp_shipping-crate.png",
     information: "This side up",
     deg: false
 }
@@ -7979,7 +7979,7 @@ itemList["shitlockpick"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_shitlockpick.png",
+    image: "nadrp_shitlockpick.png",
     information: "-5 Jail <br> -3 Strength <br> +3 Intelligence <br> Why the fuck is this so heavy? <br> If it has roleplay stats, it must be roleplay.",
     deg: false
 } //'Heavy Shotgun'
@@ -7991,7 +7991,7 @@ itemList["silvercoin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_silver-coin.png",
+    image: "nadrp_silver-coin.png",
     information: "Dont lose it",
     deg: false
 }
@@ -8004,7 +8004,7 @@ itemList["slushy"] = {
     weight: 15,
     nonStack: false,
     model: "",
-    image: "ffrp_slushy.png",
+    image: "nadrp_slushy.png",
     information: "-5 Jail <br> +5 Charisma <br> The only thing in Jail that tastes good. <br> If it has roleplay stats, it must be roleplay. ",
     deg: false
 }
@@ -8026,7 +8026,7 @@ itemList["smallscales"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_small-scale.png",
+    image: "nadrp_small-scale.png",
     information: "Weighs Baggies with minimal loss",
     deg: false
 }
@@ -8038,7 +8038,7 @@ itemList["smirror"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_side-mirror.png",
+    image: "nadrp_side-mirror.png",
     information: "On green, I'm going for it",
     deg: false
 }
@@ -8050,7 +8050,7 @@ itemList["snakeskin"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_snakeskin.png",
+    image: "nadrp_snakeskin.png",
     information: "Sssss",
     deg: false
 }
@@ -8062,7 +8062,7 @@ itemList["snowpic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_snow-photo.png",
+    image: "nadrp_snow-photo.png",
     information: "My beloved Jacqueline Snow",
     deg: false
 }
@@ -8074,7 +8074,7 @@ itemList["snowvhs"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_snow-vhs.png",
+    image: "nadrp_snow-vhs.png",
     information: "Filmed On the Samsung flip phone from 2003 this high quality boomer production value will have you questioning.... Is that a dick?",
     deg: false
 }
@@ -8086,7 +8086,7 @@ itemList["sound"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sound-system.png",
+    image: "nadrp_sound-system.png",
     information: "Makes your ears bleed",
     deg: false
 }
@@ -8098,7 +8098,7 @@ itemList["sozepic"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_soze-photo.png",
+    image: "nadrp_soze-photo.png",
     information: "The State PO-lice's finest",
     deg: false
 }
@@ -8110,7 +8110,7 @@ itemList["spoiler"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_spoiler.png",
+    image: "nadrp_spoiler.png",
     information: "Quarter mile at a time",
     deg: false
 }
@@ -8122,7 +8122,7 @@ itemList["sprunk"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sprunk.png",
+    image: "nadrp_sprunk.png",
     information: "The Essence of Life",
     deg: false
 }
@@ -8134,7 +8134,7 @@ itemList["sskirts"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_side-skirts.png",
+    image: "nadrp_side-skirts.png",
     information: "Ride or die, remember?",
     deg: false
 }
@@ -8146,7 +8146,7 @@ itemList["starrynight"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_starry-night.png",
+    image: "nadrp_starry-night.png",
     information: "Neither ear nor there",
     deg: false
 }
@@ -8158,7 +8158,7 @@ itemList["stolen10ctchain"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_10ct-gold-chain.png",
+    image: "nadrp_10ct-gold-chain.png",
     deg: false
 }
 itemList["stolen2ctchain"] = {
@@ -8169,7 +8169,7 @@ itemList["stolen2ctchain"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_2ct-gold-chain.png",
+    image: "nadrp_2ct-gold-chain.png",
     deg: false
 }
 itemList["stolen5ctchain"] = {
@@ -8180,7 +8180,7 @@ itemList["stolen5ctchain"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_5ct-gold-chain.png",
+    image: "nadrp_5ct-gold-chain.png",
     deg: false
 }
 itemList["stolen8ctchain"] = {
@@ -8191,7 +8191,7 @@ itemList["stolen8ctchain"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_8ct-gold-chain.png",
+    image: "nadrp_8ct-gold-chain.png",
     deg: false
 }
 itemList["stolencasiowatch"] = {
@@ -8202,7 +8202,7 @@ itemList["stolencasiowatch"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_casio-watch.png",
+    image: "nadrp_casio-watch.png",
     deg: false
 }
 itemList["stolengameboy"] = {
@@ -8213,7 +8213,7 @@ itemList["stolengameboy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_gameboy.png",
+    image: "nadrp_gameboy.png",
     deg: false
 }
 itemList["stoleniphone"] = {
@@ -8224,7 +8224,7 @@ itemList["stoleniphone"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_apple-iphone.png",
+    image: "nadrp_apple-iphone.png",
     deg: false
 }
 itemList["stolennokia"] = {
@@ -8235,7 +8235,7 @@ itemList["stolennokia"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_nokia-phone.png",
+    image: "nadrp_nokia-phone.png",
     deg: false
 }
 itemList["stolenoakleys"] = {
@@ -8246,10 +8246,10 @@ itemList["stolenoakleys"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_oakley-sunglesses.png",
+    image: "nadrp_oakley-sunglesses.png",
     deg: false
 }
-itemList["stoleffrpixel3"] = {
+itemList["stolenadrpixel3"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Pixel 3 Phone",
@@ -8257,10 +8257,10 @@ itemList["stoleffrpixel3"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_pixel-2-phone.png",
+    image: "nadrp_pixel-2-phone.png",
     deg: false
 }
-itemList["stoleffrpsp"] = {
+itemList["stolenadrpsp"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "PSP",
@@ -8268,7 +8268,7 @@ itemList["stoleffrpsp"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_psp.png",
+    image: "nadrp_psp.png",
     deg: false
 }
 itemList["stolenraybans"] = {
@@ -8279,7 +8279,7 @@ itemList["stolenraybans"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_raybans.png",
+    image: "nadrp_raybans.png",
     deg: false
 }
 itemList["stolens8"] = {
@@ -8290,7 +8290,7 @@ itemList["stolens8"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_samsung-s8.png",
+    image: "nadrp_samsung-s8.png",
     deg: false
 }
 itemList["stooth"] = {
@@ -8301,7 +8301,7 @@ itemList["stooth"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_shark-tooth.png",
+    image: "nadrp_shark-tooth.png",
     information: "Gonna need a bigger boat",
     deg: false
 }
@@ -8313,7 +8313,7 @@ itemList["Suitcase"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_suitcase.png",
+    image: "nadrp_suitcase.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -8325,7 +8325,7 @@ itemList["sunflower"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_sunflower.png",
+    image: "nadrp_sunflower.png",
     information: "Super effective vs zombies",
     deg: false
 }
@@ -8337,7 +8337,7 @@ itemList["swheel"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_steering-wheel.png",
+    image: "nadrp_steering-wheel.png",
     information: "Winning is winning...",
     deg: false
 }
@@ -8349,7 +8349,7 @@ itemList["tagbelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tag-team-belt.png",
+    image: "nadrp_tag-team-belt.png",
     information: "Off the turbuckle",
     deg: false
 }
@@ -8361,7 +8361,7 @@ itemList["tbag"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_transport-bag.png",
+    image: "nadrp_transport-bag.png",
     information: "Keeping your organs fresh",
     deg: false
 }
@@ -8373,7 +8373,7 @@ itemList["tbear"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_teddy-bear.png",
+    image: "nadrp_teddy-bear.png",
     information: "Hug me",
     deg: false
 }
@@ -8385,7 +8385,7 @@ itemList["tealb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_teal-bandana.png",
+    image: "nadrp_teal-bandana.png",
     information: "Simon ese",
     deg: false
 }
@@ -8397,7 +8397,7 @@ itemList["telvis"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_triple-elvis.png",
+    image: "nadrp_triple-elvis.png",
     information: "Warhol 1963",
     deg: false
 }
@@ -8409,7 +8409,7 @@ itemList["textbooka"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_textbook-a.png",
+    image: "nadrp_textbook-a.png",
     information: "Buy new of course",
     deg: false
 }
@@ -8431,7 +8431,7 @@ itemList["thermite"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_thermite.png",
+    image: "nadrp_thermite.png",
     deg: false
 }
 itemList["ticket"] = {
@@ -8442,7 +8442,7 @@ itemList["ticket"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_ticket.png",
+    image: "nadrp_ticket.png",
     information: "Admit one",
     deg: false
 }
@@ -8454,7 +8454,7 @@ itemList["tire"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tire.png",
+    image: "nadrp_tire.png",
     information: "Im going to get another set",
     deg: false
 }
@@ -8466,7 +8466,7 @@ itemList["tissuebox"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tissue-box.png",
+    image: "nadrp_tissue-box.png",
     information: "Not what it seems I swear",
     deg: false
 }
@@ -8478,7 +8478,7 @@ itemList["Toolbox"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_toolbox.png",
+    image: "nadrp_toolbox.png",
     information: "Its a prop, wow?",
     deg: false
 }
@@ -8490,7 +8490,7 @@ itemList["toothneck"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_tooth-necklace.png",
+    image: "nadrp_tooth-necklace.png",
     information: "Shes a beauty",
     deg: false
 }
@@ -8502,7 +8502,7 @@ itemList["trophy"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_trophy.png",
+    image: "nadrp_trophy.png",
     information: "Winner!",
     deg: false
 }
@@ -8515,7 +8515,7 @@ itemList["umbrella"] = {
     weight: 3,
     nonStack: false,
     model: "",
-    image: "ffrp_umbrella.png",
+    image: "nadrp_umbrella.png",
     deg: false
 }
 itemList["umetal"] = {
@@ -8526,7 +8526,7 @@ itemList["umetal"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_unknown-metal.png",
+    image: "nadrp_unknown-metal.png",
     information: "Dont lick your fingers",
     deg: false
 }
@@ -8539,7 +8539,7 @@ itemList["usbdevice"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_unknown-usb-device.png",
+    image: "nadrp_unknown-usb-device.png",
     deg: false
 }
 itemList["valuablegoods"] = {
@@ -8554,7 +8554,7 @@ itemList["valuablegoods"] = {
     weight: 4,
     nonStack: false,
     model: "",
-    image: "ffrp_valuable-goods.png",
+    image: "nadrp_valuable-goods.png",
     deg: false
 }
 itemList["viagra"] = {
@@ -8565,7 +8565,7 @@ itemList["viagra"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_viagra.png",
+    image: "nadrp_viagra.png",
     information: "Magic little blue pill",
     deg: false
 }
@@ -8577,7 +8577,7 @@ itemList["voodoo"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_voodoo-doll.png",
+    image: "nadrp_voodoo-doll.png",
     information: "Beware the spirits",
     deg: false
 }
@@ -8589,7 +8589,7 @@ itemList["vpapers"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_vagos-papers.png",
+    image: "nadrp_vagos-papers.png",
     information: "No prrrraaaaaablem",
     deg: false
 }
@@ -8601,7 +8601,7 @@ itemList["vpnxj"] = {
     weight: 5,
     nonStack: false,
     model: "",
-    image: "ffrp_vpn-xj.png",
+    image: "nadrp_vpn-xj.png",
     deg: false
 }
 itemList["vulture"] = {
@@ -8612,7 +8612,7 @@ itemList["vulture"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_vulture-statue.png",
+    image: "nadrp_vulture-statue.png",
     information: "For the culture",
     deg: false
 }
@@ -8624,7 +8624,7 @@ itemList["wallet"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_wallet.png",
+    image: "nadrp_wallet.png",
     information: "Includes picture of mom",
     deg: false
 }
@@ -8636,7 +8636,7 @@ itemList["watch"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_watch.png",
+    image: "nadrp_watch.png",
     information: "It's a Watch",
     deg: false
 }
@@ -8672,7 +8672,7 @@ itemList["wedding"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_wedding-ring.png",
+    image: "nadrp_wedding-ring.png",
     information: "Did you know fifty percent...",
     deg: false
 }
@@ -8684,7 +8684,7 @@ itemList["weeping"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_weeping-woman.png",
+    image: "nadrp_weeping-woman.png",
     information: "Picasso 1937",
     deg: false
 }
@@ -8696,7 +8696,7 @@ itemList["wglass"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glass-of-whiskey.png",
+    image: "nadrp_glass-of-whiskey.png",
     information: "On the rocks",
     deg: false
 }
@@ -8708,7 +8708,7 @@ itemList["whitebelt"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_white-belt.png",
+    image: "nadrp_white-belt.png",
     information: "Novice Rank 1/4",
     deg: false
 }
@@ -8720,7 +8720,7 @@ itemList["whitechip"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_white-chip.png",
+    image: "nadrp_white-chip.png",
     information: "Hit me",
     deg: false
 }
@@ -8732,7 +8732,7 @@ itemList["whitepearl"] = {
     weight: 1,
     nonStack: false,
     model: "",
-    image: "ffrp_white-pearl.png",
+    image: "nadrp_white-pearl.png",
     deg: false
 }
 itemList["whitewine"] = {
@@ -8743,7 +8743,7 @@ itemList["whitewine"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_white-wine-bottle.png",
+    image: "nadrp_white-wine-bottle.png",
     information: "Made from real crime free grapes",
     deg: false
 }
@@ -8755,7 +8755,7 @@ itemList["whiteb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_white-bandana.png",
+    image: "nadrp_white-bandana.png",
     information: "SSK!",
     deg: false
 }
@@ -8767,7 +8767,7 @@ itemList["wineglass"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_glass-wine.png",
+    image: "nadrp_glass-wine.png",
     information: "Quite exquisite",
     deg: false
 }
@@ -8779,7 +8779,7 @@ itemList["wlilies"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_water-lilies.png",
+    image: "nadrp_water-lilies.png",
     information: "Monet 1907",
     deg: false
 }
@@ -8791,7 +8791,7 @@ itemList["xscondom"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_xs-condom.png",
+    image: "nadrp_xs-condom.png",
     information: "Its the motion in the ocean",
     deg: false
 }
@@ -8803,7 +8803,7 @@ itemList["ydiamond"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_yellow-diamond.png",
+    image: "nadrp_yellow-diamond.png",
     information: "Forever",
     deg: false
 }
@@ -8815,7 +8815,7 @@ itemList["yellowb"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_yellow-bandana.png",
+    image: "nadrp_yellow-bandana.png",
     information: "Im tellin you",
     deg: false
 }
@@ -8827,7 +8827,7 @@ itemList["zebra"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_zebra.png",
+    image: "nadrp_zebra.png",
     information: "Vasarely 1937",
     deg: false
 }
@@ -8839,7 +8839,7 @@ itemList["fakesnowvhs"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_fake-snow-vhs.png",
+    image: "nadrp_fake-snow-vhs.png",
     information: "At this point you can not even tell if it is a dick or the roundhay garden scene from 1888.",
     deg: false
 }
@@ -8851,7 +8851,7 @@ itemList["wigglue"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_wig-glue.png",
+    image: "nadrp_wig-glue.png",
     information: "Recommended by Snow.",
     deg: false
 }
@@ -8863,7 +8863,7 @@ itemList["marstonrevolver"] = {
     weight: 0,
     nonStack: false,
     model: "",
-    image: "ffrp_revolver.png",
+    image: "nadrp_revolver.png",
     information: "Owned by John Marston, this Cattleman Revolver features a black steel frame inlaid with gold and a custom bone grip.",
     deg: false
 }
