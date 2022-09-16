@@ -4,44 +4,44 @@ Config = {}
 
 --Add gold, diamond item to database or change item names in bottom. (dont need add cash item)
 Config['FleecaMain'] = {
-    requiredPoliceCount = 1,
+    requiredPoliceCount = 0,
     requiredItems = {
         'drill', -- Add item to database
-        'DuffelBag' -- Add item to database
+        'bag' -- Add item to database
     },
     rewardItems = {
         diamondTrolly = { 
             item = 'diamond', --item code
-            count = 1, -- reward count
-            sellPrice = 12, -- for buyer sell price
+            count = 300, -- reward count
+            sellPrice = 100, -- for buyer sell price
         },
         goldTrolly = { 
-            item = 'goldbar', 
-            count = 1,
-            multiGrabCount = 15, -- middle main grab
-            sellPrice = 12,
+            item = 'cashroll', 
+            count = 200,
+            multiGrabCount = 20, -- middle main grab
+            sellPrice = 100,
         },
         cashTrolly = { 
             item = nil, -- cash
-            count = 5000,
-            multiGrabCount = 750000, -- middle main grab
+            count = 300,
+            multiGrabCount = 30000, -- middle main grab
         },
         lockbox = function()
             local items = {Config['FleecaMain']['rewardItems']['diamondTrolly'], Config['FleecaMain']['rewardItems']['goldTrolly']}
             local random = math.random(1, 2)
             local lockboxBag = { -- random diamond or gold for safety box drill reward
                 item = items[random].item,
-                count = 5
+                count = 2500
             }
             return lockboxBag
         end,
     },
     grabReward = function() -- dont change this
-        local rewards, random = {'goldbar', 'cash'}, math.random(1, 2)
+        local rewards, random = {'cashroll', 'cash'}, math.random(1, 2)
         return rewards[random]
     end,
     trollyReward = function() -- dont change this
-        local rewards, random = {'goldbar', 'cash', 'diamond'}, math.random(1, 3)
+        local rewards, random = {'cashroll', 'cash', 'diamond'}, math.random(1, 3)
         return rewards[random]
     end,
     finishHeist = {

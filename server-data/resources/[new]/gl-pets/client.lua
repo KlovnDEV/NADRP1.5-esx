@@ -137,7 +137,7 @@ end)
 
 local aiming, entity
 function k9Search()
-    if PlayerData["job"].name == 'police' then
+    --if PlayerData["job"].name == 'police' then
         if DoesEntityExist(pet) then
         attacking = true
             if IsPlayerFreeAiming(PlayerId()) then
@@ -152,8 +152,6 @@ function k9Search()
             end
         end
     end
-
-end
 
 
 function k9Attack()

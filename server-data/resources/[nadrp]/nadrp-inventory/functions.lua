@@ -150,7 +150,7 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
             TriggerEvent('stg_switch:use')
         end
         if (itemid == "landmine") then
-            TriggerEvent('ruined_kits:landmine')
+            TriggerEvent('AirDropBlip')
         end
 
 
@@ -216,8 +216,19 @@ AddEventHandler('RunUseItem', function(itemid, slot, inventoryName, isWeapon)
         TriggerEvent('core_evidence:getData')
     end
 
+    if (itemid == "pixellaptop") then
+        TriggerEvent('boosting:DisplayUI')
+    end
+    if (itemid == "disabler") then
+        TriggerEvent('boosting:DisablerUsed')
+    end
+
     if (itemid == "sponge") then
         TriggerEvent('RS7x:OnClean')
+        remove = true
+    end
+    if (itemid == "oxygen_mask") then
+        TriggerEvent('cayo:oxygen_mask')
         remove = true
     end
 

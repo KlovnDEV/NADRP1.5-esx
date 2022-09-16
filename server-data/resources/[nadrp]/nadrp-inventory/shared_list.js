@@ -2127,6 +2127,403 @@ itemList["sponge"] = {
     deg: false
 }
 
+//new drug test
+
+itemList["weed_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "weed_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "weed_pooch.png",
+    deg: false
+}
+itemList["coke_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "coke_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "coke_pooch.png",
+    deg: false
+}
+itemList["meth_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "meth_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "meth_pooch.png",
+    deg: false
+}
+itemList["cannabis"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "cannabis",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "cannabis.png",
+    deg: false
+}
+itemList["cannabis_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "cannabis_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "cannabis_pooch.png",
+    deg: false
+}
+itemList["crack_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "crack_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "crack_pooch.png",
+    deg: false
+}
+itemList["ecstasy"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ecstasy",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ecstasy.png",
+    deg: false
+}
+itemList["ecstasy_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ecstasy_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ecstasy_pooch.png",
+    deg: false
+}
+itemList["heroine"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "heroine",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "heroine.png",
+    deg: false
+}
+itemList["heroine_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "heroine_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "heroine_pooch.png",
+    deg: false
+}
+itemList["ghb"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ghb",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ghb.png",
+    deg: false
+}
+itemList["ghb_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ghb_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ghb_pooch.png",
+    deg: false
+}
+itemList["psychedeliques"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "psychedeliques",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "psychedeliques.png",
+    deg: false
+}
+itemList["psychedeliques_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "psychedeliques_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "psychedeliques_pooch.png",
+    deg: false
+}
+itemList["opium"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "opium",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "opium.png",
+    deg: false
+}
+itemList["opium_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "opium_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "opium_pooch.png",
+    deg: false
+}
+itemList["ketamine"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ketamine",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ketamine.png",
+    deg: false
+}
+itemList["ketamine_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "ketamine_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "ketamine_pooch.png",
+    deg: false
+}
+itemList["lsd"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "lsd",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "lsd.png",
+    deg: false
+}
+itemList["lsd_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "lsd_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "lsd_pooch.png",
+    deg: false
+}
+itemList["morphine"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "morphine",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "morphine.png",
+    deg: false
+}
+itemList["morphine_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "morphine_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "morphine_pooch.png",
+    deg: false
+}
+itemList["lean"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "lean",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "lean.png",
+    deg: false
+}
+itemList["lean_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "lean_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "lean_pooch.png",
+    deg: false
+}
+itemList["amphetamines"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "amphetamines",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "amphetamines.png",
+    deg: false
+}
+itemList["amphetamines_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "amphetamines_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "amphetamines_pooch.png",
+    deg: false
+}
+itemList["marijuana"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "marijuana",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "marijuana.png",
+    deg: false
+}
+itemList["marijuana_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "marijuana_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "marijuana_pooch.png",
+    deg: false
+}
+itemList["speed"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "speed",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "speed.png",
+    deg: false
+}
+itemList["speed_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "speed_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "speed_pooch.png",
+    deg: false
+}
+itemList["thc"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "thc",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "thc.png",
+    deg: false
+}
+itemList["thc_pooch"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "thc_pooch",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "thc_pooch.png",
+    deg: false
+}
+itemList["shovel"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "shovel",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "shovel.png",
+    deg: false
+}
+//Boosting
+itemList["pixellaptop"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "pixellaptop",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "pixellaptop.png",
+    deg: false
+}
+itemList["disabler"] = {
+    fullyDegrades: true,
+    decayrate: 0.0,
+    displayname: "disabler",
+    price: 50,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "disabler.png",
+    deg: false
+}
+
+//new drug test
+
+
+
+
+
+
+
 // drugs
 
 itemList["1gcocaine"] = {
@@ -2413,6 +2810,32 @@ itemList["badlsdtab"] = {
     image: "nadrp_drug-x.png",
     information: "Bottle of wonders.",
     deg: true
+}
+//island hiest
+
+itemList["oxygen_mask"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "oxygen_mask",
+    price: 0,
+    weight: 0,
+    nonStack: false,
+    model: "",
+    image: "oxygen_mask.png",
+    information: "oxygen_mask",
+    deg: false
+}
+itemList["statue"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "statue",
+    price: 0,
+    weight: 0,
+    nonStack: false,
+    model: "",
+    image: "statue.png",
+    information: "statue",
+    deg: false
 }
 
 // other drugy shit
@@ -7211,6 +7634,28 @@ itemList["refinedwood"] = {
     fullyDegrades: false,
     decayrate: 0.0,
     displayname: "Refined Wood",
+    price: 15,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "nadrp_wood.png",
+    deg: false
+}
+itemList["wood"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "Wood",
+    price: 15,
+    weight: 1,
+    nonStack: false,
+    model: "",
+    image: "nadrp_wood.png",
+    deg: false
+}
+itemList["processed_wood"] = {
+    fullyDegrades: false,
+    decayrate: 0.0,
+    displayname: "processed_wood",
     price: 15,
     weight: 1,
     nonStack: false,

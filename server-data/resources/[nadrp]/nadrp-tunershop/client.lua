@@ -143,8 +143,35 @@ local vehshopOwner = {
 				{model = "ar8lb", name = "Audi R8 LW", costs = 450000, description = {} },
 				{model = "infernus2custom", name = "Infernus 2", costs = 450000, description = {} },
 				{model = "sultanrs", name = "Sultan RS", costs = 420000, description = {} },
+				{name = "Aerondight", costs = 550, description = {}, model = "Aerondight"},
+				{name = "Cliors", costs = 550, description = {}, model = "Cliors"},
+				{name = "Hevo", costs = 550, description = {}, model = "Hevo"},	
+				{name = "m6f13t", costs = 550, description = {}, model = "m6f13"},	
+				{name = "Rmodf40", costs = 550, description = {}, model = "Rmodf40"},	
+				{name = "rmodc63amg", costs = 550, description = {}, model = "rmodc63amg"},	
+				{name = "Rmodf40", costs = 550, description = {}, model = "Rmodf40"},	
+				{name = "Rmodgt63", costs = 550, description = {}, model = "Rmodgt63"},	
+				{name = "rmodgtr50", costs = 550, description = {}, model = "rmodgtr50"},	
+				{name = "Rmodjesko", costs = 550, description = {}, model = "Rmodjesko"},	
+				{name = "Rmodrover", costs = 550, description = {}, model = "Rmodrover"},	
+				{name = "Rmodsianr", costs = 550, description = {}, model = "Rmodsianr"},						
+				{name = "Rmodspeed", costs = 550, description = {}, model = "Rmodspeed"},	
+				{name = "Victorhirot", costs = 550, description = {}, model = "Victorhirot"},	
+				{name = "Gtrnismo17", costs = 550, description = {}, model = "Gtrnismo17"},	
+				{name = "hellcatlb", costs = 550, description = {}, model = "hellcatlb"},	
+				{name = "lp700", costs = 550, description = {}, model = "lp700"},	
+				{name = "Piikesvip4", costs = 550, description = {}, model = "Piikesvip4"},	
+				{name = "Piikesvip7", costs = 550, description = {}, model = "Piikesvip7"},	
+				{name = "Piikesvip9", costs = 550, description = {}, model = "Piikesvip9"},
+				{name = "Piikesvip10", costs = 550, description = {}, model = "Piikesvip10"},
+				{name = "Piikesvip16", costs = 550, description = {}, model = "Piikesvip16"},
+				{name = "Piikesvip21", costs = 550, description = {}, model = "Piikesvip21"},
+				{name = "Piikesvip22", costs = 550, description = {}, model = "Piikesvip22"},
+				{name = "Piikesvip23", costs = 550, description = {}, model = "Piikesvip23"},
+				{name = "Piikesvip36", costs = 550, description = {}, model = "Piikesvip36"},
 			}
 		},
+		
 
 		["Sold"] = {
 			title = "Sold",
@@ -211,7 +238,7 @@ AddEventHandler("car:testdrive_tuner", function()
 
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	
@@ -242,7 +269,7 @@ AddEventHandler("car:testdrive_tuner", function()
 		TaskWarpPedIntoVehicle(PlayerPedId(),veh,-1)
 		myspawnedvehs[veh] = true
 	else
-		exports['mythic_notify']:SendAlert('inform', 'A car is on the spawn point.')
+		exports['mythic_notify']:DoLongHudText('inform', 'A car is on the spawn point.')
 	end
 end)
 
@@ -253,7 +280,7 @@ AddEventHandler("finance_tuner", function()
 	end
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -267,7 +294,7 @@ AddEventHandler("tuner:enable_buy", function()
 	end
 	local veh = GetClosestVehicle(GetEntityCoords(PlayerPedId()), 3.000, 0, 70)
 	if not DoesEntityExist(veh) then
-		exports['mythic_notify']:SendAlert('inform', 'Could not locate vehicle')
+		exports['mythic_notify']:DoLongHudText('inform', 'Could not locate vehicle')
 		return
 	end
 	local vehplate = GetVehicleNumberPlateText(veh)
@@ -334,7 +361,7 @@ function BuyMenu()
 			end
 			DisableControlAction(0,23)
 			if IsControlJustReleased(0,47) and buyPlates[addplate] ~= nil then
-				exports["mythic_notify"]:SendAlert('inform', 'Attempting Purchase')
+				exports["mythic_notify"]:DoLongHudText('inform', 'Attempting Purchase')
 				AttemptBuy(i,false)
 			end
 
@@ -342,7 +369,7 @@ function BuyMenu()
 				local veh = GetClosestVehicle(carspawns[i]["x"],carspawns[i]["y"],carspawns[i]["z"], 3.000, 0, 70)
 				local addplate = GetVehicleNumberPlateText(veh)
 				if financedPlates[addplate] ~= nil then
-					exports['mythic_notify']:SendAlert('inform', 'Attempting Purchase')
+					exports['mythic_notify']:DoLongHudText('inform', 'Attempting Purchase')
 					AttemptBuy(i,true)
 				end
 			end
@@ -355,7 +382,7 @@ function AttemptBuy(tableid,financed)
 	local veh = GetClosestVehicle(carspawns[tableid]["x"],carspawns[tableid]["y"],carspawns[tableid]["z"], 3.000, 0, 70)
 
 	if not DoesEntityExist(veh) then
-		exports["mythic_notify"]:SendAlert('error', 'Could not locate vehicle')
+		exports["mythic_notify"]:DoLongHudText('error', 'Could not locate vehicle')
 		return
 	end
 
@@ -386,7 +413,7 @@ function OwnerMenu()
 			ownerMenu = true
 			currentCarSpawnLocation = i
 			if IsControlJustReleased(0,38) then
-				exports['mythic_notify']:SendAlert('inform', 'We Opened')
+				exports['mythic_notify']:DoLongHudText('inform', 'We Opened')
 				if vehshop.opened then
 					CloseCreator()
 				else
@@ -474,7 +501,7 @@ function SpawnSaleVehicles()
 
 		if modelwait > 100 then
 			DespawnSaleVehicles()
-			exports['mythic_notify']:SendAlert('inform', 'Vehicles failed to load, please be patient')
+			exports['mythic_notify']:DoLongHudText('inform', 'Vehicles failed to load, please be patient')
 			Wait(10000)
 			return
 		end

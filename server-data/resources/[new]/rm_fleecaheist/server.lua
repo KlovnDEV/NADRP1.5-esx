@@ -8,7 +8,7 @@ lastRob = {
     [6] = 0,
 }
 discord = {
-    ['webhook'] = 'DISCORDCHANNELWEBHOOKLINK',
+    ['webhook'] = 'https://discord.com/api/webhooks/867342301260677120/rIC68Hz6vmuU72kCLPuwNYS3Z3wsVL3iVdnPAnyfdCZN6DM5M_tzAPtWVRaTBP4D8gOn',
     ['name'] = 'rm_fleecaheist',
     ['image'] = 'https://cdn.discordapp.com/avatars/869260464775921675/dea34d25f883049a798a241c8d94020c.png?size=1024'
 }
@@ -20,7 +20,7 @@ end)
 ESX.RegisterServerCallback('fleecaheist:server:checkPoliceCount', function(source, cb)
     local src = source
     local players = ESX.GetPlayers()
-    local policeCount = 0
+    local policeCount = 4
 
     for i = 1, #players do
         local player = ESX.GetPlayerFromId(players[i])
@@ -55,8 +55,8 @@ end)
 --[[ESX.RegisterServerCallback('fleecaheist:server:hasItem', function(source, cb, item)
     local src = source
     local player = ESX.GetPlayerFromId(src)
-    local player = exports ['nadrp-inventory']:hasEnoughOfItem(item)
-   -- exports['nadrp-inventory']:hasEnoughOfItem("lockpick", 1)
+    local playerItem = player.getInventoryItem(item)
+
     if player and playerItem ~= nil then
         if playerItem.count >= 1 then
             cb(true, playerItem.label)
@@ -88,15 +88,19 @@ AddEventHandler('fleecaheist:server:rewardItem', function(reward, count)
     if player then
         if reward.item ~= nil then
             if count ~= nil then
-                player.TriggerClientEvent('player:receiveItem',reward.item, count)
+              --  player.addInventoryItem(reward.item, count)
+                TriggerEvent("player:receiveItem",src,reward.item, count)
+                player.addMoney(1000)
             else
-                player.TriggerClientEvent('player:receiveItem',reward.item, reward.count)
+               -- player.addInventoryItem(reward.item, reward.count)
+                TriggerEvent("player:receiveItem",src,"goldbar", 20)
+                player.addMoney(reward.count)
             end
         else
             if count ~= nil then
-                player.addMoney(count)
+                player.addMoney(1000)
             else
-                player.addMoney(reward.count)
+                player.addMoney(5000)
             end
         end
     end
@@ -110,16 +114,16 @@ AddEventHandler('fleecaheist:server:sellRewardItems', function()
     if player then
         local totalMoney = 0
         local rewardItems = Config['FleecaMain']['rewardItems']
-        local diamondCount = player.exports['nadrp-inventory']:hasEnoughOfItem(rewardItems['diamondTrolly']['item']).count
-        local goldCount = player.exports['nadrp-inventory']:hasEnoughOfItem(rewardItems['goldTrolly']['item']).count
+        local diamondCount = player.getInventoryItem(rewardItems['diamondTrolly']['item']).count
+        local goldCount = player.getInventoryItem(rewardItems['goldTrolly']['item']).count
 
         if diamondCount > 0 then
-            player.TriggerClientEvent('inventory:removeItem',rewardItems['diamondTrolly']['item'], diamondCount)
+            player.removeInventoryItem(rewardItems['diamondTrolly']['item'], diamondCount)
             player.addMoney(rewardItems['diamondTrolly']['sellPrice'] * diamondCount)
             totalMoney = totalMoney + (rewardItems['diamondTrolly']['sellPrice'] * diamondCount)
         end
         if goldCount > 0 then
-            player.TriggerClientEvent('inventory:removeItem',rewardItems['goldTrolly']['item'], goldCount)
+            player.removeInventoryItem(rewardItems['goldTrolly']['item'], goldCount)
             player.addMoney(rewardItems['goldTrolly']['sellPrice'] * goldCount)
             totalMoney = totalMoney + (rewardItems['goldTrolly']['sellPrice'] * goldCount)
         end
@@ -152,19 +156,6 @@ end)
 RegisterServerEvent('fleecaheist:server:resetHeist')
 AddEventHandler('fleecaheist:server:resetHeist', function(index)
     TriggerClientEvent('fleecaheist:client:resetHeist', -1, index)
-end)
-
-RegisterCommand('pdfleeca', function(source, args)
-    local src = source
-    local player = ESX.GetPlayerFromId(src)
-    
-    if player then
-        if player['job']['name'] == 'police' then
-            TriggerClientEvent('fleecaheist:client:nearBank', src)
-        else
-            TriggerClientEvent('fleecaheist:client:showNotification', src, 'You are not cop!')
-        end
-    end
 end)
 
 function discordLog(name, message)

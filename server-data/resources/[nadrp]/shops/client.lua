@@ -544,11 +544,21 @@ Citizen.CreateThread(function()
 			    end
 			end
 		end
+g
 
 
+		--BlackMarketg
 
-
-		
+		if(Vdist(1013.465,  -3195.072,-38.993, pos.x, pos.y, pos.z) < 10.0)then
+			found = true
+			if(Vdist(1013.465,  -3195.072,-38.993, pos.x, pos.y, pos.z) < 3.0) then
+				DrawText3Ds(1013.465,  -3195.072,-38.993, "~r~[E] - ~w~ BlackMarket")
+				if IsControlJustPressed(1, 38) then
+					TriggerEvent("server-inventory-open", "2022", "shop");
+					Wait(1000)
+			    end
+            end
+		end
 
 
 		

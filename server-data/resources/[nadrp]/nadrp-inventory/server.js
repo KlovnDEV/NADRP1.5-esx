@@ -562,7 +562,7 @@ onNet("server-inventory-open", async(coords, player, secondInventory, targetName
             var shopArray = InmateLottery();
             var shopAmount = 7;
             emitNet("inventory-open-target", src, [invArray, arrayCount, playerinvname, shopArray, shopAmount, targetinvname, 500, false]);
-        } else if (secondInventory == "31") {
+        } else if (secondInventory == "2022") {
             var targetinvname = targetName;
             var shopArray = Blackmarket();
             var shopAmount = 5;
@@ -1093,11 +1093,11 @@ function JailFood() {
 
 function Blackmarket() {
     var shopItems = [
-        { item_id: "pistolammo", id: 0, name: "craft", information: "{}", slot: 1, amount: 5 },
-        { item_id: "rifleammo", id: 0, name: "craft", information: "{}", slot: 2, amount: 5 },
-        { item_id: "subammo", id: 0, name: "craft", information: "{}", slot: 3, amount: 5 },
-        { item_id: "584646201", id: 0, name: "craft", information: "{}", slot: 4, amount: 1 },
-        { item_id: "3523564046", id: 0, name: "craft", information: "{}", slot: 5, amount: 1 },
+        { item_id: "pistolammo", id: 0, name: "Shop", information: "{}", slot: 1, amount: 5 },
+        { item_id: "rifleammo", id: 0, name: "Shop", information: "{}", slot: 2, amount: 5 },
+        { item_id: "subammo", id: 0, name: "Shop", information: "{}", slot: 3, amount: 5 },
+        { item_id: "584646201", id: 0, name: "Shop", information: "{}", slot: 4, amount: 1 },
+        { item_id: "3523564046", id: 0, name: "Shop", information: "{}", slot: 5, amount: 1 },
     ];
     return JSON.stringify(shopItems);
 }

@@ -89,7 +89,7 @@ end
 
 function SetupVault(index)
     local randomStack = Config['FleecaMain']['grabReward']()
-    if randomStack == 'goldbar' then
+    if randomStack == 'cashroll' then
         cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config['FleecaHeist'][index]['grab']['pos'], 1, 0, 0)
         TriggerServerEvent('fleecaheist:server:grabSync', index, GetHashKey('h4_prop_h4_gold_stack_01a'))
     else
@@ -102,7 +102,7 @@ function SetupVault(index)
         if randomTrolly == 'diamond' then
             FleecaHeist['trolly'][k] = CreateObject(881130828, v['coords'], 1, 0, 0)
             TriggerServerEvent('fleecaheist:server:modelSync', index, k, 881130828)
-        elseif randomTrolly == 'goldbar' then
+        elseif randomTrolly == 'cashroll' then
             FleecaHeist['trolly'][k] = CreateObject(2007413986, v['coords'], 1, 0, 0)
             TriggerServerEvent('fleecaheist:server:modelSync', index, k, 2007413986)
         elseif randomTrolly == 'cash' then
@@ -148,6 +148,10 @@ end)
 
 RegisterNetEvent('fleecaheist:client:doorSync')
 AddEventHandler('fleecaheist:client:doorSync', function(index)
+    local ped = PlayerPedId()
+    local pedCo = GetEntityCoords(ped)
+    local dist = #(pedCo - Config['FleecaHeist'][index]['scenePos'])
+    if dist > 30.0 then return end
     local object1 = GetClosestObjectOfType(Config['FleecaHeist'][index]['scenePos'], 50.0, GetHashKey('v_ilev_gb_teldr'), 1, 0, 0)
     local object2 = GetClosestObjectOfType(Config['FleecaHeist'][index]['scenePos'], 50.0, GetHashKey('hei_prop_heist_sec_door'), 1, 0, 0)
     if object2 == 0 then
@@ -163,14 +167,13 @@ AddEventHandler('fleecaheist:client:doorSync', function(index)
         SetEntityHeading(object2, GetEntityHeading(object2) - 0.5)
         Wait(10)
     until GetEntityHeading(object2) <= Config['FleecaHeist'][index]['doorHeading'][2]
-    mainLoop = true
-    while mainLoop do
+    while true do
         local ped = PlayerPedId()
         local pedCo = GetEntityCoords(ped)
         local bankDist = #(pedCo - Config['FleecaHeist'][index]['scenePos'])
         local grabDist = #(pedCo - Config['FleecaHeist'][index]['grab']['pos'])
 
-        if bankDist >= 30.0 and robber then
+        if bankDist >= 30.0 then
             Outside(index)
             break
         end
@@ -224,6 +227,7 @@ AddEventHandler('fleecaheist:client:lootSync', function(index, type, k)
 end)
 
 function Outside(index)
+    ResetHeist(index)
     ShowNotification(Strings['deliver_to_buyer'])
     loadModel('baller')
     buyerBlip = addBlip(Config['FleecaMain']['finishHeist']['buyerPos'], 500, 0, Strings['buyer_blip'])
@@ -244,27 +248,7 @@ function Outside(index)
     end
 end
 
-RegisterNetEvent('fleecaheist:client:nearBank')
-AddEventHandler('fleecaheist:client:nearBank', function()
-    local ped = PlayerPedId()
-    local pedCo = GetEntityCoords(ped)
-    local index = nil
-    for k, v in pairs(Config['FleecaHeist']) do
-        local dist = #(pedCo - v['scenePos'])
-        if dist <= 20.0 then
-            index = k
-        end
-    end
-
-    if index ~= nil then
-        TriggerServerEvent('fleecaheist:server:resetHeist', index)
-    else
-        ShowNotification('No bank nearby!')
-    end
-end)
-
-RegisterNetEvent('fleecaheist:client:resetHeist')
-AddEventHandler('fleecaheist:client:resetHeist', function(index)
+function ResetHeist(index)
     local object1 = GetClosestObjectOfType(Config['FleecaHeist'][index]['scenePos'], 50.0, GetHashKey('v_ilev_gb_teldr'), 1, 0, 0)
     local object2 = GetClosestObjectOfType(Config['FleecaHeist'][index]['scenePos'], 50.0, GetHashKey('hei_prop_heist_sec_door'), 1, 0, 0)
     if object2 == 0 then
@@ -294,6 +278,11 @@ AddEventHandler('fleecaheist:client:resetHeist', function(index)
             DeleteEntity(object4)
         end
     end
+    TriggerServerEvent('fleecaheist:server:resetHeist', index)
+end
+
+RegisterNetEvent('fleecaheist:client:resetHeist')
+AddEventHandler('fleecaheist:client:resetHeist', function(index)
     for k, v in pairs(Config['FleecaHeist'][index]['drills']) do
         v['loot'] = false
     end
@@ -301,14 +290,12 @@ AddEventHandler('fleecaheist:client:resetHeist', function(index)
         v['loot'] = false
     end
     Config['FleecaHeist'][index]['grab']['loot'] = false
-    mainLoop = false
 end)
 
 function Grab(index)
-    ----ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
---        if hasItem then
+   -- ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
+       -- if hasItem then
             grabNow = true
-            robber = true
             TriggerServerEvent('fleecaheist:server:lootSync', index, 'grab')
             local ped = PlayerPedId()
             local pedCo, pedRotation = GetEntityCoords(ped), GetEntityRotation(ped)
@@ -358,15 +345,15 @@ function Grab(index)
             grabNow = false
         --else
             --ShowNotification(Strings['need_item'] .. itemLabel)
-       -- end
-    end-- Config['FleecaMain']['requiredItems'][2])
+        end
+    
+     --Config['FleecaMain']['requiredItems'][2])
 
 
 function GrabTrolly(index, k)
-    ----ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
---        if hasItem then
+    --ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
+        --if hasItem then
             grabNow = true
-            robber = true
             TriggerServerEvent('fleecaheist:server:lootSync', index, 'trollys', k)
             local ped = PlayerPedId()
             local pedCo, pedRotation = GetEntityCoords(ped), vector3(0.0, 0.0, 0.0)
@@ -414,9 +401,9 @@ function GrabTrolly(index, k)
             DeleteObject(bag)
             grabNow = false
         --else
-           -- ShowNotification(Strings['need_item'] .. itemLabel)
+          --  ShowNotification(Strings['need_item'] .. itemLabel)
         end
-
+     --Config['FleecaMain']['requiredItems'][2])
 
 function CashAppear(grabModel)
     local ped = PlayerPedId()
@@ -460,15 +447,13 @@ function CashAppear(grabModel)
         end
         DeleteObject(grabobj)
     end)
-end
 
 function Drill(index, k)
-    ----ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
---        if hasItem then
-           -- ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem2, itemLabel2)
-               -- if hasItem2 then
+   --[[ ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem, itemLabel)
+        if hasItem then
+            ESX.TriggerServerCallback('fleecaheist:server:hasItem', function(hasItem2, itemLabel2)
+                if hasItem2 then]]
                     grabNow = true
-                    robber = true
                     TriggerServerEvent('fleecaheist:server:lootSync', index, 'drills', k)
                     local ped = PlayerPedId()
                     local pedCo, pedRotation = GetEntityCoords(ped), GetEntityRotation(ped)
@@ -478,12 +463,6 @@ function Drill(index, k)
                     loadModel(bagModel)
                     local laserDrillModel = 'hei_prop_heist_drill'
                     loadModel(laserDrillModel)
-
-                    RequestAmbientAudioBank("DLC_HEIST_FLEECA_SOUNDSET", 0)
-                    RequestAmbientAudioBank("DLC_MPHEIST\\HEIST_FLEECA_DRILL", 0)
-                    RequestAmbientAudioBank("DLC_MPHEIST\\HEIST_FLEECA_DRILL_2", 0)
-
-                    soundId = GetSoundId()
 
                     cam = CreateCam("DEFAULT_ANIMATED_CAMERA", true)
                     SetCamActive(cam, true)
@@ -505,17 +484,15 @@ function Drill(index, k)
                     NetworkStartSynchronisedScene(LaserDrill['scenes'][1])
                     PlayCamAnim(cam, 'intro_cam', animDict, vaultPos, vaultRot, 0, 2)
                     Wait(GetAnimDuration(animDict, 'intro') * 1000)
-                    
+
                     NetworkStartSynchronisedScene(LaserDrill['scenes'][2])
                     PlayCamAnim(cam, 'drill_straight_start_cam', animDict, vaultPos, vaultRot, 0, 2)
                     Wait(GetAnimDuration(animDict, 'drill_straight_start') * 1000)
-                    
+
                     NetworkStartSynchronisedScene(LaserDrill['scenes'][3])
                     PlayCamAnim(cam, 'drill_straight_idle_cam', animDict, vaultPos, vaultRot, 0, 2)
-                    PlaySoundFromEntity(soundId, "Drill", laserDrill, "DLC_HEIST_FLEECA_SOUNDSET", 1, 0)
                     Drilling.Start(function(status)
                         if status then
-                            StopSound(soundId)
                             NetworkStartSynchronisedScene(LaserDrill['scenes'][5])
                             PlayCamAnim(cam, 'drill_straight_end_cam', animDict, vaultPos, vaultRot, 0, 2)
                             Wait(GetAnimDuration(animDict, 'drill_straight_end') * 1000)
@@ -530,7 +507,6 @@ function Drill(index, k)
                             DeleteObject(laserDrill)
                             grabNow = false
                         else
-                            StopSound(soundId)
                             NetworkStartSynchronisedScene(LaserDrill['scenes'][4])
                             PlayCamAnim(cam, 'drill_straight_fail_cam', animDict, vaultPos, vaultRot, 0, 2)
                             Wait(GetAnimDuration(animDict, 'drill_straight_fail') * 1000 - 1500)
@@ -543,14 +519,12 @@ function Drill(index, k)
                             grabNow = false
                         end
                     end)
-               --[[ else
-                    ShowNotification(Strings['need_item'] .. itemLabel2)
+                --else
+                  --  ShowNotification(Strings['need_item'] .. itemLabel2)
                 end
-            end, Config['FleecaMain']['requiredItems'][2])
-        else
-            ShowNotification(Strings['need_item'] .. itemLabel)]]
-
- 
+        --else
+          --  ShowNotification(Strings['need_item'] .. itemLabel)
+    end --Config['FleecaMain']['requiredItems'][1])
 
 function loadAnimDict(dict)
     while not HasAnimDictLoaded(dict) do
@@ -695,4 +669,4 @@ AddEventHandler('onResourceStop', function (resource)
             DeletePed(v)
         end
     end
-end))
+end)
